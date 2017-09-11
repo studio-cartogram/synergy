@@ -1,0 +1,23 @@
+.image {
+  align-content: stretch;
+}
+
+.image__image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.image__content {
+  padding: $d-quad $d-quad $d-duo;
+  background: $ca-image-content-background;
+
+  @include bp($bp-tablet) {
+    padding: $d-oct;
+  }
+
+  .image:nth-child(odd) & {
+    @include bp($bp-laptop) {
+      order: 1;
+    }
+  }
+}

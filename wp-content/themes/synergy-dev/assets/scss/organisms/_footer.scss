@@ -1,0 +1,63 @@
+/* =========================================
+Footer Component
+========================================= */
+
+.footer {
+  padding: $d-sex 0;
+  position: relative;
+  transition: all $a-timing * 2 $a-easing;
+  text-align: center;
+
+  .js-is-loading & {
+    opacity: 0;
+  }
+
+  .footer__icon {
+    padding: $d-sex 0;
+    color: $c-lightGrey;
+  }
+
+  .footer__inner {
+    align-items: center;
+    justify-content: center;
+    @include bp($bp-tablet) {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  .footer__right {
+    padding: $d-trio;
+    @include bp($bp-tablet) {
+      padding: 0 0 0 $d-sex;
+      text-align: left;
+    }
+  }
+
+  .footer__left {
+    padding: $d-trio;
+    @include bp($bp-tablet) {
+      padding: 0 $d-sex 0 0;
+      text-align: right;
+    }
+  }
+
+  .footer__list {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    li {
+      padding: $d-trio;
+    }
+
+    &.list--narrow {
+      li {
+        padding: $d-base;
+      }
+    }
+  }
+
+}
+
+

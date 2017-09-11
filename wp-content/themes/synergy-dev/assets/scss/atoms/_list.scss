@@ -1,0 +1,93 @@
+/* =========================================
+List Component
+========================================= */
+
+.list {
+  &,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+  }
+
+  flex-direction: row;
+  display: flex;
+
+  li {
+    color: $ca-list-color;
+  }
+
+}
+
+.list--small {
+  font-size: $t-font-size-zeta;
+}
+
+.list--spaced-horizontal {
+  margin-right: -$d-base;
+  li {
+    padding: 0 $d-base;
+  }
+
+  li:first-child {
+    padding-left: 0;
+  }
+
+  @include bp($bp-tablet) {
+    margin-right: -$d-duo;
+    li {
+      padding: 0 $d-duo;
+    }
+    li:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+.list--spaced-vertical {
+  li {
+    padding: $d-base 0;
+  }
+}
+
+.list--vertical {
+  @include bp($bp-tablet) {
+    flex-direction: column;
+  }
+}
+
+.list--center {
+  justify-content: center;
+}
+
+.list--right {
+  justify-content: flex-end;
+}
+.list--right--tablet {
+  @include bp($bp-tablet) {
+    justify-content: flex-end;
+  }
+}
+
+.list--sep-slash {
+  li:after {
+    content: '/ ';
+    padding-left: 1px;
+    padding-right: 1px;
+    color: $c-lightGrey;
+  }
+  li:last-child:after {
+    content: '';
+  }
+}
+
+.list--sep-comma {
+  li:after {
+    content: ', ';
+    padding-right: 3px;
+  }
+  li:first-child:after,
+  li:last-child:after {
+    content: '';
+  }
+}

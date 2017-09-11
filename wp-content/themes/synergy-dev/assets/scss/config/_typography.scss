@@ -1,0 +1,40 @@
+/* =========================================
+Typography
+========================================= */
+/**
+ * Prefix typography vars with $t_
+ * to make them easier to find with
+ * autocomplete
+ *
+ */
+
+$t-em-base: 16;
+$t-font-family: 'Karla', sans-serif;
+$t-font-family-serif: 'Lora', serif;
+$t-font-family-mono: 'Inconsolata', monospace;
+
+$t-font-weight-regular: 400;
+$t-font-weight-bold: 700;
+
+$t-font-size-alpha: 40 / $t-em-base + em;
+$t-font-size-beta: 24 / $t-em-base + em;
+$t-font-size-gamma: 18 / $t-em-base + em;
+$t-font-size-delta: 14 / $t-em-base + em;
+$t-font-size-epsilon: 14 / $t-em-base + em;
+$t-font-size-zeta: 12 / $t-em-base + em;
+
+$t-font-size-alpha-mobile: 30 / $t-em-base + em;
+$t-font-size-beta-mobile: 20 / $t-em-base + em;
+// $t-font-size-gamma-mobile: 18 / $t-em-base + em;
+// $t-font-size-delta-mobile: 14 / $t-em-base + em;
+// $t-font-size-epsilon-mobile: 14 / $t-em-base + em;
+// $t-font-size-zeta-mobile: 14 / $t-em-base + em;
+
+$t-font-size-p-large: 18 / $t-em-base + em;
+$t-font-size-p-small: 12 / $t-em-base + em;
+$t-font-size-p-xlarge: 32 / $t-em-base + em;
+
+$t-font-size-button-small: 12 / $t-em-base + em;
+$t-font-size-button-large: 18 / $t-em-base + em;
+
+

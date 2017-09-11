@@ -1,0 +1,24 @@
+/*
+essential styles:
+these make the slideshow work
+*/
+.slideshow {
+  position: relative;
+  height: 300px;
+}
+
+.slideshow__slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity $a-timing;
+  &.is-active {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+

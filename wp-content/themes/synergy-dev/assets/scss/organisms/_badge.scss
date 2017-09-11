@@ -1,0 +1,28 @@
+.badges {
+  justify-content: center;
+  padding: $d-quad 0;
+  position: relative;
+  z-index: 1;
+  @include bp($bp-tablet) {
+    padding: $d-quad $d-duo;
+  }
+}
+
+.badge {
+  text-align: center;
+  padding: $d-duo;
+  @include bp($bp-tablet) {
+    padding: $d-trio;
+  }
+}
+
+.badge__title {
+  color: $ca-badge-title-color;
+}
+
+.badge__icon {
+  max-width: $d-quin;
+  max-height: $d-quin;
+  margin: $d-duo;
+  fill: $ca-icon-badge-color;
+}

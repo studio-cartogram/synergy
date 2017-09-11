@@ -1,0 +1,37 @@
+/* =========================================
+Icon Component
+========================================= */
+
+.icon {
+  display:inline-block;
+  max-width: 100%;
+}
+
+.icon--logo,
+.icon--logo-word {
+  display:inline-block;
+  max-width: $d-dec * 2;
+  max-height: $d-dec;
+  fill: $ca-logo-color;
+}
+
+.icon--logo-icon {
+  fill: $ca-logo-color;
+  max-width: $d-trio;
+  max-height: $d-trio;
+}
+
+
+.icon--dropdown {
+  max-width: $d-trio;
+  max-height: $d-trio;
+}
+
+.icon--search {
+  fill: $ca-icon-search-color;
+  max-width: $d-quad;
+  max-height: $d-quad;
+}
+
+
+

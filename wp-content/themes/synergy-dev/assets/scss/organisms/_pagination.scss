@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.nav-links {
+}
+
+.page-numbers {
+  padding: $d-duo $d-base;
+  margin-left: $d-base;
+  margin-right: $d-base;
+  border-bottom: 1px solid transparent;
+}
+
+.page-numbers.current {
+  color: $ca-anchor-hover-color;
+  border-bottom: 1px solid currentColor;
+}
+.page-numbers.prev,
+.page-numbers.next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  padding-left: $d-quad;
+}
+
+
+.page-numbers.prev {
+  left: 0;
+  right: auto;
+}

@@ -1,0 +1,41 @@
+.faq {
+  margin: $d-sex $d-trio;
+  padding: $d-quad;
+  color: $c-teal;
+  padding: $d-trio;
+
+  @include bp($bp-mobile) {
+    padding: $d-quad;
+  }
+  @include bp($bp-tablet) {
+    padding: $d-oct;
+  }
+}
+
+.faq__question {
+  position: relative;
+  padding-bottom: $d-quad;
+  text-align: center;
+}
+
+.faq__answer {
+  position: relative;
+  padding-bottom: $d-quad;
+}
+
+.faq__footer {
+  justify-content: center;
+}
+
+
+.faq__more {
+  padding-top: $d-duo;
+  text-align: center;
+}
+
+.link-more {
+  @extend .button;
+  @extend .button--secondary;
+  @extend .button--small;
+}
+

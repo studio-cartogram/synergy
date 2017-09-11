@@ -1,0 +1,50 @@
+/* =========================================
+Links/Anchor Component
+========================================= */
+
+a,
+.link {
+  display: inline-block;
+  outline: none;
+  color: inherit;
+  text-decoration: inherit;
+  color: $ca-anchor-color;
+  font-weight: $t-font-weight-regular;
+  transition: all $a-timing $a-easing;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  // .current-menu-item &,
+  &.is-active {
+    color: $ca-anchor-hover-color;
+  }
+
+  // .current-menu-item &,
+  &.is-active {
+    &:focus,
+    &:hover {
+      color: $ca-anchor-color;
+    }
+  }
+}
+
+h2 a,
+.link--primary {
+  color: $ca-anchor-primary-color;
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: $ca-anchor-primary-hover-color;
+  }
+}
+
+.link--secondary {
+  color: $ca-anchor-secondary-color;
+  text-decoration: underline;
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: $ca-anchor-primary-hover-color;
+  }
+}

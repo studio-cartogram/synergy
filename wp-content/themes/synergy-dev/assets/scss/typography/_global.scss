@@ -1,0 +1,91 @@
+/* =========================================
+Basic/Global Typography
+========================================= */
+
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $t-font-family;
+  font-size:14px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &.nav-is-shown {
+    overflow: hidden;
+  }
+
+  @include bp($bp-tablet) {
+  }
+}
+
+.serif {
+  font-family: $t-font-family-serif !important
+}
+
+.mono {
+  font-family: $t-font-family-mono !important
+}
+
+.text--align-left {
+  text-align: left !important;
+}
+
+b,
+strong,
+.font-weight-bold,
+.strong {
+  font-weight: $t-font-weight-bold !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.text--inverted {
+    > *,
+    & {
+      color: $ca-color-inverted;
+    }
+  }
+}
+
+
+.format {
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  li,
+  h6 {
+    @extend .secondary;
+  }
+  a:not(.button) {
+    @extend .link--primary;
+  }
+
+  ol,
+  ul,
+  li {
+    margin: 0;
+    padding:0;
+  }
+
+  li {
+    padding-bottom: $d-duo;
+  }
+
+  hr {
+    margin: 0 0 $d-duo 0;
+    border: 0;
+    border-top: 1px solid $ca-hr-color;
+  }
+}
+
+

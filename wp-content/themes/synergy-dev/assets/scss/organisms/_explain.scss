@@ -1,0 +1,20 @@
+.explain {
+  padding: $d-sex 0 $d-quad;
+  overflow: hidden;
+  @include bp($bp-tablet) {
+    padding: $d-oct $d-duo $d-sex;
+  }
+  @include bp($bp-laptop) {
+    padding: $d-oct $d-oct $d-sex;
+  }
+}
+
+
+.explain h1,
+.explain .badge__content h3 {
+  color: $c-teal;
+}
+
+.explain p.buttons {
+  text-align: center;
+}

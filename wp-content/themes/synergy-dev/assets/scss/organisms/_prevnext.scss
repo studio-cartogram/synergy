@@ -1,0 +1,20 @@
+.prevnext {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.prevnext__link {
+  padding: -0 $d-trio;
+}
+
+.prevnext__link--right {
+}
+
+.prevnext__icon {
+  fill: $ca-icon-search-color;
+  max-width: $d-trio;
+  max-height: $d-trio;
+}

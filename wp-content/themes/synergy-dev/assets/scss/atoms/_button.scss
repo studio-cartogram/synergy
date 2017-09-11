@@ -1,0 +1,77 @@
+/* =========================================
+Button Component
+========================================= */
+
+.button {
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-content: center;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  font-weight: $t-font-weight-bold;
+  border-radius: $b-radius;
+  color: $ca-button-color;
+
+  &:hover {
+  }
+}
+
+.button--primary {
+  padding: $d-base $d-duo;
+  background: $ca-button-primary-background;
+  color: $ca-button-primary-color;
+  box-shadow: 0 2px 20px 0 rgba(35,29,36,0.15);
+
+  &:hover {
+    background: $ca-button-primary-background-hover;
+    color: $ca-button-primary-color;
+    box-shadow: none;
+  }
+
+  &.button--inverted {
+    background: $ca-button-inverted-background;
+    color: $ca-button-inverted-color;
+    &:hover {
+      background: $ca-button-inverted-background-hover;
+    }
+  }
+}
+
+.button--secondary {
+  padding: $d-base $d-duo;
+  background: $ca-button-secondary-background;
+  color: $ca-button-secondary-color;
+  border: 1px solid currentColor;
+
+  &:hover {
+    color: $ca-button-secondary-color-hover;
+  }
+}
+
+.button--circle {
+  border-radius: 50%;
+  height: $d-quin;
+  width: $d-quin;
+  border: $b-default;
+  padding: 0;
+
+  .icon {
+    align-self: center;
+    height: $d-trio;
+    width: $d-trio;
+  }
+}
+
+
+.button--small {
+  padding: 0 $d-duo;
+  font-size: $t-font-size-button-small;
+}
+
+.button--large {
+  padding: $d-duo $d-quad;
+  font-size: $t-font-size-button-large;
+}

@@ -1,0 +1,39 @@
+.testimonials {
+  padding: $d-duo 0 $d-sex;
+}
+
+.testimonial {
+  flex: 0 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: $d-duo;
+  @include bp($bp-tablet) {
+    padding: $d-quin $d-sex;
+  }
+
+  position: relative;
+  &:after {
+    z-index: -1;
+    content: '“';
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: .8;
+    font-size: 300px;
+    font-family: $t-font-family-serif;
+    color: $c-lightestBlue;
+    @include bp($bp-tablet) {
+      font-size: 600px;
+    }
+  }
+}
+
+.testimonial__text {
+  font-family: $t-font-family-serif;
+}
+
+.testimonials {
+  margin: auto;
+}
+
+
