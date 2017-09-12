@@ -1,18 +1,14 @@
 <?php
-
-echo '<section class="searchform">';
-
-  echo '<div class="row row--justify-center">';
-
-    echo '<div class="column column-8-tablet">';
-
-      get_search_form();
-
-    echo '</div>';
-
-  echo '</div>';
-
-echo '</section>';
-
-?>
-
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../synergy-dev/theme/partials/archive-search.php';

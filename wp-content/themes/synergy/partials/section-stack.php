@@ -1,40 +1,14 @@
 <?php
-
-$title = get_sub_field('title');
-$subtitle = get_sub_field('subtitle');
-$type = get_sub_field('type');
-
-echo '<section class="stack">';
-
-  echo '<div class="row">';
-
-    echo '<div class="column intro">';
-
-      echo '<h2>' . $title . '</h2>';
-
-      echo '<p class="secondary">' . $subtitle . '</p>';
-
-    echo '</div>';
-
-  echo '</div>';
-
-  if( have_rows('blocks') ):
-
-    echo '<div class="row">';
-
-      while ( have_rows('blocks') ) : the_row();
-
-        set_query_var( 'type', $type );
-
-        get_template_part('partials/block', $type);
-
-      endwhile;
-
-    echo '</div>';
-
-  endif;
-
-
-echo '</section>';
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../synergy-dev/theme/partials/section-stack.php';

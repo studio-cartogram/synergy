@@ -21,10 +21,10 @@
  */
 
 module.exports = {
-	name: 'fondfolio',
-	prettyName: 'Fondfolio',
-  devUrl: 'fondfolio.dev',
-	description: 'A theme for Fondfolio',
+	name: 'synergy',
+	prettyName: 'Synergy',
+  devUrl: 'synergy.dev',
+	description: 'A theme for Synergy',
 	version: '0.1.0',
 	author: 'Cartogram',
 	authorURI: 'http://cartogram.ca',

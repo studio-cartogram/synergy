@@ -1,16 +1,14 @@
 <?php
-echo '<section class="mast">';
-
-  echo '<div class="row">';
-
-    echo '<div class="column mast__title">';
-
-      echo '<h1 class="">' . (get_search_query() ? 'Search Results for &ldquo;' . get_search_query() . '&rdquo;' : 'How can we help?') . '</h1>';
-
-    echo '</div>';
-
-  echo '</div>';
-
-echo '</section>';
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../synergy-dev/theme/partials/archive-mast.php';
