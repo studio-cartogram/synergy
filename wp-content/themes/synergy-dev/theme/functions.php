@@ -41,6 +41,17 @@
 
       register_post_type( 'faqs', $faqs_args );
 
+      $media_args = array(
+        'public'              => true,
+        'label'               => 'Media',
+        'has_archive'         => true,
+        'rewrite'            => array( 'slug' => 'help' ),
+        'supports'            => array( 'title', 'thumbnail', 'excerpt', 'editor')
+      );
+
+      register_post_type( 'media', $media_args );
+
+
       $staff_args = array(
         'public'              => true,
         'label'               => 'Staff',

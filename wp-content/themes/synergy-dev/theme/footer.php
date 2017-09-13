@@ -34,7 +34,7 @@ echo '<footer class="footer">';
 
         echo ' <em class="dashed serif">&mdash;or&mdash;</em> ';
 
-        echo '<a href="mailto:' . 'hello@fondfolio.com' . '" class="link link--primary">' . 'Send us an email' . '</a>';
+        echo '<a href="mailto:' . 'synergy@synergysportsmedicine.com' . '" class="link link--primary">' . 'Send us an email' . '</a>';
 
         echo '<br>We value your words.';
 
@@ -78,16 +78,6 @@ echo '<footer class="footer">';
   echo '<ul class="mono footer__list list--small list list--narrow">';
 
     wp_nav_menu( $nav_footer );
-
-  echo '</ul>';
-
-  echo '<ul class="mono footer__list list--small list">';
-
-    echo '<li>';
-
-      echo '<span class="secondary ">' . 'Made with love by <a href="http://cartogram.ca">Cartogram</a>' . '</span>';
-
-    echo '</li>';
 
   echo '</ul>';
 
