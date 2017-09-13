@@ -46,10 +46,41 @@
         'label'               => 'Staff',
         'has_archive'         => true,
         'rewrite'            => array( 'slug' => 'staff' ),
-        'supports'            => array( 'title', 'excerpt', 'editor')
+        'supports'            => array( 'title', 'thumbnail', 'revisions', 'excerpt', 'editor')
       );
 
       register_post_type( 'staff', $staff_args );
+
+      $services_args = array(
+        'public'              => true,
+        'label'               => 'Services',
+        'has_archive'         => true,
+        'hierarchical'        => true,
+        'rewrite'            => array( 'slug' => 'services' ),
+        'supports'            => array( 'title', 'revisions', 'page-attributes', 'thumbnail', 'excerpt', 'editor')
+      );
+
+      register_post_type( 'services', $services_args );
+
+      $testimonials_args = array(
+        'public'              => true,
+        'label'               => 'Testimonials',
+        'has_archive'         => true,
+        'rewrite'            => array( 'slug' => 'testimonials' ),
+        'supports'            => array( 'title', 'excerpt', 'editor')
+      );
+
+      register_post_type( 'testimonials', $testimonials_args );
+
+      $fees_args = array(
+        'public'              => true,
+        'label'               => 'Fees & Policies',
+        'has_archive'         => true,
+        'rewrite'            => array( 'slug' => 'fees' ),
+        'supports'            => array( 'title', 'excerpt', 'editor')
+      );
+
+      register_post_type( 'fees', $fees_args );
 
       flush_rewrite_rules( false );
 
@@ -88,6 +119,58 @@
 
       register_taxonomy( 'topic', array('faqs'), $args );
 
+      $labels = array(
+        'name'                       => _x( 'Category', 'taxonomy general name' ),
+        'singular_name'              => _x( 'Category', 'taxonomy singular name' ),
+        'search_items'               => __( 'Search Categories' ),
+        'popular_items'              => __( 'Popular Categories' ),
+        'all_items'                  => __( 'All Categories' ),
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'edit_item'                  => __( 'Edit Category' ),
+        'update_item'                => __( 'Update Category' ),
+        'add_new_item'               => __( 'Add New Category' ),
+        'new_item_name'              => __( 'New Category Name' ),
+        'separate_items_with_commas' => __( 'Separate Category with commas' ),
+        'add_or_remove_items'        => __( 'Add or remove Category' ),
+        'choose_from_most_used'      => __( 'Choose from the most used Category' ),
+        'not_found'                  => __( 'No Categories found.' ),
+        'menu_name'                  => __( 'Categories' ),
+      );
+
+      $args = array(
+        'exclude_from_search' => false,
+        'labels'              => $labels,
+      );
+
+      register_taxonomy( 'categories', array('staff'), $args );
+
+      $labels = array(
+        'name'                       => _x( 'Tags', 'taxonomy general name' ),
+        'singular_name'              => _x( 'Tags', 'taxonomy singular name' ),
+        'search_items'               => __( 'Search Tagss' ),
+        'popular_items'              => __( 'Popular Tags' ),
+        'all_items'                  => __( 'All Tagss' ),
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'edit_item'                  => __( 'Edit Tags' ),
+        'update_item'                => __( 'Update Tags' ),
+        'add_new_item'               => __( 'Add New Tags' ),
+        'new_item_name'              => __( 'New Tags Name' ),
+        'separate_items_with_commas' => __( 'Separate tags with commas' ),
+        'add_or_remove_items'        => __( 'Add or remove Tags' ),
+        'choose_from_most_used'      => __( 'Choose from the most used tags' ),
+        'not_found'                  => __( 'No Tags found.' ),
+        'menu_name'                  => __( 'Tags' ),
+      );
+
+      $args = array(
+        'exclude_from_search' => false,
+        'labels'              => $labels,
+      );
+
+      register_taxonomy( 'tags', array('services'), $args );
+
       flush_rewrite_rules( false );
 
     }
@@ -102,9 +185,7 @@
 
   if( function_exists('acf_add_options_page') ) {
 
-        acf_add_options_page('Footer');
-        acf_add_options_page('Homepage');
-
+        acf_add_options_page('Contact');
   }
 
 	/* ========================================================================================================================
