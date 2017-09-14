@@ -1,14 +1,13 @@
 <?php
-/**
- *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../synergy-dev/theme/partials/loop-sections.php';
+
+if( have_rows('sections', 'options') ):
+
+    while ( have_rows('sections') ) : the_row();
+		
+        get_template_part('partials/section', get_row_layout());
+
+    endwhile;
+
+endif;
+
+?>

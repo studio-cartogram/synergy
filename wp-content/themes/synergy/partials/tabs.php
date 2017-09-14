@@ -1,14 +1,19 @@
 <?php
-/**
- *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../synergy-dev/theme/partials/tabs.php';
+
+$nav_tabs = array(
+  'theme_location'  => 'nav_tabs',
+  'container'       => false,
+  'items_wrap'      => '%3$s',
+);
+
+echo '<nav class="tabs">';
+
+  echo '<ul class="tabs__nav">';
+
+    wp_nav_menu( $nav_tabs );
+
+  echo '</ul>';
+
+echo '</nav>';
+
+?>

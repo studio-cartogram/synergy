@@ -43,7 +43,7 @@
 
       $media_args = array(
         'public'              => true,
-        'label'               => 'Media',
+        'label'               => 'Press',
         'has_archive'         => true,
         'rewrite'            => array( 'slug' => 'help' ),
         'supports'            => array( 'title', 'thumbnail', 'excerpt', 'editor')

@@ -1,15 +1,33 @@
 <?php
 /**
- *  Template Name: Landing
+ * Template Name: Landing
  *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../synergy-dev/theme/page-landing.php';
+*/
+
+get_template_part('partials/head');
+
+get_template_part('partials/analytics');
+
+get_header();
+
+get_template_part('partials/nav');
+
+echo '<main id="main" role="main" class="main">';
+
+echo '<div id="barba-wrapper">';
+
+  echo '<div class="barba-container" data-namespace="landing">';
+
+  get_template_part('partials/loop-sections');
+
+  echo '</div>';
+
+echo '</div>';
+
+echo '</main>';
+
+get_footer();
+
+get_template_part('partials/curtain');
+
+get_template_part('partials/foot');
