@@ -83,6 +83,16 @@
 
       register_post_type( 'testimonials', $testimonials_args );
 
+      $locations_args = array(
+        'public'              => true,
+        'label'               => 'Locations',
+        'has_archive'         => true,
+        'rewrite'            => array( 'slug' => 'locations' ),
+        'supports'            => array( 'title', 'excerpt', 'editor')
+      );
+
+      register_post_type( 'locations', $locations_args );
+
       $fees_args = array(
         'public'              => true,
         'label'               => 'Fees & Policies',

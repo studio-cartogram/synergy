@@ -3,12 +3,11 @@
 $title = get_sub_field('title');
 $description = get_sub_field('description');
 $subtitle = get_sub_field('subtitle');
-$button_text = get_sub_field('button_text');
-$button_link = get_sub_field('button_link');
+$link_text = get_sub_field('link_text');
+$link = get_sub_field('link');
 $image = get_sub_field('image');
 $size = 'full';
-$video = get_sub_field('video');
-$type = get_sub_field('type');
+$orientation = get_sub_field('orientation');
 
 echo '<section class="banner">';
 
@@ -26,11 +25,17 @@ echo '<section class="banner">';
 
       echo '<h1 class="">' . $title . '</h1>';
 
+      echo '<h2 class="">' . $subtitle . '</h2>';
+
+      if ($description) :
+
       echo '<p class="p--large">' . $description . '</p>';
 
-      if ($button_link && $button_text) :
+      endif;
 
-      echo '<a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a>';
+      if ($link && $link_text) :
+
+      echo '<a href="' . $link .'" class="link link--primary link--large">' . $link_text . '</a>';
 
       endif;
 
@@ -38,13 +43,9 @@ echo '<section class="banner">';
 
    echo '</div>';
 
-  if( $video ) :
+  if( $image ) :
 
-    echo 'Put the video in the background';
-
-  else :
-
-    echo '<div class="banner__image">';
+    echo '<div class="content__image">';
 
     echo wp_get_attachment_image( $image, $size );
 

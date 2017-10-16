@@ -4,7 +4,7 @@ $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $type = get_sub_field('type');
 
-echo '<section class="stack">';
+echo '<section class="grid">';
 
   echo '<div class="row">';
 

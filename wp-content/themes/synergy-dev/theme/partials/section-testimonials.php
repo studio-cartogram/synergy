@@ -1,7 +1,8 @@
 <?php
 
 $section = 'testimonials';
-$divider_text = get_sub_field('divider_text');
+$client = get_sub_field('client');
+$related_services = get_sub_field('related_services');
 
 
 echo '<section class="' . $section . '">';
@@ -12,7 +13,7 @@ echo '<section class="' . $section . '">';
 
         echo '<div class="blocks__title">';
 
-          echo '<h6 class="with-line secondary serif"><em>' . $divider_text . '</em></h6>';
+          echo '<h6 class="with-line secondary serif"><em>' . $client . '</em></h6>';
 
         echo '</div>';
 
