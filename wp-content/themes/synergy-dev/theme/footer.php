@@ -46,7 +46,7 @@ echo '<footer class="footer">';
     
       get_template_part('partials/contact-hours');
 
-      get_template_part('partials/contact-notes-contact');
+      get_template_part('partials/contact-notes');
 
       get_template_part('partials/contact-notes-location');
 
