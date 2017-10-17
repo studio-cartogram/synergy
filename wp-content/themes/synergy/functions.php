@@ -99,7 +99,6 @@
 
   }
 
-
   if ( ! function_exists( 'create_taxonimies' ) ) {
 
     function create_taxonomies() {
