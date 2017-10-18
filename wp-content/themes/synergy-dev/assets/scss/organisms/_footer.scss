@@ -3,7 +3,7 @@ Footer Component
 ========================================= */
 
 .footer {
-  padding: $d-quin 0;
+  padding: $d-quin 0 $d-base 0;
   position: relative;
   transition: all $a-timing * 2 $a-easing;
   background-color: $ca-footer-background;
@@ -73,6 +73,15 @@ Footer Component
   }
 
   .location {
+    padding-bottom: $d-duo;
+  }
+
+  .footer__section {
+    border-top: $b-footer;
+    padding-top: $d-trio;
+  }
+
+  .email {
     padding-bottom: $d-duo;
   }
 

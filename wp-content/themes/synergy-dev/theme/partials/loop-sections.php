@@ -10,7 +10,7 @@ echo '<section class="title">';
 
       echo the_title( '<h1>', '</h1>' );
 
-      echo '<h2 class="">' . $subtitle . '</h2>';
+      echo '<h2 class="secondary">' . $subtitle . '</h2>';
 
     echo '</div>';
 

@@ -25,7 +25,7 @@ echo '<section class="banner">';
 
       echo '<h1 class="">' . $title . '</h1>';
 
-      echo '<h2 class="">' . $subtitle . '</h2>';
+      echo '<h2 class="secondary">' . $subtitle . '</h2>';
 
       if ($description) :
 

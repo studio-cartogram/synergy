@@ -2,8 +2,6 @@
 
 if( have_rows('locations', 'options') ):
 
-  echo '<div class="locations column column-8-laptop">';
-
     while ( have_rows('locations', 'options') ) : the_row();
 
       $name = get_sub_field('name');
@@ -15,21 +13,27 @@ if( have_rows('locations', 'options') ):
       $note = get_sub_field('note');
       $image = get_sub_field('image');
     
-      echo '<div class="column location">';
+      echo '<div class="footer__right column column-3-tablet ">';
         
         echo '<h3>' . $name . '</h3>';
 
         echo '<p class="address">' . $address . ' <a class="underline" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
 
-        echo '<p class="address">' . $phone . '</p>';
+        if( $phone ):
 
-        echo '<p class="address">' . $fax . '</p>';
+          echo '<p class="address">Phone: ' . $phone . '</p>';
+
+        endif;
+
+        if( $fax ):
+
+          echo '<p class="address">Fax: ' . $fax . '</p>';
+
+        endif;
     
       echo '</div>';
 
     endwhile;
-
-  echo '</div>';
 
 endif;
 

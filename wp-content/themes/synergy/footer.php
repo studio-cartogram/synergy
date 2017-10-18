@@ -26,7 +26,7 @@ echo '<footer class="footer">';
 
     echo '<div class="footer__left column column-6-tablet ">';
     
-      echo '<a href="' . $classes . '" class="link link--primary">' . 'Class schedules' . '</a>';
+      echo '<a href="' . $classes . '" class="link link--primary underline">' . 'Class schedules' . '</a>';
       
       echo '<a href="#" class="button button--primary">' . 'Book an appointment' . '</a>';
 
@@ -36,11 +36,7 @@ echo '<footer class="footer">';
 
   echo '<div class="row footer__inner">';
 
-    echo '<div class="footer__right column column-6-tablet ">';
-
-      get_template_part('partials/contact-locations');
-
-    echo '</div>';
+    get_template_part('partials/contact-locations');
 
     echo '<div class="footer__right footer__left column column-6-tablet ">';
     
@@ -63,6 +59,8 @@ echo '<footer class="footer">';
     echo '</div>';
 
     echo '<div class="footer__right column column-3-tablet ">';
+
+      echo '<h3>Social</h3>';
     
       echo '<ul class="footer__list list list--small">';
       
@@ -101,7 +99,7 @@ echo '<footer class="footer">';
 
   echo '</div>';
 
-  echo '<div class="row footer__inner">';
+  echo '<div class="row footer__inner footer__section">';
 
     echo '<div class="column footer__right column-6-tablet">';
 
