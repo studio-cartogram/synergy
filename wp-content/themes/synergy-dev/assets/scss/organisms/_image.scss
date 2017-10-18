@@ -9,8 +9,7 @@
 
 .image__content {
   padding: $d-quad $d-quad $d-duo;
-  background: $ca-image-content-background;
-
+  
   @include bp($bp-tablet) {
     padding: $d-oct;
   }

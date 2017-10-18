@@ -18,13 +18,13 @@ echo '<footer class="footer">';
 
   echo '<div class="row footer__inner">';
 
-    echo '<div class="column_left column-6-tablet ">';
+    echo '<div class="footer__right column column-6-tablet ">';
 
       echo '<h1>Contact us</h1>';
 
     echo '</div>';
 
-    echo '<div class="column_right column-6-tablet ">';
+    echo '<div class="footer__left column column-6-tablet ">';
     
       echo '<a href="' . $classes . '" class="link link--primary">' . 'Class schedules' . '</a>';
       
@@ -36,13 +36,13 @@ echo '<footer class="footer">';
 
   echo '<div class="row footer__inner">';
 
-    echo '<div class="footer__left column column-6-tablet ">';
+    echo '<div class="footer__right column column-6-tablet ">';
 
       get_template_part('partials/contact-locations');
 
     echo '</div>';
 
-    echo '<div class="footer__left column column-6-tablet ">';
+    echo '<div class="footer__right footer__left column column-6-tablet ">';
     
       get_template_part('partials/contact-hours');
 
@@ -62,7 +62,7 @@ echo '<footer class="footer">';
   
     echo '</div>';
 
-    echo '<div class="footer__left column column-3-tablet ">';
+    echo '<div class="footer__right column column-3-tablet ">';
     
       echo '<ul class="footer__list list list--small">';
       
@@ -91,7 +91,7 @@ echo '<footer class="footer">';
     
     echo '</div>';
 
-    echo '<div class="footer__right column column-6-tablet">';
+    echo '<div class="footer__left column column-6-tablet">';
     
       echo '<h3 class="">Newsletter</h3>';
 
@@ -103,9 +103,9 @@ echo '<footer class="footer">';
 
   echo '<div class="row footer__inner">';
 
-    echo '<div class="footer__right column column-6-tablet">';
+    echo '<div class="column footer__right column-6-tablet">';
 
-      echo '<ul class="list--small list">';
+      echo '<ul class="list--small list footer__list">';
 
         wp_nav_menu( $nav_footer );
 
@@ -115,15 +115,7 @@ echo '<footer class="footer">';
 
     echo '<div class="footer__left column column-6-tablet">';
 
-      echo '<ul class="list--small list">';
-      
-        echo '<li>';
-
-          echo '<span class="secondary ">' . $copyright . '</span>';
-
-        echo '</li>';
-      
-      echo '</ul>';
+      echo '<p class="secondary note">' . $copyright . '</p>';
       
     echo '</div>';
 

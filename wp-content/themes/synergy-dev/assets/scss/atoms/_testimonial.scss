@@ -20,16 +20,10 @@
     left: 0;
     line-height: .8;
     font-size: 300px;
-    font-family: $t-font-family-serif;
-    color: $c-lightestBlue;
     @include bp($bp-tablet) {
       font-size: 600px;
     }
   }
-}
-
-.testimonial__text {
-  font-family: $t-font-family-serif;
 }
 
 .testimonials {

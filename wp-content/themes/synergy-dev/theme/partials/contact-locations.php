@@ -17,15 +17,13 @@ if( have_rows('locations', 'options') ):
     
       echo '<div class="column location">';
         
-        echo '<h3 class="">' . $name . '</h3>';
+        echo '<h3>' . $name . '</h3>';
 
-        echo '<p class="">' . $address . '</p>';
+        echo '<p class="address">' . $address . ' <a class="underline" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
 
-        echo '<a href="' . $directions . '" class="link link--primary">' . 'View map' . '</a>';
+        echo '<p class="address">' . $phone . '</p>';
 
-        echo '<p class="">' . $phone . '</p>';
-
-        echo '<p class="">' . $fax . '</p>';
+        echo '<p class="address">' . $fax . '</p>';
     
       echo '</div>';
 

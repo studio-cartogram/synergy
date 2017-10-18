@@ -4,7 +4,7 @@ if( have_rows('emails', 'options') ):
 
   echo '<h3 class="">Emails</h3>';
   
-  echo '<ul class="emails column column-8-laptop">';
+  echo '<ul class="list emails column column-8-laptop">';
 
   while ( have_rows('emails', 'options') ) : the_row();
 

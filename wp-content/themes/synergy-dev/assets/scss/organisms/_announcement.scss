@@ -1,4 +1,4 @@
-.note {
+.announcement {
   background: white;
   text-align: center;
   width: 100%;
@@ -7,9 +7,9 @@
   left: 0;
   right: 0;
   z-index: 10;
-  background: $c-lightestYellow;
-  border-top: 1px solid $c-lightestGrey;
-  box-shadow: 0 -4px 4px rgba($c-grey, 0.05);
+  background: $c-yellowLightest;
+  border-top: 1px solid $c-sky;
+  box-shadow: 0 -4px 4px rgba($c-inkLighter, 0.05);
   &,
   > * {
     height: $d-note-height-mobile;

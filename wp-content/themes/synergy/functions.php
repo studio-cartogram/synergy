@@ -287,7 +287,7 @@
 
 	function cartogram_fonts() {
 
-    $output = '<link href="https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,400i,700|Lora:400,400i,700,700i" rel="stylesheet" />';
+    $output = '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">';
 		echo $output;
 
   }

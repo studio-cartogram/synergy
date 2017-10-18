@@ -50,7 +50,6 @@
 
 .block__inverted {
   text-align: center;
-  color: $ca-block-color;
   padding: $d-duo;
   @include bp($bp-mobile) {
     padding: $d-quad;
@@ -63,12 +62,3 @@
     transform: translate3d($d-base, $d-base, 0);
   }
 }
-
-
-.block__icon {
-  max-width: $d-sep;
-  max-height: $d-sep;
-  margin: $d-duo;
-  fill: $ca-icon-block-color;
-}
-

@@ -10,7 +10,7 @@ Grid Component
 
 .row {
   max-width: $d-container-max;
-  margin: 0 auto;
+  margin: 0;
   display:flex;
   flex-wrap: wrap;
 }

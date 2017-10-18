@@ -6,7 +6,7 @@ if( have_rows('notes', 'options') ):
 
     $note = get_sub_field('note');   
 
-    echo '<p class="contact">' . $note . '</p>';
+    echo '<p class="note contact">' . $note . '</p>';
   
   endwhile;
 

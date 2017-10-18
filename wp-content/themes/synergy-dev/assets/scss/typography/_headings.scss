@@ -10,7 +10,7 @@ h5,
 h6 {
   text-rendering: optimizeLegibility;
   color: $ca-heading-color;
-  font-weight: $t-font-weight-bold;
+  font-weight: $t-font-weight-regular;
   margin: 0;
   padding-bottom: $d-duo;
   &.primary {
@@ -25,7 +25,6 @@ h6 {
 }
 
 h1 {
-  font-family: $t-font-family-serif;
   font-size: $t-font-size-alpha-mobile;
   font-weight: $t-font-weight-regular;
   @include bp($bp-tablet) {
@@ -34,14 +33,12 @@ h1 {
 }
 
 h2 {
-  font-family: $t-font-family-serif;
   font-size: $t-font-size-beta-mobile;
   font-weight: $t-font-weight-regular;
   @include bp($bp-tablet) {
     font-size: $t-font-size-beta;
   }
 }
-
 
 h3 {
   font-size: $t-font-size-gamma;
@@ -58,7 +55,6 @@ h5 {
 
 h6 {
   font-size: $t-font-size-zeta;
-  font-family: $t-font-family-serif;
 }
 
 .alpha {

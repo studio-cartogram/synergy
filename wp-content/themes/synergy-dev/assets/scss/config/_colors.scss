@@ -12,23 +12,28 @@ Color Index
  * index
  */
 
-$c-teal: #7CADD3;
-$c-lightTeal: #83E6EB;
-$c-darkTeal: #00575c;
-$c-lightestTeal: #EBFFFF;
-$c-black: #231D24;
+$c-blue: #7CADD3;
+$c-blueLight: #B4CCE4;
+$c-blueDark: #366F99;
+$c-blueLightest: #E6EDF6;
+$c-blueDarkest: #003B70;
+$c-ink: #212B36;
+$c-inkLight: #454F5B;
+$c-inkLighter: #637381;
+$c-inkLightest: #919EAB;
+$c-sky: #DFE3E8;
+$c-skyLight: #F4F6F8;
+$c-skyDark: #C4CDD5;
+$c-skyLighter: #F9FAFB;
 $c-white: #FFFFFF;
-$c-grey: #7E7A7E;
-$c-lightGrey: #D5D0D4;
-$c-lightestGrey: #F5F5F5;
-$c-green: #0EC8A9;
-$c-lightestGreen: #EEFBF8;
-$c-yellow: #F8D04D;
-$c-lightestYellow: #fdfcf6;
-$c-red: #EE5E5E;
-$c-lightestRed: #FDEEEE;
-$c-blue: #3FC5D9;
-$c-lightestBlue: #EEFBFD;
+$c-green: #50B83C;
+$c-greenLightest: #E3F1DF;
+$c-yellow: #FDE61C;
+$c-yellowLightest: #FFFACF;
+$c-orange: #F49342;
+$c-orangeLightest: #FCEBDB;
+$c-red: #ED6347;
+$c-redLightest: #FBEAE5;
 
 /* =========================================
 Colors Applied
@@ -44,75 +49,60 @@ Colors Applied
  * of the sass code
  */
 
-$ca-hamburger-line-background: $c-white;
-$ca-carousel-background: $c-black;
 $ca-site-background: $c-white;
 $ca-mast-background: $c-white;
 
-$ca-gallery-background: $c-lightestGrey;
+$ca-footer-background: $c-blueDarkest;
+
 $ca-color-inverted: $c-white;
+
+$ca-border-default: $c-sky;
+$ca-hr-color: $c-sky;
 
 // Buttons
 $ca-button-inverted-background: $c-white;
 $ca-button-inverted-background-hover: rgba(255, 255, 255, 0.95);
-$ca-button-inverted-color: $c-teal;
+$ca-button-inverted-color: $c-blue;
 
-$ca-button-primary-background: $c-teal;
-$ca-button-primary-background-hover: $c-darkTeal;
-$ca-button-color: $c-teal;
+$ca-button-primary-background: $c-blue;
+$ca-button-primary-background-hover: $c-blueDark;
+$ca-button-color: $c-blue;
 $ca-button-primary-color: $c-white;
 $ca-button-secondary-background: $c-white;
-$ca-button-secondary-color: $c-teal;
-$ca-button-secondary-color-hover: $c-darkTeal;
-
-$ca-header-background: transparent;
-$ca-border-default: $c-lightestGrey;
-$ca-nav-background: $c-lightestYellow;
-$ca-curtain-background: $c-white;
-$ca-list-color: $c-grey;
-
-$ca-anchor-color: $c-grey;
-$ca-anchor-hover-color: $c-teal;
-
-$ca-anchor-primary-color: $c-teal;
-$ca-anchor-primary-hover-color: $c-grey;
-$ca-anchor-secondary-color: $c-grey;
-$ca-anchor-secondary-hover-color: $c-grey;
-
-$ca-logo-color: $c-teal;
-
-$ca-icon-badge-color: $c-teal;
-$ca-block-color: $c-teal;
-$ca-icon-block-color: $c-teal;
-
-$ca-paragraph-color: $c-black;
-$ca-paragraph-secondary-color: $c-grey;
-$ca-hr-color: $c-lightGrey;
-
-$ca-heading-color: $c-black;
-$ca-heading-secondary-color: $c-grey;
-$ca-heading-primary-color: $c-teal;
-
-$ca-spinner-color: $c-white;
-$ca-overlay-background: $c-black;
-
-$ca-tabs-background: $c-white;
-$ca-tab-line-color: $c-teal;
-
-$ca-faq-border-color: $c-lightestGrey;
-$ca-blockquote-color: $c-teal;
-
-$ca-icon-newsletter-color: $c-lightGrey;
-$ca-icon-newsletter-color-hover: $c-teal;
-$ca-searchform-background: $c-white;
-$ca-icon-search-color: $c-lightGrey;
-$ca-input-background: $c-white;
-$ca-input-border-color: $c-lightGrey;
-$ca-input-focus-border-color: $c-lightTeal;
-
+$ca-button-secondary-color: $c-blueDark;
+$ca-button-secondary-color-hover: $c-blueDarkest;
 
 // Sections
-$ca-image-content-background: $c-lightestYellow;
-$ca-badge-title-color: $c-teal;
-$ca-cta-background-gradient: linear-gradient(-137deg, #02858A 0%, #50ABAD 100%);
+$ca-notification-background: $c-yellowLightest;
+$ca-overlay-background: $c-sky;
 
+//Typography
+$ca-heading-color: $c-blueDarkest;
+$ca-heading-primary-color: $c-blueDarkest;
+$ca-heading-secondary-color: $c-inkLighter;
+
+$ca-footer-text-color: $c-white;
+$ca-footer-heading-color: $c-blue;
+$ca-footer-note-color: $c-blueLight;
+
+$ca-paragraph-color: $c-ink;
+$ca-paragraph-secondary-color: $c-inkLighter;
+
+$ca-accent-color: $c-blue;
+$ca-blockquote-color: $c-blueDark;
+
+$ca-anchor-primary-color: $c-blueDark;
+$ca-anchor-primary-hover-color: $c-blueDarkest;
+$ca-anchor-color: $c-blueDark;
+$ca-anchor-hover-color: $c-blueDarkest;
+$ca-anchor-secondary-color: $c-inkLighter;
+$ca-anchor-secondary-hover-color: $c-inkLight;
+
+//Atoms
+$ca-logo-color: $c-blue;
+$ca-spinner-color: $c-blue;
+$ca-footer-icon-color: $c-white;
+
+$ca-input-border-color: $c-sky;
+$ca-input-focus-border-color: $c-skyDark;
+$ca-input-background: $c-white;

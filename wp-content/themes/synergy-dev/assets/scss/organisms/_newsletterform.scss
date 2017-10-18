@@ -49,19 +49,6 @@
   position: relative;
   transform: translate(-100%, 0);
 
-  .newsletterform__icon {
-    fill: $ca-icon-newsletter-color;
-    max-width: $d-trio;
-    max-height: $d-trio;
-    transition: all $a-timing $a-easing;
-  }
-
-  &:hover,
-  &:focus {
-    .newsletterform__icon {
-      fill: $ca-icon-newsletter-color-hover
-    }
-  }
 }
 
 .newsletterform__input {

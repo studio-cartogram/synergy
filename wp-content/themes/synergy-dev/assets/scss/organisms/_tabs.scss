@@ -1,7 +1,5 @@
 .tabs {
   padding: $d-quad $d-quad 0;
-  background: $ca-tabs-background;
-  border-bottom: 1px solid $c-lightestGrey;
   justify-content: center;
   display:flex;
   overflow-x: auto;
@@ -38,7 +36,6 @@
       right: 0;
       bottom: 0;
       height: 2px;
-      background: $ca-tab-line-color;
       position: absolute;
       display: block;
       transform-origin: 0 0;

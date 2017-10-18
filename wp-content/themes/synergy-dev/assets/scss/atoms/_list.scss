@@ -13,10 +13,10 @@ List Component
   flex-direction: row;
   display: flex;
 
-  li {
-    color: $ca-list-color;
-  }
+}
 
+.list-item--top, .list-item--bottom {
+  width: 50%;
 }
 
 .list--small {
@@ -74,7 +74,6 @@ List Component
     content: '/ ';
     padding-left: 1px;
     padding-right: 1px;
-    color: $c-lightGrey;
   }
   li:last-child:after {
     content: '';

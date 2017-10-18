@@ -8,7 +8,7 @@ if( have_rows('locations', 'options') ):
 
     if( $note ):
 
-      echo '<p class="location">' . $note . '</p>';
+      echo '<p class="note location">' . $note . '</p>';
 
     endif;
   

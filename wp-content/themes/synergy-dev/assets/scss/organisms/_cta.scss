@@ -1,7 +1,6 @@
 .cta {
   overflow: hidden;
   padding: $d-sex 0 $d-quad;
-  background-image: $ca-cta-background-gradient;
   @include bp($bp-tablet) {
     padding: $d-oct $d-quad $d-sex;
   }
@@ -9,7 +8,6 @@
     padding: $d-oct $d-dec $d-sex;
   }
 }
-
 
 .cta__button {
   padding: $d-duo;
