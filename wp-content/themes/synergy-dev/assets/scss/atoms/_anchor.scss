@@ -50,5 +50,22 @@ h2 a,
 }
 
 .underline {
-  border-bottom: $b-anchor;
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $ca-border-anchor;
+    transition: width 0.175s ease-in;
+  }
+
+  &:hover {
+    color: $ca-anchor-hover;
+  }
+
+  &:hover::after {
+    width: 0%;
+  }
 }
