@@ -17,17 +17,17 @@ if( have_rows('locations', 'options') ):
         
         echo '<h3>' . $name . '</h3>';
 
-        echo '<p class="address">' . $address . ' <a class="underline" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
+        echo '<p class="address">' . $address . '<br><a class="underline" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
 
         if( $phone ):
 
-          echo '<p class="address">Phone: ' . $phone . '</p>';
+          echo '<p class="address">Phone:<br>' . $phone . '</p>';
 
         endif;
 
         if( $fax ):
 
-          echo '<p class="address">Fax: ' . $fax . '</p>';
+          echo '<p class="address">Fax:<br>' . $fax . '</p>';
 
         endif;
     

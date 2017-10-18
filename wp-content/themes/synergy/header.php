@@ -15,46 +15,52 @@ $nav_primary_left = array(
 
 echo '<header role="banner" class="js-header header">';
 
-  echo '<a href="' . get_bloginfo('url') . '" class="header__logo logo">';
+  get_template_part('partials/contact-announcement');
 
-  echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
+  echo '<div class="row row--justify-center">';
 
-    echo '<span class="logo__icon">';
+    echo '<a href="' . get_bloginfo('url') . '" class="header__logo logo">';
 
-      set_query_var( 'icon', 'logo-icon' );
+    echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
 
-      get_template_part('partials/icon');
+      echo '<span class="logo__icon">';
 
-    echo '</span>';
+        set_query_var( 'icon', 'logo-icon' );
 
-    echo '<span class="logo logo__word">';
+        get_template_part('partials/icon');
 
-      set_query_var( 'icon', 'logo' );
+      echo '</span>';
 
-      get_template_part('partials/icon');
+      echo '<span class="logo logo__word">';
 
-    echo '</span>';
+        set_query_var( 'icon', 'logo' );
 
-  echo '</a>';
+        get_template_part('partials/icon');
 
-  echo '<div class="header__group ">';
+      echo '</span>';
 
-    echo '<ul class="header__nav list list--right ">';
+    echo '</a>';
 
-      wp_nav_menu( $nav_primary_left );
+    echo '<div class="header__group ">';
 
-    echo '</ul>';
+      echo '<ul class="header__nav list list--right ">';
 
-  echo '</div>';
+        wp_nav_menu( $nav_primary_left );
 
-  echo '<div class="header__group header__group--right">';
+      echo '</ul>';
 
-    echo '<ul class="header__nav list--sep-slash list list--right ">';
+    echo '</div>';
 
-      wp_nav_menu( $nav_primary_right );
+    echo '<div class="header__group header__group--right">';
 
-    echo '</ul>';
+      echo '<ul class="header__nav list--sep-slash list list--right ">';
 
+        wp_nav_menu( $nav_primary_right );
+
+      echo '</ul>';
+
+    echo '</div>';
+  
   echo '</div>';
 
 echo '</header>';
