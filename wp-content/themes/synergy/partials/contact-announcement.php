@@ -4,11 +4,11 @@ $announcement = get_field('announcement', 'options');
 
 if( $announcement ):
 
-  echo '<div class="row row--justify-center">';
+  echo '<section class="announcement">';
 
-    echo '<p class="annoucement">' . $announcement . '</p>';
+    echo '<p>' . $announcement . '</p>';
   
-  echo '</div>';
+  echo '</section>';
 
 endif;
 
