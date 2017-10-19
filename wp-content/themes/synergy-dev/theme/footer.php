@@ -63,27 +63,39 @@ echo '<footer class="footer">';
       echo '<h3>Social</h3>';
     
       echo '<ul class="footer__list list list--small">';
+
+        if( $instagram ):
+
+          echo '<li><a class="button button--circle" href="' . $instagram . '">';
       
-        echo '<li><a class="button button--circle" href="' . $instagram . '">';
+            set_query_var( 'icon', 'instagram' );
+            get_template_part('partials/icon');
+      
+          echo '</a></li>';
+
+        endif;
+
+        if( $twitter ):
     
-          set_query_var( 'icon', 'instagram' );
-          get_template_part('partials/icon');
+          echo '<li><a class="button button--circle" href="' . $twitter . '">';
+      
+            set_query_var( 'icon', 'twitter' );
+            get_template_part('partials/icon');
+      
+          echo '</a></li>';
+        
+        endif;
+
+        if( $facebook ):
     
-        echo '</a></li>';
-    
-        echo '<li><a class="button button--circle" href="' . $twitter . '">';
-    
-          set_query_var( 'icon', 'twitter' );
-          get_template_part('partials/icon');
-    
-        echo '</a></li>';
-    
-        echo '<li><a class="button button--circle" href="' . $facebook . '">';
-    
-          set_query_var( 'icon', 'facebook' );
-          get_template_part('partials/icon');
-    
-        echo '</a></li>';
+          echo '<li><a class="button button--circle" href="' . $facebook . '">';
+      
+            set_query_var( 'icon', 'facebook' );
+            get_template_part('partials/icon');
+      
+          echo '</a></li>';
+
+        endif;
       
       echo '</ul>';
     
