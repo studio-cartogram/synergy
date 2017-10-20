@@ -31,8 +31,12 @@ Footer Component
   }
 
   .footer__icon {
-    padding: $d-quin 0;
     color: $ca-footer-icon-color;
+  }
+
+  .action {
+    text-align: left;
+    margin-left: $d-trio;
   }
 
   .footer__inner {
@@ -70,6 +74,10 @@ Footer Component
 
   .hours {
     padding-bottom: $d-trio;
+  }
+
+  .hour {
+    align-content: space-between;
   }
 
   .location {

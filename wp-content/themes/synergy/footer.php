@@ -18,17 +18,17 @@ echo '<footer class="footer">';
 
   echo '<div class="row footer__inner">';
 
-    echo '<div class="footer__right column column-6-tablet ">';
+    echo '<div class="footer__right column column-6-tablet">';
 
       echo '<h1>Contact us</h1>';
 
     echo '</div>';
 
-    echo '<div class="footer__left column column-6-tablet ">';
+    echo '<div class="footer__left column column-6-tablet align-right">';
     
-      echo '<a href="' . $classes . '" class="link link--primary underline">' . 'Class schedules' . '</a>';
+      echo '<a href="' . $classes . '" class="link link--primary underline action">' . 'Class schedules' . '</a>';
       
-      echo '<a href="#" class="button button--primary">' . 'Book an appointment' . '</a>';
+      echo '<a href="#" class="button button--primary action">' . 'Book an appointment' . '</a>';
 
     echo '</div>';
 

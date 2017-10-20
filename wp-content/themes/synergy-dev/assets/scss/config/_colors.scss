@@ -15,6 +15,7 @@ Color Index
 $c-blue: #7CADD3;
 $c-blueLight: #B4CCE4;
 $c-blueDark: #366F99;
+$c-blueDarker: #14517E;
 $c-blueLightest: #E6EDF6;
 $c-blueDarkest: #003B70;
 $c-ink: #212B36;
@@ -61,14 +62,17 @@ $ca-border-footer: $c-blueDark;
 $ca-hr-color: $c-sky;
 
 // Buttons
+$ca-button-color: $c-blue;
+
 $ca-button-inverted-background: $c-white;
 $ca-button-inverted-background-hover: rgba(255, 255, 255, 0.95);
 $ca-button-inverted-color: $c-blue;
 
-$ca-button-primary-background: $c-blue;
+$ca-button-primary-background-gradient: linear-gradient(-180deg, $c-blueDark 0%, $c-blueDarker 100%);
+$ca-button-primary-border: $c-blueDarkest;
 $ca-button-primary-background-hover: $c-blueDark;
-$ca-button-color: $c-blue;
 $ca-button-primary-color: $c-white;
+
 $ca-button-secondary-background: $c-white;
 $ca-button-secondary-color: $c-blueDark;
 $ca-button-secondary-color-hover: $c-blueDarkest;

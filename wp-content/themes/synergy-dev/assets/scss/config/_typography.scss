@@ -35,4 +35,15 @@ $t-font-size-p-xlarge: 32 / $t-em-base + em;
 $t-font-size-button-small: 14 / $t-em-base + em;
 $t-font-size-button-large: 16 / $t-em-base + em;
 
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
 
