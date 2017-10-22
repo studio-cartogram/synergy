@@ -49,7 +49,11 @@ h2 a,
   }
 }
 
-.underline {
+.link--inverted {
+  color: $ca-anchor-inverted-color;
+}
+
+.link--underline {
   &:after {
     position: absolute;
     content: '';

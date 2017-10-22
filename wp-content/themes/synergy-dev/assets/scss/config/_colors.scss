@@ -80,6 +80,8 @@ $ca-button-secondary-color-hover: $c-blueDarkest;
 $ca-border-anchor: $c-blue;
 $ca-anchor-hover: $c-blue;
 
+$ca-circle-button-hover: $c-blueDarker;
+
 // Sections
 $ca-notification-background: $c-yellowLightest;
 $ca-overlay-background: $c-sky;
@@ -89,9 +91,9 @@ $ca-heading-color: $c-blueDarkest;
 $ca-heading-primary-color: $c-blueDarkest;
 $ca-heading-secondary-color: $c-inkLighter;
 
-$ca-footer-text-color: $c-white;
 $ca-footer-heading-color: $c-blue;
-$ca-footer-note-color: $c-blueLight;
+
+$ca-note-color: $c-blueLight;
 
 $ca-paragraph-color: $c-ink;
 $ca-paragraph-secondary-color: $c-inkLighter;
@@ -105,6 +107,7 @@ $ca-anchor-color: $c-blueDark;
 $ca-anchor-hover-color: $c-blueDarkest;
 $ca-anchor-secondary-color: $c-inkLighter;
 $ca-anchor-secondary-hover-color: $c-inkLight;
+$ca-anchor-inverted-color: $c-white;
 
 //Atoms
 $ca-logo-color: $c-blue;

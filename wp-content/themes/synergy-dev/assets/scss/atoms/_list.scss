@@ -12,11 +12,11 @@ List Component
 
   flex-direction: row;
   display: flex;
-
+  flex-wrap: wrap;
 }
 
-.list-item--top, .list-item--bottom {
-  width: 50%;
+.list-item {
+  display: block;
 }
 
 .list--small {
@@ -24,23 +24,12 @@ List Component
 }
 
 .list--spaced-horizontal {
-  margin-right: -$d-base;
   li {
     padding: 0 $d-base;
   }
 
   li:first-child {
     padding-left: 0;
-  }
-
-  @include bp($bp-tablet) {
-    margin-right: -$d-duo;
-    li {
-      padding: 0 $d-duo;
-    }
-    li:first-child {
-      padding-left: 0;
-    }
   }
 }
 
@@ -51,22 +40,24 @@ List Component
 }
 
 .list--vertical {
-  @include bp($bp-tablet) {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
-.list--center {
+.list--justify-center {
   justify-content: center;
 }
 
-.list--right {
+.list--justify-right {
   justify-content: flex-end;
 }
 .list--right--tablet {
   @include bp($bp-tablet) {
     justify-content: flex-end;
   }
+}
+
+.list--align-center {
+  align-items: center;
 }
 
 .list--sep-slash {

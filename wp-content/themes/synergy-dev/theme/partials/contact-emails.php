@@ -2,18 +2,18 @@
 
 if( have_rows('emails', 'options') ):
 
-  echo '<h3 class="">Emails</h3>';
+  echo '<h3 class="footer__heading">Emails</h3>';
   
-  echo '<ul class="list emails column column-8-laptop list--vertical">';
+echo '<ul class="list list--spaced-vertical list--vertical">';
 
   while ( have_rows('emails', 'options') ) : the_row();
 
     $email = get_sub_field('email'); 
     $type = get_sub_field('type'); 
     
-    echo '<li class="email">'; 
+    echo '<li class="">'; 
 
-      echo '<a href="mailto:' . $email . '" class="contact underline">' . $type . '</a>';
+      echo '<a href="mailto:' . $email . '" class="link--inverted link--underline">' . $type . '</a>';
     
     echo '</li>';
   

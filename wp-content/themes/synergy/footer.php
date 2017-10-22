@@ -14,31 +14,35 @@ $classes = get_field('class_schedules', 'options');
 
 set_query_var( 'context', 'footer' );
 
-echo '<footer class="footer">';
+echo '<footer class="footer container">';
 
-  echo '<div class="row footer__inner">';
+  echo '<div class="row row--align-center footer__top">';
 
-    echo '<div class="footer__right column column-6-tablet">';
+    echo '<div class="column column-grow">';
 
-      echo '<h1>Contact us</h1>';
+      echo '<h1 class="text--inverted">Contact us</h1>';
 
     echo '</div>';
 
-    echo '<div class="footer__left column column-6-tablet align-right">';
+    echo '<div class="column column-auto">';
     
-      echo '<a href="' . $classes . '" class="link link--primary underline action">' . 'Class schedules' . '</a>';
-      
-      echo '<a href="#" class="button button--primary action">' . 'Book an appointment' . '</a>';
+      echo '<a href="' . $classes . '" class="link link--inverted link--primary link--underline action">' . 'Class schedules' . '</a>';
+
+    echo '</div>';
+
+    echo '<div class="column column-tablet-auto">';
+    
+      echo '<a href="#" class="button button--primary">' . 'Book an appointment' . '</a>';
 
     echo '</div>';
 
   echo '</div>';
 
-  echo '<div class="row footer__inner">';
+  echo '<div class="row">';
 
     get_template_part('partials/contact-locations');
 
-    echo '<div class="footer__right footer__left column column-6-tablet ">';
+    echo '<div class="column column-6-tablet ">';
     
       get_template_part('partials/contact-hours');
 
@@ -50,19 +54,19 @@ echo '<footer class="footer">';
 
   echo '</div>';
 
-  echo '<div class="row footer__inner">';
+  echo '<div class="row">';
 
-    echo '<div class="footer__right column column-3-tablet ">';
+    echo '<div class="column column-6-mobile column-3-tablet ">';
   
       get_template_part('partials/contact-emails');
   
     echo '</div>';
 
-    echo '<div class="footer__right column column-3-tablet ">';
+    echo '<div class="column column-6-mobile column-3-tablet ">';
 
-      echo '<h3>Social</h3>';
+      echo '<h3 class="footer__heading">Social</h3>';
     
-      echo '<ul class="footer__list list list--small">';
+      echo '<ul class="list list--spaced-horizontal">';
 
         if( $instagram ):
 
@@ -101,7 +105,7 @@ echo '<footer class="footer">';
     
     echo '</div>';
 
-    echo '<div class="footer__left column column-6-tablet">';
+    echo '<div class="column column-6-tablet">';
     
       echo '<h3 class="">Newsletter</h3>';
 
@@ -111,11 +115,11 @@ echo '<footer class="footer">';
 
   echo '</div>';
 
-  echo '<div class="row footer__inner footer__section">';
+  echo '<div class="row footer__bottom">';
 
-    echo '<div class="column footer__right column-6-tablet">';
+    echo '<div class="column column-6-tablet">';
 
-      echo '<ul class="list--small list footer__list">';
+      echo '<ul class="list--small list list--spaced-horizontal text--inverted">';
 
         wp_nav_menu( $nav_footer );
 
@@ -123,9 +127,9 @@ echo '<footer class="footer">';
 
     echo '</div>';
 
-    echo '<div class="footer__left column column-6-tablet">';
+    echo '<div class="column column-6-tablet">';
 
-      echo '<p class="secondary note">' . $copyright . '</p>';
+      echo '<p class="note">' . $copyright . '</p>';
       
     echo '</div>';
 

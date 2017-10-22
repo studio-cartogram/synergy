@@ -2,25 +2,25 @@
 
 if( have_rows('hours', 'options') ):
 
-  echo '<h3 class="">Hours</h3>';
+  echo '<h3 class="footer__heading">Hours</h3>';
 
-  echo '<ul class="list footer__list hours row">';
+  echo '<ul class="list">';
 
     while ( have_rows('hours', 'options') ) : the_row();
 
       $days = get_sub_field('days');
       $times = get_sub_field('times');
     
-      echo '<li class="column column-6 list-item">';   
+      echo '<li class="list-item hours__item">';   
       
-        echo '<div class="row row--full hour row--space-between">';
+          echo '<p class="text--inverted">';
 
-          echo '<div class="column column-12">' . $days . '</div>';
+            echo '<span>' . $days . '</span><br>';
 
-          echo '<div class="column column-12">' . $times . '</div>';
-        
-        echo '</div>';
-    
+            echo '<span>' . $times . '</span>';
+
+          echo '</p>';
+            
       echo '</li>';
 
     endwhile;

@@ -13,21 +13,21 @@ if( have_rows('locations', 'options') ):
       $note = get_sub_field('note');
       $image = get_sub_field('image');
     
-      echo '<div class="footer__right column column-3-tablet ">';
+      echo '<div class="column column-6-mobile column-3-tablet ">';
         
-        echo '<h3>' . $name . '</h3>';
+        echo '<h3 class="footer__heading">' . $name . '</h3>';
 
-        echo '<p class="address">' . $address . '<br><a class="underline" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
+        echo '<p class="text--inverted">' . $address . '<br><a class="link--underline link" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
 
         if( $phone ):
 
-          echo '<p class="address">Phone:<br>' . $phone . '</p>';
+          echo '<p class="text--inverted">Phone<br>' . $phone . '</p>';
 
         endif;
 
         if( $fax ):
 
-          echo '<p class="address">Fax:<br>' . $fax . '</p>';
+          echo '<p class="text--inverted">Fax<br>' . $fax . '</p>';
 
         endif;
     

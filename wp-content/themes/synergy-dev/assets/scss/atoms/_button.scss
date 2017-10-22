@@ -14,8 +14,14 @@ Button Component
   font-weight: $t-font-weight-bold;
   border-radius: $b-radius;
   color: $ca-button-color;
+  width: 100%;
 
   &:hover {
+  }
+
+
+  @include bp($bp-tablet) {
+    width: auto;
   }
 }
 
@@ -57,13 +63,23 @@ Button Component
   border-radius: 50%;
   height: $d-quin;
   width: $d-quin;
-  border: $b-default;
+  border: $b-anchor;
   padding: 0;
+  transition: border 0.175s ease-in-out;
 
   .icon {
     align-self: center;
     height: $d-trio;
     width: $d-trio;
+  }
+
+  &:hover {
+    color: $ca-anchor-hover;
+    border: 0;
+   .icon {
+      fill: $ca-anchor-hover;
+      transition: fill 0.175s ease-in-out;
+    }
   }
 }
 

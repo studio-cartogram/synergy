@@ -23,6 +23,16 @@ html {
   text-align: left !important;
 }
 
+.text--align-right {
+  text-align: right;
+}
+
+.text--align-center {
+  text-align: center;
+}
+
+
+
 b,
 strong,
 .font-weight-bold,
@@ -31,6 +41,7 @@ strong,
 }
 
 p,
+ul,
 h1,
 h2,
 h3,
@@ -38,7 +49,7 @@ h4,
 h5,
 h6 {
   &.text--inverted {
-    > *,
+    *,
     & {
       color: $ca-color-inverted;
     }

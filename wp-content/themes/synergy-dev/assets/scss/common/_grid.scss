@@ -6,6 +6,19 @@ Grid Component
 .container {
   position: relative;
   margin: 0 auto;
+  width: 100%;
+  padding-left: $d-duo;
+  padding-right: $d-duo;
+  
+  @include bp($bp-mobile) {
+    padding-left: $d-trio;
+    padding-right: $d-trio;
+  }
+
+  @include bp($bp-tablet) {
+    padding-left: $d-quin;
+    padding-right: $d-quin;
+  }
 }
 
 .row {
@@ -27,45 +40,69 @@ Grid Component
   max-width: 100%;
 }
 
-.row--space-between {
-  padding-bottom: $d-duo;
-}
-
 .column {
   flex: 0 0 auto;
   width: 100%;
+  padding-left: $d-duo;
+  padding-right: $d-duo;
+
+  .row--flush & {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.column-grow {
+  flex: 1;
+  width: auto;
+}
+
+.column-auto {
+  width: auto;
+}
+
+.column-tablet-auto {
+  @include bp($bp-tablet) {
+    width: auto;
+  }
 }
 
 @for $i from 0 to $d-grid-columns + 1 {
   .column-#{$i} {
     @include grid-item($i, $d-grid-columns);
   }
+
   .offset-#{$i} {
     @include grid-item-offset($i, $d-grid-columns);
   }
+}
 
+@for $i from 0 to $d-grid-columns + 1 {
   .column-#{$i}-mobile {
     @include bp($bp-mobile) {
       @include grid-item($i, $d-grid-columns);
     }
   }
+
   .offset-#{$i}-mobile {
     @include bp($bp-mobile) {
       @include grid-item-offset($i, $d-grid-columns);
     }
   }
+}
 
+@for $i from 0 to $d-grid-columns + 1 {
   .column-#{$i}-tablet {
     @include bp($bp-tablet) {
       @include grid-item($i, $d-grid-columns);
     }
   }
+
   .offset-#{$i}-tablet {
     @include bp($bp-tablet) {
       @include grid-item-offset($i, $d-grid-columns);
     }
   }
-
 }
 
 @for $i from 0 to $d-grid-columns + 1 {
