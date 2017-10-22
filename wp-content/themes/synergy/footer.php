@@ -16,7 +16,7 @@ set_query_var( 'context', 'footer' );
 
 echo '<footer class="footer container">';
 
-  echo '<div class="row row--align-center footer__top">';
+echo '<div class="row row--align-center soft-bottom--quad">';
 
     echo '<div class="column column-grow">';
 
@@ -54,7 +54,7 @@ echo '<footer class="footer container">';
 
   echo '</div>';
 
-  echo '<div class="row footer__top">';
+  echo '<div class="row">';
 
     echo '<div class="column column-6-mobile column-3-tablet ">';
   
@@ -66,7 +66,7 @@ echo '<footer class="footer container">';
 
       echo '<h3 class="footer__heading">Social</h3>';
     
-      echo '<ul class="list list--spaced-horizontal">';
+      echo '<ul class="list soft-bottom--trio list--nowrap list--spaced-horizontal">';
 
         if( $instagram ):
 

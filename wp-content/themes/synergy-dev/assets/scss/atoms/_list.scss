@@ -9,7 +9,7 @@ List Component
     padding: 0;
     list-style:none;
   }
-
+  
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
@@ -21,6 +21,10 @@ List Component
 
 .list--small {
   font-size: $t-font-size-zeta;
+}
+
+.list--nowrap {
+  flex-wrap: nowrap;
 }
 
 .list--spaced-horizontal {

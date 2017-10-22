@@ -1,74 +1,17 @@
+.form {
+  padding-bottom: $d-base;
+}
+
 .newsletterform {
   position: relative;
   display: flex;
-}
-
-.newsletterform__button {
-
 }
 
 .newsletterform__label {
   display: block;
   cursor: pointer;
   flex: 1 1 auto;
-
-  .label__inner {
-    position: absolute;
-    bottom: 1px;
-    font-size: $t-font-size-epsilon;
-    color: $ca-anchor-primary-color;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, 0);
-    @include bp($bp-tablet) {
-      left: 1px;
-      transform: translate(0, 0);
-    }
-  }
-
-}
-
-.input__help {
-  position: absolute;
-  top: 100%;
-  padding: $d-base 0;
-  display: block;
-  opacity: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  @include bp($bp-tablet) {
-    left: 0;
-    transform: translate(0, 0);
-  }
-}
-
-.newsletterform__button {
-  padding: 0;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  transform: translate(-100%, 0);
-}
-
-.newsletterform__input {
-  font-size: $t-font-size-epsilon;
-  text-align: center;
-
-  @include bp($bp-tablet) {
-    text-align: left;
-    padding-right: $d-quad;
-  }
-
-  &:focus {
-    opacity: 1;
-
-    + .label__inner {
-      opacity: 0;
-    }
-    ~ .input__help {
-      opacity: 1;
-    }
-  }
+  padding-right: $d-base;
 }
 
 

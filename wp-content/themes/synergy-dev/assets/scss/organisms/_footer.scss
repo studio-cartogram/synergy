@@ -8,14 +8,13 @@ Footer Component
 }
 
 .footer {
-  padding-top: $d-quin;
   padding-bottom: $d-base;
   background-color: $ca-footer-background;
 
   &:before {
     content: '';
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -100%);
     width: 100%;
@@ -23,6 +22,7 @@ Footer Component
     background-position: center top;
     background-size: cover;  
     height: 50px;
+
     @include bp($bp-tablet) {
       height: 100px;
     }
@@ -52,10 +52,6 @@ Footer Component
 .footer__bottom {
   border-top: $b-footer;
   padding-top: $d-trio;
-}
-
-.footer__top {
-  padding-bottom: $d-trio;
 }
 
 .footer__bottom .menu-item a {
