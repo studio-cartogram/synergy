@@ -54,7 +54,7 @@ echo '<footer class="footer container">';
 
   echo '</div>';
 
-  echo '<div class="row">';
+  echo '<div class="row footer__top">';
 
     echo '<div class="column column-6-mobile column-3-tablet ">';
   
@@ -107,7 +107,7 @@ echo '<footer class="footer container">';
 
     echo '<div class="column column-6-tablet">';
     
-      echo '<h3 class="">Newsletter</h3>';
+      echo '<h3 class="footer__heading">Newsletter</h3>';
 
       get_template_part('partials/newsletter');
     

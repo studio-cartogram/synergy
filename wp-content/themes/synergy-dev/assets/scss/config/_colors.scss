@@ -65,8 +65,9 @@ $ca-hr-color: $c-sky;
 $ca-button-color: $c-blue;
 
 $ca-button-inverted-background: $c-white;
-$ca-button-inverted-background-hover: rgba(255, 255, 255, 0.95);
+$ca-button-inverted-background-hover: rgba(0, 0, 0, 0.10);
 $ca-button-inverted-color: $c-blue;
+$ca-button-inverted-text: $c-white;
 
 $ca-button-primary-background-gradient: linear-gradient(-180deg, $c-blueDark 0%, $c-blueDarker 100%);
 $ca-button-primary-border: $c-blueDarkest;
@@ -117,3 +118,4 @@ $ca-footer-icon-color: $c-white;
 $ca-input-border-color: $c-sky;
 $ca-input-focus-border-color: $c-skyDark;
 $ca-input-background: $c-white;
+$ca-input-placeholder: $c-inkLightest;
