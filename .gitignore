@@ -1,0 +1,7 @@
+/.htaccess
+/wp-config.php
+/wp-content/.DS_Store
+/wp-content/plugins/.DS_Store
+/wp-content/themes/synergy-dev/assets/scss/.DS_Store
+/wp-content/themes/synergy-dev/gulp/.DS_Store
+/.DS_Store
