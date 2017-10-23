@@ -3,7 +3,7 @@
 $newsletter_text = get_field('newsletter_text', 'options');
 $newsletter_button_text = get_field('newsletter_button_text', 'options');
 
-echo '<form class="form newsletterform" action="//fondfolio.us13.list-manage.com/subscribe/post?u=65e81a3fa309924ed7ff3fd68&amp;id=fb444d9189" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">';
+echo '<form class="form newsletterform" action="//synergysportsmedicine.us14.list-manage.com/subscribe/post?u=f6abaee565d1b055332875379&amp;id=33f0ea0fc2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">';
 
   echo '<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_65e81a3fa309924ed7ff3fd68_fb444d9189" tabindex="-1" value=""></div>';
 
