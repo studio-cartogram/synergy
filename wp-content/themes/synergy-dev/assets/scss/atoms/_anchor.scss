@@ -73,3 +73,20 @@ h2 a,
     width: 0%;
   }
 }
+
+.link--external {
+
+  .icon {
+    align-self: center;
+    height: $d-trio;
+    width: $d-trio;
+  }
+
+  &:hover {
+   .icon {
+      fill: $ca-anchor-hover;
+      transition: fill 0.175s ease-in-out;
+    }
+  }
+
+}

@@ -26,7 +26,12 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
     echo '<div class="column column-auto">';
     
-      echo '<a href="' . $classes . '" class="link link--inverted link--primary link--underline action">' . 'Class schedules' . '</a>';
+      echo '<a href="' . $classes . '" class="link link--inverted link--primary link--underline link--external action">' . 'Class schedules';
+
+      set_query_var( 'icon', 'arrow-external' );
+      get_template_part('partials/icon');
+
+      echo '</a>';
 
     echo '</div>';
 
