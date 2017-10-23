@@ -17,4 +17,4 @@ echo '<form class="form newsletterform" action="//fondfolio.us13.list-manage.com
   
 echo '</form>';
 
-echo '<p class="note">' . $newsletter_text . '</p>';
+echo '<p class="note soft-bottom--trio">' . $newsletter_text . '</p>';

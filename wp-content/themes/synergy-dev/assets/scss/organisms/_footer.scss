@@ -9,26 +9,27 @@ Footer Component
 
 .footer {
   padding-bottom: $d-base;
+  padding-top: $d-sex;
   background-color: $ca-footer-background;
 
   &:before {
     content: '';
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, -100%);
     width: 100%;
     background-image: url($p_svg + 'waves.svg');
     background-position: center top;
     background-size: cover;  
-    height: 50px;
+    height: 40px;
 
     @include bp($bp-tablet) {
-      height: 100px;
+      height: 60px;
     }
 
     @include bp($bp-laptop) {
-      height: 132px;
+      height: 80px;
     }
   }
 

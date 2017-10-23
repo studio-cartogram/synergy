@@ -16,7 +16,7 @@ set_query_var( 'context', 'footer' );
 
 echo '<footer class="footer container">';
 
-echo '<div class="row row--align-center soft-bottom--quad">';
+echo '<div class="row row--align-center soft-bottom--quin">';
 
     echo '<div class="column column-grow">';
 
@@ -42,13 +42,17 @@ echo '<div class="row row--align-center soft-bottom--quad">';
 
     get_template_part('partials/contact-locations');
 
-    echo '<div class="column column-6-tablet ">';
+    echo '<div class="column column-6-tablet">';
     
       get_template_part('partials/contact-hours');
 
-      get_template_part('partials/contact-notes');
+      echo '<div class="notes soft-bottom--trio">';
 
-      get_template_part('partials/contact-notes-location');
+        get_template_part('partials/contact-notes');
+
+        get_template_part('partials/contact-notes-location');
+
+      echo '</div>';
 
     echo '</div>';
 
@@ -119,7 +123,7 @@ echo '<div class="row row--align-center soft-bottom--quad">';
 
     echo '<div class="column column-6-tablet">';
 
-      echo '<ul class="list--small list list--spaced-horizontal text--inverted">';
+      echo '<ul class="list--small list list--spaced-horizontal text--inverted soft-bottom--duo">';
 
         wp_nav_menu( $nav_footer );
 

@@ -4,7 +4,7 @@ if( have_rows('emails', 'options') ):
 
   echo '<h3 class="footer__heading">Emails</h3>';
   
-echo '<ul class="list soft-bottom--trio list--spaced-vertical list--vertical">';
+echo '<ul class="list soft-bottom--quad list--spaced-vertical list--vertical">';
 
   while ( have_rows('emails', 'options') ) : the_row();
 
