@@ -98,6 +98,12 @@ Button Component
   font-size: $t-font-size-button-large;
 }
 
+.button--close {
+  padding-left: $d-trio;
+  height: $d-duo;
+  cursor: pointer;
+}
+
 .button--inverted {
   border-radius: 3px;
   height: inherit;
