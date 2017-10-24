@@ -1,7 +1,8 @@
 .announcement {
-  background: white;
-  text-align: center;
+  text-align: left;
+  justify-content: center;
   width: 100%;
+  padding: $d-duo;
   position: absolute;
   display: flex;
   top: 0;
@@ -11,15 +12,11 @@
   background: $c-yellowLightest;
   border-top: 1px solid $c-sky;
   box-shadow: 0 -4px 4px rgba($c-inkLighter, 0.05);
-  &,
-  > * {
-    height: $d-note-height-mobile;
-    @include bp($bp-tablet) {
-      height: $d-note-height;
-    }
+  font-size: $t-font-size-delta-mobile;
+
+  p {
+    padding: $d-base;
   }
-<<<<<<< Updated upstream
-=======
 
   .icon {
     height: $d-duo;
@@ -32,5 +29,3 @@
   }
 
   display: none; // dont forget to remove
->>>>>>> Stashed changes
-}
