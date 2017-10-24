@@ -17,33 +17,24 @@ echo '<header role="banner" class="js-header header">';
 
   get_template_part('partials/contact-announcement');
 
-  echo '<div class="row row--justify-center">';
+  echo '<div class="row row--nav">';
 
     echo '<a href="' . get_bloginfo('url') . '" class="header__logo logo">';
 
     echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
 
-      echo '<span class="logo__icon">';
+      echo '<span class="logo">';
 
-        set_query_var( 'icon', 'logo-icon' );
-
-        get_template_part('partials/icon');
-
-      echo '</span>';
-
-      echo '<span class="logo logo__word">';
-
-        set_query_var( 'icon', 'logo' );
-
-        get_template_part('partials/icon');
+      set_query_var( 'icon', 'logo' );
+      get_template_part('partials/icon');
 
       echo '</span>';
 
     echo '</a>';
 
-    echo '<div class="header__group ">';
+    echo '<div class="header__group header__group--left">';
 
-      echo '<ul class="header__nav list list--right ">';
+      echo '<ul class="header__nav list list--left ">';
 
         wp_nav_menu( $nav_primary_left );
 

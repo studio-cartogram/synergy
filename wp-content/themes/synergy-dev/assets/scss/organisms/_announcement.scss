@@ -18,4 +18,19 @@
       height: $d-note-height;
     }
   }
+<<<<<<< Updated upstream
+=======
+
+  .icon {
+    height: $d-duo;
+    width: $d-duo;
+  }
+
+  .button--close {
+    top: 10px;
+    right: $d-trio;
+  }
+
+  display: none; // dont forget to remove
+>>>>>>> Stashed changes
 }

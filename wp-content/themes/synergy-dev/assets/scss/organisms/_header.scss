@@ -9,71 +9,77 @@
   transition: all $a-timing $a-easing;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  pointer-events: none;
-
-  padding: 0 $d-trio;
-  height: $d-header-height-mobile;
-  @include bp($bp-tablet) {
-    padding: 0 $d-quad;
-    height: $d-header-height;
-  }
-
+  padding: 0 $d-quin;
+  height: $d-dec;
 }
 
 .header__logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.header__nav {
-  pointer-events: auto;
-  font-size: $t-font-size-epsilon;
-
-  @include bp($bp-tablet) {
-    font-size: $t-font-size-gamma;
-  }
-
-  a {
-    color: $ca-anchor-primary-color;
-  }
-
-  a:hover,
-  a:focus,
-  a.is-active {
-    color: $ca-anchor-primary-hover-color;
-  }
-}
-
-.header__item {
-  margin: 0;
-  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: $d-header-height-mobile;
-  line-height: $d-header-height-mobile;
-  text-align: left;
-
-  @include bp($bp-tablet) {
-    height: $d-header-height;
-    line-height: $d-header-height;
-  }
-
 }
 
 .header__group {
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  transition: opacity $a-timing $a-easing, transform $a-timing * 2 $a-easing;
-
-  &.header__group--right {
-    flex-grow: 1;
-    text-align: right;
-  }
-
+  padding-top: $d-duo;
+  display: flex;
 }
 
+.header__group--left {
+}
+
+.header__group--right {
+  display: flex;
+  .header__nav {
+    justify-content: flex-end;
+  }
+}
+
+.header__nav {
+  padding-top: $d-duo;
+
+  a {
+    color: $ca-nav-link;
+    padding: $d-base $d-quad;
+    font-weight: $t-font-weight-bold;
+
+    &:hover {
+      color: $ca-nav-link-hover;
+    }
+  }
+  li {
+    &:hover > ul {
+      height: auto;
+      box-shadow:   $sha-sm;
+      background: $ca-sub-nav-background;
+      padding-bottom: $d-trio;
+    }
+  }
+}
+
+.header__nav > li {
+  display: inline-block;
+  position: relative;
+}
+
+.sub-menu {
+  position: absolute;
+  left: 0;
+  min-width: 240px;
+  height: 0;
+  overflow: hidden;
+  transition: ease height .5s;
+  padding: 0;
+  padding-top: $d-duo;
+
+  a {
+    color: $ca-sub-nav-link;
+    font-size: $t-font-size-epsilon;
+
+    &:hover {
+      color: $ca-sub-nav-link-hover;
+    }
+  }
+}
+
+.header__nav li ul li {
+  display: block;
+  width: auto;
+}

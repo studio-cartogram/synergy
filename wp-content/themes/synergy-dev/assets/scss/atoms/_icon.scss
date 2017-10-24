@@ -3,22 +3,14 @@ Icon Component
 ========================================= */
 
 .icon {
-  display:inline-block;
+  display: inline-block;
   max-width: 100%;
 }
 
-.icon--logo,
-.icon--logo-word {
-  display:inline-block;
+.icon--logo {
+  display: flex;
   max-width: $d-dec * 2;
   max-height: $d-dec;
-  fill: $ca-logo-color;
-}
-
-.icon--logo-icon {
-  fill: $ca-logo-color;
-  max-width: $d-trio;
-  max-height: $d-trio;
 }
 
 
