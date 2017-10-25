@@ -1,21 +1,11 @@
 .announcement {
-  text-align: left;
-  justify-content: center;
-  width: 100%;
   padding: $d-duo;
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
   background: $c-yellowLightest;
   border-top: 1px solid $c-sky;
-  box-shadow: 0 -4px 4px rgba($c-inkLighter, 0.05);
-  font-size: $t-font-size-delta-mobile;
 
   p {
     padding: $d-base;
+    font-size: $t-font-size-delta-mobile;    
   }
 
   .icon {
@@ -28,4 +18,4 @@
     right: $d-trio;
   }
 
-  display: none; // dont forget to remove
+}

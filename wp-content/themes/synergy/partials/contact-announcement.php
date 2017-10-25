@@ -6,14 +6,22 @@ if( $announcement ):
 
   echo '<section class="announcement">';
 
-    echo '<p>' . $announcement . '</p>';
+    echo '<div class="row row--justify-center row--justify-space-around">';
 
-    echo '<a href="#" class="button button--close">';
+      //echo '<div class="column column-12">';
 
-      set_query_var( 'icon', 'close' );
-      get_template_part('partials/icon');
+        echo $announcement;
 
-    echo '</a>';
+        echo '<a href="#" class="button button--close">';
+
+          set_query_var( 'icon', 'close' );
+          get_template_part('partials/icon');
+
+        echo '</a>';
+
+      //echo '</div>';
+
+    echo '</div>';
   
   echo '</section>';
 
