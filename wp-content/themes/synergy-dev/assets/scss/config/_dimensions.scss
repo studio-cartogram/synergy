@@ -22,11 +22,12 @@ $d-oct: $d-base * 8;
 $d-nano: $d-base * 9;
 $d-dec: $d-base * 10;
 $d-doz: $d-base * 12;
+$d-twe: $d-base * 20;
 $d-block-corner-icon: $d-base * 30;
 
 $d-grid-columns: 12;
 
-$d-header-height: $d-dec;
+$d-header-height: $d-twe;
 $d-header-height-mobile: $d-sep;
 $d-note-height: $d-sep;
 $d-note-height-mobile: $d-sep;
