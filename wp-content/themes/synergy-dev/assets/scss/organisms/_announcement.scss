@@ -1,21 +1,21 @@
 .announcement {
-  background: white;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
+  padding: $d-duo;
   background: $c-yellowLightest;
   border-top: 1px solid $c-sky;
-  box-shadow: 0 -4px 4px rgba($c-inkLighter, 0.05);
-  &,
-  > * {
-    height: $d-note-height-mobile;
-    @include bp($bp-tablet) {
-      height: $d-note-height;
-    }
+
+  p {
+    padding: $d-base;
+    font-size: $t-font-size-delta-mobile;    
   }
+
+  .icon {
+    height: $d-duo;
+    width: $d-duo;
+  }
+
+  .button--close {
+    top: 10px;
+    right: $d-trio;
+  }
+
 }
