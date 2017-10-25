@@ -53,6 +53,10 @@ h2 a,
   color: $ca-anchor-inverted-color;
 }
 
+.link--large {
+  font-size: $t-font-size-beta;
+}
+
 .link--underline {
   &:after {
     position: absolute;

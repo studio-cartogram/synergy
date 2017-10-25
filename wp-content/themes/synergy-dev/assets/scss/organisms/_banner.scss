@@ -1,29 +1,58 @@
 .banner {
-  padding: $d-sex 0 0;
-  position: relative;
-  min-height: calc(100vh - #{$d-header-height-mobile};
-  overflow: hidden;
+  display: flex;
+  padding: $d-quin;
+  
   @include bp($bp-tablet) {
-    min-height: calc(100vh - #{$d-header-height};
+    min-height: calc(100vh - #{$d-header-height});
   }
 
+  h1, h2, p, a {
+    text-align: left;
+  }
+
+}
+
+.banner__image, .banner__text {
+  flex-grow: 1;
+}
+
+.banner__image-crop {
+  height: 640px;
+  overflow: hidden;
 }
 
 .banner__image {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -#{$d-note-height});
-  width: auto;
-
   img {
-    min-height: 50vh;
-    max-height: 75vh;
-    width: auto;
-    margin: auto;
+    height: 640px;
+    object-position: center;
+    object-fit: cover;
   }
 }
 
+.banner__right {
+  flex-direction: row-reverse;
+}
+
+.banner__center {
+  text-align: center;
+  flex-direction: column-reverse;
+
+  h1, h2, p, a {
+    text-align: center;
+  }
+
+  .banner__image-crop {
+    height: 480px;
+    overflow: visible;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+  }
+}
 
 .banner__background {
   background-image: url($p-svg + 'confetti.svg');
