@@ -13,7 +13,8 @@
 }
 
 .banner__image, .banner__text {
-  flex-grow: 1;
+  max-width: 50%;
+  padding: $d-trio;
 }
 
 .banner__image-crop {
@@ -36,6 +37,10 @@
 .banner__center {
   text-align: center;
   flex-direction: column-reverse;
+
+  .banner__image, .banner__text {
+    max-width: 100%;
+  }
 
   h1, h2, p, a {
     text-align: center;
