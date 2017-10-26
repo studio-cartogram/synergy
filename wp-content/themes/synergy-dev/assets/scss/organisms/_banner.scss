@@ -37,9 +37,15 @@
 .banner__center {
   text-align: center;
   flex-direction: column-reverse;
+  justify-content: center;
 
-  .banner__image, .banner__text {
+  .banner__image {
     max-width: 100%;
+  }
+
+  .banner__text {
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   h1, h2, p, a {

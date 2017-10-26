@@ -19,11 +19,11 @@ echo '<section class="gallery">';
           $image = get_sub_field('image');
           $caption = get_sub_field('caption');
 
-          echo $caption;
-
           echo '<figure class="gallery__image js-slide">';
 
             echo wp_get_attachment_image( $image, $size );
+
+            echo '<div class="gallery__caption">' . $caption . '</div>';
 
           echo '</figure>';
 

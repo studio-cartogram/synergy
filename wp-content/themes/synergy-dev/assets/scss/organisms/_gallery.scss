@@ -1,5 +1,5 @@
 .gallery {
-  padding: $d-sex 0;
+  padding: 0;
   display: flex;
   width: 100%;
   height: 100%;
@@ -16,4 +16,22 @@
 .gallery__content {
   padding: $d-duo $d-quad;
 
+}
+
+.gallery__caption {
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: $d-trio $d-quin $d-duo $d-quin;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+
+  p, a {
+    color: $ca-color-inverted;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }

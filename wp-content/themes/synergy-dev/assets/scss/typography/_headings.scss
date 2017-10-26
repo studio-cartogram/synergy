@@ -24,6 +24,7 @@ h6 {
   }
 }
 
+
 h1 {
   font-size: $t-font-size-alpha-mobile;
   font-weight: $t-font-weight-regular;
@@ -38,6 +39,10 @@ h2 {
   @include bp($bp-tablet) {
     font-size: $t-font-size-beta;
   }
+}
+
+h2.secondary p {
+  color: $ca-heading-secondary-color;
 }
 
 h3 {
