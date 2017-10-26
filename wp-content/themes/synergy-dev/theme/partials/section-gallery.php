@@ -6,13 +6,13 @@ $size = 'full';
 
 echo '<section class="gallery">';
 
-  echo '<div class="row">';
+  echo '<div class="row row--full">';
 
     if( have_rows('images') ):
 
-      echo '<div class="column column-6-tablet column-8-laptop">';
+      echo '<div class="slideshow">';
 
-        echo '<div class="gallery__images">';
+        echo '<div id="js-slideshow" class="gallery__images">';
 
           while ( have_rows('images') ) : the_row();
 
@@ -21,7 +21,7 @@ echo '<section class="gallery">';
 
           echo $caption;
 
-          echo '<figure class="gallery__image">';
+          echo '<figure class="gallery__image js-slide">';
 
             echo wp_get_attachment_image( $image, $size );
 
