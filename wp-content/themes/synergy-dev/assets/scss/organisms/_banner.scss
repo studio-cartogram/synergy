@@ -1,32 +1,24 @@
+// All banners
+
 .banner {
   display: flex;
   padding: $d-quin;
-  
-  // @include bp($bp-tablet) {
-  //   min-height: calc(100vh - #{$d-header-height});
-  // }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
 
   h1, h2, p, a {
     text-align: left;
   }
 }
 
+.banner__text {
+  padding-top: $d-quin;
+}
+
 .banner__image, .banner__text {
   max-width: 50%;
-}
-
-.banner__left .banner__text {
-  padding-left: $d-sex;
-  padding-right: 0;
-}
-
-.banner__right .banner__text {
-  padding-right: $d-sex;
-  padding-left: 0;
-}
-
-.banner__center .banner__text {
-  padding-top: $d-quin;
 }
 
 .banner__image-crop {
@@ -43,20 +35,33 @@
     height: 640px;
     object-position: center;
     object-fit: cover;
+    transition: all 1.2s;
   }
 }
+
+
+// Left and Right
 
 .banner__left {
   flex-direction: row-reverse;
 }
 
+.banner__left .banner__text {
+  padding-left: $d-sex;
+  padding-right: 0;
+}
+
+.banner__right .banner__text {
+  padding-right: $d-sex;
+  padding-left: 0;
+}
+
+
+// Centered
+
 .banner__center {
   text-align: center;
   flex-direction: column-reverse;
-
-  .banner__image {
-    max-width: 100%;
-  }
 
   .banner__text {
     max-width: 860px;
@@ -69,8 +74,9 @@
 
   .banner__image-crop {
     height: 480px;
-    overflow: visible;
-    box-shadow: none;
+    overflow: hidden;
+    width: auto;
+    margin: 0 auto;
   }
 
   img {
@@ -78,7 +84,6 @@
     width: auto;
     object-position: center;
     object-fit: contain;
-    box-shadow: $sha-xl;
   }
 }
 
