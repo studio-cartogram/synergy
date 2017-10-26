@@ -14,18 +14,18 @@ $orientation = get_sub_field('orientation');
 
 echo '<section class="banner banner__'. $orientation .'">';
 
-  echo '<div class="banner__background">';
+  // echo '<div class="banner__background">';
 
-    set_query_var('icon', 'halftone-arrow');
-    set_query_var('icon', 'halftone-peak');
-    set_query_var('icon', 'halftone-shift');
-    set_query_var('icon', 'halftone-square');
-    set_query_var('icon', 'halftone-swoosh');
-    set_query_var('icon', 'halftone-trio');
+  //   set_query_var('icon', 'halftone-arrow');
+  //   set_query_var('icon', 'halftone-peak');
+  //   set_query_var('icon', 'halftone-shift');
+  //   set_query_var('icon', 'halftone-square');
+  //   set_query_var('icon', 'halftone-swoosh');
+  //   set_query_var('icon', 'halftone-trio');
 
-    get_template_part('partials/icon');
+  //   get_template_part('partials/icon');
 
-  echo '</div>';
+  // echo '</div>';
 
   echo '<div class="banner__text">';
 
