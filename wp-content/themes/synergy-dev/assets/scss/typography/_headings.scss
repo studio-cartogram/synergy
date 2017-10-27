@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: $t-font-size-alpha-mobile;
-  font-weight: $t-font-weight-bold;
+  font-weight: $t-font-weight-regular;
   @include bp($bp-tablet) {
     font-size: $t-font-size-alpha;
   }
@@ -38,6 +38,7 @@ h2 {
   @include bp($bp-tablet) {
     font-size: $t-font-size-beta;
   }
+  line-height: 1.4;
 }
 
 h2.secondary p {
