@@ -24,15 +24,9 @@ h6 {
   }
 }
 
-h2, 
-h2 p {
-  line-height: 1.5;
-}
-
-
 h1 {
   font-size: $t-font-size-alpha-mobile;
-  font-weight: $t-font-weight-regular;
+  font-weight: $t-font-weight-bold;
   @include bp($bp-tablet) {
     font-size: $t-font-size-alpha;
   }
