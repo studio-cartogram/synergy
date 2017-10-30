@@ -1,0 +1,33 @@
+.announcement {
+  padding: $d-base;
+  background: $c-yellowLightest;
+  border-top: 1px solid $c-sky;
+
+  p {
+    padding: $d-base;
+    font-size: $t-font-size-delta-mobile;  
+    display: inline-flex;  
+  }
+
+  .icon {
+    height: $d-duo;
+    width: $d-duo;
+  }
+
+  .button--close {
+    display: inline-flex;
+    align-self: center;
+    color: $c-ink;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    padding-left: $d-base;
+  }
+
+  &.is-toggled {
+    display: none;
+  }
+
+}

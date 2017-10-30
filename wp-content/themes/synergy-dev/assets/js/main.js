@@ -11,6 +11,7 @@ import './vendor/webpack.publicPath'
 import loadSprite from './vendor/loadSprite'
 import Scroll from './scripts/Scroll'
 import Fade from './scripts/Fade'
+import Togglers from './scripts/Togglers'
 import Swiper from 'swiper'
 import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
@@ -23,6 +24,7 @@ import {
 class App {
   constructor() {
     this.init()
+    new Togglers()
     loadSprite()
     document.body.classList.remove('js-is-loading')
     document.body.classList.add('js-is-initialized')
@@ -69,7 +71,6 @@ class App {
         offset: '40%',
       })
     })
-    
   }
 
   initSlideshow = () => {
@@ -83,7 +84,7 @@ class App {
         disableOnInteraction: true,
       },
     })
-    
+
   }
 
   initTransitions = () => {
@@ -108,8 +109,6 @@ class App {
       },
     })
   }
-
-
 }
 
 const app = new App()

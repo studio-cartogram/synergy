@@ -50,47 +50,39 @@
 @import 'typography/paragraphs';
 
 /**
- * Atoms Styles
+ * Component Styles
  */
-@import 'atoms/anchor';
-@import 'atoms/logo';
-@import 'atoms/icon';
-@import 'atoms/media';
-@import 'atoms/hamburger';
-@import 'atoms/spinner';
-@import 'atoms/list';
-@import 'atoms/curtain';
-@import 'atoms/overlay';
-@import 'atoms/button';
-@import 'atoms/intro';
-@import 'atoms/input';
-@import 'atoms/testimonial';
-
-/**
- * Organisms Styles
- */
-@import 'organisms/header';
-@import 'organisms/footer';
-@import 'organisms/mast';
-@import 'organisms/tabs';
-@import 'organisms/faq';
-@import 'organisms/cta';
-@import 'organisms/explain';
-@import 'organisms/stack';
-@import 'organisms/gallery';
-@import 'organisms/banner';
-@import 'organisms/block';
-@import 'organisms/badge';
-@import 'organisms/searchform';
-@import 'organisms/newsletterform';
-@import 'organisms/image';
-@import 'organisms/prevnext';
-@import 'organisms/pagination';
-@import 'organisms/announcement';
-
-/**
- * move all components here
- */
+@import 'components/anchor';
+@import 'components/logo';
+@import 'components/icon';
+@import 'components/media';
+@import 'components/hamburger';
+@import 'components/spinner';
+@import 'components/list';
+@import 'components/curtain';
+@import 'components/overlay';
+@import 'components/button';
+@import 'components/intro';
+@import 'components/input';
+@import 'components/testimonial';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/mast';
+@import 'components/tabs';
+@import 'components/faq';
+@import 'components/cta';
+@import 'components/explain';
+@import 'components/stack';
+@import 'components/gallery';
+@import 'components/banner';
+@import 'components/block';
+@import 'components/badge';
+@import 'components/searchform';
+@import 'components/newsletterform';
+@import 'components/image';
+@import 'components/prevnext';
+@import 'components/pagination';
+@import 'components/announcement';
 @import 'components/blob';
 @import 'components/loader';
 
