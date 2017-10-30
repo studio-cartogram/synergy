@@ -32,9 +32,23 @@ echo '<section class="gallery">';
 
         echo '</div>';
 
-        echo '<div class="swiper-button-prev"></div>';
+        echo '<div class="gallery__buttons">';
 
-        echo '<div class="swiper-button-next"></div>';
+          echo '<div class="swiper-button-prev button button--circle">';
+            
+            set_query_var( 'icon', 'arrow-left' );
+            get_template_part('partials/icon');
+            
+          echo '</div>';
+
+          echo '<div class="swiper-button-next button button--circle">';
+
+            set_query_var( 'icon', 'arrow-right' );
+            get_template_part('partials/icon');
+            
+          echo '</div>';
+        
+        echo '</div>';
 
       echo '</div>';
 

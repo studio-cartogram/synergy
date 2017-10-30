@@ -83,7 +83,7 @@ class App {
         disableOnInteraction: true,
       },
     })
-
+    
   }
 
   initTransitions = () => {
