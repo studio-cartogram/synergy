@@ -26,7 +26,8 @@ h6 {
 
 h1 {
   font-size: $t-font-size-alpha-mobile;
-  font-weight: $t-font-weight-regular;
+  font-weight: $t-font-weight-bold;
+  padding-bottom: $d-duo;
   @include bp($bp-tablet) {
     font-size: $t-font-size-alpha;
   }

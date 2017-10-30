@@ -7,8 +7,13 @@ p,
   color: $ca-paragraph-color;
   margin: 0;
   padding: 0 0 $d-duo;
+  line-height: 1.5;
 
   &.secondary {
+    color: $ca-paragraph-secondary-color;
+  }
+
+  .secondary & {
     color: $ca-paragraph-secondary-color;
   }
 }
@@ -23,7 +28,7 @@ p.p--small {
 .p--large > p,
 .p--large,
 p.p--large {
-  padding: 0 0 $d-quad;
+  padding: 0 0 $d-duo;
   @include bp($bp-tablet) {
     font-size: $t-font-size-p-large;
   }

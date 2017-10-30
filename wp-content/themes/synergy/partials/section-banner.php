@@ -28,7 +28,7 @@ echo '<section class="js-waypoint waypoint banner banner__'. $orientation .' ban
 
     if ($description) :
 
-    echo '<p class="p--large">' . $description . '</p>';
+    echo '<span class="p--large secondary">' . $description . '</span>';
 
     endif;
 

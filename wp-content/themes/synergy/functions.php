@@ -288,6 +288,8 @@
 	function cartogram_fonts() {
 
     $output = '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">';
+    // $output = '<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700" rel="stylesheet">';
+    $output = '<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">';
 		echo $output;
 
   }

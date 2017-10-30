@@ -28,10 +28,10 @@
     <meta name="msapplication-TileColor" content="#fddfee">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:url" content="https://www.fondfolio.com" />
-    <meta property="og:title" content="Fondfolio" />
-    <meta property="og:description" content="Fondfolio allows you to create a beautiful collaborative book filled with sincere and heartwarming words from loved ones. A personal gift, to be treasured forever." />
-    <meta property="og:image" content="https://fondfolio.com/app/uploads/2017/04/feature-2.png" />
+    <meta property="og:url" content="http://www.synergysportsmedicine.com/" />
+    <meta property="og:title" content="Synergy" />
+    <meta property="og:description" content="Our sports medicine and rehab specialists are here to help you feel better, not just today, but for the rest of your life." />
+    <meta property="og:image" content="http://synergy.studiocartogram.com/wp-content/uploads/2017/10/IMG_7100.jpg" />
     <?php wp_head(); ?>
   </head>
   <body <?php body_class('site scene js-is-loading'); ?> >
