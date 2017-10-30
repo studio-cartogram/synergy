@@ -40,6 +40,7 @@
 @import 'common/grid';
 @import 'common/visibility';
 @import 'common/utils';
+@import 'common/waypoints';
 
 /**
  * Typography Styles
@@ -86,6 +87,12 @@
 @import 'organisms/prevnext';
 @import 'organisms/pagination';
 @import 'organisms/announcement';
+
+/**
+ * move all components here
+ */
+@import 'components/blob';
+@import 'components/loader';
 
 /**
  * Template Styles

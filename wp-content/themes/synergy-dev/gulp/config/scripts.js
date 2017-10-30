@@ -10,13 +10,11 @@ module.exports = {
   options: {
     webpack: {
       defaults: {
-        plugins: [
-          new webpack.ProvidePlugin({
-            '$': 'jquery',
-            'jQuery': 'jquery',
-            'window.jQuery': 'jquery'
-          })
-        ]
+        resolve: {
+					alias: {
+						'waypoints': 'waypoints/lib/noframework.waypoints.js'
+          }
+        }
       }
     }
   }

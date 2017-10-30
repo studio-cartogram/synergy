@@ -2,6 +2,7 @@
 
 $subtitle = get_field('subtitle');
 
+
 echo '<section class="title">';
 
   echo '<div class="row row--justify-center">';
@@ -19,10 +20,16 @@ echo '<section class="title">';
 echo '</section>';
 
 if( have_rows('sections') ):
+    $count = 0;
+    while ( have_rows('sections') ) : the_row(); 
+      $layout = get_row_layout();
+       
+      if($layout == 'banner') {
+        $count++;
+        set_query_var('count', $count);
+      }
 
-    while ( have_rows('sections') ) : the_row();
-		
-        get_template_part('partials/section', get_row_layout());
+      get_template_part('partials/section', $layout);
 
     endwhile;
 

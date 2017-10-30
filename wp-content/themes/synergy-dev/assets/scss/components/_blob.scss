@@ -1,0 +1,76 @@
+
+.blob {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-content: space-between;
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.blob__item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+// .wrapper {
+//   margin: 0 auto;
+//   max-width: 1040px;
+// }
+
+// .layout__item {
+//   display: inline-block;
+//   font-size: 1rem;
+//   vertical-align: top;
+//   box-sizing: border-box;
+//   margin: 0 auto;
+// }
+
+#morphing {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  .morphing-one {
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    z-index: 10;
+  }
+  .morphing-two {
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    z-index: 5;
+  }
+  .morphing-three {
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    z-index: 15;
+  }
+}

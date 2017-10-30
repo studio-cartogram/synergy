@@ -10,10 +10,11 @@ import log from './utils/log'
 import './vendor/webpack.publicPath'
 import loadSprite from './vendor/loadSprite'
 import Scroll from './scripts/Scroll'
-import Slideshow from './scripts/Slideshow'
 import Fade from './scripts/Fade'
+import Swiper from 'swiper'
+import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
-// import stickybits from 'stickybits'
+import './scripts/Blob'
 
 import {
   ACTIVE_CLASS,
@@ -33,9 +34,9 @@ class App {
   init = () => {
     this.scroll = new Scroll()
     this.fade = new Fade()
-    this.slideshow = new Slideshow()
-    // stickybits('.js-sticky', {useStickyClasses: true})
+    this.initSlideshow()
     this.initTransitions()
+    this.initWaypoints()
     Barba.Dispatcher.on('initStateChange', () => {
       document.body.classList.add('js-is-loading')
       document.body.classList.remove('js-is-leaving')
@@ -45,12 +46,40 @@ class App {
       if (xs.length > 0) {
         removeClasses(xs, ACTIVE_CLASS)
       }
-      el.classList.add(ACTIVE_CLASS);
+      el.classList.add(ACTIVE_CLASS)
     })
     Barba.Dispatcher.on('transitionCompleted', (currentStatus, prevStatus) => {
       document.body.classList.remove('js-is-loading')
       document.body.classList.remove('js-is-leaving')
     })
+  }
+
+  initWaypoints = () => {
+    const waypointEls = document.querySelectorAll('.js-waypoint')
+
+    Array.prototype.forEach.call(waypointEls, (waypoint, index) => {
+      waypoint.classList.add('is-hidden')
+      return new Waypoint({
+        element: waypoint,
+        handler: function(direction) {
+          log(`${index} ${direction}`)
+          waypoint.classList.add('is-visible')
+          waypoint.classList.remove('is-hidden')
+        },
+        offset: '40%',
+      })
+    })
+    
+  }
+
+  initSlideshow = () => {
+    const slideshow = new Swiper('.js-slideshow', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+
   }
 
   initTransitions = () => {

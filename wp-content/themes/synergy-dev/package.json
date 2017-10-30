@@ -24,7 +24,7 @@
     "bower-webpack-plugin": "0.1.9",
     "browser-sync": "2.18.13",
     "del": "3.0.0",
-    "eslint": "4.9.0",
+    "eslint": "4.10.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-loader": "1.9.0",
     "eslint-plugin-babel": "4.1.2",
@@ -53,14 +53,15 @@
     "onchange": "^3.2.1",
     "vinyl-named": "1.1.0",
     "vinyl-transform": "1.0.0",
-    "webpack": "3.7.1",
+    "webpack": "^3.8.1",
     "webpack-stream": "4.0.0"
   },
   "dependencies": {
     "animejs": "^2.2.0",
     "babel-polyfill": "6.26.0",
     "barba.js": "^1.0.0",
-    "swiper": "^4.0.1",
+    "swiper": "^4.0.3",
+    "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   }
 }

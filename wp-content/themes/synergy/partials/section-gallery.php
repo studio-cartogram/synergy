@@ -10,16 +10,17 @@ echo '<section class="gallery">';
 
     if( have_rows('images') ):
 
-      echo '<div class="slideshow">';
+      echo '<div class="js-slideshow swiper-container">';
 
-        echo '<div id="js-slideshow" class="gallery__images">';
+        echo '<div class="gallery__images swiper-wrapper">';
 
           while ( have_rows('images') ) : the_row();
 
           $image = get_sub_field('image');
+          
           $caption = get_sub_field('caption');
 
-          echo '<figure class="gallery__image js-slide">';
+          echo '<figure class="gallery__image swiper-slide">';
 
             echo wp_get_attachment_image( $image, $size );
 
@@ -30,6 +31,10 @@ echo '<section class="gallery">';
           endwhile;
 
         echo '</div>';
+
+        echo '<div class="swiper-button-prev"></div>';
+
+        echo '<div class="swiper-button-next"></div>';
 
       echo '</div>';
 

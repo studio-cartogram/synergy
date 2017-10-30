@@ -12,22 +12,15 @@ $image = get_sub_field('image');
 $size = 'full';
 $orientation = get_sub_field('orientation');
 
-echo '<section class="banner banner__'. $orientation .'">';
+echo '<section class="js-waypoint waypoint banner banner__'. $orientation .' banner--' . $count . '">';
 
-  // echo '<div class="banner__background">';
+  if( $image ) :
+  
+    echo '<div class="banner__background waypoint__item"></div>';    
+    
+  endif;
 
-  //   set_query_var('icon', 'halftone-arrow');
-  //   set_query_var('icon', 'halftone-peak');
-  //   set_query_var('icon', 'halftone-shift');
-  //   set_query_var('icon', 'halftone-square');
-  //   set_query_var('icon', 'halftone-swoosh');
-  //   set_query_var('icon', 'halftone-trio');
-
-  //   get_template_part('partials/icon');
-
-  // echo '</div>';
-
-  echo '<div class="banner__text">';
+  echo '<div class="banner__text waypoint__item">';
 
     echo '<h1 class="">' . $title . ' </h1>';
 
@@ -49,7 +42,7 @@ echo '<section class="banner banner__'. $orientation .'">';
 
   if( $image ) :
     
-    echo '<div class="banner__image banner__image-crop">';
+    echo '<div class="banner__image banner__image-crop waypoint__item waypoint__item--delay">';
 
       echo wp_get_attachment_image( $image, $size );
 

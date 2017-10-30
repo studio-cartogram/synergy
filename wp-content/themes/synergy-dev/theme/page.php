@@ -36,6 +36,8 @@ echo '</main>';
 
 get_footer();
 
+get_template_part('partials/loader');
+
 get_template_part('partials/foot');
 
 ?>

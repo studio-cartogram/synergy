@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack-stream').webpack;
-var BowerWebpackPlugin = require('bower-webpack-plugin');
 
 // utils
 var deepMerge = require('../utils/deepMerge');
@@ -36,9 +35,7 @@ module.exports = deepMerge({
 				cache: true,
 				watch: true,
 				devtool: 'eval',
-				keepalive: true
 			},
-
 
 			// merged with defaults
 			// for :dev task
@@ -46,13 +43,10 @@ module.exports = deepMerge({
 				devtool: 'eval'
 			},
 
-
 			// merged with defaults
 			// for :prod task
 			prod: {
 				plugins: [
-					new webpack.optimize.DedupePlugin(),
-					new webpack.optimize.OccurenceOrderPlugin(true),
 					new webpack.optimize.UglifyJsPlugin({
 						sourceMap: false,
 						comments: false,
@@ -66,16 +60,8 @@ module.exports = deepMerge({
 						}
 					})
 				],
-				eslint: {
-					// failOnError: true,
-					// failOnWarning: true
-				}
 			},
-
 			defaults: {
-				resolve: {
-					extensions: ['', '.js', '.jsx']
-				},
 				output: {
 					chunkFilename: 'chunk-[name].js'
 				},
@@ -83,46 +69,21 @@ module.exports = deepMerge({
 					colors: true
 				},
 				module: {
-					preLoaders: [
+					rules: [
 						{
 							test: /\.jsx?$/,
-							exclude: [
-								/node_modules/,
-								/bower_components/,
-								/vendor/,
-								/polyfills/
-							],
-							loader: 'eslint'
-						}
+							exclude: /node_modules/,
+							use: {
+								loader: 'babel-loader',
+								options: {
+									presets: ['es2015', 'stage-2'],
+									plugins: ['transform-runtime'],
+								}			
+							},
+						},
 					],
-					loaders: [
-						{
-							test: /\.jsx?$/,
-							exclude: [
-								/node_modules/,
-								/bower_components/,
-								/polyfills/
-							],
-							loader: 'babel',
-							query: {
-								presets: ['es2015', 'stage-2'],
-								plugins: ['transform-runtime']
-							}
-						}
-					]
 				},
-				plugins: [
-					new BowerWebpackPlugin({
-						includes: /\.jsx?$/
-					})
-				],
-				eslint: {
-					emitError: true,
-					emitWarning: true,
-					configFile: path.resolve('./.eslintrc')
-				}
 			}
-
 		}
 	}
 }, overrides);

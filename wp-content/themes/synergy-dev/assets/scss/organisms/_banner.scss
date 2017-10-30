@@ -2,7 +2,9 @@
 
 .banner {
   display: flex;
-  padding: $d-quin;
+  padding: $d-dec;
+  position: relative;
+  overflow: hidden;
 
   &:hover img {
     transform: scale(1.1);
@@ -88,22 +90,37 @@
 }
 
 .banner__background {
-  background-image: url($p-svg + 'confetti.svg');
   top: 0;
-  position: fixed;
-  height: 100vh;
-  width:100vw;
-  background-size: cover;
-  background-position: 50% 50%;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
   z-index: -1;
-  svg {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 200vw;
-    min-height: 200vh;
-    margin: auto;
+  pointer-events: none;
+  background-image: url($p-svg + 'halftone-trio.svg');
+  background-position: 42% 0%;
+  background-repeat: no-repeat;
+
+  .banner__center & {
+    background-position: 10% 60%;    
   }
+
+  .banner__left & {
+    background-position: 60% 100%;    
+  }
+
+  // .banner--1 & {
+  //   background-image: url($p-svg + 'halftone-trio.svg');
+  // }
+
+  // .banner--2 & {
+  //   background-image: url($p-svg + 'halftone-shift.svg');
+  // }
+
+  // .banner--3 & {
+  //   background-image: url($p-svg + 'halftone-peak.svg');
+  // }
+
+  // .banner--4 & {
+  //   background-image: url($p-svg + 'halftone-arrow.svg');
+  // }
 }
