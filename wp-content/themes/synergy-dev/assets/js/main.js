@@ -20,7 +20,6 @@ import './scripts/Blob'
 import {
   ACTIVE_CLASS,
 } from './config'
-
 class App {
   constructor() {
     this.init()

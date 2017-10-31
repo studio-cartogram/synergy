@@ -23,3 +23,22 @@ input {
   padding-left: $d-duo;
   font-size: $t-font-size-epsilon;
 }
+
+.input__select {
+  color: $ca-input-active;
+}
+
+.input__large {
+  height: $d-sep;
+  font-size: $t-font-size-button-large;
+}
+
+.find-clinician {
+  appearance: none;
+  padding: $d-duo;
+  margin-right: $d-duo;
+  width: 60%;
+  background-image: url($p_svg + 'toggle-down.svg');
+  background-repeat: no-repeat;
+  background-position: 98% center; 
+}

@@ -19,10 +19,10 @@ class Togglers {
     }
 
     if(toggleEl.classList.contains(toggleClass)) {
-       return toggleEl.classList.remove(toggleClass);
+       return toggleEl.classList.remove(toggleClass)
     }
 
-    toggleEl.classList.add(toggleClass);
+    toggleEl.classList.add(toggleClass)
   }
 }
 
