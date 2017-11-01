@@ -20,7 +20,7 @@ echo '<section class="title">';
 
           if( have_rows('outcomes', 'options') ):
 
-            echo '<select class="input__base input__select input__large find-clinician">';
+            echo '<select class="input__base input__select input__large find-clinician js-find-clinician">';
           
               while ( have_rows('outcomes', 'options') ) : the_row();
           
@@ -36,7 +36,7 @@ echo '<section class="title">';
             $choice = get_sub_field('result'); // Should be the value of the option selected
             $buttonText = get_field('button_text', 'options');
 
-            echo '<a class="button button--primary button--large" href="' . $choice . '">'. $buttonText .'</a>';
+            echo '<button data-select=".js-find-clinician" class="button button--primary button--large">'. $buttonText .'</button>';
             
           endif;
 

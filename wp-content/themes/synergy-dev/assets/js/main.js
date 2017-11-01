@@ -16,6 +16,7 @@ import Swiper from 'swiper'
 import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
 import './scripts/Blob'
+import SelectClinician from './scripts/Select'
 
 import {
   ACTIVE_CLASS,
@@ -24,6 +25,7 @@ class App {
   constructor() {
     this.init()
     new Togglers()
+    new SelectClinician()
     loadSprite()
     document.body.classList.remove('js-is-loading')
     document.body.classList.add('js-is-initialized')
