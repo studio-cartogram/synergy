@@ -1,32 +1,91 @@
-
-
 .header {
   z-index: index($l-site, header);
   width: 100%;
-  padding: $d-quad $d-quin;
+
+  @include bp($bp-laptop) {
+    padding: $d-quad $d-quin;
+  }
+}
+
+.nav__toggle {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: index($l-nav, toggle);
+
+  @include bp($bp-laptop) {
+    display: none;
+  }
+}
+
+.nav__wrapper {
+  z-index: index($l-nav, wrapper);  
+  position: fixed;
+  overflow: scroll;
+  height: auto;
+  width: auto;
+  left: 25%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: $ca-nav-wrapper-background;
+  display: none;
+  
+  &.is-active {
+    display: block;
+  }
+
+  @include bp($bp-laptop) {
+    position: relative;
+    background-color: transparent;
+    display: block;
+    overflow: visible;
+  }
 }
 
 .header__logo {
   display: flex;
   height: $d-quin;
   width: 170px;
+  top: -$d-duo;
+
+  img {
+    display: block;
+  }
+}
+
+.nav__inner {
+  justify-content: center;
+  flex-direction: column; 
+
+  @include bp($bp-laptop) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .header__group {
   display: flex;
   align-items: center;
+  flex-direction: column;
+
+  @include bp($bp-laptop) {
+    flex-direction: row;
+  }
 }
 
 .header__group--right {
-  display: flex;
-  .header__nav {
-    justify-content: flex-end;
-  }
+
+  @include bp($bp-laptop) { 
+    order: 1;
+  } 
 }
 
 .header__nav {
   align-items: baseline;
-
+  flex-direction: column;
+  
   a {
     color: $ca-nav-link;
     font-weight: $t-font-weight-bold;
@@ -37,67 +96,83 @@
     }
   }
 
-  .icon--arrow-external {
-    fill: $ca-nav-link-icon;
-  }
-
-  .menu-item-has-children > a {
-    &:after {
-      content: '';
-      position: absolute;
-      height: 0;
-      width: 0;
-      border: 4px solid $ca-nav-link-icon;
-      border-left-color: transparent;
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-      right: 0;
-      top: 50%;
-      transform: translate(0, -25%);
-    }
-
-    &:hover:after {
-      border-top-color: $ca-nav-link-hover; 
-    }
-  }
-
-  li {
-    &:hover > ul {
-      height: auto;
-      box-shadow:   $sha-sm;
-      background: $ca-sub-nav-background;
-      padding-bottom: $d-trio;
-    }
+  @include bp($bp-laptop) {
+    flex-direction: row;    
   }
 }
 
-.header__nav > li {
-  display: inline-block;
-  position: relative;
+.header__nav--right {
+  justify-content: flex-end;
 }
 
-.sub-menu {
-  position: absolute;
-  left: 0;
-  min-width: 240px;
-  height: 0;
-  overflow: hidden;
-  transition: ease height .5s;
-  padding: 0;
-  padding-top: $d-duo;
 
-  a {
-    color: $ca-sub-nav-link;
-    font-size: $t-font-size-epsilon;
-    padding: $d-base $d-trio;
 
-    &:hover {
-      color: $ca-sub-nav-link-hover;
+@include bp($bp-laptop) {
+
+  .header__nav {
+
+    .icon--arrow-external {
+      fill: $ca-nav-link-icon;
+    }
+
+    .menu-item-has-children > a {
+      &:after {
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: 4px solid $ca-nav-link-icon;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -25%);
+      }
+
+      &:hover:after {
+        border-top-color: $ca-nav-link-hover; 
+      }
+    }
+
+    li {
+      &:hover > ul {
+        height: auto;
+        box-shadow:   $sha-sm;
+        background: $ca-sub-nav-background;
+        padding-bottom: $d-trio;
+      }
     }
   }
-}
 
-.header__nav li ul li {
-  display: block;
-  width: auto;
+  .header__nav > li {
+    display: inline-block;
+    position: relative;
+  }
+
+  .sub-menu {
+    position: absolute;
+    left: 0;
+    min-width: 240px;
+    height: 0;
+    overflow: hidden;
+    transition: ease height .5s;
+    padding: 0;
+    padding-top: $d-duo;
+
+    a {
+      color: $ca-sub-nav-link;
+      font-size: $t-font-size-epsilon;
+      padding: $d-base $d-trio;
+
+      &:hover {
+        color: $ca-sub-nav-link-hover;
+      }
+    }
+  }
+
+  .header__nav li ul li {
+    display: block;
+    width: auto;
+  }
 }
