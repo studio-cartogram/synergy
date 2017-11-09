@@ -1,24 +1,21 @@
 class SelectClinican {
-  constructor(buttonClass = '[data-select]') {
-    this.buttonEls = document.querySelectorAll(buttonClass) 
+  constructor(selectClass = '[data-select]') {
+    this.selectEl = document.querySelectorAll(selectClass) 
     this.bindEvents()
   }
   
   bindEvents() {
-    Array.prototype.forEach.call(this.buttonEls, (button) => {
-      button.addEventListener('click', this.handleClick.bind(null, button)) 
+    Array.prototype.forEach.call(this.selectEl, (select) => {
+      select.addEventListener('change', this.handleChange) 
     })
   }
+                                 
+  handleChange(event) {
+    window.location.href = event.target.value
 
-  handleClick(button) {
-    const selectEl = document.querySelector(button.dataset.select)    
-    const url = selectEl.options[selectEl.selectedIndex].value
-    if (!url) {
-      return
-    }
-    window.location.href = url
+    console.log(event)
+
   }
-                                
 }
 
 export default SelectClinican

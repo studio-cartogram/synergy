@@ -21590,10 +21590,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var SelectClinican = function () {
   function SelectClinican() {
-    var buttonClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[data-select]';
+    var selectClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[data-select]';
     (0, _classCallCheck3.default)(this, SelectClinican);
 
-    this.buttonEls = document.querySelectorAll(buttonClass);
+    this.selectEl = document.querySelectorAll(selectClass);
     this.bindEvents();
   }
 
@@ -21602,19 +21602,16 @@ var SelectClinican = function () {
     value: function bindEvents() {
       var _this = this;
 
-      Array.prototype.forEach.call(this.buttonEls, function (button) {
-        button.addEventListener('click', _this.handleClick.bind(null, button));
+      Array.prototype.forEach.call(this.selectEl, function (select) {
+        select.addEventListener('change', _this.handleChange);
       });
     }
   }, {
-    key: 'handleClick',
-    value: function handleClick(button) {
-      var selectEl = document.querySelector(button.dataset.select);
-      var url = selectEl.options[selectEl.selectedIndex].value;
-      if (!url) {
-        return;
-      }
-      window.location.href = url;
+    key: 'handleChange',
+    value: function handleChange(event) {
+      window.location.href = event.target.value;
+
+      console.log(event);
     }
   }]);
   return SelectClinican;
