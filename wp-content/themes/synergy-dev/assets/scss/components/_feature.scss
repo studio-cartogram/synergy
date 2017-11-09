@@ -1,0 +1,27 @@
+// All banners
+
+.feature {
+  .feature__text {
+    width: 720px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+    li {
+      padding-right: $d-trio;
+    }
+  }
+}
+
+.feature__title {
+  line-height: 1.15;
+  padding-bottom: $d-quad;
+}
+
+.feature__subtitle {
+  padding-bottom: $d-quad;
+}

@@ -33,6 +33,10 @@ h1 {
   }
 }
 
+h1.mega {
+  font-size: $t-font-size-mega;
+}
+
 h2 {
   font-size: $t-font-size-beta-mobile;
   font-weight: $t-font-weight-regular;
