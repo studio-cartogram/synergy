@@ -10,39 +10,9 @@ echo '<section class="title">';
 
     echo '<div class="column column-8-laptop intro">';
 
-      echo the_title( '<h1>', '</h1>' );
+      // echo the_title( '<h1>', '</h1>' );
 
-      echo '<h2 class="secondary">' . $subtitle . '</h2>';
-
-      if( $findClinician && have_rows('outcomes', 'options') ):
-
-        echo '<div class="row row--justify-center">';
-
-          if( have_rows('outcomes', 'options') ):
-
-            echo '<select class="input__base input__select input__large find-clinician js-find-clinician">';
-          
-              while ( have_rows('outcomes', 'options') ) : the_row();
-          
-                $source = get_sub_field('source_of_discomfort');
-                $result = get_sub_field('result');
-              
-                echo '<option value="' . $result . '">' . $source . '</option>';
-          
-              endwhile;
-          
-            echo '</select>';
-
-            $choice = get_sub_field('result'); // Should be the value of the option selected
-            $buttonText = get_field('button_text', 'options');
-
-            echo '<button data-select=".js-find-clinician" class="button button--primary button--large">'. $buttonText .'</button>';
-            
-          endif;
-
-        echo '</div>';
-                  
-      endif;
+      // echo '<h2 class="secondary">' . $subtitle . '</h2>';
 
     echo '</div>';
 
