@@ -14,7 +14,7 @@ echo '<section class="js-waypoint waypoint feature">';
 
   if( $image ) :
   
-    echo '<div class="feature__background waypoint__item"></div>';    
+    echo '<div class="feature__overlay waypoint__item"></div>';    
     
   endif;
 

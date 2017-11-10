@@ -19,11 +19,19 @@
 }
 
 .feature__text {
-  width: 720px;
+  width: 800px;
   position: absolute;
   z-index: index($l-feature, cta);
   top: 180px;
-  margin-left: $d-dec;
+  padding-left: $d-dec;
+}
+
+.feature__overlay {
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.00) 59%);
+  position: absolute;
+  z-index: index($l-feature, overlay); 
+  height: 100%;
+  width: 100%;
 }
 
 .feature__image {
@@ -38,5 +46,5 @@
 }
 
 .feature__subtitle {
-  padding-bottom: $d-quad;
+  padding-bottom: $d-quin;
 }
