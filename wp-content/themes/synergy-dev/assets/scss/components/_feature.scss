@@ -1,9 +1,10 @@
 // All banners
 
 .feature {
-  .feature__text {
-    width: 720px;
-  }
+  display: flex;
+  flex-direction: column;
+  z-index: index($l-site, feature);
+
   ul {
     list-style: none;
     margin: 0;
@@ -15,6 +16,20 @@
       padding-right: $d-trio;
     }
   }
+}
+
+.feature__text {
+  width: 720px;
+  position: absolute;
+  z-index: index($l-feature, cta);
+  top: 180px;
+  margin-left: $d-dec;
+}
+
+.feature__image {
+  width: 100%;
+  height: auto;
+  z-index: index($l-feature, image);
 }
 
 .feature__title {

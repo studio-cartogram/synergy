@@ -26,7 +26,7 @@ echo '<section class="js-waypoint waypoint feature">';
 
     if( $findClinician && have_rows('outcomes', 'options') ):
       
-      echo '<div class="row row--justify-center">';
+      echo '<div class="row">';
 
         if( have_rows('outcomes', 'options') ):
 

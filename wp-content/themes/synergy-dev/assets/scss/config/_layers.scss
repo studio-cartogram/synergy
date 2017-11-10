@@ -16,9 +16,11 @@ Layers
  */
 
 
- $l-site: main, nav, curtain, header, loader;
+ $l-site: main, feature, nav, curtain, header, loader;
 
  $l-nav: wrapper, toggle;
+
+ $l-feature: image, cta;
 
 
 
