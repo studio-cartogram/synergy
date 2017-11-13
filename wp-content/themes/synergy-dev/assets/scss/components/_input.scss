@@ -38,7 +38,18 @@ input {
   padding: $d-duo;
   margin-right: $d-duo;
   width: 60%;
+  background-color: $ca-button-primary-background;
   background-image: url($p_svg + 'toggle-down.svg');
   background-repeat: no-repeat;
   background-position: 98% center; 
+  color: $ca-button-primary-color;
+  border: $b-button-primary;
+  box-shadow: $sha-md;
+  font-weight: $t-font-weight-bold;
+
+  &:hover {
+    background-color: $ca-button-primary-background-hover;
+    box-shadow: $sha-inset;
+    transition: all 0.175s ease-in-out;
+  }
 }

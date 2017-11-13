@@ -36,7 +36,7 @@ Button Component
   transition: background-image 0.175s ease-out;
 
   &:hover {
-    background-image: $ca-button-primary-background-hover;
+    background-color: $ca-button-primary-background-hover;
     color: $ca-button-primary-color;
     box-shadow: $sha-inset;
     transition: box-shadow 0.175s ease-in;

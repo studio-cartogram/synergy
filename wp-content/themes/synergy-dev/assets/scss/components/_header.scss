@@ -4,7 +4,7 @@
   position: absolute;
 
   @include bp($bp-tablet) {
-    padding: $d-quad $d-quin;
+    padding: $d-quad $d-dec;
   }
 }
 
