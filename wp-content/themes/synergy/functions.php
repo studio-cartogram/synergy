@@ -273,8 +273,8 @@
 
       register_nav_menus( array(
         'nav_tabs'	=>  'Topics Nav',
-        'header_nav_secondary'	=>  'Primary Nav Right',
-        'header_nav_primary'	=>  'Primary Nav Left',
+        'header_nav_secondary'	=>  'Secondary Nav',
+        'header_nav_primary'	=>  'Primary Nav',
         'nav_footer'	=>  'Footer Nav',
       ) );
 
@@ -288,8 +288,8 @@
 	function cartogram_fonts() {
 
     $output = '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">';
-    // $output = '<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700" rel="stylesheet">';
-    $output = '<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">';
+    // $output = '<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">';
+    // $output = '<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">';
 		echo $output;
 
   }
