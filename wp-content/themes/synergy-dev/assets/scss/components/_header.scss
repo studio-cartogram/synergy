@@ -10,14 +10,19 @@
 
 .header__inner {
   display: flex;
+  justify-content: space-between;
 }
 
 .header__toggle {
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 53px;
+  right: $d-dec;
   z-index: index($l-nav, toggle);
+
+  svg {
+    
+  }
 }
 
 .header__logo {
@@ -32,11 +37,17 @@
 
 .header__nav {
   align-items: baseline;
+  margin-right: $d-sep;
   
   a {
     color: $ca-nav-link;
     font-weight: $t-font-weight-bold;
-    padding: $d-duo $d-trio;
+    padding-right: $d-trio;
+    padding-top: $d-trio;
+
+    svg {
+      fill: $ca-nav-link-icon;
+    }
 
     &:hover {
       color: $ca-nav-link-hover;
@@ -59,3 +70,4 @@
     display: block;
   }
 }
+

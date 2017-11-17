@@ -48,7 +48,7 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<button class="button button--primary">' . 'Book an appointment' . '</button>';  
+        echo '<a href="#locations" class="link link--primary">' . 'Book an appointment' . '</a>';  
       
       echo '</li>';
 
@@ -58,7 +58,7 @@ echo '<header role="banner" class="header">';
 
   echo '<a href="#menu" data-toggle=".js-nav" data-toggle-class="is-active" class="header__toggle">';
 
-    echo 'Menu';
+    echo '<img src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/hamburger.svg" />';
 
   echo '</a>';
 
