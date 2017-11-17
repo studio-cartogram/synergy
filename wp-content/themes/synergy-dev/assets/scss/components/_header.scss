@@ -2,6 +2,7 @@
   z-index: index($l-site, header);
   width: 100%;
   position: absolute;
+  padding: $d-quad $d-trio;
 
   @include bp($bp-tablet) {
     padding: $d-quad $d-dec;
@@ -16,12 +17,37 @@
 .header__toggle {
   display: block;
   position: absolute;
-  top: 53px;
-  right: $d-dec;
+  top: 50px;
+  right: $d-trio;
   z-index: index($l-nav, toggle);
 
-  svg {
-    
+  @include bp($bp-tablet) {
+    right: $d-dec;
+  }
+
+  .hamburger {
+    height: $d-trio;
+    width: $d-trio;
+    fill: $ca-nav-link;
+
+    path {
+      transition: .2s;
+      transform-origin: center;
+    }
+
+    &:hover {
+      fill: $ca-nav-link-hover;
+
+      .p1 { 
+        transform: translateY(10px) rotate(45deg);
+      }
+      .p2 { 
+        opacity: 0;
+      }
+      .p3 { 
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
   }
 }
 
@@ -37,7 +63,7 @@
 
 .header__nav {
   align-items: baseline;
-  margin-right: $d-sep;
+  margin-right: $d-quad;
   
   a {
     color: $ca-nav-link;

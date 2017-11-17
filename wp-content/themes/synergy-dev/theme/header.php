@@ -58,7 +58,10 @@ echo '<header role="banner" class="header">';
 
   echo '<a href="#menu" data-toggle=".js-nav" data-toggle-class="is-active" class="header__toggle">';
 
-    echo '<img src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/hamburger.svg" />';
+    // set_query_var( 'icon', 'menu' );
+    // get_template_part('partials/icon');
+
+    get_template_part('partials/hamburger');
 
   echo '</a>';
 
