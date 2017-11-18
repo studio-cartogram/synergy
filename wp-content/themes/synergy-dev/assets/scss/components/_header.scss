@@ -121,15 +121,18 @@
 
 .nav__list {
   padding-top: $d-dec;
-  flex-grow: 1;
+  flex-grow: 0;
+  width: 100%;
   flex-basis: auto;
-  margin-left: $d-quin;
+  margin-right: $d-quin;  
 
-  &:first-child {
+  &:last-child {
     margin-left: 0;
   }
 
   @include bp($bp-tablet) {
+    width: auto;
+    flex-grow: 1;
     flex-basis: 0;
   }
 
