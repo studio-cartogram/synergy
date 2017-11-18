@@ -24,35 +24,6 @@
   @include bp($bp-tablet) {
     right: $d-dec;
   }
-
-  .hamburger {
-    height: $d-trio;
-    width: $d-trio;
-    fill: $ca-nav-link;
-
-    path {
-      transition: .2s;
-      transform-origin: center;
-    }
-
-    &:hover {
-      fill: $ca-nav-link-hover;
-
-      .p1 { 
-        transform: translateY(10px) rotate(45deg);
-      }
-      .p2 { 
-        opacity: 0;
-      }
-      .p3 { 
-        transform: translateY(-8px) rotate(-45deg);
-      }
-    }
-
-    &:active {
-      fill: $ca-nav-inverted-text;
-    }
-  }
 }
 
 .header__logo {
@@ -83,6 +54,15 @@
       color: $ca-nav-link-hover;
     }
   }
+
+  .nav--is-visible & a {
+    color: $ca-nav-inverted-text;
+
+    &:hover {
+      color: $ca-nav-link-hover;
+    }
+
+  }
 }
 
 .nav__outside {
@@ -104,6 +84,7 @@
   width: auto;
   background: $ca-nav-overlay-background;
   padding: $d-quad $d-trio;
+  overflow: scroll;
   
   @include bp($bp-tablet) {
     padding: $d-quad $d-dec;
@@ -113,31 +94,50 @@
     justify-content: space-between;
   }
 
-  .menu-item a, .header__nav a {
+  .list__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-item a {
     color: $ca-nav-inverted-text;
 
+    &:focus,
     &:hover {
       color: $ca-nav-link-hover;
     } 
   }
 
-  &.is-active {
+  .nav--is-visible & {
     display: block;
   }
 }
 
+.nav__title {
+  color: $ca-nav-title;
+  border-bottom: $b-darker;
+  margin-bottom: $d-duo;
+}
+
 .nav__list {
-  padding-top: $d-trio;
-  font-size: $t-font-size-epsilon;
+  padding-top: $d-dec;
+  flex-grow: 1;
+  flex-basis: auto;
+  margin-left: $d-quin;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include bp($bp-tablet) {
+    flex-basis: 0;
+  }
 
   li {
     padding-bottom: $d-base;
+    font-size: $t-font-size-gamma;
   }
 
-  > li {
-    padding-right: $d-trio;
-    padding-bottom: $d-trio;
-  }
 }
 
 .sub-menu {

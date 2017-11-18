@@ -16,6 +16,7 @@ import Swiper from 'swiper'
 import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
 import './scripts/Blob'
+import './scripts/Toggle'
 import SelectClinician from './scripts/Select'
 
 import {

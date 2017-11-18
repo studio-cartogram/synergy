@@ -15,6 +15,24 @@ $nav_primary_left = array(
   'items_wrap'      => '%3$s',
 );
 
+$nav_services = array(
+  'theme_location'  => 'header_nav_services',
+  'container'       => false,
+  'items_wrap'      => '%3$s',
+);
+
+$nav_programs = array(
+  'theme_location'  => 'header_nav_programs',
+  'container'       => false,
+  'items_wrap'      => '%3$s',
+);
+
+$nav_resources = array(
+  'theme_location'  => 'header_nav_resources',
+  'container'       => false,
+  'items_wrap'      => '%3$s',
+);
+
 get_template_part('partials/contact-announcement');
 
 echo '<header role="banner" class="header">';
@@ -56,7 +74,7 @@ echo '<header role="banner" class="header">';
 
   echo '</div>';
 
-  echo '<a href="#menu" data-toggle=".js-nav" data-toggle-class="is-active" class="header__toggle">';
+  echo '<a href="#menu" data-toggle-nav class="header__toggle">';
 
     get_template_part('partials/hamburger');
 
@@ -103,11 +121,41 @@ echo '<header role="banner" class="header">';
 
     echo '<div class="row row--full nav__inner">';
 
-      echo '<ul class="nav__list list">';
+      echo '<div class="nav__list nav__services">';
 
-        wp_nav_menu( $nav_primary_left );
+        echo '<h5 class="nav__title">Services</h5>';
 
-      echo '</ul>';
+        echo '<ul class="list list__inner">';
+
+          wp_nav_menu( $nav_services );
+
+        echo '</ul>';
+
+      echo '</div>';
+
+      echo '<div class="nav__list nav__programs">';
+      
+        echo '<h5 class="nav__title">Programs</h5>';
+
+        echo '<ul class="list list__inner">';
+
+          wp_nav_menu( $nav_programs );
+
+        echo '</ul>';
+
+      echo '</div>';
+
+      echo '<div class="nav__list nav__resources">';
+      
+        echo '<h5 class="nav__title">Resources</h5>';
+
+        echo '<ul class="list list__inner">';
+
+          wp_nav_menu( $nav_resources );
+
+        echo '</ul>';
+
+      echo '</div>';
 
     echo '</div>';
 

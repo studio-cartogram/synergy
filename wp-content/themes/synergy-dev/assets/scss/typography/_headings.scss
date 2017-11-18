@@ -60,7 +60,7 @@ h4 {
 
 h5 {
   font-size: $t-font-size-epsilon;
-  font-weight: $t-font-weight-regular;
+  font-weight: $t-font-weight-bold;
 }
 
 h6 {
@@ -85,4 +85,8 @@ h6 {
 
 .epsilon {
   @extend h5;
+}
+
+.inverted {
+  color: $ca-nav-inverted-text;
 }
