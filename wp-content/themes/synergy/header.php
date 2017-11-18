@@ -33,7 +33,7 @@ echo '<header role="banner" class="header">';
 
     echo '</div>';
 
-    echo '<ul class="header__nav list">';
+    echo '<ul class="header__nav list nav__outside">';
 
       echo '<li class="">';
 
@@ -58,9 +58,6 @@ echo '<header role="banner" class="header">';
 
   echo '<a href="#menu" data-toggle=".js-nav" data-toggle-class="is-active" class="header__toggle">';
 
-    // set_query_var( 'icon', 'menu' );
-    // get_template_part('partials/icon');
-
     get_template_part('partials/hamburger');
 
   echo '</a>';
@@ -75,11 +72,36 @@ echo '<header role="banner" class="header">';
   
           echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
   
-          echo '<img src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/logo.svg" />';
+          echo '<img src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/logo-white.svg" />';
                 
         echo '</a>';
     
       echo '</div>';
+
+      echo '<ul class="header__nav nav__inside list">';
+      
+        echo '<li class="">';
+  
+          echo '<a href="' . $classes . '" class="link link--primary link--external action">' . 'Class schedules';
+        
+            set_query_var( 'icon', 'arrow-external' );
+            get_template_part('partials/icon');
+        
+          echo '</a>';
+  
+        echo '</li>';
+  
+        echo '<li class="">';
+  
+          echo '<a href="#locations" class="link link--primary">' . 'Book an appointment' . '</a>';  
+        
+        echo '</li>';
+      
+      echo '</ul>';
+
+    echo '</div>';
+
+    echo '<div class="row row--full nav__inner">';
 
       echo '<ul class="nav__list list">';
 
@@ -88,6 +110,8 @@ echo '<header role="banner" class="header">';
       echo '</ul>';
 
     echo '</div>';
+
+    get_template_part('partials/blob');
   
   echo '</nav>';
 
