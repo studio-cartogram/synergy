@@ -113,6 +113,14 @@
   }
 }
 
+.nav__inside {
+  padding-bottom: $d-quin;
+
+  @include bp($bp-tablet) {
+    padding-bottom: $d-dec;
+  }
+}
+
 .nav__title {
   color: $ca-nav-title;
   border-bottom: $b-darker;
@@ -120,20 +128,21 @@
 }
 
 .nav__list {
-  padding-top: $d-dec;
+  padding-top: $d-quin;
   flex-grow: 0;
   width: 100%;
   flex-basis: auto;
-  margin-right: $d-quin;  
-
-  &:last-child {
-    margin-left: 0;
-  }
 
   @include bp($bp-tablet) {
     width: auto;
     flex-grow: 1;
     flex-basis: 0;
+
+    margin-right: $d-quin;  
+    
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   li {
