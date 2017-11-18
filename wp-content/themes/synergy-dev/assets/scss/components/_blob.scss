@@ -25,6 +25,11 @@
   height: 100vh;
   pointer-events: none;
   z-index: 1;
+
+  path {
+    fill: $ca-blob-default;
+    opacity: 0.5;
+  }
 }
 // .wrapper {
 //   margin: 0 auto;

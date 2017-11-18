@@ -113,7 +113,12 @@ $ca-anchor-secondary-color: $c-inkLighter;
 $ca-anchor-secondary-hover-color: $c-inkLight;
 $ca-anchor-inverted-color: $c-white;
 
-//Nav
+// Blob
+
+$ca-blob-default: #90CCFA;
+$ca-blob-nav: $c-skyDark;
+
+// Nav
 
 $ca-nav-wrapper-background: $c-white;
 $ca-nav-overlay-background: $c-ink;

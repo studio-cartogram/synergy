@@ -111,6 +111,13 @@
   .nav--is-visible & {
     display: block;
   }
+
+  .blob__item {
+    path {
+      fill: $ca-blob-nav;
+      opacity: 0.2;
+    }
+  }
 }
 
 .nav__inside {
