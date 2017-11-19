@@ -64,8 +64,7 @@ Cartogram.Toggle = function Toggle(namespace, options) {
         this.$nodes.toggle
       )
     : Array.prototype.slice.call(this.$nodes.items)
-
-
+    
   this.isVisible = false
 
   if (this.config.debug) {
@@ -226,6 +225,7 @@ Cartogram.Toggle.prototype._trapFocus = function(e) {
 
     case 9:
       var focusIndex = this.focusables.indexOf(document.activeElement)
+      // debugger
       if (e.shiftKey) {
         if (focusIndex === 0) {
           this.focusables[this.focusables.length - 1].focus()

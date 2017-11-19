@@ -8,7 +8,7 @@
   width: auto;
   background-color: rgba(51,62,71,0.7);
   opacity: 0.5;
-  z-index: index($l-nav, locations);
+  z-index: index($l-header, locations);
   position: fixed;
 
   .locations--is-visible & {
@@ -19,14 +19,27 @@
 }
 
 .locations__inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: auto;
   width: auto;
   overflow: scroll;
-  transform: translate(-50%,-50%);
-  transition: all $a-timing * 2 $a-easing;
+  transform: translate(0,0);
+
+  @include bp($bp-tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    height: auto;
+    width: auto;
+    overflow: scroll;
+    transform: translate(-50%,-50%);
+  }
 }
 
 .locations__header,
@@ -35,24 +48,83 @@
   justify-content: space-between;
 }
 
+.locations__container {
+  flex-direction: column;
+
+  @include bp($bp-tablet) {
+    flex-direction: row;
+  }
+}
+
 .locations__header {
   padding-bottom: $d-base;
 }
 
-.locations__wrapper{
+.location__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: $d-quin;
+
+  @include bp($bp-tablet) {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+}
+
+.location__info {
+  flex-grow: 2;
+  padding-left: $d-trio;
+
+  @include bp($bp-tablet) {
+    flex-grow: 1;
+    padding-left: 0;
+  }
+}
+
+.locations__wrapper {
   margin: auto;
-  min-width: 640px;
+  min-width: 100%;
   overflow: auto;
   overflow-x: hidden;
   padding: 1.5em;
   position: relative;
   width: 100%;
+  height: 100%;
   background: $ca-location-overlay-background;
-  padding: $d-quin;
+  padding: $d-trio;
+
+  @include bp($bp-mobile) {
+    padding: $d-quin;
+    min-width: 640px;
+  }
+
+  @include bp($bp-tablet) {
+    height: auto;
+  }
 }
 
 .location__image {
-  max-width: 240px;
+  max-width: 96px;
   padding-bottom: $d-trio;
+  flex-grow: 1;
+
+  img {
+    object-position: center;
+    object-fit: cover;
+    height: 96px;
+    overflow: hidden;
+  }
+  
+  @include bp($bp-tablet) {
+    max-width: 240px;
+
+    img {
+      object-position: center;
+      object-fit: contain;
+      height: auto;
+      overflow: visible;
+    }
+  }
 }
 

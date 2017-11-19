@@ -45,8 +45,10 @@ echo '<header role="banner" class="header">';
 
         echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
 
-        echo '<img src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/logo.svg" />';
-              
+        echo '<img class="hide-when--nav--is-visible" src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/logo.svg" />';
+        
+        echo '<img class="show-when--nav--is-visible" src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/logo-white.svg" />';
+
       echo '</a>';
 
     echo '</div>';
@@ -74,50 +76,7 @@ echo '<header role="banner" class="header">';
 
   echo '</div>';
 
-  echo '<a href="#menu" data-toggle-nav class="header__toggle">';
-
-    get_template_part('partials/hamburger');
-
-  echo '</a>';
-
   echo '<nav class="nav js-nav" role="navigation">';
-
-    echo '<div class="row row--full nav__inner">';
-
-      echo '<div class="nav__logo">';
-    
-        echo '<a href="' . get_bloginfo('url') . '" class="">';
-  
-          echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
-  
-          echo '<img src="' . get_bloginfo('stylesheet_directory') . '/assets/svg/logo-white.svg" />';
-                
-        echo '</a>';
-    
-      echo '</div>';
-
-      echo '<ul class="header__nav nav__inside list">';
-      
-        echo '<li class="">';
-  
-          echo '<a target="_blank" href="' . $classes . '" class="link link--primary link--external action">' . 'Class schedules';
-        
-            set_query_var( 'icon', 'arrow-external' );
-            get_template_part('partials/icon');
-        
-          echo '</a>';
-  
-        echo '</li>';
-  
-        echo '<li class="">';
-  
-          echo '<a href="#locations" data-toggle-locations class="link link--primary">' . 'Book an appointment' . '</a>';  
-        
-        echo '</li>';
-      
-      echo '</ul>';
-
-    echo '</div>';
 
     echo '<div class="row row--full nav__inner">';
 
@@ -172,6 +131,12 @@ echo '<header role="banner" class="header">';
     echo '</div>';
 
   echo '</div>';
+
+  echo '<a href="#menu" data-toggle-nav class="header__toggle">';
+  
+    get_template_part('partials/hamburger');
+
+  echo '</a>';
 
 echo '</header>';
 

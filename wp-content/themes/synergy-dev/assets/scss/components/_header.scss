@@ -2,16 +2,26 @@
   z-index: index($l-site, header);
   width: 100%;
   position: absolute;
-  padding: $d-quad $d-trio;
 
-  @include bp($bp-tablet) {
-    padding: $d-quad $d-dec;
+  .nav--is-visible & {
+    overflow: scroll;
+    height: 100vh;
   }
 }
 
 .header__inner {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: $d-quad $d-trio;
+  z-index: index($l-header, header-inner);
+  flex-direction: column;
+  @include bp($bp-tablet) {
+    padding: $d-quad $d-dec;
+    flex-direction: row;
+  }
 }
 
 .header__toggle {
@@ -19,7 +29,7 @@
   position: absolute;
   top: 50px;
   right: $d-trio;
-  z-index: index($l-nav, toggle);
+  z-index: index($l-header, toggle);
 
   @include bp($bp-tablet) {
     right: $d-dec;
@@ -30,10 +40,6 @@
   display: flex;
   height: $d-quin;
   width: 170px;
-
-  img {
-    display: block;
-  }
 }
 
 .header__nav {

@@ -21801,6 +21801,7 @@ Cartogram.Toggle.prototype._trapFocus = function (e) {
 
     case 9:
       var focusIndex = this.focusables.indexOf(document.activeElement);
+      // debugger
       if (e.shiftKey) {
         if (focusIndex === 0) {
           this.focusables[this.focusables.length - 1].focus();

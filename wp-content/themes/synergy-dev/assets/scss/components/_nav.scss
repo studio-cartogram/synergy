@@ -2,29 +2,14 @@
   overflow: hidden;
 }
 
-.nav__outside {
-  display: none;
-
-  @include bp($bp-mobile) {
-    display: flex;
-  }
-}
-
 .nav {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: auto;
-  width: auto;
   background: $ca-nav-overlay-background;
-  padding: $d-quad $d-trio;
-  overflow: scroll;
+  padding: $d-dec * 2 $d-trio;
+  min-height: 100vh;
   
   @include bp($bp-tablet) {
-    padding: $d-quad $d-dec;
+    padding: $d-dec * 2 $d-dec;
     overflow: hidden;
   }
 
@@ -58,11 +43,15 @@
   }
 }
 
-.nav__inside {
-  padding-bottom: 0;
+.nav__outside {
+  display: none;
 
-  @include bp($bp-tablet) {
-    padding-bottom: $d-dec;
+  .nav--is-visible & {
+    display: flex;
+  }
+
+  @include bp($bp-mobile) {
+    display: flex;
   }
 }
 
@@ -95,4 +84,16 @@
     font-size: $t-font-size-gamma;
   }
 
+}
+
+.show-when--nav--is-visible {
+  display: none;
+
+  .nav--is-visible & {
+    display: block;
+  }
+}
+
+.nav--is-visible .hide-when--nav--is-visible {
+  display: none;
 }
