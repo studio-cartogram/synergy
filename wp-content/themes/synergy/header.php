@@ -55,7 +55,7 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<a href="' . $classes . '" class="link link--primary link--external action">' . 'Class schedules';
+        echo '<a target="_blank" href="' . $classes . '" class="link link--primary link--external action">' . 'Class schedules';
       
           set_query_var( 'icon', 'arrow-external' );
           get_template_part('partials/icon');
@@ -100,7 +100,7 @@ echo '<header role="banner" class="header">';
       
         echo '<li class="">';
   
-          echo '<a href="' . $classes . '" class="link link--primary link--external action">' . 'Class schedules';
+          echo '<a target="_blank" href="' . $classes . '" class="link link--primary link--external action">' . 'Class schedules';
         
             set_query_var( 'icon', 'arrow-external' );
             get_template_part('partials/icon');
