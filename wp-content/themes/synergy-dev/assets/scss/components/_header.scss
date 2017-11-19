@@ -17,7 +17,7 @@
 .header__toggle {
   display: block;
   position: absolute;
-  top: 50px;
+  top: 51px;
   right: $d-trio;
   z-index: index($l-nav, toggle);
 
@@ -38,13 +38,23 @@
 
 .header__nav {
   align-items: baseline;
-  margin-right: $d-quad;
+  margin-right: $d-trio;
+  padding-top: $d-quin;
+
+  @include bp($bp-mobile) {
+    padding-top: 0;
+    margin-right: $d-quad;
+  }
   
   a {
     color: $ca-nav-link;
     font-weight: $t-font-weight-bold;
     padding-right: $d-trio;
-    padding-top: $d-trio;
+    padding-top: $d-base;
+
+    @include bp($bp-mobile) {
+      padding-top: $d-trio;
+    }
 
     svg {
       fill: $ca-nav-link-icon;
@@ -55,116 +65,12 @@
     }
   }
 
-  .nav--is-visible & a {
+  .nav--is-visible & .link--primary {
     color: $ca-nav-inverted-text;
 
     &:hover {
       color: $ca-nav-link-hover;
     }
-
-  }
-}
-
-.nav__outside {
-  display: none;
-
-  @include bp($bp-mobile) {
-    display: flex;
-  }
-}
-
-.nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: auto;
-  width: auto;
-  background: $ca-nav-overlay-background;
-  padding: $d-quad $d-trio;
-  overflow: scroll;
-  
-  @include bp($bp-tablet) {
-    padding: $d-quad $d-dec;
-  }
-
-  .nav__inner {
-    justify-content: space-between;
-  }
-
-  .list__inner {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu-item a {
-    color: $ca-nav-inverted-text;
-
-    &:focus,
-    &:hover {
-      color: $ca-nav-link-hover;
-    } 
-  }
-
-  .nav--is-visible & {
-    display: block;
-  }
-
-  .blob__item {
-    path {
-      fill: $ca-blob-nav;
-      opacity: 0.2;
-    }
-  }
-}
-
-.nav__inside {
-  padding-bottom: $d-quin;
-
-  @include bp($bp-tablet) {
-    padding-bottom: $d-dec;
-  }
-}
-
-.nav__title {
-  color: $ca-nav-title;
-  border-bottom: $b-darker;
-  margin-bottom: $d-duo;
-}
-
-.nav__list {
-  padding-top: $d-quin;
-  flex-grow: 0;
-  width: 100%;
-  flex-basis: auto;
-
-  @include bp($bp-tablet) {
-    width: auto;
-    flex-grow: 1;
-    flex-basis: 0;
-
-    margin-right: $d-quin;  
-    
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  li {
-    padding-bottom: $d-base;
-    font-size: $t-font-size-gamma;
-  }
-
-}
-
-.sub-menu {
-  margin-top: $d-base;
-  padding: 0;
-
-  li {
-    font-size: $t-font-size-gamma;
   }
 }
 
