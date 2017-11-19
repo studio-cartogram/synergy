@@ -78,6 +78,8 @@ echo '<header role="banner" class="header">';
 
   echo '<nav class="nav js-nav" role="navigation">';
 
+    get_template_part('partials/blob');
+
     echo '<div class="row row--full nav__inner">';
 
       echo '<div class="nav__list nav__services">';
@@ -118,7 +120,6 @@ echo '<header role="banner" class="header">';
 
     echo '</div>';
 
-    get_template_part('partials/blob');
   
   echo '</nav>';
 

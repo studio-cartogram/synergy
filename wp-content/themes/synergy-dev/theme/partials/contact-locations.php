@@ -15,7 +15,17 @@ if( have_rows('locations', 'options') ):
     
       echo '<div class="column column-6-mobile column-3-tablet ">';
         
-        echo '<h3 class="footer__heading">' . $name . '</h3>';
+        echo '<h3 class="footer__heading">';
+        
+        echo ''. $name . '';
+
+        if( $note ):
+
+          echo '**';
+        
+        endif;
+        
+        echo '</h3>';
 
         echo '<p class="text--inverted">' . $address . '<br><a class="link--underline link" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
 

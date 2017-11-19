@@ -3,6 +3,11 @@
 }
 
 .nav {
+
+  .blob {
+    z-index: 1;
+  }
+
   display: none;
   background: $ca-nav-overlay-background;
   padding: $d-dec * 2 $d-trio;
