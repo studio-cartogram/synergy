@@ -248,6 +248,10 @@ const Nav = new Cartogram.Toggle('nav', {
   debug: true,
 })
 
+const Locations = new Cartogram.Toggle('locations', {
+  debug: true,
+})
+
 function addToArray(arr, newEntry){
   return [].concat(arr, newEntry)
 }

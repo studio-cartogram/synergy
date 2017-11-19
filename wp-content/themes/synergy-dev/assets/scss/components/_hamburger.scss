@@ -9,6 +9,7 @@
   }
 
   .nav--is-visible &,
+  .is-active > &,
   &:hover {
     fill: $ca-nav-link-hover;
 
@@ -25,5 +26,9 @@
 
   .nav--is-visible & {
     fill: $ca-nav-inverted-text;
+  }
+
+  .locations--is-visible & {
+    fill: $ca-nav-link-hover;
   }
 }

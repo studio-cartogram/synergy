@@ -7,7 +7,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   text-rendering: optimizeLegibility;
   color: $ca-heading-color;
   font-weight: $t-font-weight-regular;
@@ -22,6 +23,10 @@ h6 {
   &.inline-block {
     display: inline-block;
   }
+}
+
+span.secondary {
+  color: $ca-heading-secondary-color;
 }
 
 h1 {

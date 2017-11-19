@@ -1,11 +1,58 @@
-.overlay {
-  position: absolute;
+.locations {
+  display: none;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: $ca-overlay-background;
-  transition: all $a-timing * 2 $a-easing;
-  opacity: 0;
+  height: auto;
+  width: auto;
+  background-color: rgba(51,62,71,0.7);
+  opacity: 0.5;
+  z-index: index($l-nav, locations);
+  position: fixed;
 
+  .locations--is-visible & {
+    display: flex;
+    opacity: 1;
+    box-shadow: $sha-xl;
+  }
 }
+
+.locations__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: auto;
+  overflow: scroll;
+  transform: translate(-50%,-50%);
+  transition: all $a-timing * 2 $a-easing;
+}
+
+.locations__header,
+.locations__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.locations__header {
+  padding-bottom: $d-base;
+}
+
+.locations__wrapper{
+  margin: auto;
+  min-width: 640px;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 1.5em;
+  position: relative;
+  width: 100%;
+  background: $ca-location-overlay-background;
+  padding: $d-quin;
+}
+
+.location__image {
+  max-width: 240px;
+  padding-bottom: $d-trio;
+}
+

@@ -66,7 +66,7 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<a href="#locations" class="link link--primary">' . 'Book an appointment' . '</a>';  
+        echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . 'Book an appointment' . '</a>';  
       
       echo '</li>';
 
@@ -111,7 +111,7 @@ echo '<header role="banner" class="header">';
   
         echo '<li class="">';
   
-          echo '<a href="#locations" class="link link--primary">' . 'Book an appointment' . '</a>';  
+          echo '<a href="#locations" data-toggle-locations class="link link--primary">' . 'Book an appointment' . '</a>';  
         
         echo '</li>';
       
@@ -162,6 +162,16 @@ echo '<header role="banner" class="header">';
     get_template_part('partials/blob');
   
   echo '</nav>';
+
+  echo '<div class="overlay js-locations locations">';
+
+    echo '<div class="locations__inner">';
+
+      get_template_part('partials/overlay-locations');
+    
+    echo '</div>';
+
+  echo '</div>';
 
 echo '</header>';
 
