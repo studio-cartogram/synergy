@@ -20,9 +20,9 @@ Footer Component
     left: 50%;
     transform: translate(-50%, -100%);
     width: 100%;
-    background-image: url($p_svg + 'waves.svg');
-    background-position: center top;
-    background-size: cover;  
+    // background-image: url($p_svg + 'waves.svg');
+    // background-position: center top;
+    // background-size: cover;  
     height: 40px;
 
     @include bp($bp-tablet) {
@@ -32,6 +32,10 @@ Footer Component
     @include bp($bp-laptop) {
       height: 80px;
     }
+  }
+
+  .link--primary {
+    font-weight: $t-font-weight-bold;
   }
 
   .js-is-loading & {
@@ -52,7 +56,7 @@ Footer Component
 }
 
 .footer__bottom {
-  border-top: $b-footer;
+  border-top: $b-subdued;
   padding-top: $d-trio;
 }
 

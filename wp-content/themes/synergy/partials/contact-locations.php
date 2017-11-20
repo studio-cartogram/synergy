@@ -21,13 +21,13 @@ if( have_rows('locations', 'options') ):
 
         if( $note ):
 
-          echo '**';
+          echo ' **';
         
         endif;
         
         echo '</h3>';
 
-        echo '<p class="text--inverted">' . $address . '<br><a class="link--underline link" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
+        echo '<p class="text--inverted">' . $address . '<br><a target="_blank" class="link--underline link" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
 
         if( $phone ):
 

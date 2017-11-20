@@ -63,7 +63,7 @@ echo '<div class="locations__wrapper">';
 
         if( $booking ):
           
-          echo '<a href="' . $booking . '" class="location__booking button--primary">Book ' . $name . '</a>';
+          echo '<a href="' . $booking . '" class="location__booking button button--primary">Book ' . $name . '</a>';
           
         endif;
       

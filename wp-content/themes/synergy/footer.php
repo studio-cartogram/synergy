@@ -26,7 +26,7 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
     echo '<div class="column column-auto">';
     
-      echo '<a href="' . $classes . '" class="link link--inverted link--primary link--underline link--external action">' . 'Class schedules';
+      echo '<a href="' . $classes . '" class="link link--inverted link--primary link--external action">' . 'Class schedules';
 
       set_query_var( 'icon', 'arrow-external' );
       get_template_part('partials/icon');
@@ -37,7 +37,7 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
     echo '<div class="column column-tablet-auto">';
     
-      echo '<a href="#" class="button button--primary">' . 'Book an appointment' . '</a>';
+      echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . 'Book an appointment' . '</a>';
 
     echo '</div>';
 
@@ -140,6 +140,16 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
       echo '<p class="note">' . $copyright . '</p>';
       
+    echo '</div>';
+
+  echo '</div>';
+
+  echo '<div class="overlay js-locations locations locations-footer">';
+  
+    echo '<div class="locations__inner">';
+
+      get_template_part('partials/overlay-locations');
+    
     echo '</div>';
 
   echo '</div>';

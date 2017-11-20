@@ -52,16 +52,15 @@ Colors Applied
 
 $ca-site-background: $c-white;
 $ca-mast-background: $c-white;
-
-$ca-footer-background: $c-blueDarkest;
-
 $ca-color-inverted: $c-white;
-
 $ca-border-default: $c-sky;
 $ca-border-darker: $c-inkLightest;
-
-$ca-border-footer: $c-blueDark;
 $ca-hr-color: $c-sky;
+$ca-color-subdued: $c-inkLightest;
+
+// Footer
+$ca-footer-background: $c-ink;
+$ca-border-footer: $c-blueDark;
 
 // Buttons
 $ca-button-color: $c-blue;
@@ -95,9 +94,9 @@ $ca-heading-color: $c-ink;
 $ca-heading-primary-color: $c-ink;
 $ca-heading-secondary-color: $c-inkLighter;
 
-$ca-footer-heading-color: $c-blue;
+$ca-footer-heading-color: $c-inkLightest;
 
-$ca-note-color: $c-blueLight;
+$ca-note-color: $c-inkLightest;
 
 $ca-paragraph-color: $c-ink;
 $ca-paragraph-secondary-color: $c-inkLighter;
@@ -106,7 +105,7 @@ $ca-accent-color: $c-blue;
 $ca-blockquote-color: $c-blueDark;
 
 $ca-anchor-primary-color: $c-blueDark;
-$ca-anchor-primary-hover-color: $c-blueDarkest;
+$ca-anchor-primary-hover-color: $c-blue;
 $ca-anchor-color: $c-blueDark;
 $ca-anchor-hover-color: $c-blueDarkest;
 $ca-anchor-secondary-color: $c-inkLighter;

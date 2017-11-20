@@ -47,11 +47,28 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+span {
   &.text--inverted {
     *,
     & {
       color: $ca-color-inverted;
+    }
+  }
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.text--subdued {
+    *,
+    & {
+      color: $ca-color-subdued;
     }
   }
 }
