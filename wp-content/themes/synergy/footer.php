@@ -37,7 +37,7 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
     echo '<div class="column column-tablet-auto">';
     
-      echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . 'Book an appointment' . '</a>';
+      echo '<a href="#locations-footer" data-toggle-locations-footer class="link link--primary link--inverted locations__toggle">' . 'Book an appointment' . '</a>';
 
     echo '</div>';
 

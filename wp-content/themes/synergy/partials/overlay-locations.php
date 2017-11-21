@@ -35,7 +35,7 @@ echo '<div class="locations__wrapper">';
 
       if( $image ) :
         
-      echo '<div class="location__image feature__image feature__image-crop waypoint__item waypoint__item--delay">';
+      echo '<div class="location__image waypoint__item waypoint__item--delay">';
 
         echo wp_get_attachment_image( $image, $size );
 
