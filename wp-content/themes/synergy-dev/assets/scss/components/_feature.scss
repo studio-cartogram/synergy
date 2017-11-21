@@ -4,6 +4,14 @@
   display: flex;
   flex-direction: column;
   z-index: index($l-site, feature);
+  position: relative;
+  min-height: 400px;
+  text-align: center;
+
+  @include bp($bp-mobile) {
+    height: auto;
+    text-align: inherit;
+  }
 
   ul {
     list-style: none;
@@ -11,41 +19,100 @@
     padding: 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    @include bp($bp-tablet) {
+      justify-content: start;
+    }
 
     li {
-      padding-right: $d-trio;
+      padding-right: $d-duo;
+      padding-bottom: $d-base;
+      text-align: center;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      @include bp($bp-tablet) {
+        text-align: left;
+        padding-right: $d-trio;
+      }
     }
   }
 }
 
 .feature__text {
-  width: 800px;
+  width: 100%;
   position: absolute;
   z-index: index($l-feature, cta);
-  top: 180px;
-  padding-left: $d-dec;
+  top: 148px;
+  padding-left: $d-trio;
+  padding-right: $d-trio;
+
+  @include bp($bp-mobile) {
+    top: 104px;
+  }
+  @include bp($bp-tablet) {
+    top: 144px;
+    width: 800px;
+  }
+  @include bp($bp-laptop) {
+    top: 180px;
+    padding-left: $d-dec;
+    width: 800px;
+  }
 }
 
 .feature__overlay {
-  background-image: linear-gradient(90deg, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.00) 59%);
+  background-color: transparent;
   position: absolute;
   z-index: index($l-feature, overlay); 
   height: 100%;
   width: 100%;
+
+  @include bp($bp-mobile) {
+    background-color: rgba(255,255,255,0.60);
+  }
+
+  @include bp($bp-tablet) {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.00) 59%);
+  }
 }
 
 .feature__image {
   width: 100%;
   height: auto;
   z-index: index($l-feature, image);
+  display: none;
+
+  @include bp($bp-mobile) {
+    display: flex;   
+  }
 }
 
 .feature__title {
   line-height: 1.15;
-  padding-bottom: $d-quad;
+  padding-bottom: $d-duo;
+
+  @include bp($bp-mobile) {
+    padding-bottom: $d-trio;    
+  }
+
+  @include bp($bp-tablet) {
+    width: 724px;
+    padding-bottom: $d-quad;
+  }
 }
 
 .feature__subtitle {
-  padding-bottom: $d-quin;
-  min-width: 724px;
+  padding-bottom: $d-duo;
+  width: 100%;
+
+  @include bp($bp-tablet) {
+    padding-bottom: $d-trio;
+    width: 724px;
+  }
 }

@@ -19,14 +19,12 @@ p,
 }
 
 .p--small > p,
-.p--small,
 p.p--small {
   font-size: $t-font-size-p-small;
 }
 
 
 .p--large > p,
-.p--large,
 p.p--large {
   padding: 0 0 $d-duo;
   @include bp($bp-tablet) {
@@ -35,7 +33,6 @@ p.p--large {
 }
 
 .p--xlarge > p,
-.p--xlarge,
 p.p--xlarge {
   padding: 0 0 $d-quad;
   @include bp($bp-tablet) {

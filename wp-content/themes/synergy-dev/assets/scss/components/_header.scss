@@ -18,7 +18,12 @@
   padding: $d-quad $d-trio;
   z-index: index($l-header, header-inner);
   flex-direction: column;
+
   @include bp($bp-tablet) {
+    flex-direction: row;
+  }
+  
+  @include bp($bp-laptop) {
     padding: $d-quad $d-dec;
     flex-direction: row;
   }
@@ -31,7 +36,7 @@
   right: $d-trio;
   z-index: index($l-header, toggle);
 
-  @include bp($bp-tablet) {
+  @include bp($bp-laptop) {
     right: $d-dec;
   }
 }

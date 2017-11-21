@@ -30,14 +30,18 @@ input {
 
 .input__large {
   height: $d-sep;
-  font-size: $t-font-size-button-large;
+  font-size: $t-font-size-button-small;
+
+  @include bp($bp-mobile) {
+    font-size: $t-font-size-button-large;
+  }
 }
 
 .find-clinician {
   appearance: none;
   padding: $d-duo;
-  margin-right: $d-duo;
-  width: 63%;
+  margin: 0 auto;
+  width: 100%;
   background-color: $ca-button-primary-background;
   background-image: url($p_svg + 'toggle-down.svg');
   background-repeat: no-repeat;
@@ -46,6 +50,11 @@ input {
   border: $b-button-primary;
   box-shadow: $sha-md;
   font-weight: $t-font-weight-bold;
+
+  @include bp($bp-mobile) {
+    width: 63%;
+    margin: 0;
+  }
 
   &:hover {
     background-color: $ca-button-primary-background-hover;

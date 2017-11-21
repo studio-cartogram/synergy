@@ -39,7 +39,15 @@ h1 {
 }
 
 h1.mega {
-  font-size: $t-font-size-mega;
+  font-size: $t-font-size-beta;
+
+  @include bp($bp-mobile) {
+    font-size: $t-font-size-alpha;
+  }
+
+  @include bp($bp-tablet) {
+    font-size: $t-font-size-mega;
+  }
 }
 
 h2 {
@@ -56,7 +64,11 @@ h2.secondary p {
 }
 
 h3 {
-  font-size: $t-font-size-gamma;
+  font-size: $t-font-size-delta;
+
+  @include bp($bp-tablet) {
+    font-size: $t-font-size-gamma;
+  }
 }
 
 h4 {
