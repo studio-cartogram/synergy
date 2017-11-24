@@ -4601,11 +4601,11 @@ var _removeClasses2 = _interopRequireDefault(_removeClasses);
 
 __webpack_require__(423);
 
-__webpack_require__(424);
-
-var _Select = __webpack_require__(425);
+var _Select = __webpack_require__(424);
 
 var _Select2 = _interopRequireDefault(_Select);
+
+var _Toggle = __webpack_require__(425);
 
 var _config = __webpack_require__(114);
 
@@ -4628,14 +4628,17 @@ var App = function App() {
     });
     _barba2.default.Dispatcher.on('linkClicked', function (el) {
       var xs = document.getElementsByClassName(_config.ACTIVE_CLASS);
+      el.classList.add(_config.ACTIVE_CLASS);
+
       if (xs.length > 0) {
         (0, _removeClasses2.default)(xs, _config.ACTIVE_CLASS);
       }
-      el.classList.add(_config.ACTIVE_CLASS);
     });
     _barba2.default.Dispatcher.on('transitionCompleted', function (currentStatus, prevStatus) {
       document.body.classList.remove('js-is-loading');
       document.body.classList.remove('js-is-leaving');
+      _this.nav.hide();
+      _this.locations.hide();
     });
   };
 
@@ -4690,6 +4693,8 @@ var App = function App() {
   this.init();
   new _Togglers2.default();
   new _Select2.default();
+  this.nav = new _Toggle.Toggle('nav');
+  this.locations = new _Toggle.Toggle('locations');
   (0, _loadSprite2.default)();
   document.body.classList.remove('js-is-loading');
   document.body.classList.add('js-is-initialized');
@@ -4698,12 +4703,14 @@ var App = function App() {
   _barba2.default.Pjax.getTransition = function () {
     return _this.Transition;
   };
-}; /**
-    * Setup webpack public path
-    * to enable lazy-including of
-    * js chunks
-    *
-    */
+};
+//import './scripts/Toggle'
+/**
+ * Setup webpack public path
+ * to enable lazy-including of
+ * js chunks
+ *
+ */
 
 
 var app = new App();
@@ -21524,7 +21531,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var removeClasses = function removeClasses(xs, c) {
   xs[0].classList.remove(c);
-  if (xs[0]) removeClasses();
+  if (xs[0]) removeClasses(xs, c);
 };
 
 exports.default = removeClasses;
@@ -21571,6 +21578,58 @@ var morphingThree = (0, _animejs2.default)({
 
 /***/ }),
 /* 424 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = __webpack_require__(56);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(167);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SelectClinican = function () {
+  function SelectClinican() {
+    var selectClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[data-select]';
+    (0, _classCallCheck3.default)(this, SelectClinican);
+
+    this.selectEl = document.querySelectorAll(selectClass);
+    this.bindEvents();
+  }
+
+  (0, _createClass3.default)(SelectClinican, [{
+    key: 'bindEvents',
+    value: function bindEvents() {
+      var _this = this;
+
+      Array.prototype.forEach.call(this.selectEl, function (select) {
+        select.addEventListener('change', _this.handleChange);
+      });
+    }
+  }, {
+    key: 'handleChange',
+    value: function handleChange(event) {
+      window.location.href = event.target.value;
+
+      console.log(event);
+    }
+  }]);
+  return SelectClinican;
+}();
+
+exports.default = SelectClinican;
+
+/***/ }),
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21820,73 +21879,11 @@ Cartogram.Toggle.prototype._trapFocus = function (e) {
   }
 };
 
-var Nav = new Cartogram.Toggle('nav', {
-  debug: true
-});
-
-var Locations = new Cartogram.Toggle('locations', {
-  debug: true
-});
-
-var locationsFoot = new Cartogram.Toggle('locations-footer', {
-  debug: true
-});
-
 function addToArray(arr, newEntry) {
   return [].concat(arr, newEntry);
 }
 
-/***/ }),
-/* 425 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _classCallCheck2 = __webpack_require__(56);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(167);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SelectClinican = function () {
-  function SelectClinican() {
-    var selectClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[data-select]';
-    (0, _classCallCheck3.default)(this, SelectClinican);
-
-    this.selectEl = document.querySelectorAll(selectClass);
-    this.bindEvents();
-  }
-
-  (0, _createClass3.default)(SelectClinican, [{
-    key: 'bindEvents',
-    value: function bindEvents() {
-      var _this = this;
-
-      Array.prototype.forEach.call(this.selectEl, function (select) {
-        select.addEventListener('change', _this.handleChange);
-      });
-    }
-  }, {
-    key: 'handleChange',
-    value: function handleChange(event) {
-      window.location.href = event.target.value;
-
-      console.log(event);
-    }
-  }]);
-  return SelectClinican;
-}();
-
-exports.default = SelectClinican;
+module.exports = Cartogram;
 
 /***/ })
 /******/ ]);

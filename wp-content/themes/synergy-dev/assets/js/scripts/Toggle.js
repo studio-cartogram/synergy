@@ -244,18 +244,8 @@ Cartogram.Toggle.prototype._trapFocus = function(e) {
   }
 }
 
-const Nav = new Cartogram.Toggle('nav', {
-  debug: true,
-})
-
-const Locations = new Cartogram.Toggle('locations', {
-  debug: true,
-})
-
-const locationsFoot = new Cartogram.Toggle('locations-footer', {
-  debug: true,
-})
-
 function addToArray(arr, newEntry){
   return [].concat(arr, newEntry)
 }
+
+module.exports = Cartogram

@@ -16,8 +16,10 @@ import Swiper from 'swiper'
 import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
 import './scripts/Blob'
-import './scripts/Toggle'
+//import './scripts/Toggle'
 import SelectClinician from './scripts/Select'
+
+import {Toggle} from './scripts/Toggle'
 
 import {
   ACTIVE_CLASS,
@@ -27,6 +29,8 @@ class App {
     this.init()
     new Togglers()
     new SelectClinician()
+    this.nav = new Toggle('nav')
+    this.locations = new Toggle('locations')
     loadSprite()
     document.body.classList.remove('js-is-loading')
     document.body.classList.add('js-is-initialized')
@@ -47,14 +51,17 @@ class App {
     })
     Barba.Dispatcher.on('linkClicked', el => {
       const xs = document.getElementsByClassName(ACTIVE_CLASS)
+      el.classList.add(ACTIVE_CLASS)
+
       if (xs.length > 0) {
         removeClasses(xs, ACTIVE_CLASS)
       }
-      el.classList.add(ACTIVE_CLASS)
     })
     Barba.Dispatcher.on('transitionCompleted', (currentStatus, prevStatus) => {
       document.body.classList.remove('js-is-loading')
       document.body.classList.remove('js-is-leaving')
+      this.nav.hide()
+      this.locations.hide()
     })
   }
 
