@@ -11,7 +11,7 @@ Footer Component
   padding-bottom: $d-base;
   padding-top: $d-sex;
   background-color: $ca-footer-background;
-  margin-top: $d-twe;
+  margin-top: $d-sex;
 
   &:before {
     content: '';
@@ -26,6 +26,7 @@ Footer Component
     height: 40px;
 
     @include bp($bp-tablet) {
+      margin-top: $d-twe;
       height: 60px;
     }
 

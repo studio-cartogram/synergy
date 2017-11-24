@@ -2,9 +2,19 @@
 
 .banner {
   display: flex;
-  padding: $d-dec;
+  padding: $d-sex $d-trio;
   position: relative;
   overflow: hidden;
+  flex-direction: column;
+
+  @include bp($bp-mobile) {
+    flex-direction: row;
+  }
+
+  @include bp($bp-tablet) {
+    padding: $d-dec;
+    flex-direction: row;
+  }
 
   &:hover img {
     transform: scale(1.1);
@@ -16,28 +26,59 @@
 }
 
 .banner__text {
-  padding-top: $d-quin;
+  padding-top: 0;
+  padding-bottom: $d-trio;
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
+  @include bp($bp-mobile) {
+    padding-top: $d-quin;
+    padding-bottom: 0;
+    h1,
+    h2,
+    p {
+      text-align: left;
+    }
+  }
 }
 
 .banner__image, .banner__text {
-  max-width: 50%;
+  max-width: 100%;
+
+  @include bp($bp-mobile) {
+    max-width: 50%;
+  }
 }
 
 .banner__image-crop {
-  height: 640px;
+  height: 540px;
   overflow: hidden;
   justify-content: space-around;
   display: flex;
   box-shadow: $sha-xl;
+
+  @include bp($bp-mobile) {
+    height: 540px;
+  }
+
+  @include bp($bp-tablet) {
+    height: 640px;
+  }
 }
 
 .banner__image {
   
   img {
-    height: 640px;
+    height: 540px;
     object-position: center;
     object-fit: cover;
     transition: all 1.2s;
+
+    @include bp($bp-tablet) {
+      height: 640px;
+    }
   }
 }
 
@@ -45,19 +86,33 @@
 // Left and Right
 
 .banner__left {
-  flex-direction: row-reverse;
+  flex-direction: column;
+
+  @include bp($bp-mobile) {
+    flex-direction: row-reverse;
+  }
 }
 
 .banner__left .banner__text {
-  padding-left: $d-sex;
+  padding-left: 0;
   padding-right: 0;
-  padding-top: $d-dec;
+  padding-top: 0;
+
+  @include bp($bp-mobile) {
+    padding-left: $d-sex;
+    padding-top: $d-dec;
+  }
 }
 
 .banner__right .banner__text {
-  padding-right: $d-sex;
+  padding-right: 0;
   padding-left: 0;
-  padding-top: $d-dec;
+  padding-top: 0;
+  
+  @include bp($bp-mobile) {
+    padding-right: $d-sex;
+    padding-top: $d-dec;
+  }
 }
 
 
@@ -65,7 +120,11 @@
 
 .banner__center {
   text-align: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
+
+  @include bp($bp-mobile) {
+    flex-direction: column-reverse;
+  }
 
   .banner__text {
     max-width: 860px;
@@ -84,10 +143,15 @@
   }
 
   img {
-    height: 100%;
-    width: auto;
     object-position: center;
-    object-fit: contain;
+    object-fit: cover;
+    transition: all 1.2s;
+
+    @include bp($bp-mobile) {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
   }
 }
 
@@ -102,7 +166,7 @@
   width: 100vw;
   z-index: -1;
   pointer-events: none;
-  background-image: url($p-svg + 'halftone-trio.svg');
+  // background-image: url($p-svg + 'halftone-trio.svg');
   background-position: 42% 0%;
   background-repeat: no-repeat;
 

@@ -5,11 +5,11 @@
   flex-direction: column;
   z-index: index($l-site, feature);
   position: relative;
-  min-height: 400px;
   text-align: center;
+  min-height: 400px;  
 
   @include bp($bp-mobile) {
-    height: auto;
+    min-height: auto;
     text-align: inherit;
   }
 
