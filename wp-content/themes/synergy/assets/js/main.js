@@ -21661,20 +21661,22 @@ var constants = {
 
 Cartogram.Toggle = function Toggle(namespace, options) {
   var toggleSelector = 'data-toggle-' + namespace;
-  var toggle = document.querySelector('[' + toggleSelector + ']');
+  var toggles = document.querySelectorAll('[' + toggleSelector + ']');
 
   if (!options) {
     var options = {};
   }
 
-  if (!toggle) {
+  if (!toggles) {
     if (options.debug) {
       console.log('Could not find toggle for ' + namespace + ' Toggle');
     }
     return null;
   }
 
-  var container = toggle.getAttribute(toggleSelector) ? document.querySelector(toggle.getAttribute(toggleSelector)) : document.querySelector('.js-' + namespace);
+  var containerSelector = toggles.length ? toggles[0].getAttribute(toggleSelector) : toggles.getAttribute(toggleSelector);
+
+  var container = containerSelector ? document.querySelector(containerSelector) : document.querySelector('.js-' + namespace);
 
   if (!container) {
     if (options.debug) {
@@ -21693,7 +21695,7 @@ Cartogram.Toggle = function Toggle(namespace, options) {
 
   this.$nodes = {
     container: container,
-    toggle: toggle,
+    toggles: toggles,
     body: document.body,
     items: container.querySelectorAll('a[href], button'),
     close: container.querySelector('[' + toggleSelector + ']')
@@ -21702,6 +21704,7 @@ Cartogram.Toggle = function Toggle(namespace, options) {
   this.focusables = !this.$nodes.close ? addToArray(Array.prototype.slice.call(this.$nodes.items), this.$nodes.toggle) : Array.prototype.slice.call(this.$nodes.items);
 
   this.isVisible = false;
+  this.clickedToggle = null;
 
   if (this.config.debug) {
     console.log('Adding ' + namespace + ' Toggle');
@@ -21723,7 +21726,12 @@ Cartogram.Toggle = function Toggle(namespace, options) {
  * @method init
 */
 Cartogram.Toggle.prototype.init = function () {
-  this.$nodes.toggle.addEventListener('click', this.show);
+  var _this = this;
+
+  this.$nodes.toggles.forEach(function (toggle) {
+    return toggle.addEventListener('click', _this.show);
+  });
+
   this.$nodes.close && this.$nodes.close.addEventListener('click', this.hide);
   if (this.config.withAsync) {
     this.watchActiveItem();
@@ -21739,6 +21747,8 @@ Cartogram.Toggle.prototype.init = function () {
  * @param {event object} e event object returned from event handler
 */
 Cartogram.Toggle.prototype._show = function (e) {
+  var _this2 = this;
+
   if (this.isVisible) {
     return null;
   }
@@ -21748,9 +21758,14 @@ Cartogram.Toggle.prototype._show = function (e) {
   }
 
   this.isVisible = true;
+  // this.clickedToggle START HERE
+  this.$nodes.toggles.forEach(function (toggle) {
+    return toggle.removeEventListener('click', _this2.show);
+  });
+  this.$nodes.toggles.forEach(function (toggle) {
+    return toggle.addEventListener('click', _this2.hide);
+  });
 
-  this.$nodes.toggle.removeEventListener('click', this.show);
-  this.$nodes.toggle.addEventListener('click', this.hide);
   this.$nodes.body.classList.add(this.namespace + '--' + constants.VISIBLE_CLASS);
   this.setShowFocus();
   window.addEventListener('keydown', this.trapFocus);
@@ -21763,6 +21778,8 @@ Cartogram.Toggle.prototype._show = function (e) {
  * @param {event object} e event object returned from event handler
 */
 Cartogram.Toggle.prototype._hide = function (e) {
+  var _this3 = this;
+
   if (!this.isVisible) {
     return null;
   }
@@ -21772,8 +21789,12 @@ Cartogram.Toggle.prototype._hide = function (e) {
   }
 
   this.isVisible = false;
-  this.$nodes.toggle.removeEventListener('click', this.hide);
-  this.$nodes.toggle.addEventListener('click', this.show);
+  this.$nodes.toggles.forEach(function (toggle) {
+    return toggle.removeEventListener('click', _this3.hide);
+  });
+  this.$nodes.toggles.forEach(function (toggle) {
+    return toggle.addEventListener('click', _this3.show);
+  });
   this.$nodes.body.classList.remove(this.namespace + '--' + constants.VISIBLE_CLASS);
   window.removeEventListener('keydown', this.trapFocus);
   this.setHideFocus();
@@ -21845,7 +21866,7 @@ Cartogram.Toggle.prototype.setShowFocus = function () {
  * @method setHideFoucs
 */
 Cartogram.Toggle.prototype.setHideFocus = function () {
-  this.$nodes.toggle.focus();
+  this.$nodes.toggles[0].focus();
 };
 
 /**
