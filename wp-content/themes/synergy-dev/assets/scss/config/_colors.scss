@@ -50,7 +50,7 @@ Colors Applied
  * of the sass code
  */
 
-$ca-site-background: $c-white;
+$ca-site-background: $c-skyLight;
 $ca-mast-background: $c-white;
 $ca-color-inverted: $c-white;
 $ca-border-default: $c-sky;
@@ -71,16 +71,16 @@ $ca-button-inverted-color: $c-blue;
 $ca-button-inverted-text: $c-white;
 
 $ca-button-primary-background-gradient: linear-gradient(-180deg, $c-blueDark 0%, $c-blueDarker 100%);
-$ca-button-primary-border: $c-blueDarkest;
-$ca-button-primary-background: $c-blueDarker;
-$ca-button-primary-background-hover: $c-blueDark;
+$ca-button-primary-border: $c-inkLight;
+$ca-button-primary-background: $c-inkLight;
+$ca-button-primary-background-hover: $c-blue;
 $ca-button-primary-color: $c-white;
 
 $ca-button-secondary-background: $c-white;
 $ca-button-secondary-color: $c-ink;
 $ca-button-secondary-color-hover: $c-blue;
 
-$ca-border-anchor: $c-blue;
+$ca-border-anchor: $c-inkLightest;
 $ca-anchor-hover: $c-blue;
 
 $ca-circle-button-hover: $c-blueDarker;
@@ -107,14 +107,14 @@ $ca-blockquote-color: $c-blueDark;
 $ca-anchor-primary-color: $c-blueDark;
 $ca-anchor-primary-hover-color: $c-blue;
 $ca-anchor-color: $c-blueDark;
-$ca-anchor-hover-color: $c-blueDarkest;
+$ca-anchor-hover-color: $c-blue;
 $ca-anchor-secondary-color: $c-inkLighter;
 $ca-anchor-secondary-hover-color: $c-inkLight;
 $ca-anchor-inverted-color: $c-white;
 
 // Blob
 
-$ca-blob-default: #90CCFA;
+$ca-blob-default: $c-skyDark;
 $ca-blob-nav: $c-skyDark;
 
 // Nav

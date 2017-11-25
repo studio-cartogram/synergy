@@ -32,7 +32,7 @@
 .header__toggle {
   display: block;
   position: absolute;
-  top: 50px;
+  top: $d-sep;
   right: $d-trio;
   z-index: index($l-header, toggle);
 
@@ -43,8 +43,8 @@
 
 .header__logo {
   display: flex;
-  height: $d-quin;
-  width: 170px;
+  height: $d-sex;
+  width: 203px;
 }
 
 .header__nav {
@@ -64,7 +64,7 @@
     padding-top: $d-base;
 
     @include bp($bp-mobile) {
-      padding-top: $d-trio;
+      padding-top: $d-quad;
     }
 
     svg {

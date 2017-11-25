@@ -34,7 +34,7 @@ echo '<section class="js-waypoint waypoint banner banner__'. $orientation .' ban
 
     if ($link && $link_text) :
 
-    echo '<a href="' . $link .'" class="button button--secondary banner__link">' . $link_text . '</a>';
+    echo '<p class="p--large secondary"><a href="' . $link .'" class="link link--underline">' . $link_text . '</a></p>';
 
     endif;
 

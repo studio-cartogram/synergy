@@ -9,6 +9,7 @@ $image = get_sub_field('image');
 $video = get_sub_field('video');
 $findClinician = get_sub_field('show_find_clinician_cta');
 $size = 'full';
+$links = get_sub_field('links');
 
 echo '<section class="js-waypoint waypoint feature">';
 
@@ -22,7 +23,28 @@ echo '<section class="js-waypoint waypoint feature">';
 
     echo '<h1 class="mega feature__title">' . $title . ' </h1>';
 
-    echo '<h3 class="secondary feature__subtitle">' . $subtitle . '</h3>';
+    if( $links && have_rows('links') ):
+
+      echo '<h3 class="secondary feature__links">';
+
+      while ( have_rows('links') ) : the_row();
+
+        $text = get_sub_field('text');
+        $link = get_sub_field('link');
+      
+        echo '<a class="feature__link" href=" ' . $link . ' ">'. $text .'</a>'; 
+
+      endwhile;
+
+      echo '</h3>';
+
+    endif;
+
+    if( $subtitle ) :
+
+      echo '<h3 class="secondary feature__subtitle">' . $subtitle . '</h3>';
+
+    endif;
 
     if( $findClinician && have_rows('outcomes', 'options') ):
       
