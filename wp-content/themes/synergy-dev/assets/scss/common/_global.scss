@@ -7,19 +7,20 @@ Common Styles
   box-sizing: border-box;
 }
 
+html {
+  background: $ca-site-background;
+}
+
 html,
 body {
   position: relative;
-  height: 100%;
-  width: 100%;
-  background-color: $ca-site-background;
 }
 
 .site {
   display: flex;
   min-height: 100vh;
+  background: transparent;
   flex-direction: column;
-  background: $ca-site-background;
 }
 
 .main {
