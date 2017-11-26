@@ -84,7 +84,7 @@ echo '<header role="banner" class="header">';
 
       echo '<div class="nav__list nav__services">';
 
-        echo '<h5 class="nav__title">Services</h5>';
+        echo '<h3 class="nav__title">Services</h3>';
 
         echo '<ul class="list list__inner">';
 
@@ -96,7 +96,7 @@ echo '<header role="banner" class="header">';
 
       echo '<div class="nav__list nav__programs">';
       
-        echo '<h5 class="nav__title">Programs</h5>';
+        echo '<h3 class="nav__title">Programs</h3>';
 
         echo '<ul class="list list__inner">';
 
@@ -108,7 +108,7 @@ echo '<header role="banner" class="header">';
 
       echo '<div class="nav__list nav__resources">';
       
-        echo '<h5 class="nav__title">Resources</h5>';
+        echo '<h3 class="nav__title">Resources</h3>';
 
         echo '<ul class="list list__inner">';
 

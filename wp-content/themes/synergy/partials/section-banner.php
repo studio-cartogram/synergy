@@ -14,12 +14,6 @@ $orientation = get_sub_field('orientation');
 
 echo '<section class="js-waypoint waypoint banner banner__'. $orientation .' banner--' . $count . '">';
 
-  if( $image ) :
-  
-    echo '<div class="banner__background waypoint__item"></div>';    
-    
-  endif;
-
   echo '<div class="banner__text waypoint__item">';
 
     echo '<h1 class="">' . $title . ' </h1>';
