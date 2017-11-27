@@ -12,27 +12,12 @@ Footer Component
   padding-top: $d-sex;
   background-color: $ca-footer-background;
   margin-top: $d-sex;
+  padding-left: $d-trio;
+  padding-right: $d-trio;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    width: 100%;
-    // background-image: url($p_svg + 'waves.svg');
-    // background-position: center top;
-    // background-size: cover;  
-    height: 40px;
-
-    @include bp($bp-tablet) {
-      margin-top: $d-twe;
-      height: 60px;
-    }
-
-    @include bp($bp-laptop) {
-      height: 80px;
-    }
+  @include bp($bp-tablet) {
+    padding-left: $d-quin;
+    padding-right: $d-quin;
   }
 
   .link--primary {
@@ -41,6 +26,75 @@ Footer Component
 
   .js-is-loading & {
     opacity: 0;
+  }
+}
+
+.footer__mast {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer__actions {
+
+  .action {
+    padding-right: $d-trio;
+  }
+}
+
+.footer__locations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  @include bp($bp-tablet) {
+    flex-direction: row;
+
+    .footer__location {
+      width: 50%;
+    }
+  }
+}
+
+.locations__hours,
+.footer__contacts,
+.footer__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__contacts {
+  padding-top: $d-quin;
+}
+
+.footer__social,
+.footer__emails {
+  width: 50%;
+
+  @include bp($bp-tablet) {
+    width: auto;
+  }
+}
+
+.footer__newsletter {
+  width: auto;
+
+  @include bp($bp-tablet) {
+    width: 50%;
+  }
+}
+
+.footer__location {
+  padding-top: $d-trio;
+
+  .phone {
+    width: 50%;
   }
 }
 

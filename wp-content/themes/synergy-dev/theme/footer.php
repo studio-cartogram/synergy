@@ -16,46 +16,22 @@ set_query_var( 'context', 'footer' );
 
 echo '<footer class="footer container">';
 
-echo '<div class="row row--align-center soft-bottom--quin">';
+  echo '<div class="row">';
 
-    echo '<div class="column column-grow">';
+    echo '<div class="footer__mast">';
 
       echo '<h1 class="text--inverted">Contact us</h1>';
 
-    echo '</div>';
-
-    echo '<div class="column column-auto">';
+      echo '<div class="footer__actions">';
     
-      echo '<a href="' . $classes . '" class="link link--inverted link--primary link--external action">' . 'Class schedules';
+        echo '<a href="' . $classes . '" class="link link--inverted link--primary link--external action">' . 'Class schedules';
 
-      set_query_var( 'icon', 'arrow-external' );
-      get_template_part('partials/icon');
+        set_query_var( 'icon', 'arrow-external' );
+        get_template_part('partials/icon');
 
-      echo '</a>';
-
-    echo '</div>';
-
-    echo '<div class="column column-tablet-auto">';
+        echo '</a>';
     
-      echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . 'Book an appointment' . '</a>';
-
-    echo '</div>';
-
-  echo '</div>';
-
-  echo '<div class="row">';
-
-    get_template_part('partials/contact-locations');
-
-    echo '<div class="column column-6-tablet">';
-    
-      get_template_part('partials/contact-hours');
-
-      echo '<div class="notes soft-bottom--trio">';
-
-        get_template_part('partials/contact-notes');
-
-        get_template_part('partials/contact-notes-location');
+        echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . 'Book an appointment' . '</a>';
 
       echo '</div>';
 
@@ -65,60 +41,74 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
   echo '<div class="row">';
 
-    echo '<div class="column column-6-mobile column-3-tablet ">';
-  
-      get_template_part('partials/contact-emails');
-  
+    echo '<div class="footer__locations">';
+
+      get_template_part('partials/contact-locations');
+
     echo '</div>';
 
-    echo '<div class="column column-6-mobile column-3-tablet ">';
+  echo '</div>';
 
-      echo '<h3 class="footer__heading">Social</h3>';
+  echo '<div class="row">';
+
+    echo '<div class="footer__contacts">';
+
+      echo '<div class="footer__emails">';
     
-      echo '<ul class="list soft-bottom--trio list--nowrap list--spaced-horizontal">';
-
-        if( $instagram ):
-
-          echo '<li><a class="button button--circle" href="' . $instagram . '">';
-      
-            set_query_var( 'icon', 'instagram' );
-            get_template_part('partials/icon');
-      
-          echo '</a></li>';
-
-        endif;
-
-        if( $twitter ):
+        get_template_part('partials/contact-emails');
     
-          echo '<li><a class="button button--circle" href="' . $twitter . '">';
+      echo '</div>';
+
+      echo '<div class="footer__social">';
+
+        echo '<h3 class="footer__heading">Social</h3>';
       
-            set_query_var( 'icon', 'twitter' );
-            get_template_part('partials/icon');
-      
-          echo '</a></li>';
+        echo '<ul class="list soft-bottom--trio list--nowrap list--spaced-horizontal">';
+
+          if( $instagram ):
+
+            echo '<li><a class="button button--circle" href="' . $instagram . '">';
         
-        endif;
+              set_query_var( 'icon', 'instagram' );
+              get_template_part('partials/icon');
+        
+            echo '</a></li>';
 
-        if( $facebook ):
-    
-          echo '<li><a class="button button--circle" href="' . $facebook . '">';
+          endif;
+
+          if( $twitter ):
       
-            set_query_var( 'icon', 'facebook' );
-            get_template_part('partials/icon');
+            echo '<li><a class="button button--circle" href="' . $twitter . '">';
+        
+              set_query_var( 'icon', 'twitter' );
+              get_template_part('partials/icon');
+        
+            echo '</a></li>';
+          
+          endif;
+
+          if( $facebook ):
       
-          echo '</a></li>';
+            echo '<li><a class="button button--circle" href="' . $facebook . '">';
+        
+              set_query_var( 'icon', 'facebook' );
+              get_template_part('partials/icon');
+        
+            echo '</a></li>';
 
-        endif;
+          endif;
+        
+        echo '</ul>';
       
-      echo '</ul>';
-    
-    echo '</div>';
+      echo '</div>';
 
-    echo '<div class="column column-6-tablet">';
-    
-      echo '<h3 class="footer__heading">Newsletter</h3>';
+      echo '<div class="footer__newsletter">';
+      
+        echo '<h3 class="footer__heading">Newsletter</h3>';
 
-      get_template_part('partials/newsletter');
+        get_template_part('partials/newsletter');
+      
+      echo '</div>';
     
     echo '</div>';
 
@@ -126,7 +116,7 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
   echo '<div class="row footer__bottom">';
 
-    echo '<div class="column column-6-tablet">';
+    echo '<div class="footer__nav">';
 
       echo '<ul class="list--small list list--spaced-horizontal text--inverted soft-bottom--duo">';
 
@@ -136,7 +126,7 @@ echo '<div class="row row--align-center soft-bottom--quin">';
 
     echo '</div>';
 
-    echo '<div class="column column-6-tablet">';
+    echo '<div class="footer__copyright">';
 
       echo '<p class="note">' . $copyright . '</p>';
       
