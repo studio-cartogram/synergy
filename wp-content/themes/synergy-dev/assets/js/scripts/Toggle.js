@@ -65,7 +65,8 @@ Cartogram.Toggle = function Toggle(namespace, options) {
   this.focusables = !this.$nodes.close
     ? addToArray(
         Array.prototype.slice.call(this.$nodes.items),
-        this.$nodes.toggle
+        // TODO: this is still broken because it will also loop the first toggle into the focusable group
+        this.$nodes.toggles[0]
       )
     : Array.prototype.slice.call(this.$nodes.items)
     
@@ -114,11 +115,12 @@ Cartogram.Toggle.prototype._show = function(e) {
   }
 
   if (e) {
+    console.log(e)
     e.preventDefault()
+    this.clickedToggle = e.target
   }
 
   this.isVisible = true
-  // this.clickedToggle START HERE
   this.$nodes.toggles.forEach(toggle => toggle.removeEventListener('click', this.show))
   this.$nodes.toggles.forEach(toggle => toggle.addEventListener('click', this.hide))
   
@@ -217,7 +219,7 @@ Cartogram.Toggle.prototype.setShowFocus = function() {
  * @method setHideFoucs
 */
 Cartogram.Toggle.prototype.setHideFocus = function() {
-  this.$nodes.toggles[0].focus()
+  this.clickedToggle.focus()
 }
 
 /**
@@ -233,6 +235,7 @@ Cartogram.Toggle.prototype._trapFocus = function(e) {
     case 9:
       var focusIndex = this.focusables.indexOf(document.activeElement)
       // debugger
+      console.log(this.focusables)
       if (e.shiftKey) {
         if (focusIndex === 0) {
           this.focusables[this.focusables.length - 1].focus()
