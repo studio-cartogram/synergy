@@ -21,12 +21,6 @@ if( have_rows('locations', 'options') ):
         echo '<h2 class="footer__heading">';
         
         echo ''. $name . '';
-
-        if( $note ):
-
-          echo ' **';
-        
-        endif;
         
         echo '</h2>';
 
@@ -97,7 +91,11 @@ if( have_rows('locations', 'options') ):
 
       echo '<div class="row">';
 
-        get_template_part('partials/contact-notes-location');
+      if( $note ):
+        
+        echo '<p class="note location">' . $note . '</p>';
+        
+      endif;
 
       echo '</div>';
 
