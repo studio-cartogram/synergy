@@ -20,6 +20,11 @@ Footer Component
     padding-right: $d-quin;
   }
 
+  @include bp($bp-laptop) {
+    padding-left: $d-oct;
+    padding-right: $d-oct;
+  }
+
   .link--primary {
     font-weight: $t-font-weight-bold;
   }
