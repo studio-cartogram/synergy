@@ -1,6 +1,7 @@
 <?php
 
-$subtitle = get_field('subtitle', get_option('page_for_posts'));
+  $subtitle_staff = get_field('subtitle_staff', 'options');
+  $subtitle_services = get_field('subtitle_services', 'options');
 
 echo '<section class="mast">';
 
@@ -15,8 +16,16 @@ echo '<section class="mast">';
       echo '</h1>';
 
       echo '<h2 class="subtitle">';
+
+      if(is_archive('staff') ) : 
       
-        echo $subtitle;
+        echo $subtitle_staff;
+      
+      elseif(is_archive('services') ) : 
+
+        echo $subtitle_services;
+
+      endif;
             
       echo '</h2>';
 

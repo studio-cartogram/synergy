@@ -195,7 +195,12 @@
 
   if( function_exists('acf_add_options_page') ) {
 
-        acf_add_options_page('Contact');
+    acf_add_options_page('Contact');
+
+    acf_add_options_page('Staff');
+
+    acf_add_options_page('Services');
+
   }
 
 	/* ========================================================================================================================

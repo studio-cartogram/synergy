@@ -19,29 +19,17 @@ echo '<article id="' . $item->post_name . '" class="item item--' . $context . '"
 
     echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
 
-  echo '</div>';
+    if(is_archive('staff') ) : 
 
-  echo '<div class="format item__answer">';
+      echo '<h2 class="secondary">'. $profession .'</h2>';
 
-  if ($context === 'single') {
-    the_content();
-  } else {
+    elseif(is_archive('services') ) : 
 
-    the_excerpt();
 
-    if (has_excerpt($item->ID)) {
-
-    echo '<div class="item__more">';
-
-      more_link('View Full Answer');
-
-    echo '</div>';
-
-    }
-
-  }
+    endif;
 
   echo '</div>';
+
 
   echo '<div class="faq__footer row">';
 
