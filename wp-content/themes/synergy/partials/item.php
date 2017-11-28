@@ -3,64 +3,73 @@
 $item = get_query_var('item');
 $topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $context = get_query_var('context');
+$image = get_post_thumbnail_id();
+$size = 'full';
+$profession = get_field('profession');
 
-echo '<article id="' . $item->post_name . '" class="faq faq--' . $context . ' with-paper">';
+echo '<article id="' . $item->post_name . '" class="item item--' . $context . '">';
 
-    echo '<div class="faq__question">';
+  echo '<div class="item__image">';
 
-      echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
+    echo wp_get_attachment_image( $image, $size );
+
+  echo '</div>';
+
+  echo '<div class="item__text">';
+
+    echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
+
+  echo '</div>';
+
+  echo '<div class="format item__answer">';
+
+  if ($context === 'single') {
+    the_content();
+  } else {
+
+    the_excerpt();
+
+    if (has_excerpt($item->ID)) {
+
+    echo '<div class="item__more">';
+
+      more_link('View Full Answer');
 
     echo '</div>';
-
-    echo '<div class="format faq__answer">';
-
-    if ($context === 'single') {
-      the_content();
-    } else {
-
-      the_excerpt();
-
-      if (has_excerpt($item->ID)) {
-
-      echo '<div class="faq__more">';
-
-        more_link('View Full Answer');
-
-      echo '</div>';
-
-      }
 
     }
 
-    echo '</div>';
+  }
 
-    echo '<div class="faq__footer row">';
+  echo '</div>';
 
-    if($topics) :
+  echo '<div class="faq__footer row">';
 
-      echo '<ul class="list list--small list--sep-comma">';
+  if($topics) :
 
-      echo '<li>';
+    echo '<ul class="list list--small list--sep-comma">';
 
-        echo '<em class="serif">filed under &mdash;</em> ';
+    echo '<li>';
 
-      echo '</li>';
+      echo '<em class="serif">filed under &mdash;</em> ';
 
-    foreach($topics as $topic) :
+    echo '</li>';
 
-      echo '<li>';
+  foreach($topics as $topic) :
 
-        echo '<a href="' . get_term_link($topic) . '" class="link link--secondary">' . $topic->slug . '</a>';
+    echo '<li>';
 
-      echo '</li>';
+      echo '<a href="' . get_term_link($topic) . '" class="link link--secondary">' . $topic->slug . '</a>';
 
-    endforeach;
+    echo '</li>';
 
-    echo '</ul>';
+  endforeach;
 
-    endif;
+  echo '</ul>';
 
-    echo '</div>';
+  endif;
+
+  echo '</div>';
 
 echo '</article>';
 
