@@ -6,6 +6,7 @@ $context = get_query_var('context');
 $image = get_post_thumbnail_id();
 $size = 'full';
 
+echo 'hi this is item staff';
 echo '<article id="' . $item->post_name . '" class="item item--' . $context . '">';
 
   echo '<div class="item__image">';

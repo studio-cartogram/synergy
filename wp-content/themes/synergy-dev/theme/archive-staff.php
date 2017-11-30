@@ -22,7 +22,7 @@ echo '<div id="barba-wrapper">';
 
     echo '<div class="column column-10-tablet column-7-laptop">';
 
-      get_template_part('partials/loop-staff');
+      get_template_part('partials/loop');
 
     echo '</div>';
 

@@ -28,18 +28,6 @@
   width: auto;
   overflow: scroll;
   transform: translate(0,0);
-
-  @include bp($bp-tablet) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    height: auto;
-    width: auto;
-    overflow: scroll;
-    transform: translate(-50%,-50%);
-  }
 }
 
 .locations__header,
@@ -98,10 +86,6 @@
     padding: $d-quin;
     min-width: 640px;
   }
-
-  @include bp($bp-tablet) {
-    height: auto;
-  }
 }
 
 .location__image {
@@ -115,8 +99,8 @@
     height: 96px;
     overflow: hidden;
   }
-  
-  @include bp($bp-tablet) {
+
+  @include bp($bp-mobile) {
     max-width: 240px;
 
     img {
@@ -125,6 +109,10 @@
       height: auto;
       overflow: visible;
     }
+  }
+  
+  @include bp($bp-tablet) {
+    max-width: 340px;
   }
 }
 

@@ -5,7 +5,6 @@ $topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $context = get_query_var('context');
 $image = get_post_thumbnail_id();
 $size = 'full';
-$profession = get_field('profession');
 
 echo '<article id="' . $item->post_name . '" class="item item--' . $context . '">';
 
@@ -19,17 +18,7 @@ echo '<article id="' . $item->post_name . '" class="item item--' . $context . '"
 
     echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
 
-    if(is_archive('staff') ) : 
-
-      echo '<h2 class="secondary">'. $profession .'</h2>';
-
-    elseif(is_archive('services') ) : 
-
-
-    endif;
-
   echo '</div>';
-
 
   echo '<div class="faq__footer row">';
 

@@ -1,6 +1,5 @@
 <?php
 
-$context = get_query_var( 'context' );
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $modifications = array(
   'paged' => $paged,
@@ -11,7 +10,6 @@ $args = array_merge(
   $modifications 
 );
 
-
 $the_query = new WP_Query($args);
 
 if ( $the_query->have_posts() ) :
@@ -20,7 +18,7 @@ if ( $the_query->have_posts() ) :
 
     set_query_var( 'item', $post );
 
-    get_template_part('partials/item', $context);
+    get_template_part('partials/item', get_post_type());
 
   endwhile;
 
