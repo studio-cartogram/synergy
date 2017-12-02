@@ -25,6 +25,10 @@ echo '<section class="mast">';
 
         echo $subtitle_services;
 
+      elseif(is_archive('faq') ) : 
+        
+        echo $subtitle_faq;
+
       endif;
             
       echo '</h2>';
