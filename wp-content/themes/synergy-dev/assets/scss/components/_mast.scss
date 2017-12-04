@@ -1,4 +1,13 @@
 .mast {
-  padding: $d-quez $d-quad 0 $d-quad;
+  padding: $d-twe $d-quad $d-duo $d-quad;
   text-align: center;
+  margin: 0 auto;
+
+  @include bp($bp-tablet) {
+    max-width: 870px;
+  }
+
+  .subtitle {
+    padding-bottom: $d-trio;
+  }
 }

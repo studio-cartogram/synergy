@@ -10,9 +10,12 @@
   }
 }
 
-.filter__toggle {
-  padding-top: $d-duo;
+.icon--toggle-down {
+  height: $d-duo;
+  width: $d-duo;
+  margin-left: $d-base;
 }
+
 
 .filter__nav {
   display: flex;

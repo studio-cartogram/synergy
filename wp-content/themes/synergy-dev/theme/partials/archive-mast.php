@@ -38,7 +38,12 @@ echo '<section class="mast">';
 
       if(is_archive('staff') ) : 
 
-        echo '<a href="#filter" data-toggle-filter class="button button--primary">Sort Staff by category</a>';        
+        echo '<a href="#filter" data-toggle-filter class="button button--primary button--large">Sort Staff by category';
+
+        set_query_var( 'icon', 'toggle-down' );
+        get_template_part('partials/icon');
+        
+        echo'</a>';        
 
       endif;
 

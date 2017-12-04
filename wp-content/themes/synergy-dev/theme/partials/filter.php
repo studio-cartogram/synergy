@@ -26,7 +26,7 @@ if(is_archive('staff') ) :
     $term_list = '<div class="filter__nav">';
     foreach ( $terms as $term ) {
         $i++;
-        $term_list .= '<a class="secondary link link--underline filter__link" href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a>';
+        $term_list .= '<a class="secondary link link--underline filter__link filter__toggle" href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a>';
         if ( $count != $i ) {
             $term_list .= ' &middot; ';
         }
