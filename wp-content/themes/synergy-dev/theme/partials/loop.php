@@ -4,6 +4,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $modifications = array(
   'paged' => $paged,
   'orderby' => 'menu_order',
+  'order'     => 'ASC',  
 );
 
 $args = array_merge(

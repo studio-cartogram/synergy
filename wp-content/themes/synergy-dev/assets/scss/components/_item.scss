@@ -20,6 +20,17 @@
   padding-bottom: $d-quin;
   flex-basis: auto;
 
+  &:hover {
+    img {
+      // mix-blend-mode: luminosity;
+      transform: scale(1.1);
+      transition: transform 1s ease-in-out;
+    }
+    .item__text h3 {
+      color: $ca-nav-link-hover;
+    }
+  }
+
   @include bp($bp-tablet) {
     flex-basis: 30%;
   }
@@ -29,14 +40,21 @@
   box-shadow: $sha-lg;
   height: 320px;
   overflow: hidden;
+  background-color: $ca-item-image-background;
 
   img {
+    transform: scale(1);
     height: 320px;
     object-position: center;
     object-fit: cover;
+    transition: transform 1s ease-in-out;
   }
 }
 
 .item__text {
   padding-top: $d-duo;
+
+  .item__title {
+    padding-bottom: $d-half;
+  }
 }

@@ -166,7 +166,6 @@
   width: 100vw;
   z-index: -1;
   pointer-events: none;
-  // background-image: url($p-svg + 'halftone-trio.svg');
   background-position: 42% 0%;
   background-repeat: no-repeat;
 
@@ -177,20 +176,4 @@
   .banner__left & {
     background-position: 60% 100%;    
   }
-
-  // .banner--1 & {
-  //   background-image: url($p-svg + 'halftone-trio.svg');
-  // }
-
-  // .banner--2 & {
-  //   background-image: url($p-svg + 'halftone-shift.svg');
-  // }
-
-  // .banner--3 & {
-  //   background-image: url($p-svg + 'halftone-peak.svg');
-  // }
-
-  // .banner--4 & {
-  //   background-image: url($p-svg + 'halftone-arrow.svg');
-  // }
 }

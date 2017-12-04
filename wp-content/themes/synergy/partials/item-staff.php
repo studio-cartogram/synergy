@@ -22,11 +22,11 @@ if($hasimage) :
 
       echo '<div class="item__text">';
 
-        echo '<h3>' . get_the_title($item->ID) . '';
+        echo '<h3 class="item__title">' . get_the_title($item->ID) . '</h3>';
         
-        echo '<br><span class="secondary">' . $profession . '</span>';
+        echo '<h3 class="secondary">' . $profession . '</h3>';
 
-        echo '</h3>';
+
 
       echo '</div>';
 
