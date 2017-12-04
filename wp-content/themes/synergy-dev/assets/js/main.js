@@ -16,7 +16,7 @@ import Swiper from 'swiper'
 import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
 import './scripts/Blob'
-//import './scripts/Toggle'
+// import './scripts/Toggle'
 import SelectClinician from './scripts/Select'
 
 import {Toggle} from './scripts/Toggle'
@@ -31,6 +31,7 @@ class App {
     new SelectClinician()
     this.nav = new Toggle('nav')
     this.locations = new Toggle('locations')
+    // this.filter = new Toggle('filter')    
     loadSprite()
     document.body.classList.remove('js-is-loading')
     document.body.classList.add('js-is-initialized')
@@ -62,6 +63,7 @@ class App {
       document.body.classList.remove('js-is-leaving')
       this.nav.hide()
       this.locations.hide()
+      // this.filter.hide()
     })
   }
 

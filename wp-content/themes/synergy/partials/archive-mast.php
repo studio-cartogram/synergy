@@ -15,11 +15,14 @@ echo '<section class="mast">';
 
       echo '</h1>';
 
-      echo '<h2 class="subtitle">';
+      echo '<h2 class="subtitle secondary">';
 
       if(is_archive('staff') ) : 
       
         echo $subtitle_staff;
+        
+        // set_query_var( 'icon', 'arrow-down' );
+        // get_template_part('partials/icon');
       
       elseif(is_archive('services') ) : 
 
@@ -32,6 +35,12 @@ echo '<section class="mast">';
       endif;
             
       echo '</h2>';
+
+      if(is_archive('staff') ) : 
+
+        echo '<a href="#filter" data-toggle-filter class="button button--primary">Sort Staff by category</a>';        
+
+      endif;
 
     echo '</div>';
 

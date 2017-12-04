@@ -67,7 +67,6 @@ echo '<section class="js-waypoint waypoint feature">';
 
           // $choice = get_sub_field('result'); // Should be the value of the option selected
           // $buttonText = get_field('button_text', 'options');
-      
           // echo '<button data-select=".js-find-clinician" class="button button--primary button--large">'. $buttonText .'</button>';
                   
         endif;

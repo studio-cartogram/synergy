@@ -1,0 +1,42 @@
+.items__staff,
+.items__services {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: $d-trio;
+
+  @include bp($bp-tablet) {
+    flex-direction: row;
+  }
+  @include bp($bp-laptop) {
+    flex-direction: row;
+    padding: $d-quin;
+  }
+}
+
+.item--staff,
+.item--services {
+  padding-bottom: $d-quin;
+  flex-basis: auto;
+
+  @include bp($bp-tablet) {
+    flex-basis: 30%;
+  }
+}
+
+.item__image {
+  box-shadow: $sha-lg;
+  height: 320px;
+  overflow: hidden;
+
+  img {
+    height: 320px;
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+.item__text {
+  padding-top: $d-duo;
+}

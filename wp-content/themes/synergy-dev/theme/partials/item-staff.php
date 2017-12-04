@@ -1,53 +1,39 @@
 <?php
 
 $item = get_query_var('item');
-$topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $context = get_query_var('context');
+$topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $image = get_post_thumbnail_id();
+$profession = get_field('profession');
+$hasimage = has_post_thumbnail();
 $size = 'full';
 
-echo '<article id="' . $item->post_name . '" class="item item--' . $context . '">';
+if($hasimage) :
 
-  echo '<div class="item__image">';
+  echo '<article id="' . $item->post_name . '" class="item item--staff">';
 
-    echo wp_get_attachment_image( $image, $size );
+    echo '<a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">';
 
-  echo '</div>';
+      echo '<div class="item__image">';
 
-  echo '<div class="item__text">';
+        echo wp_get_attachment_image( $image, $size );
 
-    echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
+      echo '</div>';
 
-  echo '</div>';
+      echo '<div class="item__text">';
 
-  echo '<div class="staff__footer row">';
+        echo '<h3>' . get_the_title($item->ID) . '';
+        
+        echo '<br><span class="secondary">' . $profession . '</span>';
 
-  if($topics) :
+        echo '</h3>';
 
-    echo '<ul class="list list--small list--sep-comma">';
+      echo '</div>';
 
-    echo '<li>';
+    echo '</a>';
 
-      echo '<em class="serif">filed under &mdash;</em> ';
+  echo '</article>';
 
-    echo '</li>';
-
-  foreach($topics as $topic) :
-
-    echo '<li>';
-
-      echo '<a href="' . get_term_link($topic) . '" class="link link--secondary">' . $topic->slug . '</a>';
-
-    echo '</li>';
-
-  endforeach;
-
-  echo '</ul>';
-
-  endif;
-
-  echo '</div>';
-
-echo '</article>';
+endif;
 
 ?>

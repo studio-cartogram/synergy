@@ -4639,6 +4639,7 @@ var App = function App() {
       document.body.classList.remove('js-is-leaving');
       _this.nav.hide();
       _this.locations.hide();
+      // this.filter.hide()
     });
   };
 
@@ -4695,6 +4696,7 @@ var App = function App() {
   new _Select2.default();
   this.nav = new _Toggle.Toggle('nav');
   this.locations = new _Toggle.Toggle('locations');
+  // this.filter = new Toggle('filter')    
   (0, _loadSprite2.default)();
   document.body.classList.remove('js-is-loading');
   document.body.classList.add('js-is-initialized');
@@ -4704,7 +4706,7 @@ var App = function App() {
     return _this.Transition;
   };
 };
-//import './scripts/Toggle'
+// import './scripts/Toggle'
 /**
  * Setup webpack public path
  * to enable lazy-including of
