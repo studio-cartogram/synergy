@@ -1,6 +1,8 @@
 <?php
 
   $subtitle_staff = get_field('subtitle_staff', 'options');
+  $select_staff = get_field('select_staff', 'options');
+
   $subtitle_services = get_field('subtitle_services', 'options');
 
 echo '<section class="mast">';
@@ -38,7 +40,7 @@ echo '<section class="mast">';
 
       if(is_archive('staff') ) : 
 
-        echo '<a href="#filter" data-toggle-filter class="button button--primary button--large">Sort Staff by category';
+        echo '<a href="#filter" data-toggle-filter class="button button--primary button--large">'. $select_staff .'';
 
         set_query_var( 'icon', 'toggle-down' );
         get_template_part('partials/icon');
