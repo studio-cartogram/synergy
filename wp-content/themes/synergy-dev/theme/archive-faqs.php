@@ -14,11 +14,11 @@ echo '<div id="barba-wrapper">';
 
   echo '<div class="barba-container">';
 
-    get_template_part('partials/mast-services');
-
+    get_template_part('partials/archive-mast');
+    
     echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 
-    echo '<div class="items__services">';
+    echo '<div class="items__faqs">';
 
       get_template_part('partials/loop');
 

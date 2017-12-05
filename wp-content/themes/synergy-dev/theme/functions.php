@@ -35,7 +35,7 @@
         'public'              => true,
         'label'               => 'FAQs',
         'has_archive'         => true,
-        'rewrite'            => array( 'slug' => 'help' ),
+        'rewrite'            => array( 'slug' => 'faqs' ),
         'supports'            => array( 'title', 'excerpt', 'editor')
       );
 
@@ -45,7 +45,7 @@
         'public'              => true,
         'label'               => 'Press',
         'has_archive'         => true,
-        'rewrite'            => array( 'slug' => 'help' ),
+        'rewrite'            => array( 'slug' => 'press' ),
         'supports'            => array( 'title', 'thumbnail', 'excerpt', 'editor')
       );
 
