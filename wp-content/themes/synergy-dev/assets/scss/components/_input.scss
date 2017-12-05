@@ -37,7 +37,8 @@ input {
   }
 }
 
-.find-clinician {
+.find-clinician,
+.filter__toggle {
   appearance: none;
   padding: $d-duo;
   margin: 0 auto;
@@ -61,4 +62,8 @@ input {
     box-shadow: $sha-inset;
     transition: all 0.175s ease-in-out;
   }
+}
+
+.filter__toggle {
+  width: auto;
 }
