@@ -5,11 +5,11 @@ $context = get_query_var('context');
 $topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $image = get_post_thumbnail_id();
 $hasimage = has_post_thumbnail();
-$size = 'full';
+$size = 'large';
 
 if($hasimage) :
 
-  echo '<article id="' . $item->post_name . '" class="item item--service">';
+  echo '<article id="' . $item->post_name . '" class="item item--services">';
 
     echo '<a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">';
 

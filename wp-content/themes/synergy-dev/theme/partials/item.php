@@ -7,7 +7,7 @@ $image = get_post_thumbnail_id();
 $hasimage = has_post_thumbnail();
 $size = 'full';
 
-if($hasimage) :
+// if($hasimage) :
 
   echo '<article id="' . $item->post_name . '" class="item item--' . $context . '">';
 
@@ -53,5 +53,5 @@ if($hasimage) :
 
   echo '</article>';
 
-endif;
+// endif;
 ?>

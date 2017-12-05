@@ -14,7 +14,7 @@ echo '<div id="barba-wrapper">';
 
   echo '<div class="barba-container">';
 
-    get_template_part('partials/archive-mast');
+    get_template_part('partials/mast-faqs');
     
     echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 
