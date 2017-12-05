@@ -49,7 +49,7 @@ class App {
         removeClasses(xs, ACTIVE_CLASS)
       }
 
-      this.filter.hide && this.filter.hide()    
+      // this.filter.hide && this.filter.hide()    
       this.nav.hide()
       this.locations.hide()
     })
@@ -62,7 +62,8 @@ class App {
   }
 
   init = () => {
-    this.filter = new Toggle('filter')    
+    // this.filter = new Toggle('filter') 
+    this.select =  new SelectClinician()   
     this.scroll = new Scroll()
     this.fade = new Fade()
     this.initSlideshow()

@@ -4617,7 +4617,8 @@ var App = function App() {
   (0, _classCallCheck3.default)(this, App);
 
   this.init = function () {
-    _this.filter = new _Toggle.Toggle('filter');
+    // this.filter = new Toggle('filter') 
+    _this.select = new _Select2.default();
     _this.scroll = new _Scroll2.default();
     _this.fade = new _Fade2.default();
     _this.initSlideshow();
@@ -4697,7 +4698,7 @@ var App = function App() {
       (0, _removeClasses2.default)(xs, _config.ACTIVE_CLASS);
     }
 
-    _this.filter.hide && _this.filter.hide();
+    // this.filter.hide && this.filter.hide()    
     _this.nav.hide();
     _this.locations.hide();
   });
