@@ -40,6 +40,11 @@ echo '<section class="mast">';
 
       if(is_archive('staff') ) : 
 
+        wp_dropdown_categories(array(
+          'taxonomy' => 'categories',
+          'class' => 'filter__toggle'
+        ));
+
         echo '<a href="#filter" data-toggle-filter class="button button--primary button--large">'. $select_staff .'';
 
         set_query_var( 'icon', 'toggle-down' );

@@ -26,26 +26,17 @@ import {
 } from './config'
 class App {
   constructor() {
-    this.init()
     new Togglers()
     new SelectClinician()
     this.nav = new Toggle('nav')
     this.locations = new Toggle('locations')
-    // this.filter = new Toggle('filter')    
+    this.init()
     loadSprite()
     document.body.classList.remove('js-is-loading')
     document.body.classList.add('js-is-initialized')
     Barba.Pjax.init()
     Barba.Prefetch.init()
     Barba.Pjax.getTransition = () =>  this.Transition
-  }
-
-  init = () => {
-    this.scroll = new Scroll()
-    this.fade = new Fade()
-    this.initSlideshow()
-    this.initTransitions()
-    this.initWaypoints()
     Barba.Dispatcher.on('initStateChange', () => {
       document.body.classList.add('js-is-loading')
       document.body.classList.remove('js-is-leaving')
@@ -57,14 +48,25 @@ class App {
       if (xs.length > 0) {
         removeClasses(xs, ACTIVE_CLASS)
       }
+
+      this.filter.hide && this.filter.hide()    
+      this.nav.hide()
+      this.locations.hide()
     })
     Barba.Dispatcher.on('transitionCompleted', (currentStatus, prevStatus) => {
       document.body.classList.remove('js-is-loading')
       document.body.classList.remove('js-is-leaving')
-      this.nav.hide()
-      this.locations.hide()
-      // this.filter.hide()
+      this.init()
     })
+    this.initTransitions()    
+  }
+
+  init = () => {
+    this.filter = new Toggle('filter')    
+    this.scroll = new Scroll()
+    this.fade = new Fade()
+    this.initSlideshow()
+    this.initWaypoints()
   }
 
   initWaypoints = () => {

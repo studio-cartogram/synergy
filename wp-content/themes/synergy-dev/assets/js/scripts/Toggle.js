@@ -24,16 +24,15 @@ Cartogram.Toggle = function Toggle(namespace, options) {
     var options = {}
   }
 
-  if (!toggles) {
+  
+  if (!toggles.length) {
     if (options.debug) {
       console.log('Could not find toggle for ' + namespace + ' Toggle')
     }
     return null
   }
 
-  var containerSelector = toggles.length
-    ? toggles[0].getAttribute(toggleSelector)
-    : toggles.getAttribute(toggleSelector)
+  var containerSelector = toggles[0].getAttribute(toggleSelector)
 
   var container = containerSelector
     ? document.querySelector(containerSelector)

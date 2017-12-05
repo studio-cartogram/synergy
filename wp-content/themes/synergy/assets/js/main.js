@@ -4617,30 +4617,11 @@ var App = function App() {
   (0, _classCallCheck3.default)(this, App);
 
   this.init = function () {
+    _this.filter = new _Toggle.Toggle('filter');
     _this.scroll = new _Scroll2.default();
     _this.fade = new _Fade2.default();
     _this.initSlideshow();
-    _this.initTransitions();
     _this.initWaypoints();
-    _barba2.default.Dispatcher.on('initStateChange', function () {
-      document.body.classList.add('js-is-loading');
-      document.body.classList.remove('js-is-leaving');
-    });
-    _barba2.default.Dispatcher.on('linkClicked', function (el) {
-      var xs = document.getElementsByClassName(_config.ACTIVE_CLASS);
-      el.classList.add(_config.ACTIVE_CLASS);
-
-      if (xs.length > 0) {
-        (0, _removeClasses2.default)(xs, _config.ACTIVE_CLASS);
-      }
-    });
-    _barba2.default.Dispatcher.on('transitionCompleted', function (currentStatus, prevStatus) {
-      document.body.classList.remove('js-is-loading');
-      document.body.classList.remove('js-is-leaving');
-      _this.nav.hide();
-      _this.locations.hide();
-      // this.filter.hide()
-    });
   };
 
   this.initWaypoints = function () {
@@ -4691,12 +4672,11 @@ var App = function App() {
     });
   };
 
-  this.init();
   new _Togglers2.default();
   new _Select2.default();
   this.nav = new _Toggle.Toggle('nav');
   this.locations = new _Toggle.Toggle('locations');
-  // this.filter = new Toggle('filter')    
+  this.init();
   (0, _loadSprite2.default)();
   document.body.classList.remove('js-is-loading');
   document.body.classList.add('js-is-initialized');
@@ -4705,6 +4685,28 @@ var App = function App() {
   _barba2.default.Pjax.getTransition = function () {
     return _this.Transition;
   };
+  _barba2.default.Dispatcher.on('initStateChange', function () {
+    document.body.classList.add('js-is-loading');
+    document.body.classList.remove('js-is-leaving');
+  });
+  _barba2.default.Dispatcher.on('linkClicked', function (el) {
+    var xs = document.getElementsByClassName(_config.ACTIVE_CLASS);
+    el.classList.add(_config.ACTIVE_CLASS);
+
+    if (xs.length > 0) {
+      (0, _removeClasses2.default)(xs, _config.ACTIVE_CLASS);
+    }
+
+    _this.filter.hide && _this.filter.hide();
+    _this.nav.hide();
+    _this.locations.hide();
+  });
+  _barba2.default.Dispatcher.on('transitionCompleted', function (currentStatus, prevStatus) {
+    document.body.classList.remove('js-is-loading');
+    document.body.classList.remove('js-is-leaving');
+    _this.init();
+  });
+  this.initTransitions();
 };
 // import './scripts/Toggle'
 /**
@@ -21669,14 +21671,14 @@ Cartogram.Toggle = function Toggle(namespace, options) {
     var options = {};
   }
 
-  if (!toggles) {
+  if (!toggles.length) {
     if (options.debug) {
       console.log('Could not find toggle for ' + namespace + ' Toggle');
     }
     return null;
   }
 
-  var containerSelector = toggles.length ? toggles[0].getAttribute(toggleSelector) : toggles.getAttribute(toggleSelector);
+  var containerSelector = toggles[0].getAttribute(toggleSelector);
 
   var container = containerSelector ? document.querySelector(containerSelector) : document.querySelector('.js-' + namespace);
 
