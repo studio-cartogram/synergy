@@ -51,7 +51,6 @@
 
       register_post_type( 'media', $media_args );
 
-
       $staff_args = array(
         'public'              => true,
         'label'               => 'Staff',
@@ -201,6 +200,8 @@
 
     acf_add_options_page('Services');
 
+    acf_add_options_page('FAQ');
+
   }
 
 	/* ========================================================================================================================
@@ -326,6 +327,19 @@
 
 	  return $html;
 
+  }
+
+  /* ========================================================================================================================
+
+  Custom Select
+
+  ======================================================================================================================== */
+
+  add_filter( 'wp_dropdown_cats', 'dropdown_filter', 10, 2);
+  
+  function dropdown_filter( $output, $r ) {
+      $output = preg_replace( '/<select (.*?) >/', '<select data-select=".js-find-clinician" class="filter__toggle js-find-clinician">', $output);
+      return $output;
   }
 
 ?>

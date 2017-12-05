@@ -16,11 +16,11 @@ echo '<div id="barba-wrapper">';
 
     get_template_part('partials/archive-mast');
     
-    echo '<div class="filter filter--staff js-filter">';
+    // echo '<div class="filter filter--staff js-filter">';
 
-      get_template_part('partials/filter');
+    //   get_template_part('partials/filter');
 
-    echo '</div>';
+    // echo '</div>';
 
     echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 
@@ -28,6 +28,12 @@ echo '<div id="barba-wrapper">';
 
       get_template_part('partials/loop');
 
+    echo '</div>';
+
+    echo '<div class="cta__staff">';
+    
+      get_template_part('partials/cta');
+    
     echo '</div>';
 
     echo '</div>';

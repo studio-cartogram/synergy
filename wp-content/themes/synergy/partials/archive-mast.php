@@ -1,9 +1,10 @@
 <?php
 
-  $subtitle_staff = get_field('subtitle_staff', 'options');
-  $select_staff = get_field('select_staff', 'options');
+$subtitle_staff = get_field('subtitle_staff', 'options');
+$select_staff = get_field('select_staff', 'options');
 
-  $subtitle_services = get_field('subtitle_services', 'options');
+$subtitle_services = get_field('subtitle_services', 'options');
+$select_services = get_field('select_services', 'options');
 
 echo '<section class="mast">';
 
@@ -17,40 +18,35 @@ echo '<section class="mast">';
 
       echo '</h1>';
 
-      echo '<h2 class="subtitle secondary">';
-
       if(is_archive('staff') ) : 
-      
-        echo $subtitle_staff;
-        
-        // set_query_var( 'icon', 'arrow-down' );
-        // get_template_part('partials/icon');
+
+        echo '<h2 class="subtitle secondary">'. $subtitle_staff .'</h2>';
+              
+        wp_dropdown_categories(array(
+          'taxonomy' => 'categories',
+          'class' => 'filter__toggle',
+          // 'show_option_all' => 'All',
+          'show_option_none' => $select_staff,
+          'orderby' => 'name',
+          'value_field' => 'slug',
+        )); 
       
       elseif(is_archive('services') ) : 
 
-        echo $subtitle_services;
+        echo '<h2 class="subtitle secondary">'. $subtitle_services .'</h2>';
+        
+        wp_dropdown_categories(array(
+          'taxonomy' => 'tags',
+          'class' => 'filter__toggle',
+          // 'show_option_all' => 'All',
+          'show_option_none' => $select_services,
+          'orderby' => 'name',
+          'value_field' => 'slug',
+        ));
 
       elseif(is_archive('faq') ) : 
         
         echo $subtitle_faq;
-
-      endif;
-            
-      echo '</h2>';
-
-      if(is_archive('staff') ) : 
-
-        wp_dropdown_categories(array(
-          'taxonomy' => 'categories',
-          'class' => 'filter__toggle'
-        ));
-
-        echo '<a href="#filter" data-toggle-filter class="button button--primary button--large">'. $select_staff .'';
-
-        set_query_var( 'icon', 'toggle-down' );
-        get_template_part('partials/icon');
-        
-        echo'</a>';        
 
       endif;
 
