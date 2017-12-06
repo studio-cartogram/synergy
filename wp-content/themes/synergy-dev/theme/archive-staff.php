@@ -14,13 +14,7 @@ echo '<div id="barba-wrapper">';
 
   echo '<div class="barba-container">';
 
-    get_template_part('partials/archive-mast');
-    
-    // echo '<div class="filter filter--staff js-filter">';
-
-    //   get_template_part('partials/filter');
-
-    // echo '</div>';
+    get_template_part('partials/mast-staff');
 
     echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 

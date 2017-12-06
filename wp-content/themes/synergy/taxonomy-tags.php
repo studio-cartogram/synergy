@@ -1,4 +1,8 @@
 <?php
+/**
+ * This is the Services taxonomy archive
+ *
+*/
 
 get_template_part('partials/head');
 
@@ -14,20 +18,14 @@ echo '<div id="barba-wrapper">';
 
   echo '<div class="barba-container">';
 
-    get_template_part('partials/mast-staff');
+    get_template_part('partials/mast-services');
 
     echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 
-    echo '<div class="items__staff">';
+    echo '<div class="items__services">';
 
       get_template_part('partials/loop');
 
-    echo '</div>';
-
-    echo '<div class="cta__staff">';
-    
-      get_template_part('partials/cta');
-    
     echo '</div>';
 
     echo '</div>';

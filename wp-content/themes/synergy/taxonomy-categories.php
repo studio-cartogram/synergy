@@ -1,4 +1,8 @@
 <?php
+/**
+ * This is the Staff taxonomy archive
+ *
+*/
 
 get_template_part('partials/head');
 

@@ -1,7 +1,6 @@
 <?php
 
 $subtitle_faq = get_field('subtitle_faq', 'options');
-$select_faq = get_field('select_faq', 'options');
 
 echo '<section class="mast">';
 
@@ -17,14 +16,7 @@ echo '<section class="mast">';
 
       echo '<h2 class="subtitle secondary">'. $subtitle_faq .'</h2>';
       
-      wp_dropdown_categories(array(
-        'taxonomy' => 'tags',
-        'class' => 'filter__toggle',
-        // 'show_option_all' => 'All',
-        'show_option_none' => $select_faq,
-        'orderby' => 'name',
-        'value_field' => 'slug',
-      ));
+      get_template_part('partials/filter-faqs');   
 
     echo '</div>';
 

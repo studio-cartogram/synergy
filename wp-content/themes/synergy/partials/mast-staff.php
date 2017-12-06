@@ -1,6 +1,7 @@
 <?php
 
-$subtitle_services = get_field('subtitle_services', 'options');
+$subtitle_staff = get_field('subtitle_staff', 'options');
+$select_staff = get_field('select_staff', 'options');
 
 echo '<section class="mast">';
 
@@ -14,10 +15,10 @@ echo '<section class="mast">';
 
       echo '</h1>';
 
-      echo '<h2 class="subtitle secondary">'. $subtitle_services .'</h2>';
+      echo '<h2 class="subtitle secondary">'. $subtitle_staff .'</h2>';
 
-      get_template_part('partials/filter-services');
-
+      get_template_part('partials/filter-staff');      
+              
     echo '</div>';
 
   echo '</div>';
