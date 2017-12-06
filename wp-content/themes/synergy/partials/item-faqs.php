@@ -11,6 +11,8 @@ echo '<article id="' . $item->post_name . '" class="item item--faqs">';
     echo '<div class="item__text">';
 
       echo '<h3 class="item__title">' . get_the_title($item->ID) . '</h3>';
+
+      echo '<p class="item__answer">' . get_the_content($item->ID) . '</p>';
       
     echo '</div>';
 
