@@ -45,12 +45,18 @@ echo '<div id="barba-wrapper">';
             if( have_rows('specializations') ):
 
               echo '<h3 class="secondary">Specializations</h3>';
+
+              echo '<ul class="list list-medium list--spaced-vertical specializations">';
               
               while ( have_rows('specializations') ) : the_row();
           
-                the_sub_field('specialization');
+                $specialization = get_sub_field('specialization');
+                
+                echo '<li class="list-item">' . $specialization . '</li>';
           
               endwhile;
+
+              echo '</ul>';
               
             endif;
 
@@ -66,19 +72,25 @@ echo '<div id="barba-wrapper">';
 
           echo '<div class="sidebar-section">';
           
-              if( have_rows('education_experience') ):
+            if( have_rows('education_experience') ):
 
-                echo '<h3 class="secondary">Experience</h3>';
-                
-                while ( have_rows('education_experience') ) : the_row();
-            
-                  the_sub_field('experience');
-            
-                endwhile;
-                
-              endif;
+              echo '<h3 class="secondary">Experience</h3>';
+
+              echo '<ul class="list list-medium list--spaced-vertical experience">';
+              
+              while ( have_rows('education_experience') ) : the_row();
+
+                $experience = get_sub_field('experience');
+          
+                echo '<li class="list-item">' . $experience . '</li>';
+          
+              endwhile;
+
+              echo '</ul>';
+              
+            endif;
   
-            echo '</div>';
+          echo '</div>';
         
         echo '</div>';
 
