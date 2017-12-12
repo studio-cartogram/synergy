@@ -5,6 +5,14 @@
   overflow: hidden;
   font-size: $t-font-size-gamma;
   border-bottom: $b-default;
+
+  &:hover {
+    label {
+      color: $ca-faq-active;
+      background: $ca-faq-background;
+      transition: all $a-timing $a-easing;
+    }
+  }
 }
 
 input {
@@ -38,11 +46,11 @@ label {
 
 /* :checked */
 input:checked ~ .faq-answer {
-  max-height: 480px;
+  max-height: 680px;
 }
 
 input:checked ~ label {
-  color: $ca-heading-secondary-color;
+  color: $ca-faq-active;
   background: $ca-faq-background;
 }
 
