@@ -2,6 +2,7 @@
 global $language;
 
 $classes = get_field('class_schedules', 'options');
+$locations_overlay_toggle = get_field('locations_overlay_toggle', 'options');
 
 $nav_primary_right = array(
   'theme_location'  => 'header_nav_secondary',
@@ -68,7 +69,7 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . 'Contact us' . '</a>';  
+        echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . $locations_overlay_toggle . '</a>';  
       
       echo '</li>';
 

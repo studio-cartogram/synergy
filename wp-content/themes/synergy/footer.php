@@ -11,6 +11,7 @@ $facebook = get_field('facebook', 'options');
 $instagram = get_field('instagram', 'options');
 $twitter = get_field('twitter', 'options');
 $classes = get_field('class_schedules', 'options');
+$locations_overlay_toggle = get_field('locations_overlay_toggle', 'options');
 
 set_query_var( 'context', 'footer' );
 
@@ -31,7 +32,7 @@ echo '<footer class="footer container">';
 
         echo '</a>';
     
-        echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . 'Contact us' . '</a>';
+        echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . $locations_overlay_toggle . '</a>';
 
       echo '</div>';
 
