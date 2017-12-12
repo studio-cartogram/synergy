@@ -1,5 +1,11 @@
 <?php
 
+$profession = get_field('profession');
+$credentials = get_field('credentials');
+$image = get_post_thumbnail_id();
+$hasimage = has_post_thumbnail();
+$size = 'full';
+
 get_template_part('partials/head');
 
 get_template_part('partials/analytics');
@@ -14,13 +20,86 @@ echo '<div id="barba-wrapper">';
 
   while ( have_posts() ) : the_post();
 
-    echo '<div class="row row--justify-center">';
+    echo '<div class="row">';
 
-      echo '<div class="column column-10-tablet column-7-laptop">';
+      echo '<div class="mast mast-single">';
 
-      set_query_var( 'context', 'single' );
-      set_query_var( 'item', $post );
-      get_template_part('partials/item');
+        echo '<a href="#back" class="link link--back">Back</a>';
+
+        echo '<div class="mast-text">';
+
+          echo '<h1 class="item__title">' . get_the_title() . '</h1>';
+      
+          echo '<h2 class="secondary">' . $profession . '</h2>';
+
+        echo '</div>';
+
+      echo '</div>';
+
+      echo '<div class="content-single">';
+
+        echo '<div class="single__sidebar">';
+
+          echo '<div class="sidebar-section">';
+        
+            if( have_rows('specializations') ):
+
+              echo '<h3 class="secondary">Specializations</h3>';
+              
+              while ( have_rows('specializations') ) : the_row();
+          
+                the_sub_field('specialization');
+          
+              endwhile;
+              
+            endif;
+
+          echo '</div>';
+
+          echo '<div class="sidebar-section">';
+
+            echo '<h3 class="secondary">Credentials</h3>';
+
+            echo '<p class="small">' . $credentials . '</p>';
+
+          echo '</div>';
+
+          echo '<div class="sidebar-section">';
+          
+              if( have_rows('education_experience') ):
+
+                echo '<h3 class="secondary">Experience</h3>';
+                
+                while ( have_rows('education_experience') ) : the_row();
+            
+                  the_sub_field('experience');
+            
+                endwhile;
+                
+              endif;
+  
+            echo '</div>';
+        
+        echo '</div>';
+
+        echo '<div class="primary__content">';
+
+          echo '<div class="primary__image">';
+          
+            echo wp_get_attachment_image( $image, $size );
+          
+          echo '</div>';
+
+          echo '<div class="primary__text">';
+          
+            echo get_the_content();
+          
+          echo '</div>';
+
+        echo '</div>';
+
+      echo '</div>';
+
       get_template_part('partials/prevnext');
 
       echo '</div>';

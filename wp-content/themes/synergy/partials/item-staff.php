@@ -26,8 +26,6 @@ if($hasimage) :
         
         echo '<h3 class="secondary">' . $profession . '</h3>';
 
-
-
       echo '</div>';
 
     echo '</a>';

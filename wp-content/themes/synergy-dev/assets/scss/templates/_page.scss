@@ -1,3 +1,28 @@
 .page__content {
   padding: 0 $d-quad;
 }
+
+.content-single {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: $d-trio;
+  background-color: white;
+}
+
+.single__sidebar {
+  width: 30%;
+}
+
+.primary__content {
+  width: 60%;
+}
+
+.sidebar-section {
+  padding-bottom: $d-trio;
+  padding-right: $d-trio;
+}
+
+.primary__text {
+  padding: $d-quin $d-sex $d-quin 0;
+}
