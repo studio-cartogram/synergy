@@ -11,21 +11,30 @@
   }
 }
 
+.answer {
+  display: none;
+
+  .answer--is-visible & {
+    display: flex;
+    opacity: 1;
+    box-shadow: $sha-xl;
+  }
+}
+
 .faq__question {
   position: relative;
   padding-bottom: $d-quad;
   text-align: center;
 }
 
-.faq__answer {
-  position: relative;
-  padding-bottom: $d-quad;
-}
+// .faq__answer {
+//   position: relative;
+//   padding-bottom: $d-quad;
+// }
 
 .faq__footer {
   justify-content: center;
 }
-
 
 .faq__more {
   padding-top: $d-duo;

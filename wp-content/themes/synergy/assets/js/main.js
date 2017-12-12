@@ -4677,6 +4677,7 @@ var App = function App() {
   new _Select2.default();
   this.nav = new _Toggle.Toggle('nav');
   this.locations = new _Toggle.Toggle('locations');
+  this.answer = new _Toggle.Toggle('answer');
   this.init();
   (0, _loadSprite2.default)();
   document.body.classList.remove('js-is-loading');
@@ -4701,6 +4702,7 @@ var App = function App() {
     // this.filter.hide && this.filter.hide()    
     _this.nav.hide();
     _this.locations.hide();
+    _this.answer.hide();
   });
   _barba2.default.Dispatcher.on('transitionCompleted', function (currentStatus, prevStatus) {
     document.body.classList.remove('js-is-loading');
