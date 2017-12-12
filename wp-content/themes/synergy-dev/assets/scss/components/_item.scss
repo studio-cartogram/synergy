@@ -38,8 +38,16 @@
   }
 }
 
-.item--faqs {
+.items__faqs {
+  border-top: $b-default;
+  padding: 0;
+  margin-top: $d-quin;
+  margin-left: $d-trio;
+  margin-right: $d-trio;
+}
 
+.item--faqs {
+  padding-bottom: 0;
   @include bp($bp-tablet) {
     flex-basis: 50%;
   }

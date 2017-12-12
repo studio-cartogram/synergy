@@ -30,7 +30,6 @@ class App {
     new SelectClinician()
     this.nav = new Toggle('nav')
     this.locations = new Toggle('locations')
-    this.answer = new Toggle('answer')
     this.init()
     loadSprite()
     document.body.classList.remove('js-is-loading')
@@ -53,7 +52,6 @@ class App {
       // this.filter.hide && this.filter.hide()    
       this.nav.hide()
       this.locations.hide()
-      this.answer.hide()
     })
     Barba.Dispatcher.on('transitionCompleted', (currentStatus, prevStatus) => {
       document.body.classList.remove('js-is-loading')
