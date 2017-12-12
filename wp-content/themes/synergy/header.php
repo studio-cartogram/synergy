@@ -68,7 +68,7 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . 'Book an appointment' . '</a>';  
+        echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . 'Contact us' . '</a>';  
       
       echo '</li>';
 

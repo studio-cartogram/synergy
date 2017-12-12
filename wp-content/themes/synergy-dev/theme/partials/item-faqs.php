@@ -14,7 +14,7 @@ echo '<div class="item--faqs">';
 
     echo '<div class="faq-answer">';
 
-      echo '<p class="">' . get_the_content($item->ID) . '</p>';
+      echo '<p class="answer-text">' . get_the_content($item->ID) . '</p>';
 
     echo '</div>';
 

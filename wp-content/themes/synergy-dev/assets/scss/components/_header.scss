@@ -1,7 +1,7 @@
 .header {
   z-index: index($l-site, header);
   width: 100%;
-  position: absolute;
+  position: fixed;
 
   .nav--is-visible & {
     overflow: scroll;

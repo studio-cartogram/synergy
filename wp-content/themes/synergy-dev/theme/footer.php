@@ -31,7 +31,7 @@ echo '<footer class="footer container">';
 
         echo '</a>';
     
-        echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . 'Book an appointment' . '</a>';
+        echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . 'Contact us' . '</a>';
 
       echo '</div>';
 
