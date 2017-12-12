@@ -48,8 +48,9 @@
 
 .item--faqs {
   padding-bottom: 0;
+
   @include bp($bp-tablet) {
-    flex-basis: 50%;
+    flex-basis: 48%;
   }
 }
 
