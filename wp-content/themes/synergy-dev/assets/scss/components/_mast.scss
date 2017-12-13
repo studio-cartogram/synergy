@@ -20,9 +20,15 @@
   max-width: none;
   margin: 0;
   width: 100%;
-  padding: $d-twe $d-trio $d-duo $d-trio;
+  padding: $d-twe $d-trio $d-trio $d-trio;
 }
 
 .link--back {
+
+  .icon {
+    width: $d-duo;
+    height: $d-duo;
+    margin-right: $d-base;
+  }
   width: 30%;
 }

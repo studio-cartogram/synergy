@@ -25,7 +25,7 @@ echo '<footer class="footer container">';
 
       echo '<div class="footer__actions">';
     
-        echo '<a href="' . $classes . '" class="link link--inverted link--primary link--external action">' . 'Class schedules';
+        echo '<a href="' . $classes . '" class="link link--inverted link--primary link--external action">Class schedules';
 
         set_query_var( 'icon', 'arrow-external' );
         get_template_part('partials/icon');

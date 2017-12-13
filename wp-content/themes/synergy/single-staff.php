@@ -14,115 +14,158 @@ get_header();
 
 echo '<main id="main" role="main" class="main">';
 
-echo '<div id="barba-wrapper">';
+  echo '<div id="barba-wrapper">';
 
-  echo '<div class="barba-container" data-namespace="single">';
+    echo '<div class="barba-container" data-namespace="single">';
 
-  while ( have_posts() ) : the_post();
+      while ( have_posts() ) : the_post();
 
-    echo '<div class="row">';
+        echo '<div class="row">';
 
-      echo '<div class="mast mast-single">';
+          echo '<div class="mast mast-single">';
 
-        echo '<a href="#back" class="link link--back">Back</a>';
+            echo '<a href="' . get_post_type_archive_link( 'staff' ) .'" class="link link--back">';
 
-        echo '<div class="mast-text">';
+            set_query_var( 'icon', 'arrow-left' );
+            get_template_part('partials/icon');
+            
+            echo 'All staff</a>';
 
-          echo '<h1 class="item__title">' . get_the_title() . '</h1>';
-      
-          echo '<h2 class="secondary">' . $profession . '</h2>';
+            echo '<div class="mast-text">';
 
-        echo '</div>';
-
-      echo '</div>';
-
-      echo '<div class="content-single">';
-
-        echo '<div class="single__sidebar">';
-
-          echo '<div class="sidebar-section">';
-        
-            if( have_rows('specializations') ):
-
-              echo '<h3 class="secondary">Specializations</h3>';
-
-              echo '<ul class="list list-medium list--spaced-vertical specializations">';
-              
-              while ( have_rows('specializations') ) : the_row();
+              echo '<h1 class="item__title">' . get_the_title() . '</h1>';
           
-                $specialization = get_sub_field('specialization');
+              echo '<h2 class="secondary">' . $profession . '</h2>';
+
+            echo '</div>';
+
+          echo '</div>';
+
+          echo '<div class="content-background">';
+
+            echo '<div class="content-container">';
+
+              echo '<div class="single__sidebar">';
+
+                if($credentials) :
+
+                echo '<div class="sidebar-section">';
+              
+                  echo '<h3 class="secondary section-heading">Credentials</h3>';
+
+                  echo '<p class="small">' . $credentials . '</p>';
+              
+                echo '</div>';
+              
+                endif;
+              
+                if( have_rows('specializations') ):
+
+                  echo '<div class="sidebar-section">';
+
+                    echo '<div class="accordion-toggle">';
+
+                      echo '<input id="specializations" type="checkbox" name="tabs">';
+                    
+                      echo '<label class="gamma secondary" for="specializations">Specializations';
+                      
+                      echo '</label>';
+
+                      echo '<div class="accordion-content">';
+
+                        echo '<ul class="list list-sidebar list--medium list--spaced-vertical specializations">';
+                        
+                          while ( have_rows('specializations') ) : the_row();
+                      
+                            $specialization = get_sub_field('specialization');
+                            
+                            echo '<li class="list-item">' . $specialization . '</li>';
+                      
+                          endwhile;
+
+                        echo '</ul>';
+                      
+                      echo '</div>';
+
+                    echo '</div>';
+
+                  echo '</div>';
+                  
+                endif;
                 
-                echo '<li class="list-item">' . $specialization . '</li>';
-          
-              endwhile;
+                if( have_rows('education_experience') ):
 
-              echo '</ul>';
+                  echo '<div class="sidebar-section">';
+
+                    echo '<div class="accordion-toggle">';
+                    
+                      echo '<input id="experience" type="checkbox" name="tabs">';
+                    
+                      echo '<label class="gamma secondary" for="experience">Experience';
+                      
+                      echo '</label>';
+
+                      echo '<div class="accordion-content">';
+
+                        echo '<ul class="list list-sidebar list--medium list--spaced-vertical experience">';
+                        
+                        while ( have_rows('education_experience') ) : the_row();
+                    
+                          $experience = get_sub_field('experience');
+                          
+                          echo '<li class="list-item">' . $experience . '</li>';
+                    
+                        endwhile;
+
+                        echo '</ul>';
+                      
+                      echo '</div>';
+
+                    echo '</div>';
+
+                  echo '</div>';
+                    
+                endif;
               
-            endif;
+              echo '</div>';
+
+              echo '<div class="primary__content">';
+
+                echo '<div class="primary__image">';
+                
+                  echo wp_get_attachment_image( $image, $size );
+                
+                echo '</div>';
+
+                echo '<div class="primary__text">';
+                
+                  echo get_the_content();
+
+                  echo '<div class="categories-assigned">';
+
+                    echo '<h5>Staff Categories</h5>';
+
+                    get_template_part('partials/taxonomy-list');
+
+                  echo '</div>';
+
+                echo '</div>';
+
+              echo '</div>';
+
+            echo '</div>';
+
+            get_template_part('partials/prevnext');
 
           echo '</div>';
 
-          echo '<div class="sidebar-section">';
-
-            echo '<h3 class="secondary">Credentials</h3>';
-
-            echo '<p class="small">' . $credentials . '</p>';
-
-          echo '</div>';
-
-          echo '<div class="sidebar-section">';
-          
-            if( have_rows('education_experience') ):
-
-              echo '<h3 class="secondary">Experience</h3>';
-
-              echo '<ul class="list list-medium list--spaced-vertical experience">';
-              
-              while ( have_rows('education_experience') ) : the_row();
-
-                $experience = get_sub_field('experience');
-          
-                echo '<li class="list-item">' . $experience . '</li>';
-          
-              endwhile;
-
-              echo '</ul>';
-              
-            endif;
-  
-          echo '</div>';
-        
         echo '</div>';
 
-        echo '<div class="primary__content">';
-
-          echo '<div class="primary__image">';
-          
-            echo wp_get_attachment_image( $image, $size );
-          
-          echo '</div>';
-
-          echo '<div class="primary__text">';
-          
-            echo get_the_content();
-          
-          echo '</div>';
-
-        echo '</div>';
-
-      echo '</div>';
-
-      get_template_part('partials/prevnext');
-
-      echo '</div>';
+      endwhile;
 
     echo '</div>';
 
-  endwhile;
-
   echo '</div>';
-
-echo '</div>';
 
 echo '</main>';
 

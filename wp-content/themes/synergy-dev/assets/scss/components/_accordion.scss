@@ -1,9 +1,8 @@
-.faq-question {
+.accordion-toggle {
   position: relative;
   margin-bottom: 1px;
   width: 100%;
   overflow: hidden;
-  font-size: $t-font-size-gamma;
   border-bottom: $b-default;
 
   &:hover {
@@ -24,29 +23,35 @@ input {
 label {
   position: relative;
   display: block;
-  padding: $d-trio $d-sex $d-trio $d-trio;
   background: transparent;
   cursor: pointer;
   line-height: 1.6;
 }
 
-.faq-answer {
+.item--faqs {
+
+  label {
+    padding: $d-trio $d-sex $d-trio $d-trio;    
+  }
+}
+
+.accordion-content {
   max-height: 0;
   overflow: hidden;
   background: transparent;
   -webkit-transition: max-height .35s;
   -o-transition: max-height .35s;
   transition: max-height .35s;
-  background: $ca-faq-background;  
+  background: $ca-faq-background;
 }
 
-.faq-answer p {
+.accordion-content p {
   padding: 0 $d-trio $d-quin $d-trio;
 }
 
 /* :checked */
-input:checked ~ .faq-answer {
-  max-height: 680px;
+input:checked ~ .accordion-content {
+  max-height: 1680px;
 }
 
 input:checked ~ label {
@@ -75,4 +80,30 @@ input[type=checkbox] + label::after {
 
 input[type=checkbox]:checked + label::after {
   transform: rotate(315deg);
+}
+
+.sidebar-section {
+
+  border-bottom: $b-default;
+
+  .accordion-toggle,
+  .section-heading {
+    border-bottom: none;
+    padding-top: $d-trio;
+  }
+
+  label {
+
+    padding-bottom: 0;
+    line-height: 2;
+
+    &:after {
+      right: $d-base;
+      top: 0;
+    }
+  }
+
+  input:checked ~ label {
+    color: $ca-faq-active;
+  }
 }

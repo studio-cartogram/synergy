@@ -56,7 +56,8 @@ h2 a,
   font-size: $t-font-size-beta;
 }
 
-.link--underline {
+.link--underline,
+.categories-assigned a {
   &:after {
     position: absolute;
     content: '';
