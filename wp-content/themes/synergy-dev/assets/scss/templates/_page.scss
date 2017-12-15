@@ -14,7 +14,7 @@
   }
 
   @include bp($bp-laptop) {
-    padding: 0 $d-dec;
+    padding: 0 $d-dec $d-trio;
   }
 }
 
@@ -94,7 +94,7 @@
 }
 
 .categories-assigned {
-  padding-top: $d-quin;
+  padding-top: $d-trio;
 
   a {
     font-size: $t-font-size-epsilon;
