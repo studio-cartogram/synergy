@@ -14,7 +14,7 @@
   }
 
   @include bp($bp-laptop) {
-    padding: $d-quad $d-dec;
+    padding: 0 $d-dec;
   }
 }
 
