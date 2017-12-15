@@ -5,6 +5,9 @@ $credentials = get_field('credentials');
 $image = get_post_thumbnail_id();
 $hasimage = has_post_thumbnail();
 $size = 'full';
+$services = get_field('related_services');
+
+$cv_document = get_field('cv_document');
 
 get_template_part('partials/head');
 
@@ -24,7 +27,7 @@ echo '<main id="main" role="main" class="main">';
 
           echo '<div class="mast mast-single">';
 
-            echo '<a href="' . get_post_type_archive_link( 'staff' ) .'" class="link link--back">';
+            echo '<a href="' . get_post_type_archive_link( 'staff' ) .'" class="secondary link link--back">';
 
             set_query_var( 'icon', 'arrow-left' );
             get_template_part('partials/icon');
@@ -126,6 +129,23 @@ echo '<main id="main" role="main" class="main">';
                   echo '</div>';
                     
                 endif;
+
+                if( $cv_document ):
+
+                echo '<div class="sidebar-action">';
+
+                  $url = wp_get_attachment_url( $cv_document );
+                
+                  echo '<a class="button button--down button--tertiary" href="' . $url .'">Download Full CV';
+
+                  set_query_var( 'icon', 'arrow-down' );
+                  get_template_part('partials/icon');
+                  
+                  echo '</a>';
+                
+                echo '</div>';
+              
+                endif;
               
               echo '</div>';
 
@@ -143,7 +163,7 @@ echo '<main id="main" role="main" class="main">';
 
                   echo '<div class="categories-assigned">';
 
-                    echo '<h5>Staff Categories</h5>';
+                    echo '<h5 class="secondary border-top">Clinician Categories</h5>';
 
                     get_template_part('partials/taxonomy-list');
 
@@ -155,8 +175,59 @@ echo '<main id="main" role="main" class="main">';
 
             echo '</div>';
 
-            get_template_part('partials/prevnext');
+            echo '<div class="prevnext__page">';
 
+              get_template_part('partials/prevnext');
+
+            echo '</div>';
+
+          echo '</div>';
+
+          echo '<div class="tertiary__content">';
+          
+            if( $services ):
+
+              echo '<div class="related-header">';
+
+                echo '<h3 class="secondary">Related Services</h3>';
+
+                echo '<a href="' . get_post_type_archive_link( 'services' ) .'" class="secondary link link--all link--underline">All services</a>';
+
+              echo '</div>';
+
+              echo '<div class="related-items">';
+
+                foreach( $services as $service):
+
+                  $serviceimage = get_post_thumbnail_id($service->ID);
+                  $serviceimagesize = 'large';
+
+                  echo '<div class="related-item item item--services">';
+
+                    echo '<a href="' . get_the_permalink($service->ID) . '">';
+
+                      echo '<div class="item__image">';
+                    
+                        echo wp_get_attachment_image( $serviceimage, $serviceimagesize );
+                    
+                      echo '</div>';
+
+                      echo '<div class="item__text">';
+
+                        echo '<h3 class="item__title">'. get_the_title($service->ID) .'</h3>';
+
+                      echo '</div>';
+                      
+                    echo '</a>';
+
+                  echo '</div>';
+
+                endforeach;
+
+              echo '</div>';
+
+            endif;
+          
           echo '</div>';
 
         echo '</div>';

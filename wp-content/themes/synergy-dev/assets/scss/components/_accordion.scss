@@ -14,18 +14,21 @@
   }
 }
 
-input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
+.accordion-toggle {
 
-label {
-  position: relative;
-  display: block;
-  background: transparent;
-  cursor: pointer;
-  line-height: 1.6;
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1.6;
+  }
 }
 
 .item--faqs {

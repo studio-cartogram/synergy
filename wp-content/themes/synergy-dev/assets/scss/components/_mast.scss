@@ -14,21 +14,20 @@
 
 .mast-single {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
   max-width: none;
   margin: 0;
   width: 100%;
   padding: $d-twe $d-trio $d-trio $d-trio;
-}
 
-.link--back {
-
-  .icon {
-    width: $d-duo;
-    height: $d-duo;
-    margin-right: $d-base;
+  @include bp($bp-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  width: 30%;
+
+  @include bp($bp-laptop) {
+    padding: $d-twe $d-dec $d-trio $d-dec;
+  }
 }

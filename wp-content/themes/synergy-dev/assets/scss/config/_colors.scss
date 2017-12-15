@@ -57,6 +57,7 @@ $ca-border-default: $c-sky;
 $ca-border-darker: $c-inkLightest;
 $ca-hr-color: $c-sky;
 $ca-color-subdued: $c-inkLightest;
+$ca-content-background: $c-white;
 
 // Footer
 $ca-footer-background: $c-ink;
@@ -80,7 +81,13 @@ $ca-button-secondary-background: $c-white;
 $ca-button-secondary-color: $c-ink;
 $ca-button-secondary-color-hover: $c-blue;
 
+$ca-button-tertiary-background: $c-skyLight;
+$ca-button-tertiary-color: $c-inkLighter;
+$ca-button-tertiary-background-hover: $c-white;
+$ca-button-tertiary-color-hover: $c-blue;
+
 $ca-border-anchor: $c-inkLightest;
+$ca-border-anchor-secondary: $c-sky;
 $ca-anchor-hover: $c-blue;
 
 $ca-circle-button-hover: $c-blueDarker;

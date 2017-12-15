@@ -107,3 +107,8 @@ h6 {
 .inverted {
   color: $ca-nav-inverted-text;
 }
+
+.border-top {
+  border-top: $b-default;
+  padding-top: $d-base;
+}

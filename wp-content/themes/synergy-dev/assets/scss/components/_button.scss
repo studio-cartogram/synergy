@@ -14,7 +14,7 @@ Button Component
   border-radius: $b-radius;
   color: $ca-button-color;
   width: 100%;
-  font-size: $t-font-size-button-small;
+  font-size: $t-font-size-button;
 
   &:hover {
   }
@@ -22,7 +22,12 @@ Button Component
   @include bp($bp-tablet) {
     width: auto;
   }
-}
+
+  .icon {
+    height: $d-duo;
+    width: $d-duo;
+  }
+} 
 
 .button--primary {
   padding: $d-base $d-duo;
@@ -86,8 +91,19 @@ Button Component
   }
 }
 
+.button--tertiary {
+  padding: $d-base $d-duo;
+  background: $ca-button-tertiary-background;
+  color: $ca-button-tertiary-color;
+
+  &:hover {
+    background: $ca-button-tertiary-background-hover;
+    color: $ca-button-tertiary-color-hover;
+  }
+}
+
 .button--small {
-  padding: 0 $d-duo;
+  padding: $d-base;
   font-size: $t-font-size-button-small;
 }
 
@@ -98,6 +114,14 @@ Button Component
 
 .button--close {
   cursor: pointer;
+}
+
+.button--down {
+
+  .icon {
+    margin-left: $d-base;
+    margin-top: 3px;
+  }
 }
 
 .button--inverted {

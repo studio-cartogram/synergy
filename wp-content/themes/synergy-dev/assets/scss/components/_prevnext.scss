@@ -5,15 +5,34 @@
   position: relative;
 }
 
-
 .prevnext__link {
   padding: -0 $d-trio;
+
+  @include bp($bp-laptop) {
+    padding: -0 $d-dec;
+  }
+
+  .icon {
+    width: $d-duo;
+    height: $d-duo;
+  }
 }
 
 .prevnext__link--right {
+
+  .icon {
+    margin-left: $d-base;
+  }
 }
 
-.prevnext__icon {
-  max-width: $d-trio;
-  max-height: $d-trio;
+.prevnext__link--left {
+  
+  .icon {
+    margin-right: $d-base;
+  }
+}
+
+.prevnext__page {
+  border-top: $b-default;
+  padding-top: $d-sex;
 }

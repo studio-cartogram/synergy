@@ -48,6 +48,10 @@ h2 a,
   }
 }
 
+a.secondary {
+  color: $ca-heading-secondary-color;
+}
+
 .link--inverted {
   color: $ca-anchor-inverted-color;
 }
@@ -94,4 +98,21 @@ h2 a,
     }
   }
 
+}
+
+.link--back {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: $d-quin;
+
+  @include bp($bp-tablet) {
+    width: 30%;
+    padding-top: 26px;
+  }
+  
+  .icon {
+    width: $d-duo;
+    height: $d-duo;
+    margin-right: $d-base;
+  }
 }
