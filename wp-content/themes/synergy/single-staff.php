@@ -161,13 +161,17 @@ echo '<main id="main" role="main" class="main">';
                 
                   echo get_the_content();
 
-                  echo '<div class="categories-assigned">';
+                  if( has_term('','categories') ):
 
-                    echo '<h5 class="secondary border-top">Clinician Categories</h5>';
+                    echo '<div class="categories-assigned">';
 
-                    get_template_part('partials/taxonomy-list');
+                      echo '<h5 class="secondary border-top">Clinician Categories</h5>';
 
-                  echo '</div>';
+                      get_template_part('partials/taxonomy-list');
+
+                    echo '</div>';
+
+                  endif;
 
                 echo '</div>';
 
