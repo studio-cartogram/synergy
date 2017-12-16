@@ -18,7 +18,7 @@ echo '<div id="barba-wrapper">';
     
     echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 
-    echo '<div class="items__faqs">';
+    echo '<div class="faqs">';
 
       get_template_part('partials/loop');
 

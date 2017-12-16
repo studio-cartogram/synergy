@@ -1,6 +1,5 @@
 .items__staff,
-.items__services,
-.items__faqs {
+.items__services {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -17,8 +16,7 @@
 }
 
 .item--staff,
-.item--services,
-.item--faqs {
+.item--services {
   padding-bottom: $d-quin;
   flex-basis: auto;
 
@@ -27,7 +25,7 @@
       // mix-blend-mode: luminosity;
       transform: scale(1.1);
       transition: transform 1s ease-in-out;
-    }
+    } 
     .item__text h3 {
       color: $ca-nav-link-hover;
     }
@@ -38,21 +36,6 @@
   }
 }
 
-.items__faqs {
-  border-top: $b-default;
-  padding: 0;
-  margin-top: $d-quin;
-  margin-left: $d-trio;
-  margin-right: $d-trio;
-}
-
-.item--faqs {
-  padding-bottom: 0;
-
-  @include bp($bp-tablet) {
-    flex-basis: 48%;
-  }
-}
 
 .item__image {
   box-shadow: $sha-lg;
@@ -61,6 +44,7 @@
   background-color: $ca-item-image-background;
 
   img {
+    display: block;
     transform: scale(1);
     height: 320px;
     object-position: center;
@@ -75,4 +59,20 @@
   .item__title {
     padding-bottom: $d-half;
   }
+}
+
+// new page for faqs
+
+.faqs {
+  display: flex;
+}
+
+.faqs__column {
+  display: flex;
+  flex-direction: column;
+  width: 50%
+}
+
+.faqs__item {
+  width: 100%;
 }

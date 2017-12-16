@@ -23,7 +23,7 @@
 module.exports = {
 	name: 'synergy',
 	prettyName: 'Synergy',
-  devUrl: 'synergy.dev',
+  devUrl: 'synergy.test',
 	description: 'A theme for Synergy',
 	version: '0.1.0',
 	author: 'Cartogram',

@@ -40,7 +40,7 @@
 
   @include bp($bp-tablet) {
     width: 30%;
-    top: $d-elf;
+    padding-top: $d-elf;
   }
 }
 
