@@ -1,0 +1,44 @@
+.faqs {
+  display: flex;
+  flex-direction: column;
+  margin-top: $d-quin;
+  margin-right: $d-trio;
+  margin-left: $d-trio;
+
+  @include bp($bp-tablet) {
+    flex-direction: row;
+  }
+}
+
+.faqs__column {  
+  width: 100%;
+
+  @include bp($bp-tablet) {
+    width: 50%;
+  }
+}
+
+.faqs__column.-left {
+  margin-right: $d-duo;
+
+  :first-child & {
+    border-top: $b-default;
+  }
+}
+
+.faqs__column.-right {
+  margin-left: $d-duo;
+
+  :first-child & {
+    border-top: $b-default;
+  }
+}
+
+.faqs__item {
+  border-bottom: $b-default;
+  width: 100%;
+
+  label {
+    padding: $d-trio $d-sex $d-trio $d-trio;    
+  }
+}

@@ -1,20 +1,8 @@
-.accordion-toggle {
+.revealer {
   position: relative;
   margin-bottom: 1px;
   width: 100%;
   overflow: hidden;
-  border-bottom: $b-default;
-
-  &:hover {
-    label {
-      color: $ca-faq-active;
-      background: $ca-faq-background;
-      transition: all $a-timing $a-easing;
-    }
-  }
-}
-
-.accordion-toggle {
 
   input {
     position: absolute;
@@ -29,16 +17,17 @@
     cursor: pointer;
     line-height: 1.6;
   }
-}
 
-.item--faqs {
-
-  label {
-    padding: $d-trio $d-sex $d-trio $d-trio;    
+  &:hover {
+    label {
+      color: $ca-faq-active;
+      background: $ca-faq-background;
+      transition: all $a-timing $a-easing;
+    }
   }
 }
 
-.accordion-content {
+.revealer__content {
   max-height: 0;
   overflow: hidden;
   background: transparent;
@@ -48,12 +37,12 @@
   background: $ca-faq-background;
 }
 
-.accordion-content p {
+.revealer__content p {
   padding: 0 $d-trio $d-quin $d-trio;
 }
 
 /* :checked */
-input:checked ~ .accordion-content {
+input:checked ~ .revealer__content {
   max-height: 1680px;
 }
 
@@ -66,7 +55,7 @@ input:checked ~ label {
 label::after {
   position: absolute;
   right: $d-duo;
-  top: $d-trio;
+  top: 20px;
   display: block;
   width: 2em;
   height: 2em;
@@ -83,30 +72,4 @@ input[type=checkbox] + label::after {
 
 input[type=checkbox]:checked + label::after {
   transform: rotate(315deg);
-}
-
-.sidebar-section {
-
-  border-bottom: $b-default;
-
-  .accordion-toggle,
-  .section-heading {
-    border-bottom: none;
-    padding-top: $d-trio;
-  }
-
-  label {
-
-    padding-bottom: 0;
-    line-height: 2;
-
-    &:after {
-      right: $d-base;
-      top: 0;
-    }
-  }
-
-  input:checked ~ label {
-    color: $ca-faq-active;
-  }
 }

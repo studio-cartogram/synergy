@@ -1,6 +1,7 @@
 .cta {
   overflow: hidden;
   padding: $d-sex 0 $d-quad;
+  
   @include bp($bp-tablet) {
     padding: $d-oct $d-quad $d-sex;
   }

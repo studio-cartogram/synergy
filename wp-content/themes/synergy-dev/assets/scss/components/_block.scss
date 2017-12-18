@@ -1,6 +1,7 @@
 .blocks {
   margin: 0 -$d-duo;
   align-content: center;
+
   @include bp($bp-tablet) {
     align-content: stretch;
   }
@@ -8,6 +9,7 @@
 
 .blocks--explain {
   padding: $d-duo;
+
   @include bp($bp-tablet) {
     margin-top: $d-doz;
   }
@@ -23,6 +25,7 @@
 
 .blocks__title {
   padding: $d-quad $d-duo;
+
   @include bp($bp-tablet) {
     padding: $d-quad 0;
   }
@@ -51,6 +54,7 @@
 .block__inverted {
   text-align: center;
   padding: $d-duo;
+  
   @include bp($bp-mobile) {
     padding: $d-quad;
   }

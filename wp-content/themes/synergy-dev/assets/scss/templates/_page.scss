@@ -1,8 +1,4 @@
 .page__content {
-  padding: 0 $d-quad;
-}
-
-.content-container {
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
@@ -18,7 +14,7 @@
   }
 }
 
-.content-background {
+.page__background {
   position: relative;
 
   &:after {
@@ -33,7 +29,7 @@
   }
 }
 
-.single__sidebar {
+.sidebar {
   width: 100%;
   position: relative;
   top: 0;
@@ -52,9 +48,31 @@
   }
 }
 
-.sidebar-section {
+.sidebar__section {
   margin-right: 0;
   padding-bottom: $d-trio;
+  border-bottom: $b-default;
+  
+  .revealer,
+  .sidebar__heading {
+    border-bottom: none;
+    padding-top: $d-trio;
+  }
+
+  label {
+
+    padding-bottom: 0;
+    line-height: 2;
+
+    &:after {
+      right: $d-base;
+      top: 0;
+    }
+  }
+
+  input:checked ~ label {
+    color: $ca-faq-active;
+  }
 
   @include bp($bp-tablet) {
     margin-right: $d-trio;
@@ -130,7 +148,7 @@
   }
 }
 
-.related-items {
+.related {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -141,7 +159,7 @@
   }
 }
 
-.related-item {
+.related__item {
   width: 100%;
 
   @include bp($bp-tablet) {

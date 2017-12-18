@@ -44,17 +44,17 @@ echo '<main id="main" role="main" class="main">';
 
           echo '</div>';
 
-          echo '<div class="content-background">';
+          echo '<div class="page__background">';
 
-            echo '<div class="content-container">';
+            echo '<div class="page__content">';
 
-              echo '<div class="single__sidebar">';
+              echo '<div class="sidebar">';
 
                 if($credentials) :
 
-                echo '<div class="sidebar-section">';
+                echo '<div class="sidebar__section">';
               
-                  echo '<h3 class="secondary section-heading">Credentials</h3>';
+                  echo '<h3 class="secondary sidebar__heading">Credentials</h3>';
 
                   echo '<p class="small">' . $credentials . '</p>';
               
@@ -64,9 +64,9 @@ echo '<main id="main" role="main" class="main">';
               
                 if( have_rows('specializations') ):
 
-                  echo '<div class="sidebar-section">';
+                  echo '<div class="sidebar__section">';
 
-                    echo '<div class="accordion-toggle">';
+                    echo '<div class="revealer">';
 
                       echo '<input id="specializations" type="checkbox" name="tabs">';
                     
@@ -74,7 +74,7 @@ echo '<main id="main" role="main" class="main">';
                       
                       echo '</label>';
 
-                      echo '<div class="accordion-content">';
+                      echo '<div class="revealer__content">';
 
                         echo '<ul class="list list-sidebar list--medium list--spaced-vertical specializations">';
                         
@@ -98,9 +98,9 @@ echo '<main id="main" role="main" class="main">';
                 
                 if( have_rows('education_experience') ):
 
-                  echo '<div class="sidebar-section">';
+                  echo '<div class="sidebar__section">';
 
-                    echo '<div class="accordion-toggle">';
+                    echo '<div class="revealer">';
                     
                       echo '<input id="experience" type="checkbox" name="tabs">';
                     
@@ -108,7 +108,7 @@ echo '<main id="main" role="main" class="main">';
                       
                       echo '</label>';
 
-                      echo '<div class="accordion-content">';
+                      echo '<div class="revealer__content">';
 
                         echo '<ul class="list list-sidebar list--medium list--spaced-vertical experience">';
                         
@@ -199,14 +199,14 @@ echo '<main id="main" role="main" class="main">';
 
               echo '</div>';
 
-              echo '<div class="related-items">';
+              echo '<div class="related">';
 
                 foreach( $services as $service):
 
                   $serviceimage = get_post_thumbnail_id($service->ID);
                   $serviceimagesize = 'large';
 
-                  echo '<div class="related-item item item--services">';
+                  echo '<div class="related__item item item--services">';
 
                     echo '<a href="' . get_the_permalink($service->ID) . '">';
 

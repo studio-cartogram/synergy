@@ -60,19 +60,3 @@
     padding-bottom: $d-half;
   }
 }
-
-// new page for faqs
-
-.faqs {
-  display: flex;
-}
-
-.faqs__column {
-  display: flex;
-  flex-direction: column;
-  width: 50%
-}
-
-.faqs__item {
-  width: 100%;
-}

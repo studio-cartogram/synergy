@@ -1,5 +1,6 @@
 <?php
 
+$title_faq = get_field('title_faq', 'options');
 $subtitle_faq = get_field('subtitle_faq', 'options');
 
 echo '<section class="mast">';
@@ -10,7 +11,7 @@ echo '<section class="mast">';
 
       echo '<h1 class="title">';
 
-        echo wp_title('');
+        echo $title_faq;
 
       echo '</h1>';
 
