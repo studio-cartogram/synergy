@@ -1,6 +1,6 @@
 <?php
 
-$title_staff= get_field('title_faq', 'options');
+$title_staff= get_field('title_staff', 'options');
 $subtitle_staff = get_field('subtitle_staff', 'options');
 
 echo '<section class="mast">';

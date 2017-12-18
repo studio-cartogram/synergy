@@ -1,6 +1,6 @@
 <?php
 
-$title_services = get_field('title_faq', 'options');
+$title_services = get_field('title_services', 'options');
 $subtitle_services = get_field('subtitle_services', 'options');
 
 echo '<section class="mast">';
