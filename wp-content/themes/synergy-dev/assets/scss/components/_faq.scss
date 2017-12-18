@@ -8,6 +8,10 @@
   @include bp($bp-tablet) {
     flex-direction: row;
   }
+  @include bp($bp-laptop) {
+    margin-right: $d-dec;
+    margin-left: $d-dec;
+  }
 }
 
 .faqs__column {  

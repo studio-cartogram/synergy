@@ -12,6 +12,7 @@
   add_action('wp_head','cartogram_fonts');
   add_action( 'wp_enqueue_scripts', 'cartogram_styles' );
   add_action( 'wp_enqueue_scripts', 'cartogram_scripts' );
+  remove_filter( 'the_content', 'wpautop' );
 
 	/**
 	 * Post types and taxonomies

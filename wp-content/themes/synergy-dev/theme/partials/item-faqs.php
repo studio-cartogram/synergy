@@ -30,7 +30,7 @@ echo '<div class="faqs__item">';
 
     echo '<div class="revealer__content">';
 
-      echo '<p class="answer">' . get_the_content($item->ID) . '</p>';
+      echo '<div class="answer">' . get_the_content($item->ID) . '</div>';
 
     echo '</div>';
 

@@ -6,7 +6,6 @@ $image = get_post_thumbnail_id();
 $hasimage = has_post_thumbnail();
 $size = 'full';
 $services = get_field('related_services');
-
 $cv_document = get_field('cv_document');
 
 get_template_part('partials/head');
