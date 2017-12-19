@@ -1,53 +1,59 @@
 <?php
 
-$section = 'testimonials';
-$client = get_sub_field('client');
-$related_services = get_sub_field('related_services');
+$testimonials = get_sub_field('testimonials');
 
+echo '<div class="tertiary__content">';
 
-echo '<section class="' . $section . '">';
+  if( $testimonials ):
+    
+    echo '<div class="related-header">';
 
-    echo '<div class="row ">';
-
-      echo '<div class="column column-12">';
-
-        echo '<div class="blocks__title">';
-
-          echo '<h6 class="with-line secondary serif"><em>' . $client . '</em></h6>';
-
-        echo '</div>';
-
-      echo '</div>';
+      echo '<h3 class="secondary">Words from our clients</h3>';
 
     echo '</div>';
 
-    if( have_rows('testimonials') ):
+    echo '<div class="related">';
 
-    echo '<div id="js-slideshow" class="slideshow row">';
+      foreach( $testimonials as $testimonial ):
 
-      while ( have_rows('testimonials') ) : the_row();
+        $testimonialText = get_field('testimonial', $testimonial->ID);
+        $client = get_field('client', $testimonial->ID);
+        $services = get_field('related_services', $testimonial->ID);
+        
+        echo '<div class="item related__item item--press">';
 
-        echo '<div class="js-slide slideshow__slide">';
+          echo '<div class="item__text">';
 
-        echo '<div class="testimonial">';
+            echo '<h3 class="">'. $testimonialText .'</h3>';
 
-          $credit = get_sub_field('credit');
+            echo '<h5 class="secondary">'. $client .'';
 
-          $testimonial = get_sub_field('testimonial');
+              if( $services ):
+                
+                foreach( $services as $service ):
+    
+                  echo '<a class"link--underline" href="' . get_the_permalink($service->ID) . '">, ';
+    
+                    echo get_the_title($service->ID);
+                  
+                  echo '</a>';
+    
+                endforeach;
+    
+              endif;
 
-          echo '<p class="p--xlarge testimonial__text">' . $testimonial . '</p>';
+            echo '</h5>';
 
-          echo '<p class="testimonial__credit secondary">&mdash; ' . $credit . '</p>';
-
+          echo '</div>';
+            
         echo '</div>';
 
-        echo '</div>';
-
-      endwhile;
-
+      endforeach;
+      
     echo '</div>';
 
-    endif;
+  endif;
 
-echo '</section>';
+  echo '</div>';
+
 ?>

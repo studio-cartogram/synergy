@@ -16,6 +16,7 @@
 
 .page__background {
   position: relative;
+  z-index: 2;
 
   &:after {
     display: inline-block;

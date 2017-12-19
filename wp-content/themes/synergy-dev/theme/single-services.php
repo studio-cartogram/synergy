@@ -8,6 +8,7 @@ $areas = get_field('areas_treated');
 $faqs = get_field('related_faq');
 $fees = get_field('related_fees');
 
+$services_title = get_field('services_title');
 $services = get_field('related_services');
 $staff = get_field('related_staff');
 
@@ -220,6 +221,59 @@ echo '<main id="main" role="main" class="main">';
 
           echo '<div class="tertiary__content">';
 
+            if( $services ):
+              
+              echo '<div class="related-header">';
+
+              if($services_title):
+
+                echo '<h3 class="secondary">'. $services_title .'</h3>';
+
+              else :
+
+                echo '<h3 class="secondary">Related Services</h3>';
+
+              endif;
+
+                echo '<a href="' . get_post_type_archive_link( 'services' ) .'" class="secondary link link--all link--underline">All services</a>';
+
+              echo '</div>';
+
+              echo '<div class="related">';
+
+                foreach( $services as $service):
+
+                  $serviceimage = get_post_thumbnail_id($service->ID);
+                  $serviceimagesize = 'large';
+
+                  echo '<div class="related__item item item--services">';
+
+                    echo '<a href="' . get_the_permalink($service->ID) . '">';
+
+                      echo '<div class="item__image">';
+                    
+                        echo wp_get_attachment_image( $serviceimage, $serviceimagesize );
+                    
+                      echo '</div>';
+
+                      echo '<div class="item__text">';
+
+                        echo '<h3 class="item__title">'. get_the_title($service->ID) .'</h3>';
+
+                        echo '<h3 class="secondary">'. get_the_excerpt($service->ID) .'</h3>';                        
+
+                      echo '</div>';
+                      
+                    echo '</a>';
+
+                  echo '</div>';
+
+                endforeach;
+
+              echo '</div>';
+
+            endif;
+
             if( $staff ):
               
               echo '<div class="related-header">';
@@ -265,55 +319,14 @@ echo '<main id="main" role="main" class="main">';
               echo '</div>';
 
             endif;
-          
-            if( $services ):
-
-              echo '<div class="related-header">';
-
-                echo '<h3 class="secondary">Related Services</h3>';
-
-                echo '<a href="' . get_post_type_archive_link( 'services' ) .'" class="secondary link link--all link--underline">All services</a>';
-
-              echo '</div>';
-
-              echo '<div class="related">';
-
-                foreach( $services as $service):
-
-                  $serviceimage = get_post_thumbnail_id($service->ID);
-                  $serviceimagesize = 'large';
-
-                  echo '<div class="related__item item item--services">';
-
-                    echo '<a href="' . get_the_permalink($service->ID) . '">';
-
-                      echo '<div class="item__image">';
-                    
-                        echo wp_get_attachment_image( $serviceimage, $serviceimagesize );
-                    
-                      echo '</div>';
-
-                      echo '<div class="item__text">';
-
-                        echo '<h3 class="item__title">'. get_the_title($service->ID) .'</h3>';
-
-                      echo '</div>';
-                      
-                    echo '</a>';
-
-                  echo '</div>';
-
-                endforeach;
-
-              echo '</div>';
-
-            endif;
 
           echo '</div>';
 
         echo '</div>';
 
       endwhile;
+
+      get_template_part('partials/blob');
 
     echo '</div>';
 

@@ -219,6 +219,8 @@ echo '<main id="main" role="main" class="main">';
 
                         echo '<h3 class="item__title">'. get_the_title($service->ID) .'</h3>';
 
+                        echo '<h3 class="secondary">'. get_the_excerpt($service->ID) .'</h3>';
+
                       echo '</div>';
                       
                     echo '</a>';
@@ -236,6 +238,8 @@ echo '<main id="main" role="main" class="main">';
         echo '</div>';
 
       endwhile;
+
+      get_template_part('partials/blob');
 
     echo '</div>';
 
