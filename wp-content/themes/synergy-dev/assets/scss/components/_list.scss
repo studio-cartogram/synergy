@@ -15,6 +15,12 @@ List Component
   flex-wrap: wrap;
 }
 
+.list-sidebar {
+  li {
+    width: 100%;
+  }
+}
+
 .list-item {
   display: block;
 }
@@ -89,4 +95,20 @@ List Component
   li:last-child:after {
     content: '';
   }
+}
+
+.related_fees {
+  padding-top: $d-duo;
+  padding-right: $d-duo;
+}
+
+.fee {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $b-dashed;
+  margin-bottom: $d-duo;
+}
+
+.fee__type {
+  padding-left: $d-base;
 }
