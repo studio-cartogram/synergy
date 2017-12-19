@@ -20,7 +20,7 @@
 	add_action('init', 'create_post_types' );
 	add_action('init', 'create_taxonomies' );
 	add_filter('the_excerpt', 'excerpt_ellipsis');
-	add_filter('the_content', 'cartogram_remove_more_link');
+  add_filter('the_content', 'cartogram_remove_more_link');
 
 	/* ========================================================================================================================
 
@@ -329,5 +329,21 @@
 	  return $html;
 
   }
+
+  function remove_tax_name( $title, $sep, $seplocation ) {
+    if ( is_tax() ) {
+        $term_title = single_term_title( '', false );
+
+        // Determines position of separator
+        if ( 'right' == $seplocation ) {
+            $title = $term_title . " $sep ";
+        } else {
+            $title = " $sep " . $term_title;
+        }
+    }
+
+    return $title;
+    }
+  add_filter( 'wp_title', 'remove_tax_name', 10, 3 );
 
 ?>

@@ -11,11 +11,24 @@ echo '<section class="mast">';
 
       echo '<h1 class="title">';
 
-        echo $title_faq;
+        // echo $title_faq;
+
+        echo wp_title('');
 
       echo '</h1>';
 
       echo '<h2 class="subtitle secondary">'. $subtitle_faq .'</h2>';
+
+      if ( is_tax() ) :
+        
+        echo '<a href="' . get_post_type_archive_link( 'faq' ) .'" class="secondary link link--back">';
+        
+        set_query_var( 'icon', 'arrow-left' );
+        get_template_part('partials/icon');
+        
+        echo 'All faq</a>';          
+        
+      endif;
       
       get_template_part('partials/filter-faqs');   
 

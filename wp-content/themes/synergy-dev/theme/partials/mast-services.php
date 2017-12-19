@@ -11,11 +11,24 @@ echo '<section class="mast">';
 
       echo '<h1 class="title">';
 
-        echo $title_services;
+        // echo $title_services;
+
+        echo wp_title('');
 
       echo '</h1>';
 
       echo '<h2 class="subtitle secondary">'. $subtitle_services .'</h2>';
+
+      if ( is_tax() ) :
+        
+        echo '<a href="' . get_post_type_archive_link( 'services' ) .'" class="secondary link link--back">';
+        
+        set_query_var( 'icon', 'arrow-left' );
+        get_template_part('partials/icon');
+        
+        echo 'All services</a>';          
+        
+      endif;
 
       get_template_part('partials/filter-services');
 

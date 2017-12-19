@@ -20,13 +20,13 @@ echo '<div id="barba-wrapper">';
 
     get_template_part('partials/loop-sections');
 
+    get_template_part('partials/blob');
+
   echo '</div>';
 
 echo '</div>';
 
 echo '</main>';
-
-get_template_part('partials/blob');
 
 get_footer();
 
