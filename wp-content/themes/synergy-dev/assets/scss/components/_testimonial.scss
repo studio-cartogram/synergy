@@ -1,33 +1,30 @@
 .testimonials {
-  padding: $d-duo 0 $d-sex;
+  background: $ca-testimonial-background;
+  width: 100%;
+  margin-top: $d-dec;
+  display: inline-block;
+}
+
+.testimonials__header {
+  margin: 0 auto;
+  padding-top: $d-quin;
 }
 
 .testimonial {
   flex: 0 0 auto;
   width: 100%;
   text-align: center;
-  padding: $d-duo;
-  @include bp($bp-tablet) {
-    padding: $d-quin $d-sex;
-  }
-
+  padding: $d-quin $d-sex;
+  overflow: hidden;
   position: relative;
-  &:after {
-    z-index: -1;
-    content: '“';
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: .8;
-    font-size: 300px;
-    @include bp($bp-tablet) {
-      font-size: 600px;
-    }
+
+  @include bp($bp-tablet) {
+    padding: $d-quin 160px $d-dec;
   }
 }
 
-.testimonials {
-  margin: auto;
+.testimonial__text {
+  line-height: 1.6;
 }
 
 

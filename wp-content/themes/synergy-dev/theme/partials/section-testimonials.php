@@ -2,17 +2,17 @@
 
 $testimonials = get_sub_field('testimonials');
 
-echo '<div class="tertiary__content">';
+echo '<div class="js-slideshow swiper-container testimonials">';
 
   if( $testimonials ):
     
-    echo '<div class="related-header">';
+    echo '<div class="testimonials__header">';
 
-      echo '<h3 class="secondary">Words from our clients</h3>';
+      echo '<h2 class="secondary text--align-center">Words from our clients</h2>';
 
     echo '</div>';
 
-    echo '<div class="related">';
+    echo '<div class="swiper-wrapper">';
 
       foreach( $testimonials as $testimonial ):
 
@@ -20,19 +20,19 @@ echo '<div class="tertiary__content">';
         $client = get_field('client', $testimonial->ID);
         $services = get_field('related_services', $testimonial->ID);
         
-        echo '<div class="item related__item item--press">';
+        echo '<div class="swiper-slide">';
 
-          echo '<div class="item__text">';
+          echo '<div class="item__text testimonial">';
 
-            echo '<h3 class="">'. $testimonialText .'</h3>';
+            echo '<h2 class="text--align-center testimonial__text">“'. $testimonialText .'”</h2>';
 
-            echo '<h5 class="secondary">'. $client .'';
+            echo '<h3 class="testimonial__credit secondary">&#8212; '. $client .'';
 
               if( $services ):
                 
                 foreach( $services as $service ):
     
-                  echo '<a class"link--underline" href="' . get_the_permalink($service->ID) . '">, ';
+                  echo ', <a class="link--underline" href="' . get_the_permalink($service->ID) . '">';
     
                     echo get_the_title($service->ID);
                   
@@ -42,7 +42,7 @@ echo '<div class="tertiary__content">';
     
               endif;
 
-            echo '</h5>';
+            echo '</h3>';
 
           echo '</div>';
             
@@ -50,6 +50,24 @@ echo '<div class="tertiary__content">';
 
       endforeach;
       
+    echo '</div>';
+
+    echo '<div class="gallery__buttons">';
+    
+      echo '<div class="swiper-button-prev button button--circle">';
+        
+        set_query_var( 'icon', 'arrow-left' );
+        get_template_part('partials/icon');
+        
+      echo '</div>';
+
+      echo '<div class="swiper-button-next button button--circle">';
+
+        set_query_var( 'icon', 'arrow-right' );
+        get_template_part('partials/icon');
+        
+      echo '</div>';
+    
     echo '</div>';
 
   endif;

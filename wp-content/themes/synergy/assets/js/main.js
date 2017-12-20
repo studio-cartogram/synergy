@@ -4648,8 +4648,9 @@ var App = function App() {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
+      loop: true,
       autoplay: {
-        delay: 6000,
+        delay: 10000,
         disableOnInteraction: true
       }
     });
