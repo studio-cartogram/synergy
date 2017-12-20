@@ -27,4 +27,28 @@
   line-height: 1.6;
 }
 
+.testimonials__buttons {
+
+  .button--circle {
+    border: $b-default;
+    color: $ca-heading-secondary-color;
+    background-color: transparent;
+
+    svg {
+      fill: $ca-heading-secondary-color;
+    }
+
+    :hover & {
+      border: $b-accent;
+      color: $ca-accent;
+
+      svg {
+        fill: $ca-accent;
+      }
+    }
+
+    
+  }
+}
+
 

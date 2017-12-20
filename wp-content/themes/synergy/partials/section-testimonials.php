@@ -52,7 +52,7 @@ echo '<div class="js-slideshow swiper-container testimonials">';
       
     echo '</div>';
 
-    echo '<div class="gallery__buttons">';
+    echo '<div class="testimonials__buttons">';
     
       echo '<div class="swiper-button-prev button button--circle">';
         
