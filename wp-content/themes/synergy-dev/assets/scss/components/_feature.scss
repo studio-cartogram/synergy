@@ -6,7 +6,9 @@
   z-index: index($l-site, feature);
   position: relative;
   text-align: center;
-  min-height: 400px;  
+  min-height: 400px;
+  max-height: 680px;
+  overflow: hidden;
 
   @include bp($bp-mobile) {
     min-height: auto;
@@ -93,10 +95,15 @@
 }
 
 .feature__image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   z-index: index($l-feature, image);
   display: none;
+
+  img {
+    object-position: center;
+    object-fit: cover;
+  }
 
   @include bp($bp-mobile) {
     display: flex;   
