@@ -21,7 +21,7 @@ echo '<section class="mast">';
 
       if ( is_tax() ) :
         
-        echo '<a href="' . get_post_type_archive_link( 'faq' ) .'" class="secondary link link--back">';
+        echo '<a href="' . get_post_type_archive_link( 'faqs' ) .'" class="secondary link link--back">';
         
         set_query_var( 'icon', 'arrow-left' );
         get_template_part('partials/icon');
