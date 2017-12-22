@@ -30,6 +30,17 @@
   }
 }
 
+.single-faqs {
+
+  .page__background {
+    padding-bottom: $d-sex;
+
+    &:after {
+      top: 0;
+    }
+  }
+}
+
 .sidebar {
   width: 100%;
   position: relative;
