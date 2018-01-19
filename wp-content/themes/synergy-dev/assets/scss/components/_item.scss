@@ -60,3 +60,42 @@
     padding-bottom: $d-half;
   }
 }
+
+.item--services {
+  border-bottom: $b-default;
+  padding: $d-trio $d-sex $d-trio $d-trio;
+
+  .item__text {
+    padding-top: 0;
+  }
+
+  &:hover {
+    color: $ca-faq-active;
+    background: $ca-faq-background;
+    transition: all $a-timing $a-easing;
+  }
+}
+
+.services__column {  
+  width: 100%;
+
+  @include bp($bp-tablet) {
+    width: 32%;
+  }
+}
+
+.services__column.-left {
+  margin-right: $d-duo;
+
+  :first-child & {
+    border-top: $b-default;
+  }
+}
+
+.services__column.-right {
+  margin-left: $d-duo;
+
+  :first-child & {
+    border-top: $b-default;
+  }
+}
