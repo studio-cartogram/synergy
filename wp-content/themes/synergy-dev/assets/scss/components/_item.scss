@@ -61,41 +61,41 @@
   }
 }
 
-.item--services {
-  border-bottom: $b-default;
-  padding: $d-trio $d-sex $d-trio $d-trio;
+  .services__column {  
+    width: 100%;
 
-  .item__text {
-    padding-top: 0;
+    @include bp($bp-tablet) {
+      width: 32%;
+    }
+
+    .item--services {
+      border-bottom: $b-default;
+      padding: $d-trio $d-sex $d-trio $d-trio;
+  
+      .item__text {
+        padding-top: 0;
+      }
+  
+      &:hover {
+        color: $ca-faq-active;
+        background: $ca-faq-background;
+        transition: all $a-timing $a-easing;
+      }
+    }
   }
 
-  &:hover {
-    color: $ca-faq-active;
-    background: $ca-faq-background;
-    transition: all $a-timing $a-easing;
+  .services__column.-left {
+    margin-right: $d-duo;
+
+    :first-child & {
+      border-top: $b-default;
+    }
   }
-}
 
-.services__column {  
-  width: 100%;
+  .services__column.-right {
+    margin-left: $d-duo;
 
-  @include bp($bp-tablet) {
-    width: 32%;
+    :first-child & {
+      border-top: $b-default;
+    }
   }
-}
-
-.services__column.-left {
-  margin-right: $d-duo;
-
-  :first-child & {
-    border-top: $b-default;
-  }
-}
-
-.services__column.-right {
-  margin-left: $d-duo;
-
-  :first-child & {
-    border-top: $b-default;
-  }
-}
