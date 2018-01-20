@@ -32,6 +32,9 @@
     <meta property="og:title" content="Synergy" />
     <meta property="og:description" content="Our sports medicine and rehab specialists are here to help you feel better, not just today, but for the rest of your life." />
     <meta property="og:image" content="http://synergy.studiocartogram.com/wp-content/uploads/2017/10/IMG_7100.jpg" />
+    <?php
+    $formid = get_sub_field('form');
+    gravity_form_enqueue_scripts( $formid, false );?>
     <?php wp_head(); ?>
   </head>
   <body <?php body_class('site scene js-is-loading'); ?> >
