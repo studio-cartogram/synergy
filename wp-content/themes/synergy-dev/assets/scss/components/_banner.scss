@@ -129,6 +129,11 @@
   .banner__text {
     max-width: 860px;
     margin: 0 auto;
+    padding-top: $d-dec;
+
+    @include bp($bp-tablet) {
+      padding-top: $d-sep;
+    }
   }
 
   h1, h2, p, a {

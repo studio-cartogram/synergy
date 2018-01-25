@@ -73,3 +73,146 @@ input {
   width: auto;
   padding-right: $d-quin;
 }
+
+// Gravity Form Styles
+
+.form__synergy_wrapper {
+  margin: 0;
+  margin-top: -$d-sep;
+  padding: 0 $d-trio;
+
+  @include bp($bp-tablet) {
+    padding: 0 $d-trio;
+  }
+}
+
+.form__synergy_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+  padding: 5px 12px;
+}
+
+.form__synergy.form__synergy.form__synergy {
+  font-family: $t-font-family;
+  font-weight: $t-font-weight-regular;
+   
+  input,
+  .gfield_select,
+  textarea {
+    background-color: $ca-input-background;
+    border: $b-default;
+    min-height: $d-quin;
+    border-radius: 2px;
+  }
+
+  label,
+  .gfield_select,
+  .validation_error {
+    font-size: $t-font-size-epsilon;
+    font-weight: $t-font-weight-regular;
+    color: $ca-color-secondary;
+  }
+
+  .gfield_select {
+    height: $d-quin;
+    padding: 5px 12px;
+  }
+
+  .ginput_container_email input,
+  .ginput_container_select select,
+  .ginput_container_multiselect select,
+  .ginput_container_phone input {
+    width: 100%;
+  }
+
+  .ginput_container_multiselect select[multiple=multiple] option:checked {
+    background-color: $c-blue!important;
+  }
+
+  .gform_button {
+    color: $ca-button-primary-color;
+    background-color: $ca-button-primary-background;
+    padding: $d-base $d-trio;
+    border-radius: 2px;
+    font-family: $t-font-family;
+    font-size: $t-font-size-epsilon;
+
+    &:hover {
+      background-color: $ca-button-primary-background-hover;
+      box-shadow: $sha-inset;
+      transition: all 0.175s ease-in-out;
+    }
+  }
+
+  .gfield_required {
+    color: $ca-required;
+  }
+
+  .gfield_radio {
+    display: flex;
+  }
+
+  .gfield_radio input {
+    padding: $d-duo;
+    border-radius: $d-quin;
+
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      height: $d-base;
+      width: $d-base;
+      border-radius: $d-duo;
+    }
+  }
+
+  .gfield_radio label {
+    margin-right: $d-duo;
+  }
+
+  .gfield_radio input[type=radio]:checked {
+    border: 1px solid $c-blue;
+
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      height: $d-base;
+      width: $d-base;
+      background-color: $c-blue;
+      border-radius: $d-duo;
+    }
+  }
+
+  .gfield_radio input[type=radio]:checked+label{
+    color: $c-blue;
+    background: transparent;
+  }
+
+  .validation_error,
+  .gfield_error {
+    color: $ca-error;
+    background-color: $ca-errorBackground;
+    padding: $d-duo;
+    border-top: none;
+    border-bottom: none;
+    font-weight: $t-font-weight-bold;
+  }
+
+  .validation_message {
+    color: $ca-error;
+  }
+
+  .gform_confirmation_message_1 {
+    background-color: $c-white;
+    padding: $d-quin;
+    color: $c-green;
+  }
+
+  li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
+    border: $b-error;
+  }
+
+  li.gfield.gfield_error.gfield_contains_required {
+    padding-right: $d-duo;
+  }
+}
+

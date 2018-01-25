@@ -60,6 +60,7 @@ Color Index
  $ca-border-light: $c-skyLight;
  $ca-border-darker: $c-inkLightest;
  $ca-hr-color: $c-sky;
+ $ca-color-secondary: $c-inkLight;
  $ca-color-subdued: $c-inkLightest;
  $ca-content-background: $c-white;
  
@@ -149,7 +150,6 @@ Color Index
  
  $ca-sub-nav-background: $c-white;
  
- 
  $ca-logo-color: $c-blue;
  $ca-spinner-color: $c-blue;
  $ca-footer-icon-color: $c-white;
@@ -163,3 +163,9 @@ Color Index
  
  // Items
  $ca-item-image-background: $c-blue;
+
+ // Form
+
+ $ca-required: $c-blue;
+ $ca-error: $c-red;
+ $ca-errorBackground: $c-redLightest;
