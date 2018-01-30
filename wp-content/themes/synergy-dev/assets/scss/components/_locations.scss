@@ -1,0 +1,36 @@
+.contactLocations {
+  padding: $d-dec;
+}
+
+.contactLocations__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contactLocation {
+  width: 48%;
+
+  .phone {
+    padding-right: $d-trio;
+  }
+
+  .note {
+    color:  $ca-contact-note-color;
+  }
+
+  .location__image {
+    max-width: 640px;
+  }
+}
+
+.contactLocation__info {
+  padding-bottom: $d-duo;
+}
+
+
+.contactLocation__container {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: $d-quin;
+}
