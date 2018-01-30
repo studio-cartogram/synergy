@@ -10,7 +10,11 @@
 }
 
 .contactLocation {
-  width: 48%;
+  width: 100%;
+
+  @include bp($bp-tablet) {
+    width: 48%;
+  }
 
   .phone {
     padding-right: $d-trio;
