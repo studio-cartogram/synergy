@@ -158,7 +158,7 @@
       $labels = array(
         'name'                       => _x( 'Tags', 'taxonomy general name' ),
         'singular_name'              => _x( 'Tags', 'taxonomy singular name' ),
-        'search_items'               => __( 'Search Tagss' ),
+        'search_items'               => __( 'Search Tags' ),
         'popular_items'              => __( 'Popular Tags' ),
         'all_items'                  => __( 'All Tagss' ),
         'parent_item'                => null,

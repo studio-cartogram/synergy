@@ -3,7 +3,7 @@
 $select_blog = get_field('select_blog', 'options');
 
 $args = array( 'hide_empty=0' );
-$terms = get_terms( 'categories', $args );
+$terms = get_terms( 'category', $args ); // what is the blog posts taxonomy?
 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 $count = count( $terms );
 $i = 0;
