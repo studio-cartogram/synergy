@@ -1,5 +1,6 @@
 .items__staff,
-.items__services {
+.items__services,
+.items__blog {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -16,7 +17,8 @@
 }
 
 .item--staff,
-.item--services {
+.item--services,
+.item--blog {
   padding-bottom: $d-quin;
   flex-basis: auto;
 

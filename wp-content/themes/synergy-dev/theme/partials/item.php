@@ -1,15 +1,16 @@
 <?php
 
 $item = get_query_var('item');
-$topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $context = get_query_var('context');
+$topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $image = get_post_thumbnail_id();
+$profession = get_field('profession');
 $hasimage = has_post_thumbnail();
 $size = 'full';
 
-// if($hasimage) :
+echo '<article id="' . $item->post_name . '" class="item item--blog">';
 
-  echo '<article id="' . $item->post_name . '" class="item item--' . $context . '">';
+  echo '<a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">';
 
     echo '<div class="item__image">';
 
@@ -19,39 +20,14 @@ $size = 'full';
 
     echo '<div class="item__text">';
 
-      echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
+      echo '<h3 class="item__title">' . get_the_title($item->ID) . '</h3>';
+      
+      echo '<h3 class="secondary">' . $profession . '</h3>';
 
     echo '</div>';
 
-    echo '<div class="faq__footer row">';
+  echo '</a>';
 
-    if($topics) :
+echo '</article>';
 
-      echo '<ul class="list list--small list--sep-comma">';
-
-      echo '<li>';
-
-        echo '<em class="serif">filed under &mdash;</em> ';
-
-      echo '</li>';
-
-    foreach($topics as $topic) :
-
-      echo '<li>';
-
-        echo '<a href="' . get_term_link($topic) . '" class="link link--secondary">' . $topic->slug . '</a>';
-
-      echo '</li>';
-
-    endforeach;
-
-    echo '</ul>';
-
-    endif;
-
-    echo '</div>';
-
-  echo '</article>';
-
-// endif;
 ?>
