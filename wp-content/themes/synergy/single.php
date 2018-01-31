@@ -1,6 +1,7 @@
 <?php
 
 $image = get_post_thumbnail_id();
+$date = get_the_date();
 $hasimage = has_post_thumbnail();
 $size = 'full';
 
@@ -33,11 +34,13 @@ echo '<main id="main" role="main" class="main">';
             set_query_var( 'icon', 'arrow-left' );
             get_template_part('partials/icon');
             
-            echo 'All posts</a>';
+            echo 'Blog</a>';
 
             echo '<div class="mast-text">';
 
               echo '<h1 class="item__title">' . get_the_title() . '</h1>';
+
+              echo '<h2 class="secondary">by '. get_the_author() .' • ' . $date . '</h2>';
           
             echo '</div>';
 
@@ -47,132 +50,78 @@ echo '<main id="main" role="main" class="main">';
 
             echo '<div class="page__content">';
 
-              echo '<div class="sidebar">';
+              echo '<div class="sidebar sidebar--blog">';
+
+                echo '<div class="sidebar__section">';
+
+                  echo '<h3 class="gamma secondary" for="resources">Share this post</h3>';
+
+                  echo '<div class="share-links">';
+
+                    echo '<a class="button--share mail" href="mailto:?subject='. get_the_title() .'&amp;body=' . get_the_permalink() .'" title="Share by Email"">';
+
+                      set_query_var( 'icon', 'mail' );
+                      get_template_part('partials/icon');
+
+                    echo '</a>';
+
+                    echo '<a target="_blank" class="button--share twitter" href="http://twitter.com/home/?status= ' . get_the_title() .'-' . get_the_permalink() .'" title="Tweet this!">';
+                    
+                      set_query_var( 'icon', 'twitter' );
+                      get_template_part('partials/icon');
+
+                    echo '</a>';
+
+                    echo '<a target="_blank" class="button--share facebook" href="http://www.facebook.com/sharer.php?u=' . get_the_permalink() .'&amp;t='. get_the_title() .'" title="Share on Facebook.">';
+                    
+                    set_query_var( 'icon', 'facebook' );
+                    get_template_part('partials/icon');
+
+                    echo '</a>';
+
+                    echo '<a target="_blank" class="button--share linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;title='. get_the_title() .'&amp;url='. get_the_permalink() .'" title="Share on LinkedIn">';
+
+                    set_query_var( 'icon', 'linkedin' );
+                    get_template_part('partials/icon');
+
+                    echo '</a>';
+
+                    echo '<a target="_blank" class="button--share pinterest" href="http://pinterest.com/pin/create/button/?url='. get_the_permalink() .'&media='. $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ), $url .'">';
+
+                    set_query_var( 'icon', 'pinterest' );
+                    get_template_part('partials/icon');
+
+                    echo '</a>';
+
+                  echo '</div>';
+
+                echo '</div>';
               
-                if( have_rows('areas_treated') ):
+                if( have_rows('resources') ):
 
                   echo '<div class="sidebar__section">';
-
-                    echo '<div class="revealer">';
-
-                      echo '<input id="areas_treated" type="checkbox" name="tabs">';
+                  
+                    echo '<h3 class="gamma secondary" for="resources">Resources';
                     
-                      echo '<label class="gamma secondary" for="areas_treated">Issues/Areas Treated';
-                      
-                      echo '</label>';
+                    echo '</h3>';
 
-                      echo '<div class="revealer__content">';
-
-                        echo '<ul class="list list-sidebar list--medium list--spaced-vertical areas_treated">';
-                        
-                          while ( have_rows('areas_treated') ) : the_row();
-                      
-                            $area = get_sub_field('area');
-                            
-                            echo '<li class="list-item">' . $area . '</li>';
-                      
-                          endwhile;
-
-                        echo '</ul>';
-                      
-                      echo '</div>';
-
-                    echo '</div>';
-
-                  echo '</div>';
-                  
-                endif;
-
-                if( $faqs ):
-                  
-                  echo '<div class="sidebar__section">';
-
-                    echo '<div class="revealer">';
-
-                      echo '<input id="related_faqs" type="checkbox" name="tabs">';
+                    echo '<ul class="list list-sidebar list--medium list--spaced-vertical resources">';
                     
-                      echo '<label class="gamma secondary" for="related_faqs">FAQ';
-                      
-                      echo '</label>';
+                      while ( have_rows('resources') ) : the_row();
+                  
+                        $link = get_sub_field('link');
+                        $text = get_sub_field('link_text');
 
-                      echo '<div class="revealer__content">';
-
-                        echo '<ul class="list list-sidebar list--medium list--spaced-vertical related_faqs">';
+                        echo '<li class="list-item">';
                         
-                        foreach( $faqs as $faq ):
-                          
-                          echo '<li class="list-item">';
-        
-                            echo '<a href="' . get_the_permalink($faq->ID) . '">';
-        
-                              echo get_the_title($faq->ID);
-                                    
-                            echo '</a>';
-        
-                          echo '</li>';
-        
-                        endforeach;
+                          echo '<a class="" href="'. $link .'">' . $text . '</a>';
 
-                        echo '</ul>';
-                      
-                      echo '</div>';
-
-                    echo '</div>';
-
-                  echo '</div>';
+                        echo '</li>';
                   
-                endif;
+                      endwhile;
 
-                if( $fees ):
-                  
-                  echo '<div class="sidebar__section">';
-
-                    echo '<div class="revealer">';
-
-                      echo '<input id="related_fees" type="checkbox" name="tabs">';
+                    echo '</ul>';
                     
-                      echo '<label class="gamma secondary" for="related_fees">Fees';
-                      
-                      echo '</label>';
-
-                      echo '<div class="revealer__content">';
-
-                        echo '<div class="table related_fees">';
-                        
-                          foreach( $fees as $fee ):
-
-                            if( have_rows('breakdown', $fee->ID) ):
-                                                        
-                              while ( have_rows('breakdown', $fee->ID) ) : the_row();
-                            
-                                $time = get_sub_field('time', $fee->ID);
-                                $type = get_sub_field('type', $fee->ID);
-                                $cost = get_sub_field('cost', $fee->ID);
-                                
-                                echo '<div class="table__row fee">';
-                                
-                                  echo '<h6 class="fee__time">' . $time . '';
-                          
-                                  echo '<span class="fee__type secondary">' . $type . '</span></h6>';
-                          
-                                  echo '<h6 class="fee__cost">' . $cost . '</h6>';
-
-                                  echo '</h6>';
-                            
-                                echo '</div>';
-                            
-                              endwhile;
-                                                      
-                            endif;
-          
-                          endforeach;
-
-                        echo '</div>';
-                      
-                      echo '</div>';
-
-                    echo '</div>';
-
                   echo '</div>';
                   
                 endif;
@@ -191,13 +140,13 @@ echo '<main id="main" role="main" class="main">';
                 
                   echo get_the_content();
 
-                  if( has_term('','tags') ):
+                  if( has_term('','category') ):
 
                     echo '<div class="categories-assigned">';
 
-                      echo '<h5 class="secondary border-top">Service Categories</h5>';
+                      echo '<h5 class="secondary border-top">Article Categories</h5>';
 
-                      get_template_part('partials/taxonomy-list-services');
+                      get_template_part('partials/taxonomy-list-blog');
 
                     echo '</div>';
 
