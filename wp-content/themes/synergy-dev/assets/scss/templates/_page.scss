@@ -72,7 +72,6 @@
   }
 
   label {
-
     padding-bottom: 0;
     line-height: 2;
 
@@ -88,6 +87,14 @@
 
   @include bp($bp-tablet) {
     margin-right: $d-trio;
+  }
+}
+
+.sidebar--blog {
+
+  .sidebar__section {
+    padding-top: $d-trio;
+    border-bottom: none;
   }
 }
 

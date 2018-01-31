@@ -7,7 +7,7 @@ p,
   color: $ca-paragraph-color;
   margin: 0;
   padding: 0 0 $d-duo;
-  line-height: 1.5;
+  line-height: 1.8;
 
   &.secondary {
     color: $ca-paragraph-secondary-color;
@@ -53,5 +53,9 @@ blockquote {
     font-style: italic;
     color: $ca-blockquote-color;
   }
+}
+
+.primary__text {
+  line-height: 1.8;
 }
 

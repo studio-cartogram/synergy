@@ -134,3 +134,44 @@ Button Component
     color: $ca-anchor-hover;
   }
 }
+
+.share-links {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  padding-top: $d-base;
+}
+
+.button--share {
+  border-radius: $b-radius;
+  width: $d-trio;
+  height: $d-trio;
+  box-shadow: $sha-xs;
+  display: flex;
+
+  .icon {
+    width: $d-trio;
+    height: $d-trio;
+    fill: #ffffff;
+  }
+
+  &.twitter {
+    background: $ca-twitter;
+  }
+
+  &.facebook {
+    background: $ca-facebook;
+  }
+
+  &.linkedin {
+    background: $ca-linkedin;
+  }
+
+  &.pinterest {
+    background: $ca-pinterest;
+  }
+
+  &.mail {
+    background: $ca-mail;
+  }
+}

@@ -37,6 +37,11 @@ Color Index
  $c-redLightest: #FBEAE5;
  $c-warm: #fefbf4;
  $c-white: #ffffff;
+
+ $c-pinterest: #CE0009;
+ $c-twitter: #32ADF4;
+ $c-facebook: #31599D;
+ $c-linkedin: #0076B9;
  
  /* =========================================
  Colors Applied
@@ -63,6 +68,13 @@ Color Index
  $ca-color-secondary: $c-inkLight;
  $ca-color-subdued: $c-inkLightest;
  $ca-content-background: $c-white;
+
+ // Social
+$ca-pinterest: $c-pinterest;
+$ca-twitter: $c-twitter;
+$ca-linkedin: $c-linkedin;
+$ca-facebook: $c-facebook;
+$ca-mail: $c-inkLight;
  
  // Footer
  $ca-footer-background: $c-ink;
