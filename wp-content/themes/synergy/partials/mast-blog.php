@@ -11,15 +11,13 @@ echo '<section class="mast">';
 
       echo '<h1 class="title">';
 
-        // echo $title_staff;
-
         echo wp_title('');
 
       echo '</h1>';
 
       echo '<h2 class="subtitle secondary">'. $subtitle_blog .'</h2>';
 
-      if ( is_tax() ) :
+      if ( is_category('') ) :
         
         echo '<a href="' . get_post_type_archive_link( 'post' ) .'" class="secondary link link--back">';
         

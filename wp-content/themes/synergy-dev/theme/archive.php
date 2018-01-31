@@ -14,11 +14,11 @@ echo '<div id="barba-wrapper">';
 
   echo '<div class="barba-container">';
 
-    get_template_part('partials/archive-mast');
+    get_template_part('partials/mast-blog');
 
     echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 
-    echo '<div class="column column-10-tablet column-7-laptop">';
+    echo '<div class="items__staff">';
 
       get_template_part('partials/loop');
 
@@ -32,8 +32,10 @@ echo '</div>';
 
 echo '</main>';
 
+get_template_part('partials/blob');
+
 get_footer();
 
-get_template_part('partials/curtain');
+get_template_part('partials/loader');
 
 get_template_part('partials/foot');
