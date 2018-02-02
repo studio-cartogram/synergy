@@ -41,7 +41,7 @@ p.p--xlarge {
 }
 
 .p--hard {
-  padding: 0 !important
+  padding: 0 !important;
 }
 
 blockquote {
@@ -52,6 +52,12 @@ blockquote {
     margin-left: -15%;
     width: 115%;
     font-size: $t-font-size-beta;
+  }
+
+  &:before {
+    content:"\201C";
+    position: absolute;
+    margin-left: -$d-duo;
   }
 
   p {
