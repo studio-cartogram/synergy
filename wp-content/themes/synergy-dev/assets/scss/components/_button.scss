@@ -16,9 +16,6 @@ Button Component
   width: 100%;
   font-size: $t-font-size-button;
 
-  &:hover {
-  }
-
   @include bp($bp-tablet) {
     width: auto;
   }
@@ -35,7 +32,6 @@ Button Component
   background-color: $ca-button-primary-background;
   box-shadow: 0 1px 0 0 rgba(22,29,37,0.10), inset 0 1px 0 1px rgba(255,255,255,0.06);
   border-radius: 3px;
-
   transition: background-image 0.175s ease-out;
 
   &:hover {
@@ -48,6 +44,7 @@ Button Component
   &.button--inverted {
     background: $ca-button-inverted-background;
     color: $ca-button-inverted-color;
+
     &:hover {
       background: $ca-button-inverted-background-hover;
     }
@@ -65,7 +62,8 @@ Button Component
   }
 }
 
-.button--circle, .button--inverted {
+.button--circle, 
+.button--inverted {
   border-radius: 50%;
   height: $d-quin;
   width: $d-quin;
@@ -84,6 +82,7 @@ Button Component
   &:hover {
     color: $ca-anchor-hover;
     background-color: $ca-button-inverted-background-hover;
+
    .icon {
       fill: $ca-anchor-hover;
       transition: fill 0.175s ease-in-out;
@@ -139,7 +138,6 @@ Button Component
   display: flex;
   justify-content: space-between;
   width: 160px;
-  padding-top: $d-base;
 }
 
 .button--share {
@@ -173,5 +171,11 @@ Button Component
 
   &.mail {
     background: $ca-mail;
+  }
+
+  &:hover {
+    background: $ca-button-primary-background-hover;
+    box-shadow: none;
+    transition: box-shadow 0.175s ease-in;
   }
 }

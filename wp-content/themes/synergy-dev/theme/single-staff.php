@@ -160,19 +160,27 @@ echo '<main id="main" role="main" class="main">';
                 
                   echo get_the_content();
 
-                  if( has_term('','categories') ):
+                echo '</div>';
 
-                    echo '<div class="categories-assigned">';
+                if( has_term('','categories') ):
 
-                      echo '<h5 class="secondary border-top">Clinician Categories</h5>';
+                  echo '<div class="categories-assigned border-top">';
+
+                    echo '<div class="categories-label">';
+
+                      echo '<h5 class="secondary">Categories:</h5>';
+
+                    echo '</div>';
+
+                    echo '<div>';
 
                       get_template_part('partials/taxonomy-list');
 
                     echo '</div>';
 
-                  endif;
+                  echo '</div>';
 
-                echo '</div>';
+                endif;
 
               echo '</div>';
 

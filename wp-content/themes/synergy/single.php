@@ -56,44 +56,7 @@ echo '<main id="main" role="main" class="main">';
 
                   echo '<h3 class="gamma secondary" for="resources">Share this post</h3>';
 
-                  echo '<div class="share-links">';
-
-                    echo '<a class="button--share mail" href="mailto:?subject='. get_the_title() .'&amp;body=' . get_the_permalink() .'" title="Share by Email"">';
-
-                      set_query_var( 'icon', 'mail' );
-                      get_template_part('partials/icon');
-
-                    echo '</a>';
-
-                    echo '<a target="_blank" class="button--share twitter" href="http://twitter.com/home/?status= ' . get_the_title() .'-' . get_the_permalink() .'" title="Tweet this!">';
-                    
-                      set_query_var( 'icon', 'twitter' );
-                      get_template_part('partials/icon');
-
-                    echo '</a>';
-
-                    echo '<a target="_blank" class="button--share facebook" href="http://www.facebook.com/sharer.php?u=' . get_the_permalink() .'&amp;t='. get_the_title() .'" title="Share on Facebook.">';
-                    
-                    set_query_var( 'icon', 'facebook' );
-                    get_template_part('partials/icon');
-
-                    echo '</a>';
-
-                    echo '<a target="_blank" class="button--share linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;title='. get_the_title() .'&amp;url='. get_the_permalink() .'" title="Share on LinkedIn">';
-
-                    set_query_var( 'icon', 'linkedin' );
-                    get_template_part('partials/icon');
-
-                    echo '</a>';
-
-                    echo '<a target="_blank" class="button--share pinterest" href="http://pinterest.com/pin/create/button/?url='. get_the_permalink() .'&media='. $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ), $url .'">';
-
-                    set_query_var( 'icon', 'pinterest' );
-                    get_template_part('partials/icon');
-
-                    echo '</a>';
-
-                  echo '</div>';
+                  echo get_template_part('partials/share');
 
                 echo '</div>';
               
@@ -140,19 +103,33 @@ echo '<main id="main" role="main" class="main">';
                 
                   echo get_the_content();
 
-                  if( has_term('','category') ):
+                echo '</div>';
 
-                    echo '<div class="categories-assigned">';
+                echo '<div class="share-footer border-top">';
 
-                      echo '<h5 class="secondary border-top">Article Categories</h5>';
+                  echo get_template_part('partials/share');
+
+                echo '</div>';
+
+                if( has_term('','category') ):
+
+                  echo '<div class="categories-assigned border-top">';
+
+                    echo '<div class="categories-label">';
+
+                      echo '<h5 class="secondary">Categories:</h5>';
+
+                    echo '</div>';
+
+                    echo '<div>';
 
                       get_template_part('partials/taxonomy-list-blog');
 
                     echo '</div>';
 
-                  endif;
+                  echo '</div>';
 
-                echo '</div>';
+                endif;
 
               echo '</div>';
 

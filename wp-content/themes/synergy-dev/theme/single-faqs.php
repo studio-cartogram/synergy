@@ -49,19 +49,27 @@ echo '<main id="main" role="main" class="main">';
                 
                   echo get_the_content();
 
-                  if( has_term('','topic') ):
+                echo '</div>';
 
-                    echo '<div class="categories-assigned">';
+                if( has_term('','topic') ):
 
-                      echo '<h5 class="secondary border-top">Filed under</h5>';
+                  echo '<div class="categories-assigned border-top">';
+
+                    echo '<div class="categories-label">';
+
+                      echo '<h5 class="secondary">Topics:</h5>';
+
+                    echo '</div>';
+
+                    echo '<div>';
 
                       get_template_part('partials/taxonomy-list-faqs');
 
                     echo '</div>';
 
-                  endif;
+                  echo '</div>';
 
-                echo '</div>';
+                endif;
 
               echo '</div>';
 

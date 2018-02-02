@@ -15,7 +15,7 @@ if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ) {
        'echo'     => false,
        'taxonomy' => $taxonomy,
        'include'  => $term_ids,
-       'separator'  => '&nbsp;&nbsp;',
+       'separator'  => '&nbsp;',
    ) );
 
    // Display post categories.

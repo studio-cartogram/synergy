@@ -46,11 +46,11 @@ p.p--xlarge {
 
 blockquote {
   font-size: $t-font-size-beta-mobile;
-  margin-left: -15%;
-  width: 115%;
   color: $ca-blockquote-color;
 
   @include bp($bp-tablet) {
+    margin-left: -15%;
+    width: 115%;
     font-size: $t-font-size-beta;
   }
 
