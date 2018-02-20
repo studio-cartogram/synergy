@@ -16,7 +16,7 @@ echo '<div class="share-links">';
 
   echo '</a>';
 
-  echo '<a target="_blank" class="button--share facebook" href="http://www.facebook.com/sharer.php?u=' . get_the_permalink() .'&amp;t='. get_the_title() .'" title="Share on Facebook.">';
+  echo '<a target="_blank" class="button--share facebook" href="http://www.facebook.com/sharer.php?u=' . get_the_permalink() .'" data-share-url="http://www.facebook.com/sharer.php?u=' . get_the_permalink() .'" title="Share on Facebook.">';
   
   set_query_var( 'icon', 'facebook' );
   get_template_part('partials/icon');

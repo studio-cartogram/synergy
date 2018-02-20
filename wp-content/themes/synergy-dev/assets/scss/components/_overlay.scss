@@ -75,16 +75,15 @@
   min-width: 100%;
   overflow: auto;
   overflow-x: hidden;
-  padding: 1.5em;
+  padding: $d-sep $d-trio;
   position: relative;
   width: 100%;
   height: 100%;
   background: $ca-location-overlay-background;
   padding: $d-trio;
 
-  @include bp($bp-mobile) {
-    padding: $d-quin;
-    min-width: 640px;
+  @include bp($bp-laptop ) {
+    padding: $d-sep $d-dec;
   }
 }
 

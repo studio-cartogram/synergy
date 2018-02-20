@@ -1,3 +1,7 @@
+svg.hamburger {
+  overflow: visible;
+}
+
 .hamburger {
   height: $d-trio;
   width: $d-trio;
@@ -14,7 +18,7 @@
     fill: $ca-nav-link-hover;
 
     .p1 { 
-      transform: translateY(12px) rotate(45deg);
+      transform: translateY(7px) rotate(45deg);
     }
     .p2 { 
       opacity: 0;

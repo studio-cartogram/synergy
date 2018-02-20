@@ -28,8 +28,9 @@
     <meta name="msapplication-TileColor" content="#fddfee">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:url" content="http://www.synergysportsmedicine.com/" />
-    <meta property="og:title" content="Synergy" />
+    <meta property="og:url" content=<?php get_permalink(); ?> />
+    <meta property="og:title" content=<?php get_the_title(); ?> />
+    <meta property="og:site_name" content=<?php bloginfo('name') ?> />
     <meta property="og:description" content="Our sports medicine and rehab specialists are here to help you feel better, not just today, but for the rest of your life." />
     <meta property="og:image" content="http://synergy.studiocartogram.com/wp-content/uploads/2017/10/IMG_7100.jpg" />
     <?php
