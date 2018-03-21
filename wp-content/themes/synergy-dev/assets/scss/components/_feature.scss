@@ -7,8 +7,6 @@
   position: relative;
   text-align: center;
   min-height: 100vh;
-  // min-height: 400px;
-  // max-height: 680px;
   overflow: hidden;
 
   @include bp($bp-mobile) {
@@ -50,13 +48,10 @@
   width: 100%;
   position: absolute;
   z-index: index($l-feature, cta);
-  top: 148px;
+  top: 180px;
   padding-left: $d-trio;
   padding-right: $d-trio;
 
-  @include bp($bp-mobile) {
-    top: 124px;
-  }
   @include bp($bp-tablet) {
     top: 144px;
     width: 800px;
@@ -78,14 +73,11 @@
   z-index: index($l-feature, overlay); 
   height: 100vh;
   width: 100%;
+  background-color: rgba(255,255,255,0.40);
 
-  @include bp($bp-mobile) {
-    background-color: rgba(255,255,255,0.60);
-  }
 
   @include bp($bp-tablet) {
     background-color: transparent;
-    // background-image: linear-gradient(90deg, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.00) 59%);
     background-image: linear-gradient(90deg, rgba(255,255,255,0.90) 17%, rgba(255,255,255,0.00) 95%);
   }
 }
@@ -103,16 +95,13 @@
   width: auto;
   height: 100vh;
   z-index: index($l-feature, image);
-  display: none;
 
   img {
+    height: 100vh;
     object-position: center;
     object-fit: cover;
   }
 
-  @include bp($bp-mobile) {
-    display: flex;   
-  }
 }
 
 .feature__title {
