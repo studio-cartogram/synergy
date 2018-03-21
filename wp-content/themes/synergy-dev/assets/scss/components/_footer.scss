@@ -118,6 +118,23 @@ Footer Component
 .footer__bottom {
   border-top: $b-subdued;
   padding-top: $d-trio;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    background-image: url(../svg/wave.svg);
+    background-position: right bottom;
+    background-size: contain;
+    height: 50%;
+    width: 100%;
+
+    @include bp($bp-tablet) {
+    padding: 0;
+    height: 250px;
+    }
+  }
 }
 
 .footer__bottom .menu-item a {
