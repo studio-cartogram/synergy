@@ -122,16 +122,18 @@ Footer Component
   &:after {
     content: '';
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     right: 0;
     background-image: url(../svg/wave.svg);
     background-position: right bottom;
     background-size: contain;
     height: 50%;
-    width: 70%;
+    width: 100%;
 
     @include bp($bp-tablet) {
+    bottom: 12%;
     padding: 0;
+    width: 70%;
     height: 250px;
     }
   }
