@@ -16,6 +16,10 @@
     flex-direction: row;
   }
 
+  @include bp($bp-4k) {
+    padding: $d-twe;
+  }
+
   &:hover img {
     transform: scale(1.1);
   }
@@ -112,6 +116,9 @@
   @include bp($bp-mobile) {
     padding-right: $d-sex;
     padding-top: $d-dec;
+  }
+  @include bp($bp-4k) {
+    padding-right: $d-twe;
   }
 }
 

@@ -33,8 +33,12 @@ h1 {
   font-size: $t-font-size-alpha-mobile;
   font-weight: $t-font-weight-bold;
   padding-bottom: $d-duo;
+
   @include bp($bp-tablet) {
     font-size: $t-font-size-alpha;
+  }
+  @include bp($bp-4k) {
+    font-size: $t-font-size-4k;  
   }
 }
 
@@ -47,6 +51,10 @@ h1.mega {
 
   @include bp($bp-tablet) {
     font-size: $t-font-size-mega;
+  }
+
+  @include bp($bp-4k) {
+    font-size: $t-font-size-mega-4k;  
   }
 }
 
