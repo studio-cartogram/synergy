@@ -118,9 +118,9 @@ echo '<header role="banner" class="header">';
 
       echo '<div class="nav__list nav__resources">';
       
-        echo '<h3 class="nav__title">'. $menu_title_resources .'</h3>';
+        // echo '<h3 class="nav__title">'. $menu_title_resources .'</h3>';
 
-        echo '<ul class="list list__inner">';
+        echo '<ul class="list list__inner list--large list--align-center">';
 
           wp_nav_menu( $nav_resources );
 

@@ -30,8 +30,11 @@ List Component
 }
 
 .list--medium {
-  
   font-size: $t-font-size-epsilon;
+}
+
+.list--large {
+  font-size: $t-font-size-beta;
 }
 
 .list--nowrap {
