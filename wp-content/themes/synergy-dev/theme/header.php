@@ -4,6 +4,15 @@ global $language;
 $classes = get_field('class_schedules', 'options');
 $locations_overlay_toggle = get_field('locations_overlay_toggle', 'options');
 
+$menu_object_services = wp_get_nav_menu_object( 104 );
+$menu_title_services = $menu_object_services->name;
+
+$menu_object_programs = wp_get_nav_menu_object( 105 );
+$menu_title_programs = $menu_object_programs->name;
+
+$menu_object_resources = wp_get_nav_menu_object( 106 );
+$menu_title_resources = $menu_object_resources->name;
+
 $nav_primary_right = array(
   'theme_location'  => 'header_nav_secondary',
   'container'       => false,
@@ -83,33 +92,33 @@ echo '<header role="banner" class="header">';
 
     echo '<div class="row row--full nav__inner">';
 
-      echo '<div class="nav__list nav__services">';
+      // echo '<div class="nav__list nav__services">';
 
-        echo '<h3 class="nav__title">Services</h3>';
+      //   echo '<h3 class="nav__title">'. $menu_title_services .'</h3>';
 
-        echo '<ul class="list list__inner">';
+      //   echo '<ul class="list list__inner">';
 
-          wp_nav_menu( $nav_services );
+      //     wp_nav_menu( $nav_services );
 
-        echo '</ul>';
+      //   echo '</ul>';
 
-      echo '</div>';
+      // echo '</div>';
 
-      echo '<div class="nav__list nav__programs">';
+      // echo '<div class="nav__list nav__programs">';
       
-        echo '<h3 class="nav__title">Programs</h3>';
+      //   echo '<h3 class="nav__title">'. $menu_title_programs .'</h3>';
 
-        echo '<ul class="list list__inner">';
+      //   echo '<ul class="list list__inner">';
 
-          wp_nav_menu( $nav_programs );
+      //     wp_nav_menu( $nav_programs );
 
-        echo '</ul>';
+      //   echo '</ul>';
 
-      echo '</div>';
+      // echo '</div>';
 
       echo '<div class="nav__list nav__resources">';
       
-        echo '<h3 class="nav__title">Resources</h3>';
+        echo '<h3 class="nav__title">'. $menu_title_resources .'</h3>';
 
         echo '<ul class="list list__inner">';
 

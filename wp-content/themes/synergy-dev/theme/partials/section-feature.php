@@ -31,8 +31,16 @@ echo '<section class="js-waypoint waypoint feature">';
 
         $text = get_sub_field('text');
         $link = get_sub_field('link');
+
+        if( $link ):
       
-        echo '<a class="feature__link" href=" ' . $link . ' ">'. $text .'</a>'; 
+          echo '<a class="feature__link" href=" ' . $link . ' ">'. $text .'</a>';
+
+        else :
+          
+          echo '<span class="feature__link" >'. $text .'</span>'; 
+
+        endif;
 
       endwhile;
 
