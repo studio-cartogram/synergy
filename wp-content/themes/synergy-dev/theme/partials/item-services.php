@@ -12,7 +12,7 @@ $total_count = get_query_var('total_count');
 
 echo '<article id="' . $item->post_name . '" class="item item--services">';
 
-  echo '<a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">';
+  // echo '<a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">';
 
     echo '<div class="item__image">';
 
@@ -28,7 +28,7 @@ echo '<article id="' . $item->post_name . '" class="item item--services">';
       
     echo '</div>';
 
-  echo '</a>';
+  // echo '</a>';
 
 echo '</article>';
 
