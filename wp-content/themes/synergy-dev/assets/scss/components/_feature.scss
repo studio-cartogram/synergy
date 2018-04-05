@@ -53,7 +53,7 @@
   padding-right: $d-trio;
 
   @include bp($bp-tablet) {
-    top: 144px;
+    top: 200px;
     width: 800px;
   }
   @include bp($bp-laptop) {

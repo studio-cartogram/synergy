@@ -1,7 +1,8 @@
 .header {
   z-index: index($l-site, header);
   width: 100%;
-  position: absolute;
+  position: fixed;
+  top: 0;
 
   .nav--is-visible & {
     overflow: scroll;
@@ -15,16 +16,17 @@
   position: absolute;
   left: 0;
   right: 0;
-  padding: $d-quad $d-trio;
+  padding: $d-trio $d-trio;
   z-index: index($l-header, header-inner);
   flex-direction: column;
+  // background-color: #f6f4ef; for when i can figure out how to change the background colour onscroll
 
   @include bp($bp-tablet) {
     flex-direction: row;
   }
   
   @include bp($bp-laptop) {
-    padding: $d-quad $d-dec;
+    padding: $d-trio $d-dec;
     flex-direction: row;
   }
 }
@@ -39,13 +41,12 @@
   @include bp($bp-laptop) {
     right: $d-dec;
   }
-  
 }
 
 .header__logo {
   display: flex;
-  height: $d-sex;
-  width: 203px;
+  height: $d-sep;
+  width: 240px;
 }
 
 .header__nav {
@@ -61,11 +62,11 @@
   a {
     color: $ca-nav-link;
     font-weight: $t-font-weight-bold;
-    padding-right: $d-trio;
+    padding-right: $d-quin;
     padding-top: $d-base;
 
     @include bp($bp-mobile) {
-      padding-top: $d-quad;
+      padding-top: $d-quin;
     }
 
     svg {

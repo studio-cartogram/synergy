@@ -63,41 +63,34 @@
   }
 }
 
-  .services__column {  
-    width: 100%;
+  // .services__column {  
+  //   width: 100%;
 
-    @include bp($bp-tablet) {
-      width: 32%;
-    }
+  //   @include bp($bp-tablet) {
+  //     width: 32%;
+  //   }
 
-    .item--services {
-      border-bottom: $b-default;
-      padding: $d-trio $d-sex $d-trio $d-trio;
+  //   .item--services {
   
-      .item__text {
-        padding-top: 0;
-      }
-  
-      &:hover {
-        color: $ca-faq-active;
-        background: $ca-faq-background;
-        transition: all $a-timing $a-easing;
-      }
-    }
-  }
+  //     &:hover {
+  //       color: $ca-faq-active;
+  //       transition: all $a-timing $a-easing;
+  //     }
+  //   }
+  // }
 
-  .services__column.-left {
-    margin-right: $d-duo;
+  // .services__column.-left {
+  //   margin-right: $d-duo;
 
-    :first-child & {
-      border-top: $b-default;
-    }
-  }
+  //   :first-child & {
+  //     border-top: $b-default;
+  //   }
+  // }
 
-  .services__column.-right {
-    margin-left: $d-duo;
+  // .services__column.-right {
+  //   margin-left: $d-duo;
 
-    :first-child & {
-      border-top: $b-default;
-    }
-  }
+  //   :first-child & {
+  //     border-top: $b-default;
+  //   }
+  // }
