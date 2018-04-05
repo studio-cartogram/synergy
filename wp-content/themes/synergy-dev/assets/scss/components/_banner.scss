@@ -162,7 +162,6 @@
     @include bp($bp-mobile) {
       height: 100%;
       width: auto;
-      object-fit: contain;
     }
   }
 }
