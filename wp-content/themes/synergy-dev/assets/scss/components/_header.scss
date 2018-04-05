@@ -26,7 +26,7 @@
   }
   
   @include bp($bp-laptop) {
-    padding: $d-trio $d-dec;
+    padding: $d-trio $d-quin;
     flex-direction: row;
   }
 }
@@ -39,7 +39,7 @@
   z-index: index($l-header, toggle);
 
   @include bp($bp-laptop) {
-    right: $d-dec;
+    right: $d-quin;
   }
 }
 
