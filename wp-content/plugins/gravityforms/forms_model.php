@@ -4110,7 +4110,7 @@ class GFFormsModel {
 		return $drop_tables;
 	}
 
-	public static function insert_form_view( $form_id, $ip ) {
+	public static function insert_form_view( $form_id, $deprecated = null ) {
 		global $wpdb;
 		$table_name = self::get_form_view_table_name();
 

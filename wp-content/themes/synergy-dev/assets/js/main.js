@@ -61,6 +61,7 @@ class App {
     Barba.Dispatcher.on('newPageReady', (currentStatus, oldStatus, container) => {
       const scripts = container.querySelectorAll('script')
       if (scripts.length >= 1) {
+        console.log('boooop')
         Array.prototype.forEach.call(scripts, script => {
           eval(script.innerHTML)
         })

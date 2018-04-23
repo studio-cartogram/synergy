@@ -151,7 +151,7 @@ class GFCommon {
 		}
 
 		// ignores all errors
-		set_error_handler( create_function( '', 'return 0;' ), E_ALL );
+		set_error_handler( '__return_false', E_ALL );
 
 		//creates an empty index.html file
 		if ( $f = fopen( $dir . '/index.html', 'w' ) ) {
@@ -5841,5 +5841,28 @@ class EncryptDB extends wpdb {
 		$this->check_current_query = false;
 
 		return parent::get_var( $query );
+	}
+}
+
+/**
+ * Late static binding for dynamic function calls.
+ *
+ * Provides compatibility with PHP 7.2 (create_function deprecated) and 5.2.
+ * So whenever the need for `create_function` arises, use this instead.
+ */
+class GF_Late_Static_Binding {
+	private $args = array();
+
+	public function __construct( $args ) {
+		$this->args = wp_parse_args( $args, array(
+			'form_id' => 0,
+		) );
+	}
+
+	/**
+	 * Binding for GFFormDisplay::footer_init_scripts
+	 */
+	public function GFFormDisplay_footer_init_scripts() {
+		return GFFormDisplay::footer_init_scripts( $this->args['form_id'] );
 	}
 }

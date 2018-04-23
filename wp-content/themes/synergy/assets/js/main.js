@@ -4685,6 +4685,7 @@ var App = function App() {
   _barba2.default.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
     var scripts = container.querySelectorAll('script');
     if (scripts.length >= 1) {
+      console.log('boooop');
       Array.prototype.forEach.call(scripts, function (script) {
         eval(script.innerHTML);
       });

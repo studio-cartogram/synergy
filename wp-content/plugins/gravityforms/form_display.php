@@ -793,7 +793,7 @@ class GFFormDisplay {
 					}
 				}
 			} elseif ( ! current_user_can( 'administrator' ) && ! $view_counter_disabled ) {
-				RGFormsModel::insert_form_view( $form_id, $_SERVER['REMOTE_ADDR'] );
+				RGFormsModel::insert_form_view( $form_id );
 			}
 		}
 
@@ -808,7 +808,7 @@ class GFFormDisplay {
 			/**
 			 * Filter the form not found message that will be displayed
 			 *
-			 * @since
+			 * @since 2.2.6
 			 *
 			 * @param string                The default form not found message
 			 * @param int|string $form_id   The ID of the form we tried to retrieve
@@ -1089,8 +1089,9 @@ class GFFormDisplay {
 				self::register_form_init_scripts( $form, $field_values, $ajax );
 
 				if ( apply_filters( 'gform_init_scripts_footer', false ) ) {
-					add_action( 'wp_footer', create_function( '', 'GFFormDisplay::footer_init_scripts(' . $form['id'] . ');' ), 20 );
-					add_action( 'gform_preview_footer', create_function( '', 'GFFormDisplay::footer_init_scripts(' . $form['id'] . ');' ) );
+					$callback = array( new GF_Late_Static_Binding( array( 'form_id' => $form['id'] ) ), 'GFFormDisplay_footer_init_scripts' );
+					add_action( 'wp_footer', $callback, 20 );
+					add_action( 'gform_preview_footer', $callback );
 				} else {
 					$form_string .= self::get_form_init_scripts( $form );
 					$form_string .= "<script type='text/javascript'>" . apply_filters( 'gform_cdata_open', '' ) . " jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [{$form_id}, {$current_page}]) } ); " . apply_filters( 'gform_cdata_close', '' ) . '</script>';
@@ -2781,7 +2782,7 @@ class GFFormDisplay {
 			//adding fields with next button logic
 			if ( ! empty( $field->nextButton['conditionalLogic'] ) ) {
 				foreach ( $field->nextButton['conditionalLogic']['rules'] as $rule ) {
-					if ( $rule['fieldId'] == $fieldId && ! in_array( $fieldId, $fields ) ) {
+					if ( intval( $rule['fieldId'] ) == $fieldId && ! in_array( $fieldId, $fields ) ) {
 						$fields[] = floatval( $field->id );
 						break;
 					}
@@ -2858,7 +2859,7 @@ class GFFormDisplay {
 
 		$error_class      = $field->failed_validation ? 'gfield_error' : '';
 		$admin_only_class = $field->visibility == 'administrative' ? 'field_admin_only' : ''; // maintain for backwards compat
-		$visibility_class = sprintf( 'gfield_visibility_%s', $field->visibility );
+		$visibility_class = sprintf( 'gfield_visibility_%s', ( $field->visibility ? $field->visibility : 'visible' ) );
 		$selectable_class = $is_admin ? 'selectable' : '';
 		$hidden_class     = in_array( $input_type, array( 'hidden', 'hiddenproduct' ) ) ? 'gform_hidden' : '';
 

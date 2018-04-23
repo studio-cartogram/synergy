@@ -467,6 +467,10 @@ function gformGetProductQuantity(formId, productFieldId) {
         quantityInput = jQuery('#ginput_quantity_' + formId + '_' + productFieldId),
         numberFormat;
 
+    if (gformIsHidden(quantityInput)) {
+        return 0;
+    }
+
     if (quantityInput.length > 0) {
 
         quantity = quantityInput.val();
