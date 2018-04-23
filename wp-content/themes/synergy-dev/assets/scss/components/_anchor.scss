@@ -61,7 +61,8 @@ a.secondary {
 }
 
 .link--underline,
-.categories-assigned a {
+.categories-assigned a,
+.primary__text a {
   &:after {
     position: absolute;
     content: '';
@@ -114,5 +115,13 @@ a.secondary {
     width: $d-duo;
     height: $d-duo;
     margin-right: $d-base;
+  }
+}
+
+.primary__text a {
+
+  &:after {
+    bottom: 1px;
+    background-color: $ca-border-anchor-secondary;
   }
 }
