@@ -10,7 +10,7 @@ import log from './utils/log'
 import './vendor/webpack.publicPath'
 import loadSprite from './vendor/loadSprite'
 import Scroll from './scripts/Scroll'
-import Fade from './scripts/Fade'
+// import Fade from './scripts/Fade'
 import Togglers from './scripts/Togglers'
 import Swiper from 'swiper'
 import Waypoints from 'waypoints'
@@ -58,6 +58,14 @@ class App {
       document.body.classList.remove('js-is-leaving')
       this.init()
     })
+    Barba.Dispatcher.on('newPageReady', (currentStatus, oldStatus, container) => {
+      const scripts = container.querySelectorAll('script')
+      if (scripts.length >= 1) {
+        Array.prototype.forEach.call(scripts, script => {
+          eval(script.innerHTML)
+        })
+      }
+    })
     this.initTransitions()    
   }
 
@@ -65,7 +73,7 @@ class App {
     // this.filter = new Toggle('filter') 
     this.select =  new SelectClinician()   
     this.scroll = new Scroll()
-    this.fade = new Fade()
+    // this.fade = new Fade()
     this.initSlideshow()
     this.initWaypoints()
   }

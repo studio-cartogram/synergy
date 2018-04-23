@@ -114,7 +114,6 @@ Cartogram.Toggle.prototype._show = function(e) {
   }
 
   if (e) {
-    console.log(e)
     e.preventDefault()
     this.clickedToggle = e.target
   }
@@ -218,7 +217,7 @@ Cartogram.Toggle.prototype.setShowFocus = function() {
  * @method setHideFoucs
 */
 Cartogram.Toggle.prototype.setHideFocus = function() {
-  this.clickedToggle.focus()
+  this.clickedToggle.focus && this.clickedToggle.focus()
 }
 
 /**
