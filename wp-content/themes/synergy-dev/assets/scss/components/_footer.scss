@@ -14,6 +14,7 @@ Footer Component
   margin-top: $d-sex;
   padding-left: $d-trio;
   padding-right: $d-trio;
+  z-index: index($l-site, footer);
 
   @include bp($bp-tablet) {
     padding-left: $d-quin;
@@ -76,6 +77,7 @@ Footer Component
 .footer__social,
 .footer__emails {
   width: 50%;
+  z-index: index($l-footer, social);
 
   @include bp($bp-tablet) {
     width: auto;
@@ -84,6 +86,7 @@ Footer Component
 
 .footer__newsletter {
   width: auto;
+  z-index: index($l-footer, newsletter);
 
   @include bp($bp-tablet) {
     width: 50%;
@@ -124,6 +127,8 @@ Footer Component
     background-size: contain;
     height: 50%;
     width: 100%;
+    z-index: index($l-footer, graphic);
+
 
     @include bp($bp-tablet) {
     bottom: 12%;
