@@ -16,7 +16,7 @@ import Togglers from './scripts/Togglers'
 import Swiper from 'swiper'
 import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
-import './scripts/Blob'
+import Blob from './scripts/Blob'
 // import './scripts/Toggle'
 import SelectClinician from './scripts/Select'
 
@@ -30,6 +30,7 @@ class App {
     new Togglers()
     new SelectClinician()
     this.nav = new Toggle('nav')
+    this.blob = new Blob();
     this.locations = new Toggle('locations')
     this.init()
     loadSprite()
@@ -78,12 +79,14 @@ class App {
   }
 
   init = () => {
-    // this.filter = new Toggle('filter') 
+    // this.filter = new Toggle('filter')
+    this.blob.init(); 
     this.select =  new SelectClinician()   
     this.scroll = new Scroll()
     // this.fade = new Fade()
     this.initSlideshow()
     this.initWaypoints()
+    
   }
 
   initWaypoints = () => {
