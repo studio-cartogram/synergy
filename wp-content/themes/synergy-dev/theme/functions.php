@@ -11,7 +11,7 @@
 	 **/
   add_action('wp_head','cartogram_fonts');
   add_action( 'wp_enqueue_scripts', 'cartogram_styles' );
-  add_action( 'wp_enqueue_scripts', 'cartogram_scripts' );
+  // add_action( 'wp_enqueue_scripts', 'cartogram_scripts' );
   remove_filter( 'the_content', 'wpautop' );
 
 	/**
@@ -213,17 +213,17 @@
 
 	======================================================================================================================== */
 
-  if ( ! function_exists( 'cartogram_scripts' ) ) {
+  // if ( ! function_exists( 'cartogram_scripts' ) ) {
 
-    function cartogram_scripts() {
+  //   function cartogram_scripts() {
 
-      $theme_dir = get_stylesheet_directory_uri();
+  //     $theme_dir = get_stylesheet_directory_uri();
 
-      wp_enqueue_script( 'main', "$theme_dir/assets/js/main.js", array(), null, true );
+  //     wp_enqueue_script( 'main', "$theme_dir/assets/js/main.js", array(), null, true );
 
-    }
+  //   }
 
-  }
+  // }
 
 	/* ========================================================================================================================
 

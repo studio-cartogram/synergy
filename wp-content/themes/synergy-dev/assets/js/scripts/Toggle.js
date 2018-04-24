@@ -92,7 +92,8 @@ Cartogram.Toggle = function Toggle(namespace, options) {
  * @method init
 */
 Cartogram.Toggle.prototype.init = function() {
-  this.$nodes.toggles.forEach(toggle => toggle.addEventListener('click', this.show))
+  Array.prototype.forEach.call(this.$nodes.toggles, toggle => toggle.addEventListener('click', this.show))
+
   
   this.$nodes.close && this.$nodes.close.addEventListener('click', this.hide)
   if (this.config.withAsync) {
@@ -119,8 +120,8 @@ Cartogram.Toggle.prototype._show = function(e) {
   }
 
   this.isVisible = true
-  this.$nodes.toggles.forEach(toggle => toggle.removeEventListener('click', this.show))
-  this.$nodes.toggles.forEach(toggle => toggle.addEventListener('click', this.hide))
+  Array.prototype.forEach.call(this.$nodes.toggles, toggle => toggle.removeEventListener('click', this.show))
+  Array.prototype.forEach.call(this.$nodes.toggles, toggle => toggle.addEventListener('click', this.hide))
   
   this.$nodes.body.classList.add(this.namespace + '--' + constants.VISIBLE_CLASS)
   this.setShowFocus()
@@ -143,8 +144,8 @@ Cartogram.Toggle.prototype._hide = function(e) {
   }
 
   this.isVisible = false
-  this.$nodes.toggles.forEach(toggle => toggle.removeEventListener('click', this.hide))
-  this.$nodes.toggles.forEach(toggle => toggle.addEventListener('click', this.show))
+  Array.prototype.forEach.call(this.$nodes.toggles, toggle => toggle.removeEventListener('click', this.hide))  
+  Array.prototype.forEach.call(this.$nodes.toggles, toggle => toggle.addEventListener('click', this.show))
   this.$nodes.body.classList.remove(this.namespace + '--' + constants.VISIBLE_CLASS)
   window.removeEventListener('keydown', this.trapFocus)
   this.setHideFocus()

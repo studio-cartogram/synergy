@@ -7,6 +7,7 @@
 import 'babel-polyfill'
 import Barba from 'barba.js'
 import log from './utils/log'
+import {sortScripts} from './utils/scripts'
 import './vendor/webpack.publicPath'
 import loadSprite from './vendor/loadSprite'
 import Scroll from './scripts/Scroll'
@@ -61,10 +62,16 @@ class App {
     Barba.Dispatcher.on('newPageReady', (currentStatus, oldStatus, container) => {
       const scripts = container.querySelectorAll('script')
       if (scripts.length >= 1) {
-        console.log('boooop')
-        Array.prototype.forEach.call(scripts, script => {
-          eval(script.innerHTML)
-        })
+     
+        const {inlineScripts, externalScripts} = sortScripts(scripts)
+
+        Promise.all(externalScripts).then(function() {
+          Array.prototype.forEach.call(inlineScripts, script => {
+            eval(script.innerHTML)          
+          })
+        }).catch(function(error) {
+          console.log('error loading inline script tags after transition. This is likely a problem with gravity-forms and the way scripts are added to the page.', error)
+        });  
       }
     })
     this.initTransitions()    
@@ -87,7 +94,7 @@ class App {
       return new Waypoint({
         element: waypoint,
         handler: function(direction) {
-          log(`${index} ${direction}`)
+          // log(`${index} ${direction}`)
           waypoint.classList.add('is-visible')
           waypoint.classList.remove('is-hidden')
         },

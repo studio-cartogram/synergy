@@ -22,6 +22,8 @@ echo '<div id="barba-wrapper">';
 
     get_template_part('partials/blob');
 
+    wp_footer();
+    
   echo '</div>';
 
 echo '</div>';
