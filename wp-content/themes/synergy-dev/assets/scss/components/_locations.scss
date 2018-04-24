@@ -1,5 +1,18 @@
 .contactLocations {
-  padding: $d-dec;
+  padding: 0;
+
+  @include bp($bp-tablet) {
+    padding: $d-dec;
+  }
+
+  h2 {
+    padding-left: $d-trio;
+
+    @include bp($bp-tablet) {
+      padding-left: 0;
+    }
+  
+  }
 }
 
 .contactLocations__container {
@@ -26,6 +39,15 @@
 
   .location__image {
     max-width: 640px;
+
+    img {
+      height: 100%;
+
+      @include bp($bp-tablet) {
+        height: auto;
+      }
+    }
+    
   }
 }
 
@@ -36,5 +58,9 @@
 
 .contactLocation__container {
   background-color: rgba(255, 255, 255, 0.4);
-  padding: $d-quin;
+  padding: $d-trio;
+
+  @include bp($bp-tablet) {
+    padding: $d-quin;
+  }
 }

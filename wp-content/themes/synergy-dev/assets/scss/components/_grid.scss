@@ -1,5 +1,9 @@
 .grid {
-  padding: $d-quin $d-dec;
+  padding: $d-quin $d-trio;
+
+  @include bp($bp-tablet) {
+    padding: $d-quin $d-dec;
+  }
 }
 
 .grid__header {
@@ -13,6 +17,11 @@
 }
 
 .grid__item {
-  width: 32%;
-  padding: $d-duo $d-trio $d-duo 0;
+  width: 100%;
+  padding: $d-base $d-trio $d-base 0;
+
+  @include bp($bp-tablet) {
+    width: 32%;
+    padding: $d-duo $d-trio $d-duo 0;
+  }
 }
