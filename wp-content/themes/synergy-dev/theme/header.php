@@ -142,9 +142,15 @@ echo '<header role="banner" class="header">';
 
   echo '</div>';
 
-  echo '<a href="#menu" data-toggle-nav class="header__toggle">';
+  echo '<a href="#menu" data-toggle-nav class="header__toggle hamburger--spin hamburger">';
+
+    echo '<span class="hamburger-box">';
+    
+      echo '<span class="hamburger-inner"></span>';
+
+    echo '</span>';
   
-    get_template_part('partials/hamburger');
+    // get_template_part('partials/hamburger');
 
   echo '</a>';
 

@@ -6,9 +6,13 @@ echo '<div class="locations__wrapper">';
 
     echo '<h3 class="secondary">Choose a location</h3>';
 
-    echo '<a href="#locations" data-toggle-locations class="locations__toggle is-active">';
+    echo '<a href="#locations" data-toggle-locations class="locations__toggle is-active hamburger--spin hamburger">';
 
-      get_template_part('partials/hamburger');
+      echo '<span class="hamburger-box">';
+    
+        echo '<span class="hamburger-inner"></span>';
+
+      echo '</span>';
 
     echo '</a>';
 
