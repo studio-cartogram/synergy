@@ -1,34 +1,54 @@
 <?php
 
-$title = get_field('404_title', 'options');
-$description = get_field('404_description', 'options');
-$subtitle = get_field('404_subtitle', 'options');
-$button_text = get_field('404_button_text', 'options');
-$button_link = get_field('404_button_link', 'options');
+$title = get_field('title_404', 'options');
+$subtitle = get_field('subtitle_404', 'options');
+$help = get_field('help_404', 'options');
+$links = get_field('links_404', 'options');
 
-echo '<section class="banner">';
+echo '<section class="mast">';
 
-  echo '<div class="row row--justify-center">';
+  echo '<div class="row">';
 
-    echo '<div class="column column-8-laptop intro">';
+    echo '<div class="column mast__title">';
 
-      echo '<h1 class="">';
+      echo '<h1 class="title secondary">'. $subtitle .'</h1>';
 
-      if ($title) : echo $title; else: echo 'Nothing to see here'; endif;
+      echo '<h2 class="subtitle secondary">'. $subtitle .'</h2>';
+      
+  echo '</div>';
 
-      echo '</h1>';
+  echo '<div class="row links_404">';
 
-      echo '<p class="p--large">' . $description . '</p>';
+      echo '<h2 class="centered">'. $help .'</h2>';
+        
+      if( have_rows('links_404', 'options') ):
 
-      if ($button_link && $button_text) :
+	      echo '<h3 class="secondary feature__links">';
 
-      echo '<a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a>';
+          while( have_rows('links_404', 'options') ): the_row(); 
+
+            $text = get_sub_field('text');
+            $link = get_sub_field('link');
+
+            echo '<span class="feature__link">';
+
+              echo '<a href="'. $link .'">';
+
+              echo $text;
+
+              echo '</a>';
+
+            echo '</span>';
+
+          endwhile;
+
+        echo '</h3>';
 
       endif;
-
+        
     echo '</div>';
 
-   echo '</div>';
+  echo '</div>';
 
 echo '</section>';
 
