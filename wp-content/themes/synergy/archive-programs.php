@@ -24,6 +24,12 @@ echo '<div id="barba-wrapper">';
 
     echo '</div>';
 
+    echo '<div class="cta__staff">';
+    
+      get_template_part('partials/cta');
+    
+    echo '</div>';
+
     echo '</div>';
 
   echo '</div>';
