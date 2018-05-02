@@ -5,6 +5,16 @@
   $cta_button_text_staff = get_field('cta_button_text_staff', 'options');
   $cta_button_link_staff = get_field('cta_button_link_staff', 'options');
 
+  $cta_heading_programs = get_field('cta_heading_programs', 'options');
+  $cta_description_programs = get_field('cta_description_programs', 'options');
+  $cta_button_text_programs = get_field('cta_button_text_programs', 'options');
+  $cta_button_link_programs = get_field('cta_button_link_programs', 'options');
+
+  $cta_heading_services = get_field('cta_heading_services', 'options');
+  $cta_description_services = get_field('cta_description_services', 'options');
+  $cta_button_text_services = get_field('cta_button_text_services', 'options');
+  $cta_button_link_services = get_field('cta_button_link_services', 'options');
+
 
 echo '<section class="cta banner banner__center">';
 
