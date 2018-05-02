@@ -17,7 +17,7 @@ echo '<section class="mast">';
 
       echo '</h1>';
 
-      echo '<h2 class="subtitle secondary">'. $subtitle_services .'</h2>';
+      echo '<h2 class="subtitle secondary">'. $subtitle_programs .'</h2>';
 
       if ( is_tax() ) :
         

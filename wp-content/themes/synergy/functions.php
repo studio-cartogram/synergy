@@ -212,7 +212,7 @@
 
     acf_add_options_page('Services');
 
-    acf_add_options_page('Group Programs');
+    acf_add_options_page('Programs');
 
     acf_add_options_page('FAQ');
 
