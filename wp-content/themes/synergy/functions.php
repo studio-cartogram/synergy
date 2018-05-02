@@ -78,7 +78,7 @@
         'label'               => 'Programs',
         'has_archive'         => true,
         'hierarchical'        => true,
-        'rewrite'            => array( 'slug' => 'programs' ),
+        'rewrite'            => array( 'slug' => 'group-programs' ),
         'supports'            => array( 'title', 'revisions', 'page-attributes', 'thumbnail', 'excerpt', 'editor')
       );
 
