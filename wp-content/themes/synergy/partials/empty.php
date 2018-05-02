@@ -11,7 +11,7 @@ echo '<section class="mast">';
 
     echo '<div class="column mast__title">';
 
-      echo '<h1 class="title secondary">'. $subtitle .'</h1>';
+      echo '<h1 class="title secondary">'. $title .'</h1>';
 
       echo '<h2 class="subtitle secondary">'. $subtitle .'</h2>';
       
