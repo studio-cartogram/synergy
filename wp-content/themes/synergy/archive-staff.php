@@ -26,7 +26,7 @@ echo '<div id="barba-wrapper">';
 
     echo '<div class="cta__staff">';
     
-      get_template_part('partials/cta');
+      get_template_part('partials/cta-staff');
     
     echo '</div>';
 
