@@ -295,10 +295,10 @@
 
       register_nav_menus( array(
         'nav_tabs'	=>  'Topics Nav',
-        'header_nav_primary'	=>  'Primary Nav',
-        'header_nav_services'	=>  'Services Nav',
-        'header_nav_programs'	=>  'Programs Nav',
-        'header_nav_resources'	=>  'Resources Nav',
+        // 'header_nav_primary'	=>  'Primary Nav',
+        // 'header_nav_services'	=>  'Services Nav',
+        // 'header_nav_programs'	=>  'Programs Nav',
+        'header_nav_resources'	=>  'Main Nav',
         'nav_footer'	=>  'Footer Nav',
       ) );
 
