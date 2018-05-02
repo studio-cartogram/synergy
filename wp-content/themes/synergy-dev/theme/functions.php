@@ -75,7 +75,7 @@
 
       $programs_args = array(
         'public'              => true,
-        'label'               => 'Group Programs',
+        'label'               => 'Programs',
         'has_archive'         => true,
         'hierarchical'        => true,
         'rewrite'            => array( 'slug' => 'programs' ),
