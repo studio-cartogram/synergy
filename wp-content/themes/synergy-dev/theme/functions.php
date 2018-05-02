@@ -73,6 +73,17 @@
 
       register_post_type( 'services', $services_args );
 
+      $programs_args = array(
+        'public'              => true,
+        'label'               => 'Group Programs',
+        'has_archive'         => true,
+        'hierarchical'        => true,
+        'rewrite'            => array( 'slug' => 'programs' ),
+        'supports'            => array( 'title', 'revisions', 'page-attributes', 'thumbnail', 'excerpt', 'editor')
+      );
+
+      register_post_type( 'programs', $programs_args );
+
       $testimonials_args = array(
         'public'              => true,
         'label'               => 'Testimonials',
@@ -200,6 +211,8 @@
     acf_add_options_page('Staff');
 
     acf_add_options_page('Services');
+
+    acf_add_options_page('Group Programs');
 
     acf_add_options_page('FAQ');
 
