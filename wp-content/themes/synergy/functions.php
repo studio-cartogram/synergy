@@ -84,16 +84,6 @@
 
       register_post_type( 'programs', $programs_args );
 
-      $testimonials_args = array(
-        'public'              => true,
-        'label'               => 'Testimonials',
-        'has_archive'         => true,
-        'rewrite'            => array( 'slug' => 'testimonials' ),
-        'supports'            => array( 'title', 'excerpt', 'editor')
-      );
-
-      register_post_type( 'testimonials', $testimonials_args );
-
       $fees_args = array(
         'public'              => true,
         'label'               => 'Fees & Policies',
