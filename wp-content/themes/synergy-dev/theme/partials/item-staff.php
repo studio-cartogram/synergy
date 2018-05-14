@@ -8,7 +8,7 @@ $profession = get_field('profession');
 $hasimage = has_post_thumbnail();
 $size = 'full';
 
-if($hasimage) :
+// if($hasimage) :
 
   echo '<article id="' . $item->post_name . '" class="item item--staff">';
 
@@ -32,6 +32,6 @@ if($hasimage) :
 
   echo '</article>';
 
-endif;
+// endif;
 
 ?>
