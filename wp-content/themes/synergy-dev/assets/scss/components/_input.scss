@@ -58,8 +58,7 @@ input {
   font-weight: $t-font-weight-bold;
 
   @include bp($bp-mobile) {
-    width: 63%;
-    margin: 0;
+    width: 43%;
   }
 
   &:hover {
