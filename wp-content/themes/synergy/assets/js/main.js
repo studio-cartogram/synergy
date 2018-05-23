@@ -12871,7 +12871,8 @@ var Scroll = function Scroll() {
   };
 
   this.scrollTop = function () {
-    var container = document.documentElement;
+    // const container = document.documentElement || document.body
+    var container = document.scrollingElement || document.documentElement;
     var config = _this.createScrollConfig({
       container: container,
       start: container.scrollTop,
