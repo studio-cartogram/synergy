@@ -66,7 +66,7 @@
         'public'              => true,
         'label'               => 'Services',
         'has_archive'         => true,
-        'hierarchical'        => true,
+        // 'hierarchical'        => true,
         'rewrite'            => array( 'slug' => 'services' ),
         'supports'            => array( 'title', 'revisions', 'page-attributes', 'thumbnail', 'excerpt', 'editor')
       );
@@ -77,7 +77,7 @@
         'public'              => true,
         'label'               => 'Programs',
         'has_archive'         => true,
-        'hierarchical'        => true,
+        // 'hierarchical'        => true,
         'rewrite'            => array( 'slug' => 'group-programs' ),
         'supports'            => array( 'title', 'revisions', 'page-attributes', 'thumbnail', 'excerpt', 'editor')
       );
