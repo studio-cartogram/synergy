@@ -76,6 +76,7 @@
 .hamburger-inner {
 
   .nav--is-visible &,
+  .locations--is-visible &,
   .is-active > & {
     background-color: $ca-nav-link-hover;
     transform: rotate(225deg);
@@ -87,6 +88,7 @@
 .hamburger-inner::before {
 
   .nav--is-visible &,
+  .locations--is-visible &, 
   .is-active > & {
     background-color: $ca-nav-link-hover;
     top: 0;
@@ -99,6 +101,7 @@
 .hamburger--spin .hamburger-inner::after {
 
   .nav--is-visible &,
+  .locations--is-visible &, 
   .is-active > & {
     background-color: $ca-nav-link-hover;
     bottom: 0;
@@ -106,36 +109,3 @@
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 }
-
-// svg.hamburger {
-//   overflow: visible;
-// }
-// .hamburger {
-//   height: $d-trio;
-//   width: $d-trio;
-//   fill: $ca-nav-link;
-//   path {
-//     transition: .2s;
-//     transform-origin: center;
-//   }
-//   .nav--is-visible &,
-//   .is-active > &,
-//   &:hover {
-//     fill: $ca-nav-link-hover;
-//     .p1 { 
-//       transform: translateY(7px) rotate(45deg);
-//     }
-//     .p2 { 
-//       opacity: 0;
-//     }
-//     .p3 { 
-//       transform: translateY(-6px) rotate(-45deg);
-//     }
-//   }
-//   .nav--is-visible & {
-//     fill: $ca-nav-inverted-text;
-//   }
-//   .locations--is-visible & {
-//     fill: $ca-nav-link-hover;
-//   }
-// }

@@ -6,7 +6,7 @@ echo '<div class="locations__wrapper">';
 
     echo '<h3 class="secondary">Choose a location</h3>';
 
-    echo '<a href="#locations" data-toggle-locations class="locations__toggle is-active hamburger--spin hamburger">';
+    echo '<a href="#locations" data-toggle-locations class="locations__toggle hamburger--spin hamburger">';
 
       echo '<span class="hamburger-box">';
     

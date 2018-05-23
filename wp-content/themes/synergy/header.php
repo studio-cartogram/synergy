@@ -150,8 +150,6 @@ echo '<header role="banner" class="header">';
 
     echo '</span>';
   
-    // get_template_part('partials/hamburger');
-
   echo '</a>';
 
 echo '</header>';
