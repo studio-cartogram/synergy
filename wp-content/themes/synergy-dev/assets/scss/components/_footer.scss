@@ -139,6 +139,14 @@ Footer Component
   }
 }
 
+.footer__social .pride {
+  width: $d-dec;
+  height: $d-sex;
+  background-image: url(../svg/pride.svg);
+  z-index: index($l-footer, graphic);
+
+}
+
 .footer__bottom .menu-item a {
   &:hover {
     color: $ca-anchor-hover;

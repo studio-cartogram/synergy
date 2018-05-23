@@ -100,6 +100,10 @@ echo '<footer class="footer container">';
           endif;
         
         echo '</ul>';
+
+        echo '<div class="pride">';
+    
+        echo '</div>';
       
       echo '</div>';
 
