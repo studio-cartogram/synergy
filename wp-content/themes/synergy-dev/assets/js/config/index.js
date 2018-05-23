@@ -1,5 +1,5 @@
 const ACTIVE_CLASS = 'is-active'
-const TRANSITION_DURATION = 400
+const TRANSITION_DURATION = 300
 const TRANSITION_EASING = 'easeInOutCubic'
 const MAIN_ELEMENT_ID = 'main'
 

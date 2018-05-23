@@ -4472,7 +4472,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var ACTIVE_CLASS = 'is-active';
-var TRANSITION_DURATION = 400;
+var TRANSITION_DURATION = 300;
 var TRANSITION_EASING = 'easeInOutCubic';
 var MAIN_ELEMENT_ID = 'main';
 

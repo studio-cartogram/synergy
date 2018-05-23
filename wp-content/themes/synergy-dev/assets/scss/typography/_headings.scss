@@ -64,7 +64,6 @@ h2 {
   @include bp($bp-tablet) {
     font-size: $t-font-size-beta;
   }
-  line-height: 1.4;
 }
 
 h2.secondary p {
