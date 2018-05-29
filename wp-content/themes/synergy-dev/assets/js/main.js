@@ -14,7 +14,7 @@ import Scroll from './scripts/Scroll'
 // import Fade from './scripts/Fade'
 import Togglers from './scripts/Togglers'
 import Swiper from 'swiper'
-import Waypoints from 'waypoints'
+// import Waypoints from 'waypoints'
 import removeClasses from './utils/removeClasses'
 import Blob from './scripts/Blob'
 // import './scripts/Toggle'
@@ -85,26 +85,26 @@ class App {
     this.scroll = new Scroll()
     // this.fade = new Fade()
     this.initSlideshow()
-    this.initWaypoints()
+    // this.initWaypoints()
     
   }
 
-  initWaypoints = () => {
-    const waypointEls = document.querySelectorAll('.js-waypoint')
+  // initWaypoints = () => {
+  //   const waypointEls = document.querySelectorAll('.js-waypoint')
 
-    Array.prototype.forEach.call(waypointEls, (waypoint, index) => {
-      waypoint.classList.add('is-hidden')
-      return new Waypoint({
-        element: waypoint,
-        handler: function(direction) {
-          // log(`${index} ${direction}`)
-          waypoint.classList.add('is-visible')
-          waypoint.classList.remove('is-hidden')
-        },
-        offset: '40%',
-      })
-    })
-  }
+  //   Array.prototype.forEach.call(waypointEls, (waypoint, index) => {
+  //     waypoint.classList.add('is-hidden')
+  //     return new Waypoint({
+  //       element: waypoint,
+  //       handler: function(direction) {
+  //         // log(`${index} ${direction}`)
+  //         waypoint.classList.add('is-visible')
+  //         waypoint.classList.remove('is-hidden')
+  //       },
+  //       offset: '40%',
+  //     })
+  //   })
+  // }
 
   initSlideshow = () => {
     const slideshow = new Swiper('.js-slideshow', {
