@@ -48,7 +48,7 @@
   width: 100%;
   position: absolute;
   z-index: index($l-feature, cta);
-  top: 180px;
+  top: 200px;
   padding-left: $d-trio;
   padding-right: $d-trio;
   text-align: center;
@@ -58,13 +58,14 @@
     top: 200px;
   }
   @include bp($bp-laptop) {
-    top: 180px;
+    top: 240px;
     padding: 0 160px;
     width: 100%;
   }
   @include bp($bp-4k) {
-    top: 320px;
+    top: 380px;
     padding-left: $d-twe;
+    padding-right: $d-twe;
   }
 }
 
@@ -118,6 +119,7 @@
   }
   @include bp($bp-4k) {
     width: 1200px;
+    margin: 0 auto;
   }
 }
 

@@ -38,11 +38,17 @@ echo '<section class="js-waypoint waypoint feature">';
 
         else :
           
-          echo '<span class="feature__link" >'. $text .'</span>'; 
+          echo '' . $text . ', '; 
 
         endif;
 
       endwhile;
+
+        if ( is_front_page() ) :
+
+          echo '' . $text . ', and more.'; 
+        
+      endif;
 
       echo '</h3>';
 
@@ -56,7 +62,7 @@ echo '<section class="js-waypoint waypoint feature">';
 
     if( $findClinician && have_rows('outcomes', 'options') ):
       
-      echo '<div class="row">';
+      echo '<div class="filter--clinician">';
 
         if( have_rows('outcomes', 'options') ):
 

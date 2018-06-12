@@ -60,6 +60,15 @@ input {
   @include bp($bp-mobile) {
     width: 43%;
   }
+  @include bp($bp-tablet) {
+    width: 60%;
+  }
+  @include bp($bp-large) {
+    width: 40%;
+  }
+  @include bp($bp-4k) {
+    width: 20%;
+  }
 
   &:hover {
     background-color: $ca-button-primary-background-hover;

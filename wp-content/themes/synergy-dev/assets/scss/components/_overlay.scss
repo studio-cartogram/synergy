@@ -108,10 +108,19 @@
       height: auto;
       overflow: visible;
     }
+
   }
   
   @include bp($bp-tablet) {
     max-width: 340px;
+  }
+
+  @include bp($bp-large) {
+    max-width: 640px;
+  }
+
+  @include bp($bp-4k) {
+    max-width: 900px;
   }
 }
 
