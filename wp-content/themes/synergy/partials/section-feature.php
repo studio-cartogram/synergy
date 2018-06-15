@@ -8,7 +8,7 @@ $subtitle = get_sub_field('subtitle');
 $image = get_sub_field('image');
 $video = get_sub_field('video');
 $findClinician = get_sub_field('show_find_clinician_cta');
-$size = 'full';
+$size = 'img_xlarge';
 $links = get_sub_field('links');
 
 echo '<section class="js-waypoint waypoint feature">';

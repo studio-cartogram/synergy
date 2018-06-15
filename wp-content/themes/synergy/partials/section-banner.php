@@ -9,7 +9,7 @@ $subtitle = get_sub_field('subtitle');
 $link_text = get_sub_field('link_text');
 $link = get_sub_field('link');
 $image = get_sub_field('image');
-$size = 'full';
+$size = 'img_xlarge';
 $orientation = get_sub_field('orientation');
 
 echo '<section class="js-waypoint waypoint banner banner__'. $orientation .' banner--' . $count . '">';
