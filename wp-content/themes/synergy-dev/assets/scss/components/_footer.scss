@@ -84,6 +84,10 @@ Footer Component
   }
 }
 
+.footer__social ul {
+  padding-bottom: $d-duo;
+}
+
 .footer__newsletter {
   width: auto;
   z-index: index($l-footer, newsletter);
@@ -140,8 +144,8 @@ Footer Component
 }
 
 .footer__social .pride {
-  width: $d-dec;
-  height: $d-sex;
+  width: auto;
+  height: $d-quin;
   background-image: url(../svg/pride.svg);
   z-index: index($l-footer, graphic);
 

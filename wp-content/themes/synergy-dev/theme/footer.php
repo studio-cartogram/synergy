@@ -64,7 +64,7 @@ echo '<footer class="footer container">';
 
         echo '<h3 class="footer__heading">Social</h3>';
       
-        echo '<ul class="list soft-bottom--trio list--nowrap list--spaced-horizontal">';
+        echo '<ul class="list list--nowrap list--spaced-horizontal">';
 
           if( $instagram ):
 
