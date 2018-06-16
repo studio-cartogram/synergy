@@ -58,12 +58,12 @@ input {
   font-weight: $t-font-weight-bold;
 
   @include bp($bp-mobile) {
-    width: 43%;
-  }
-  @include bp($bp-tablet) {
     width: 60%;
   }
-  @include bp($bp-large) {
+  @include bp($bp-tablet) {
+    width: 54%;
+  }
+  @include bp($bp-laptop) {
     width: 40%;
   }
   @include bp($bp-4k) {
