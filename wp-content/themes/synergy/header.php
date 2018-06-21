@@ -1,6 +1,10 @@
 <?php
 global $language;
 
+$booking_link_main = get_field('booking_link', 'options');
+$booking_link_text = get_field('booking_link_text', 'options');
+
+
 $classes = get_field('class_schedules', 'options');
 $locations_overlay_toggle = get_field('locations_overlay_toggle', 'options');
 
@@ -67,10 +71,7 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<a target="_blank" href="' . $classes . '" class="link link--primary link--external action">' . 'Class schedules';
-      
-          set_query_var( 'icon', 'arrow-external' );
-          get_template_part('partials/icon');
+        echo '<a target="_blank" href="' . $classes . '" class="link link--primary action">' . 'Class schedules';
       
         echo '</a>';
 
@@ -79,6 +80,12 @@ echo '<header role="banner" class="header">';
       echo '<li class="">';
 
         echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . $locations_overlay_toggle . '</a>';  
+      
+      echo '</li>';
+
+      echo '<li class="">';
+
+        echo '<a target="_blank" href="'. $booking_link_main .'" class="link link--primary">' . $booking_link_text . '</a>';  
       
       echo '</li>';
 
@@ -92,34 +99,8 @@ echo '<header role="banner" class="header">';
 
     echo '<div class="row row--full nav__inner">';
 
-      // echo '<div class="nav__list nav__services">';
-
-      //   echo '<h3 class="nav__title">'. $menu_title_services .'</h3>';
-
-      //   echo '<ul class="list list__inner">';
-
-      //     wp_nav_menu( $nav_services );
-
-      //   echo '</ul>';
-
-      // echo '</div>';
-
-      // echo '<div class="nav__list nav__programs">';
-      
-      //   echo '<h3 class="nav__title">'. $menu_title_programs .'</h3>';
-
-      //   echo '<ul class="list list__inner">';
-
-      //     wp_nav_menu( $nav_programs );
-
-      //   echo '</ul>';
-
-      // echo '</div>';
-
       echo '<div class="nav__list nav__resources">';
       
-        // echo '<h3 class="nav__title">'. $menu_title_resources .'</h3>';
-
         echo '<ul class="list list__inner list--large list--align-center">';
 
           wp_nav_menu( $nav_resources );

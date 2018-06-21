@@ -12,7 +12,7 @@
   }
 
   @include bp($bp-tablet) {
-    padding: $d-dec;
+    padding: 140px $d-dec;
     flex-direction: row;
   }
 
