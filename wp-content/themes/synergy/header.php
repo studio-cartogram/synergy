@@ -4,7 +4,6 @@ global $language;
 $booking_link_main = get_field('booking_link', 'options');
 $booking_link_text = get_field('booking_link_text', 'options');
 
-
 $classes = get_field('class_schedules', 'options');
 $locations_overlay_toggle = get_field('locations_overlay_toggle', 'options');
 

@@ -6,6 +6,9 @@ $nav_footer = array(
   'items_wrap'      => '%3$s',
 );
 
+$booking_link_main = get_field('booking_link', 'options');
+$booking_link_text = get_field('booking_link_text', 'options');
+
 $copyright = get_field('copyright', 'options');
 $facebook = get_field('facebook', 'options');
 $instagram = get_field('instagram', 'options');
@@ -25,14 +28,13 @@ echo '<footer class="footer container">';
 
       echo '<div class="footer__actions">';
     
-        echo '<a href="' . $classes . '" class="link link--inverted link--primary link--external action">Class schedules';
-
-        set_query_var( 'icon', 'arrow-external' );
-        get_template_part('partials/icon');
+        echo '<a target="_blank" href="' . $classes . '" class="link link--inverted link--primary action">Class schedules';
 
         echo '</a>';
     
         echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . $locations_overlay_toggle . '</a>';
+
+        echo '<a target="_blank" href="' . $booking_link_main . '" class="link link--inverted link--primary action">'. $booking_link_text . '</a>';
 
       echo '</div>';
 
