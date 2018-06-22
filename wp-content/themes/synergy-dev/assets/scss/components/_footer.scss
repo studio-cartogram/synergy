@@ -36,9 +36,13 @@ Footer Component
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .footer__actions {
+  .footer__icon {
+    fill: $c-inkLightest;
+  }
 
   .action {
     padding-right: $d-trio;
@@ -122,7 +126,7 @@ Footer Component
   padding-top: $d-trio;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 5%;
     right: 0;
@@ -133,12 +137,11 @@ Footer Component
     width: 100%;
     z-index: index($l-footer, graphic);
 
-
     @include bp($bp-tablet) {
-    bottom: 12%;
-    padding: 0;
-    width: 70%;
-    height: 250px;
+      bottom: 12%;
+      padding: 0;
+      width: 70%;
+      height: 250px;
     }
   }
 }
@@ -148,11 +151,10 @@ Footer Component
   height: $d-quin;
   background-image: url(../svg/pride.svg);
   z-index: index($l-footer, graphic);
-
 }
 
 .footer__bottom .menu-item a {
   &:hover {
     color: $ca-anchor-hover;
   }
-} 
+}

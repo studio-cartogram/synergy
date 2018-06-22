@@ -24,17 +24,25 @@ echo '<footer class="footer container">';
 
     echo '<div class="footer__mast">';
 
-      echo '<h1 class="text--inverted">Contact us</h1>';
+      echo '<h1 class="text--inverted footer--title">Contact us</h1>';
 
       echo '<div class="footer__actions">';
+
+        echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle action">' . $locations_overlay_toggle . '</a>';
     
-        echo '<a target="_blank" href="' . $classes . '" class="link link--inverted link--primary action">Class schedules';
+        echo '<a target="_blank" href="' . $classes . '" class="link link--inverted link--primary link--external action">Class schedules';
+
+          set_query_var( 'icon', 'arrow-external' );
+          get_template_part('partials/icon');
 
         echo '</a>';
     
-        echo '<a href="#locations" data-toggle-locations class="link link--primary link--inverted locations__toggle">' . $locations_overlay_toggle . '</a>';
+        echo '<a target="_blank" href="' . $booking_link_main . '" class="link link--inverted link--primary link--external action">'. $booking_link_text . '';
 
-        echo '<a target="_blank" href="' . $booking_link_main . '" class="link link--inverted link--primary action">'. $booking_link_text . '</a>';
+          set_query_var( 'icon', 'arrow-external' );
+          get_template_part('partials/icon');
+
+        echo '</a>';
 
       echo '</div>';
 

@@ -7,9 +7,9 @@ List Component
   li {
     margin: 0;
     padding: 0;
-    list-style:none;
+    list-style: none;
   }
-  
+
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
@@ -74,29 +74,25 @@ List Component
   }
 }
 
-.list--align-center {
-  align-items: center;
-}
-
 .list--sep-slash {
   li:after {
-    content: '';
+    content: "";
     padding-left: 1px;
     padding-right: 1px;
   }
   li:last-child:after {
-    content: '';
+    content: "";
   }
 }
 
 .list--sep-comma {
   li:after {
-    content: ', ';
+    content: ", ";
     padding-right: 3px;
   }
   li:first-child:after,
   li:last-child:after {
-    content: '';
+    content: "";
   }
 }
 

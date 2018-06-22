@@ -70,7 +70,16 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<a target="_blank" href="' . $classes . '" class="link link--primary action">' . 'Class schedules';
+        echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . $locations_overlay_toggle . '</a>';  
+  
+      echo '</li>';
+
+      echo '<li class="">';
+
+        echo '<a target="_blank" href="' . $classes . '" class="link link--primary action link--external">' . 'Class schedules';
+
+        set_query_var( 'icon', 'arrow-external' );
+        get_template_part('partials/icon');
       
         echo '</a>';
 
@@ -78,13 +87,12 @@ echo '<header role="banner" class="header">';
 
       echo '<li class="">';
 
-        echo '<a href="#locations" data-toggle-locations class="link link--primary locations__toggle">' . $locations_overlay_toggle . '</a>';  
-      
-      echo '</li>';
+        echo '<a target="_blank" href="'. $booking_link_main .'" class="link link--primary link--external">' . $booking_link_text . '';
 
-      echo '<li class="">';
-
-        echo '<a target="_blank" href="'. $booking_link_main .'" class="link link--primary">' . $booking_link_text . '</a>';  
+        set_query_var( 'icon', 'arrow-external' );
+        get_template_part('partials/icon');
+        
+        echo'</a>';  
       
       echo '</li>';
 
