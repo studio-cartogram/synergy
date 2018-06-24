@@ -29,9 +29,7 @@ echo '<section class="mast">';
         echo 'All services</a>';          
         
       endif;
-
-      get_template_part('partials/filter-services');
-
+      
     echo '</div>';
 
   echo '</div>';
