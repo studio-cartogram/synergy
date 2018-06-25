@@ -63,11 +63,12 @@ a.secondary {
 .link--underline,
 .banner .p--large a,
 .grid__item a,
+.answer a,
 .categories-assigned a,
 .primary__text a {
   &:after {
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     bottom: 0;
     width: 100%;
@@ -87,7 +88,6 @@ a.secondary {
 
 .link--external,
 .link--down {
-
   .icon {
     align-self: center;
     height: $d-trio;
@@ -95,12 +95,11 @@ a.secondary {
   }
 
   &:hover {
-   .icon {
+    .icon {
       fill: $ca-anchor-hover;
       transition: fill 0.175s ease-in-out;
     }
   }
-
 }
 
 .link--back {
@@ -112,7 +111,7 @@ a.secondary {
     width: 30%;
     padding-top: 26px;
   }
-  
+
   .icon {
     width: $d-duo;
     height: $d-duo;
@@ -121,7 +120,6 @@ a.secondary {
 }
 
 .primary__text a {
-
   &:after {
     bottom: 1px;
     background-color: $ca-border-anchor-secondary;
