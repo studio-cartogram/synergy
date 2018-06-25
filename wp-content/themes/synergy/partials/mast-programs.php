@@ -2,6 +2,8 @@
 
 $title_programs = get_field('title_programs', 'options');
 $subtitle_programs = get_field('subtitle_programs', 'options');
+$link_programs = get_field('link_programs', 'options');
+$programs_link_text = get_field('programs_link_text', 'options');
 
 echo '<section class="mast">';
 
@@ -18,6 +20,12 @@ echo '<section class="mast">';
       echo '</h1>';
 
       echo '<h2 class="subtitle secondary">'. $subtitle_programs .'</h2>';
+
+      if ($link_programs && $programs_link_text) :
+
+        echo '<p class="p--large secondary"><a href="' . $link_programs .'" class="link link--underline">' . $programs_link_text . '</a></p>';
+    
+      endif;
 
       if ( is_tax() ) :
         
