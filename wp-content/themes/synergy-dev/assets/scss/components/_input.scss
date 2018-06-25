@@ -6,7 +6,7 @@
 
 input {
   order: 1;
-  border:0;
+  border: 0;
   padding: 0;
   margin: 0;
   box-shadow: 0;
@@ -47,11 +47,11 @@ input {
   appearance: none;
   padding: $d-duo;
   margin: 0 auto;
-  width: 100%;
+  width: 60%;
   background-color: $ca-button-primary-background;
-  background-image: url($p_svg + 'toggle-down.svg');
+  background-image: url($p_svg+"toggle-down.svg");
   background-repeat: no-repeat;
-  background-position: 96% center; 
+  background-position: 96% center;
   color: $ca-button-primary-color;
   border: none;
   box-shadow: $sha-md;
@@ -94,14 +94,15 @@ input {
   }
 }
 
-.form__synergy_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+.form__synergy_wrapper
+  input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
   padding: 5px 12px;
 }
 
 .form__synergy.form__synergy.form__synergy {
   font-family: $t-font-family;
   font-weight: $t-font-weight-regular;
-   
+
   input,
   .gfield_select,
   textarea {
@@ -131,8 +132,8 @@ input {
     width: 100%;
   }
 
-  .ginput_container_multiselect select[multiple=multiple] option:checked {
-    background-color: $c-blue!important;
+  .ginput_container_multiselect select[multiple="multiple"] option:checked {
+    background-color: $c-blue !important;
   }
 
   .gform_button {
@@ -163,7 +164,7 @@ input {
     border-radius: $d-quin;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: relative;
       height: $d-base;
@@ -176,11 +177,11 @@ input {
     margin-right: $d-duo;
   }
 
-  .gfield_radio input[type=radio]:checked {
+  .gfield_radio input[type="radio"]:checked {
     border: 1px solid $c-blue;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: relative;
       height: $d-base;
@@ -190,7 +191,7 @@ input {
     }
   }
 
-  .gfield_radio input[type=radio]:checked+label{
+  .gfield_radio input[type="radio"]:checked + label {
     color: $c-blue;
     background: transparent;
   }
@@ -215,7 +216,8 @@ input {
     color: $c-green;
   }
 
-  li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
+  li.gfield_error
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
     border: $b-error;
   }
 
@@ -223,4 +225,3 @@ input {
     padding-right: $d-duo;
   }
 }
-
