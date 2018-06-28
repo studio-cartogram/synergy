@@ -229,6 +229,52 @@ echo '<main id="main" role="main" class="main">';
 
           echo '<div class="tertiary__content">';
 
+            if( $staff ):
+                
+              echo '<div class="related-header">';
+
+                echo '<h3 class="secondary">Related staff</h3>';
+
+                echo '<a href="' . get_post_type_archive_link( 'staff' ) .'" class="secondary link link--all link--underline">All staff</a>';
+
+              echo '</div>';
+
+              echo '<div class="related">';
+
+                foreach( $staff as $staff):
+
+                  $staffImage = get_post_thumbnail_id($staff->ID);
+                  $staffImageSize = 'large';
+                  $profession = get_field('profession', $staff->ID);
+
+                  echo '<div class="related__item item item--staff">';
+
+                    echo '<a href="' . get_the_permalink($staff->ID) . '">';
+
+                      echo '<div class="item__image">';
+                    
+                        echo wp_get_attachment_image( $staffImage, $staffImageSize );
+                    
+                      echo '</div>';
+
+                      echo '<div class="item__text">';
+
+                        echo '<h3 class="item__title">'. get_the_title($staff->ID) .'</h3>';
+
+                        echo '<h3 class="secondary">' . $profession . '</h3>';
+
+                      echo '</div>';
+                      
+                    echo '</a>';
+
+                  echo '</div>';
+
+                endforeach;
+
+              echo '</div>';
+
+            endif;
+
             if( $services ):
               
               echo '<div class="related-header">';
@@ -269,52 +315,6 @@ echo '<main id="main" role="main" class="main">';
                         echo '<h3 class="item__title">'. get_the_title($service->ID) .'</h3>';
 
                         echo '<h3 class="secondary">'. get_the_excerpt($service->ID) .'</h3>';                        
-
-                      echo '</div>';
-                      
-                    echo '</a>';
-
-                  echo '</div>';
-
-                endforeach;
-
-              echo '</div>';
-
-            endif;
-
-            if( $staff ):
-              
-              echo '<div class="related-header">';
-
-                echo '<h3 class="secondary">Related staff</h3>';
-
-                echo '<a href="' . get_post_type_archive_link( 'staff' ) .'" class="secondary link link--all link--underline">All staff</a>';
-
-              echo '</div>';
-
-              echo '<div class="related">';
-
-                foreach( $staff as $staff):
-
-                  $staffImage = get_post_thumbnail_id($staff->ID);
-                  $staffImageSize = 'large';
-                  $profession = get_field('profession', $staff->ID);
-
-                  echo '<div class="related__item item item--staff">';
-
-                    echo '<a href="' . get_the_permalink($staff->ID) . '">';
-
-                      echo '<div class="item__image">';
-                    
-                        echo wp_get_attachment_image( $staffImage, $staffImageSize );
-                    
-                      echo '</div>';
-
-                      echo '<div class="item__text">';
-
-                        echo '<h3 class="item__title">'. get_the_title($staff->ID) .'</h3>';
-
-                        echo '<h3 class="secondary">' . $profession . '</h3>';
 
                       echo '</div>';
                       
