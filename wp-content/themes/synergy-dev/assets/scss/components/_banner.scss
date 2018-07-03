@@ -7,6 +7,10 @@
   overflow: hidden;
   flex-direction: column;
 
+  &:first-child {
+    padding-top: $d-dec;
+  }
+
   @include bp($bp-mobile) {
     flex-direction: row;
   }
