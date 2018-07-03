@@ -4,7 +4,6 @@
  * js chunks
  *
  */
-import "babel-polyfill";
 import Barba from "barba.js";
 import log from "./utils/log";
 import { sortScripts } from "./utils/scripts";
@@ -13,11 +12,13 @@ import loadSprite from "./vendor/loadSprite";
 import Scroll from "./scripts/Scroll";
 import Fade from "./scripts/Fade";
 import Togglers from "./scripts/Togglers";
-import Swiper from "swiper";
+// import Swiper from "swiper";
+// Not sure why but had to import directly https://github.com/nolimits4web/Swiper/issues/2206
+import Swiper from "swiper/dist/js/swiper.js";
 import Waypoints from "waypoints";
 import removeClasses from "./utils/removeClasses";
 import Blob from "./scripts/Blob";
-// import './scripts/Toggle'
+import "./scripts/Toggle";
 import SelectClinician from "./scripts/Select";
 
 import { Toggle } from "./scripts/Toggle";
@@ -44,11 +45,9 @@ class App {
     Barba.Dispatcher.on("linkClicked", el => {
       const xs = document.getElementsByClassName(ACTIVE_CLASS);
       el.classList.add(ACTIVE_CLASS);
-
       if (xs.length > 0) {
         removeClasses(xs, ACTIVE_CLASS);
       }
-
       // this.filter.hide && this.filter.hide()
       this.nav.hide();
       this.locations.hide();
@@ -64,7 +63,6 @@ class App {
         const scripts = container.querySelectorAll("script");
         if (scripts.length >= 1) {
           const { inlineScripts, externalScripts } = sortScripts(scripts);
-
           Promise.all(externalScripts)
             .then(function() {
               Array.prototype.forEach.call(inlineScripts, script => {
@@ -82,7 +80,6 @@ class App {
     );
     this.initTransitions();
   }
-
   init = () => {
     // this.filter = new Toggle('filter')
     this.blob.init();
@@ -92,10 +89,8 @@ class App {
     this.initSlideshow();
     this.initWaypoints();
   };
-
   initWaypoints = () => {
     const waypointEls = document.querySelectorAll(".js-waypoint");
-
     Array.prototype.forEach.call(waypointEls, (waypoint, index) => {
       waypoint.classList.add("is-hidden");
       return new Waypoint({
@@ -109,7 +104,6 @@ class App {
       });
     });
   };
-
   initSlideshow = () => {
     const slideshow = new Swiper(".js-slideshow", {
       navigation: {
@@ -123,12 +117,10 @@ class App {
       }
     });
   };
-
   initTransitions = () => {
     const _scrollTop = this.scroll.scrollTop.bind(this);
     const _fadeOut = this.fade.fadeOut.bind(this);
     const _fadeIn = this.fade.fadeIn.bind(this);
-
     this.Transition = Barba.BaseTransition.extend({
       start() {
         Promise.all([
@@ -137,7 +129,6 @@ class App {
           _scrollTop().finished
         ]).then(this.showNewPage.bind(this));
       },
-
       showNewPage() {
         _fadeIn(this.newContainer);
         this.done();
