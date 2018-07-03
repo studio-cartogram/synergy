@@ -9,7 +9,10 @@
   ],
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "browser-sync": "browser-sync start --proxy 'leftfieldbrewery.local' --files 'src/scripts/*.js'",
+    "parcel": "parcel assets/js/main.js --public-url ./dist/",
+    "parcel-build": "parcel build assets/js/main.js"
   },
   "engines": {
     "node": ">=5.0.0"

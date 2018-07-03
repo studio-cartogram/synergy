@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "es2015",
+    "stage-0",
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current",
+          "uglify": true
+        }
+      }
+    ]
+  ],
+  "plugins": ["babel-plugin-transform-class-properties", "transform-runtime"]
+}
