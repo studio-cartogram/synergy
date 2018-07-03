@@ -11,7 +11,7 @@ $findClinician = get_sub_field('show_find_clinician_cta');
 $size = 'img_xlarge';
 $links = get_sub_field('links');
 
-echo '<section class="js-waypoint waypoint feature">';
+echo '<section class="feature">';
 
   if( $image ) :
   
