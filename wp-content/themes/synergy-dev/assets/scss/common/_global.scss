@@ -27,6 +27,7 @@ body {
   flex: 1;
   opacity: 0;
   transition: all $a-timing $a-timing $a-easing;
+  padding-top: 104px;
 
   .js-is-initialized & {
     opacity: 1;
@@ -36,4 +37,3 @@ body {
     opacity: 0;
   }
 }
-

@@ -12,7 +12,7 @@
   }
 
   @include bp($bp-tablet) {
-    padding: 140px $d-dec;
+    padding: $d-dec;
     flex-direction: row;
   }
 
@@ -24,7 +24,10 @@
     transform: scale(1.1);
   }
 
-  h1, h2, p, a {
+  h1,
+  h2,
+  p,
+  a {
     text-align: left;
   }
 }
@@ -48,7 +51,8 @@
   }
 }
 
-.banner__image, .banner__text {
+.banner__image,
+.banner__text {
   max-width: 100%;
 
   @include bp($bp-mobile) {
@@ -73,7 +77,6 @@
 }
 
 .banner__image {
-  
   img {
     height: 540px;
     object-position: center;
@@ -85,7 +88,6 @@
     }
   }
 }
-
 
 // Left and Right
 
@@ -112,7 +114,7 @@
   padding-right: 0;
   padding-left: 0;
   padding-top: 0;
-  
+
   @include bp($bp-mobile) {
     padding-right: $d-sex;
     padding-top: $d-dec;
@@ -121,7 +123,6 @@
     padding-right: $d-twe;
   }
 }
-
 
 // Centered
 
@@ -143,7 +144,10 @@
     }
   }
 
-  h1, h2, p, a {
+  h1,
+  h2,
+  p,
+  a {
     text-align: center;
   }
 
@@ -181,10 +185,10 @@
   background-repeat: no-repeat;
 
   .banner__center & {
-    background-position: 10% 60%;    
+    background-position: 10% 60%;
   }
 
   .banner__left & {
-    background-position: 60% 100%;    
+    background-position: 60% 100%;
   }
 }
