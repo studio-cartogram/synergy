@@ -38,17 +38,11 @@ echo '<section class="feature">';
 
         else :
           
-          echo '' . $text . ', '; 
+          echo '<p class="feature__textItem">' . $text . '</p>'; 
 
         endif;
 
       endwhile;
-
-      if ( is_front_page() ) :
-
-        echo ' and more.'; 
-        
-      endif;
 
       echo '</h3>';
 

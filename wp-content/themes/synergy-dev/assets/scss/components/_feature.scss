@@ -67,18 +67,37 @@
   }
 }
 
+.feature__textItem {
+  display: inline-block;
+
+  &:after {
+    content: ", \2006";
+  }
+}
+
+.feature__textItem:last-child {
+  &:after {
+    content: "";
+  }
+}
+
 .feature__overlay {
   background-color: transparent;
   position: absolute;
-  z-index: index($l-feature, overlay); 
+  z-index: index($l-feature, overlay);
   height: 100%;
   width: 100%;
-  background-color: rgba(255,255,255,0.40);
+  background-color: rgba(255, 255, 255, 0.4);
 
   @include bp($bp-tablet) {
     height: 100vh;
     background-color: transparent;
-    background-image: linear-gradient(-90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.70) 50%, rgba(255,255,255,0.15) 100%);
+    background-image: linear-gradient(
+      -90deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
   }
 }
 
@@ -99,7 +118,7 @@
   img {
     height: 100vh;
     object-position: center;
-    object-fit: cover;      
+    object-fit: cover;
   }
 }
 
@@ -108,7 +127,7 @@
   padding-bottom: $d-duo;
 
   @include bp($bp-mobile) {
-    padding-bottom: $d-trio;    
+    padding-bottom: $d-trio;
   }
   @include bp($bp-tablet) {
     width: 100%;
