@@ -18,6 +18,10 @@
   @include bp($bp-tablet) {
     padding: $d-dec;
     flex-direction: row;
+
+    &:first-child {
+      padding-top: 160px;
+    }
   }
 
   @include bp($bp-4k) {
