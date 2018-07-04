@@ -44,9 +44,9 @@ echo '<section class="feature">';
 
       endwhile;
 
-        if ( is_front_page() ) :
+      if ( is_front_page() ) :
 
-          echo '' . $text . ', and more.'; 
+        echo ' and more.'; 
         
       endif;
 
