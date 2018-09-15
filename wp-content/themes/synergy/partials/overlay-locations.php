@@ -35,6 +35,7 @@ echo '<div class="locations__wrapper">';
       $note = get_sub_field('note');
       $image = get_sub_field('image');
       $booking = get_sub_field('booking_link');
+      $referral = get_sub_field('referral_form');
       $size = 'full';
 
       if( $image ) :
@@ -49,9 +50,16 @@ echo '<div class="locations__wrapper">';
 
       echo '<div class="location__info">';
       
-        echo '<p class="secondary location__name">' . $name . '</p>';
+        echo '<p class="location__name">';
+        echo '<span class="secondary"> '. $name. ' </span><br> '. $address. '<br>';
+        echo '<a class="link--underline link" href="' . $directions . '">View map</a>';
+        echo '</p>';
 
-        echo '<p class="">' . $address . '<br><a class="link--underline link" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
+        if( $referral ):
+
+          echo '<p class="location_referral"><a target="_blank" href="' . $referral . '" class="link--underline link">Download referral form</a></p>';
+
+        endif;
 
         if( $phone ):
 
@@ -67,7 +75,7 @@ echo '<div class="locations__wrapper">';
 
         if( $booking ):
           
-          echo '<a href="' . $booking . '" class="location__booking button button--primary">Book ' . $name . '</a>';
+          echo '<p><a href="' . $booking . '" class="location__booking button button--primary">Book ' . $name . '</a></p>';
           
         endif;
       

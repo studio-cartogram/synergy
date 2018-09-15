@@ -19,6 +19,7 @@ echo '<section class="contactLocations">';
         $note = get_sub_field('note');
         $image = get_sub_field('image');
         $hours = get_sub_field('hours');
+        $referral = get_sub_field('referral_form');
         $size = 'full';
 
         echo '<div class="contactLocation">';
@@ -46,6 +47,12 @@ echo '<section class="contactLocations">';
               echo '<div class="row">';
 
                 echo '<p class="address">' . $address . '<br><a target="_blank" class="link--underline link" href="' . $directions . '" class="link link--primary">' . 'View map' . '</a></p>';
+
+                if( $referral ):
+
+                  echo '<p class="location_referral"><a target="_blank" href="' . $referral . '" class="link--underline link">Download referral form</a></p>';
+        
+                endif;
       
               echo '</div>';
 

@@ -11,8 +11,11 @@
     @include bp($bp-tablet) {
       padding-left: 0;
     }
-  
   }
+}
+
+.location_referral {
+  width: 100%;
 }
 
 .contactLocations__container {
@@ -34,7 +37,7 @@
   }
 
   .note {
-    color:  $ca-contact-note-color;
+    color: $ca-contact-note-color;
   }
 
   .location__image {
@@ -47,14 +50,12 @@
         height: auto;
       }
     }
-    
   }
 }
 
 .contactLocation__info {
   padding-bottom: $d-duo;
 }
-
 
 .contactLocation__container {
   background-color: rgba(255, 255, 255, 0.4);
