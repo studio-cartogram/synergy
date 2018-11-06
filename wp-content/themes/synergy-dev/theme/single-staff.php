@@ -135,7 +135,7 @@ echo '<main id="main" role="main" class="main">';
 
                   $url = wp_get_attachment_url( $cv_document );
                 
-                  echo '<a class="button button--down button--tertiary" href="' . $url .'">Download Full CV';
+                  echo '<a target="_blank" class="button button--down button--tertiary" href="' . $url .'">Download Full CV';
 
                   set_query_var( 'icon', 'arrow-down' );
                   get_template_part('partials/icon');
